@@ -1,0 +1,377 @@
+<div style="margin: 50px;">
+    <ng-container *ngIf="(asyncTabs | async) === null">
+        Loading tabs...
+    </ng-container>
+    <h1> CAPÍTULO I: CONCEPTOS ELEMENTALES </h1>
+    <mat-tab-group [selectedIndex]="selectedIndex.value" (selectedIndexChange)="selectedIndex.setValue($event)">
+        <mat-tab label="Bienvenid@">
+            <ng-template matTabContent>
+                <div class="Cbox" [ngStyle]="{'background-image': 'url(https://drive.google.com/uc?export=view&id=1oV8NmgwJbChrCKHkzZ2F3U7fHYTpBuME)'}">
+                    <h1><span>-Cada logro comienza con la decisión de intentarlo.</span></h1>
+                    <p>-Gail Devers.</p>
+                </div>
+
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Introducción">
+            <ng-template matTabContent>
+                <h1>Introducción</h1>
+                <br>
+                <p>La computación gráfica es una de las áreas de la informática visual, donde se utilizan las computadoras para generar imágenes o gráficos sintéticamente para integrar o cambiar la información visual y espacial del mundo real. La computación
+                    gráfica se aplica en la creación de: motores gráficos, motores de videojuegos, modelamiento de objetos 2D y 3D, efectos especiales para películas, procesamiento de imágenes, procesamiento de video, visión por computadora, entre otros
+                    (Fuente).
+                </p>
+                <p>El padre de la computación gráfica es el científico de la computación Ivan Sutherland. A Ivan Sutherland le tomó varios años desarrollar el Sketckpad que fue un programa informático creado en 1963 que permitía la manipulación directa de
+                    objetos gráficos, así como la interacción persona-computadora y fue el predecesor de los programas de diseño asistido por computadora o computer-aided design (CAD). Ivan Sutherland recibió a lo largo de su vida recibió varios premios
+                    y reconocimientos como el Premio Turing de la Asociación de Maquinaria Computacional, el cual es considerado el premio más importante en las ciencias de la computación, en 1988. En el 2012 recibió el Premio Kioto de Tecnología Avanzada
+                    por “logros pioneros en el desarrollo de la computación gráfica e interfaces interactivas”. Además, este científico de la computación es miembro de Academia Nacional de Ingeniería de Estados Unidos, así como de la Academia Nacional
+                    de Ciencias de Estados Unidos (Fuente).</p>
+                <p>La computación gráfica cubre conceptos y aspectos relacionados a las matemáticas, cálculo y geometría aplicada a la computación. En muchas aplicaciones se necesitan manejar puntos, líneas, figuras geométricas y polígonos para representar
+                    objetos y modelos en 2D y 3D.</p>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Objetivos">
+            <ng-template matTabContent>
+                <h1>Objetivos</h1>
+                <br>
+                <ul>
+                    <li>Crear, compilar, enlazar y ejecutar programas básicos en C#.</li>
+                    <li>Entender la estructura básica de un programa en C#.</li>
+                    <li>Aprender el funcionamiento de las funciones básicas de entrada y salida de datos.</li>
+                    <li>Entender el concepto de variable y tipos de datos.</li>
+                    <li>Revisar los operadores aritméticos, relacionales y lógicos que maneja el lenguaje C#.</li>
+                    <li>Revisar las principales fórmulas matemáticas que maneja el lenguaje C#.</li>
+                    <li>Diseñar y crear programas en lenguaje Java utilizando operadores aritméticos, relacionales y lógicos.</li>
+                </ul>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Teoría">
+            <ng-template matTabContent>
+                <h1>Píxeles, Coordenadas y Figuras Geométricas</h1>
+                <p>La forma más conveniente de especificar un segmento de línea en la pantalla de una computadora es proporcionando las coordenadas de sus dos puntos finales. En matemáticas, las coordenadas son números reales, pero las rutinas primitivas
+                    de dibujo de líneas pueden requerir que sean enteros. Este es el caso, por ejemplo, en el lenguaje C#, que se utilizará a lo largo de este libro. El componente o subsistema GDI (Graphics Device Interface) trabaja junto con el núcleo
+                    y la API de Windows. Esta interfaz de programación de aplicaciones se encarga del control gráfico de los dispositivos de salida, como los monitores o las impresoras. Las tareas más comunes de GDI son:</p>
+                <ul>
+                    <li>El dibujo de líneas, curvas, polígonos;</li>
+                    <li>El relleno de cuadros, círculos, polígonos, etcétera;</li>
+                    <li>Se encarga del renderizado de fuentes y textos;</li>
+                    <li>Se encarga del manejo de paletas de colores.</li>
+                </ul>
+                <p>El componente GDI proporciona la clase Graphics que contiene el método DrawLine, que se lo utiliza de la siguiente manera para dibujar el segmento de línea que conecta A y B:</p>
+                <mathjax [content]='"$g.DrawLine\\left(xA, yA, xB, yB\\right);$"' class='box'></mathjax><br>
+                <p>El contexto gráfico g delante del método normalmente se proporciona como un parámetro del método de dibujo en el programa, y los cuatro argumentos de DrawLine son enteros, que van desde cero hasta algún valor máximo. La llamada anterior
+                    a DrawLine produce exactamente la misma salida en la pantalla que esta, donde se conecta B y A:</p>
+                <mathjax [content]='"$g.DrawLine\\left(xB, yB, xA, yA\\right);$"' class='box'></mathjax><br>
+                <img src="../../../assets/images/Capitulos/I/media/image2.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Figura 1.1. </strong>Dibujo de una línea a través de dos puntos.</h5><br>
+                <p>Para graficar un rectángulo se utiliza el contexto g con la función DrawRectangle, y se pueden utilizar cinco parámetros como son la pluma de dibujo, las coordenadas iniciales a partir de donde se grafica el rectángulo, el valor del ancho
+                    y el largo del rectángulo.</p>
+                <mathjax [content]='"$g.DrawRectangle\\left(Pen, 0, 0, Width, Height\\right);$"' class='box'></mathjax><br>
+                <img src="../../../assets/images/Capitulos/I/media/image3.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Figura 1.2. </strong>Dibujo de un rectángulo.</h5><br>
+                <p>Para graficar un cuadrado se utiliza el contexto g con la función DrawRectangle, y se pueden utilizar cinco parámetros como son la pluma de dibujo, las coordenadas iniciales a partir de donde se grafica el cuadrado. En este caso el valor
+                    del ancho y del largo son iguales, por lo que se coloca en ambos parámetros el valor del lado del cuadrado, puesto que el cuadrado es un caso especial del rectángulo.</p>
+                <mathjax [content]='"$g.DrawRectangle\\left(Pen, 0, 0, Side, Side\\right);$"' class='box'></mathjax><br>
+                <img src="../../../assets/images/Capitulos/I/media/image4.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Figura 1.3. </strong>Dibujo de un cuadrado a partir de un rectángulo.</h5><br>
+                <p>Para graficar una elipse se utiliza el contexto g con la función DrawEllipse, y se pueden utilizar cinco parámetros como son la pluma de dibujo, las coordenadas iniciales a partir de donde se grafica la elipse, el valor del ancho y el
+                    largo de la elipse.</p>
+                <mathjax [content]='"$g.DrawEllipse\\left(Pen, 0, 0, Width, Height\\right);$"' class='box'></mathjax><br>
+                <img src="../../../assets/images/Capitulos/I/media/image5.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Figura 1.4. </strong>Dibujo de una elipse.</h5><br>
+                <p>Para graficar un círculo se utiliza el contexto g con la función DrawEllipse, y se pueden utilizar cinco parámetros como son la pluma de dibujo, las coordenadas iniciales a partir de donde se grafica el círculo. En este caso el valor del
+                    ancho y del largo de la elipse son iguales y equivalentes al diámetro del círculo, por lo que se coloca en ambos parámetros el valor del diámetro del círculo, puesto que el círculo es un caso especial de la elipse.</p>
+                <mathjax [content]='"$g.DrawEllipse\\left(Pen, 0, 0, Diameter, Diameter\\right);$"' class='box'></mathjax><br>
+                <img src="../../../assets/images/Capitulos/I/media/image6.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Figura 1.5. </strong>Dibujo de un círculo a partir de una elipse.</h5><br>
+                <p>El eje de coordenadas por pantalla del mundo de la computación gráfica es un eje en el cual se conserva el eje positivo de las ‘x’ hacia la derecha tal y como el del mundo real, pero el eje positivo de las ‘y’ es hacia abajo, debido a
+                    que el estándar de fabricación de los monitores y pantallas se basa en el movimiento de los electrones desde arriba hacia abajo y desde la izquierda hacia la derecha aplicando los principios de la energía potencial eléctrica, donde
+                    el origen de coordenadas C(0,0) está en la esquina superior izquierda.</p>
+                <img src="../../../assets/images/Capitulos/I/media/image7.png" style="display:block; margin:auto; width: 100%;"><br>
+                <h5><strong>Figura 1.6. </strong>Eje de coordenadas del mundo real y del mundo de la Computación Gráfica. </h5><br>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Video Tutorial">
+            <ng-template matTabContent>
+                <h2> VIDEO 1:</h2>
+                <div class="video-responsive">
+                    <div class="video-responsive">
+                        <video controls preload="auto">
+                            <source src="https://drive.google.com/uc?export=download&id=1LfFmOuv6IU1iljEnHWSBPaFCOCUkAAEO#t=1" type="video/mp4" />
+                                Tu navegador no soporta HTML5 Video
+                            </video>
+                    </div>
+                </div>
+                <br>
+                <h2> VIDEO 2:</h2>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/sOnqjkJTMaA" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <br>
+                <h2> VIDEO 3:</h2>
+
+                <div class="video-responsive">
+                    <video controls preload="auto">
+                            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4#t=2" type="video/mp4" />
+                            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm#t=2" type="video/webm" />
+                            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv#t=2" type="video/ogg" />
+                            Tu navegador no soporta HTML5 Video
+                        </video>
+                </div>
+                <br>
+            </ng-template>
+        </mat-tab>
+
+        <mat-tab label="Casos de Estudio">
+            <ng-template matTabContent>
+                <mat-tab-group>
+                    <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
+                    <mat-tab *ngFor="let tab of prefTabs" label="{{tab.label}}">
+                        <br>
+                        <h2>{{tab.title}}</h2>
+                        <h3><strong>A)   Problema</strong></h3>
+                        <p>{{tab.problema}}</p>
+                        <ul *ngFor="let item of tab.formulaA">
+                            <li>
+                                <mathjax [content]=item class='box'></mathjax>
+                            </li>
+                        </ul>
+                        <img src="{{tab.imagen1}}" style="display:block; margin:auto; "><br>
+                        <h5><strong>{{tab.figuraNum1}}</strong>{{tab.figura1}}</h5><br>
+                        <h3><strong>B)   Análisis</strong></h3>
+                        <p>{{tab.analisis}}</p>
+                        <h4><strong>B.1)   Requerimiento de los Datos</strong></h4>
+                        <table>
+                            <tbody *ngFor="let item of tab.requerimientosDatos">
+                                <tr>
+                                    <h4><strong>{{item.t}}</strong></h4>
+                                    <td>
+                                        <mathjax [content]=item.a class='box'></mathjax>
+                                    </td>
+                                    <td>
+                                        <mathjax [content]=item.b class='box'></mathjax>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4><strong>B.2) Diagrama de Entrada-Salida</strong></h4>
+                        <p>{{tab.diagramaES}}</p>
+                        <img src="{{tab.imagen2}}" style="display:block; margin:auto; "><br>
+                        <h5><strong>{{tab.figuraNum2}}</strong>{{tab.figura2}}</h5><br>
+                        <h4><strong>B.3) Diagrama de Clases</strong></h4>
+                        <p>{{tab.diagramaC1}}</p>
+                        <p>{{tab.diagramaC2}}</p>
+                        <img src="{{tab.imagen3}}" style="display:block; margin:auto; "><br>
+                        <h5><strong>{{tab.figuraNum3}}</strong>{{tab.figura3}}</h5><br>
+                        <h3><strong>C)   Diseño</strong></h3>
+                        <p>{{tab.diseno}}</p>
+                        <ul *ngFor="let item of tab.algoritmos">
+                            <h4><strong>{{item.t}}</strong></h4>
+                            <p>{{item.a}}</p>
+                            <p>{{item.b}}</p>
+                            <p>{{item.d}}</p>
+                            <p>{{item.e}}</p>
+                            <p>{{item.f}}</p>
+                            <p>{{item.g}}</p>
+                            <p>{{item.h}}</p>
+                            <p>{{item.i}}</p>
+                            <p>{{item.j}}</p>
+                            <p>{{item.k}}</p>
+                        </ul>
+                        <h3><strong>{{tab.tituloGeometria}}</strong></h3>
+                        <ul *ngFor="let item of tab.geometria">
+                            <ul *ngFor="let x of item.p">
+                                <h4><strong>{{x.t}}</strong></h4>
+                                <p>{{x.d}}</p>
+                                <ul *ngFor="let itemFotos of x.i">
+                                    <img src="{{itemFotos.path}}" style="display:block; margin:auto;"><br>
+                                    <h5><strong>{{itemFotos.titulo}}</strong>{{itemFotos.descriptitulo}}</h5><br>
+                                </ul>
+                            </ul>
+                            <ul *ngFor="let x of item.s">
+                                <h4><strong>{{x.t}}</strong></h4>
+                                <ul *ngFor="let itemPasos of x.pasos">
+                                    <p>{{itemPasos.d}}</p>
+                                    <ul *ngFor="let k of itemPasos.formulas">
+                                        <mathjax [content]=k class='box'></mathjax><br>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </ul>
+                        <h3><strong>D)   Implementación</strong></h3>
+                        <p>{{tab.implementacion1}}</p>
+                        <p>{{tab.implementacion2}}</p>
+                        <img src="{{tab.imagen4}}" style="display:block; margin:auto; width: 75%;"><br>
+                        <h5><strong>{{tab.figuraNum4}}</strong>{{tab.figura4}}</h5><br>
+                        <p>{{tab.implementacion3}}</p>
+                        <img src="{{tab.imagen5}}" style="display:block; margin:auto; width: 75%;"><br>
+                        <h5><strong>{{tab.figuraNum5}}</strong>{{tab.figura5}}</h5><br>
+                        <p>{{tab.implementacion4}}</p>
+                        <img src="{{tab.imagen6}}" style="display:block; margin:auto; width: 75%;"><br>
+                        <h5><strong>{{tab.figuraNum6}}</strong>{{tab.figura6}}</h5><br>
+                        <p>{{tab.implementacion5}}</p>
+                        <img src="{{tab.imagen7}}" style="display:block; margin:auto; width: 75%;"><br>
+                        <h5><strong>{{tab.figuraNum7}}</strong>{{tab.figura7}}</h5><br>
+                        <p>{{tab.implementacion6}}</p>
+                        <img src="{{tab.imagen8}}" style="display:block; margin:auto; "><br>
+                        <h5><strong>{{tab.figuraNum8}}</strong>{{tab.figura8}}</h5><br>
+                        <p>{{tab.implementacion7}}</p>
+                        <img src="{{tab.imagen9}}" style="display:block; margin:auto; width: 75%;"><br>
+                        <h5><strong>{{tab.figuraNum9}}</strong>{{tab.figura9}}</h5><br>
+                        <p>{{tab.implementacion8}}</p>
+                        <h5><strong>{{tab.tabla1}}</strong>{{tab.tabladetalle1}}</h5><br>
+                        <TABLE BORDER class="mat-elevation-z8" style="width: 100%; ">
+                            <TR>
+                                <TH>Objeto</TH>
+                                <TH>Propiedad</TH>
+                                <TH>Valor</TH>
+                            </TR>
+                            <tbody *ngFor="let item of tab.tablaDatos1">
+                                <TR ALIGN=center>
+                                    <TD>
+                                        <mathjax [content]=item.Objeto class='box'></mathjax>
+                                    </TD>
+                                    <TD>
+                                        <ul *ngFor="let i of item.Propiedad">
+                                            <li>{{i}}</li>
+                                        </ul>
+                                    </TD>
+                                    <TD>
+                                        <ul *ngFor="let i of item.Valor">
+                                            <li>{{i}}</li>
+                                        </ul>
+                                    </TD>
+                                </TR>
+                            </tbody>
+                        </TABLE><br>
+                        <p>{{tab.implementacion9}}</p>
+                        <img src="{{tab.imagen10}}" style="display:block; margin:auto; width: 75%;"><br>
+                        <h5><strong>{{tab.figuraNum10}}</strong>{{tab.figura10}}</h5><br>
+                        <p>{{tab.implementacion10}}</p>
+                        <p>{{tab.implementacion11}}</p>
+                        <p>{{tab.implementacion12}}</p>
+                        <ul *ngFor="let item of tab.metodos">
+                            <h4><strong>{{item.t}}</strong></h4>
+                            <p>{{item.a}}</p>
+                            <pre><code [highlight]="item.b" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+                        </ul>
+                        <h4><strong>Tips de Programación...</strong>
+                            <mat-icon>wb_incandescent</mat-icon>
+                            <mat-icon>laptop_windows</mat-icon>
+                        </h4>
+                        <hr>
+                        <ul *ngFor="let item of tab.tipsProgramacion">
+                            <p>
+                                <mat-icon>check_circle_outline</mat-icon>{{item.tip}}
+                            </p>
+                        </ul>
+                        <hr>
+                        <p>{{tab.implementacion13}}</p>
+                        <h5><strong>{{tab.tabla2}}</strong>{{tab.tabladetalle2}}</h5><br>
+                        <pre><code [highlight]="tab.tablaDatos2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+                        <p>{{tab.implementacion13}}</p>
+                        <h5><strong>{{tab.tabla3}}</strong>{{tab.tabladetalle3}}</h5><br>
+                        <pre><code [highlight]="tab.tablaDatos3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+                        <br>
+                        <p>{{tab.implementacion15}}</p>
+                        <p>{{tab.implementacion16}}</p>
+                        <p>{{tab.implementacion17}}</p>
+                        <img src="{{tab.imagen11}}" style="display:block; margin:auto; "><br>
+                        <h5><strong>{{tab.figuraNum11}}</strong>{{tab.figura11}}</h5><br>
+                        <img src="{{tab.imagen12}}" style="display:block; margin:auto; width: 75%;"><br>
+                        <h5><strong>{{tab.figuraNum12}}</strong>{{tab.figura12}}</h5><br>
+                        <h3><strong>E)   Pruebas</strong></h3>
+                        <p>{{tab.implementacion18}}</p>
+                        <img src="{{tab.imagen13}}" style="display:block; margin:auto; width: 75%;"><br>
+                        <h5><strong>{{tab.figuraNum13}}</strong>{{tab.figura13}}</h5><br>
+
+                    </mat-tab>
+                </mat-tab-group>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Casos Propustos">
+            <ng-template matTabContent>
+                <br>
+                <p>
+                    Utilizando la herramienta de desarrollo, implementar una aplicación en modo visual que resuelva lo siguiente:
+                </p>
+                <ul>
+                    <li>Crear una interfaz gráfica de usuario con controles visuales (botones, cajas de texto, cajas de grupo, etc.) que permita graficar y realizar los cálculos de áreas y perímetros de las siguientes figuras geométricas:</li>
+                    <ul>
+                        <li>Círculo. </li>
+                        <li>Rectángulo. </li>
+                        <li>Cuadrado. </li>
+                        <li>Líneas. </li>
+                        <li>Triángulos.</li>
+                    </ul>
+                    <li>Validar las opciones en el caso que el usuario ingrese un dato inválido.</li>
+                    <li>Implementar las clases: CCircle, CRectangle, CSquare, CLine, CTriangle, donde cada clase contemple datos y funciones miembros para cada una de las operaciones indicadas anteriormente.</li>
+                    <li>Cada opción deberá llamar a la función correspondiente utilizando un objeto.</li>
+                    <li>Mostrar en controles visuales el resultado de cada operación.</li>
+                </ul>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Evaluación">
+            <ng-template matTabContent>
+                <div class="Evaluacion">
+                    <app-quiz></app-quiz>
+                </div>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Juegos">
+            <ng-template matTabContent>
+                <div class="Snake">
+                    <app-snake></app-snake>
+                </div>
+            </ng-template>
+
+        </mat-tab>
+        <mat-tab label="Resumen">
+            <ng-template matTabContent>
+                <h1>Resumen</h1>
+                <br>
+                <ul>
+                    <li>El compilador de Java traduce el código fuente a código bytecode. El intérprete luego combina el código objeto para producir el programa ejecutable que puede correr sobre un sistema operativo.</li>
+                    <li>Cada programa en lenguaje Java tiene una función principal (main), la cual define el punto de entrada a un programa.</li>
+                    <li>El archivo de la librería de clases System y Scanner contiene un sinnúmero de funciones para entrada y salida de datos. Entre las funciones más importantes para esta sección están la función ‘printf()’, la función ‘println()’, la función
+                        ‘print()’, que son funciones de salida de datos; y el objeto de tipo ‘Scanner’ que maneja varias funciones para entrada de datos. </li>
+                    <li>Una variable permite almacenar un elemento en la memoria de acceso aleatorio (RAM) un valor de algún tipo de dato definido en el lenguaje Java.</li>
+                    <li>Los cinco operadores aritméticos binarios que maneja el lenguaje Java son: suma (+), resta (-), multiplicación (*), división (/), módulo (%).</li>
+                    <li>Los seis operadores relacionales que maneja el lenguaje Java son: igual a (==), no igual a (!=), mayor que (>), menor que (
+                        <), mayor o igual que (>=), menor o igual que (
+                            <=).</li>
+                                <li>Los tres operadores lógicos que maneja el lenguaje Java son: operador lógico AND (&&), operador lógico OR (||), operador lógico de negación NOT (!).</li>
+                                <li>La clase Math, es una librería que tiene funciones para realizar operaciones matemáticas básicas, tales como: funciones trigonométricas, funciones exponenciales, funciones logarítmicas, funciones para calcular la raíz cuadrada,
+                                    funciones para calcular el valor absoluto de un número, etc.</li>
+                                <li>En el lenguaje Java se pueden crear programas que utilicen operadores aritméticos, relacionales y lógicos para resolver problemas de programación.</li>
+                </ul>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Bibliografía">
+            <ng-template matTabContent>
+                <h1>Bibliografía</h1>
+                <br>
+                <ul>
+                    <li>Gosling, J., Joy, B., Steele., G., 1996. The Java Language Specification. Addison Wesley, USA. ISBN: 978-0201634518.</li>
+                    <li>Deitel, P., Deitel, H., 2016. Java. Cómo Programar. Décima Edición. Pearson, México. ISBN: 978-607-32-3802-1.</li>
+                    <li>Luján, J., 2017. Java desde Cero - y prepárate para tu entrevista de trabajo. 1ra Edición, Alfaomega. ISBN: 978-607-622-949-1.</li>
+                    <li>Martín, A., 2010. Programador certificado java 2 - curso práctico. 3ra Edición, Alfaomega. ISBN: 978-607-707-023-8. </li>
+                    <li>Sznajdleder, P., 2016. Java a Fondo. Curso de Programación. Alfaomega. Tercera Edición. ISBN: 978-987-383-211-6.</li>
+                    <li>Ceballos, F.J., 2008. Java 2 - interfaces gráficas y aplicaciones para internet, 3ra Edición, Alfaomega. ISBN: 978-970-15-1412-2.</li>
+                    <li>López, I., 2017. Curso Avanzado de Java - Manual práctico. 1ra Edición, Alfaomega. ISBN: 978-607-622-853-1.</li>
+                    <li>Joyanes, L., Zahonero, I., 2011. Programación en Java 6. Algoritmos y Programación Orientada a Objetos. McGraw-Hill, México. ISBN: 978-607-15-0618-4.</li>
+                    <li>Pérez, A., Quiroz, D., Zambrano, M., Aguilar, K., Parra, P., Guerra, P., Villacís, C., 2014. Programación en Java para Ingenieros. 1era Edición, Dreams Magnet. ISBN: 978-1-940600-69-7.</li>
+                    <li>Dean, J., Dean, R., 2009.Introducción a la Programación con Java. MCGraw-Hill. 1era Edición. ISBN: 978-970-10-7278-3.</li>
+                    <li>Sierra, K., Bates, B., 2005. Head First Java, 2nd Edition. O’Reilly Media. ISBN: 978-0596009205.</li>
+                    <li>Verhas, P., 2018. Java Projects: Learn the fundamentals of Java 11 programming by building industry grade practical projects, 2nd Edition. Packt Publishing. ISBN: 978-1789131895.</li>
+                    <li>Verhas, P., 2017. Java 9 Programming By Example: Your guide to software development. 1st Edition, Packt Publishing. ASIN: B01KOG6SWI. </li>
+                    <li>Baesens, B., Backiel, A., Broucke, S., 2015. Beginning Java Programming: The Object-Oriented Approach. 1st Edition, Wrox. ASIN: B018UF5M36.</li>
+                </ul>
+            </ng-template>
+        </mat-tab>
+    </mat-tab-group>
+
+    <button mat-button (click)="selectTabNext()" *ngIf="positionCurrentNext">{{titleNext}} <mat-icon>navigate_next</mat-icon></button>
+    <button mat-button (click)="selectTabBefore()" *ngIf="positionCurrentBefore"><mat-icon>navigate_before</mat-icon> Atras  &nbsp; &nbsp; &nbsp;&nbsp;</button>
+
+</div>

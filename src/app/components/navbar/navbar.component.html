@@ -1,0 +1,65 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    <div class="brand">
+        <h1><span>{{app_name1}}</span>{{app_name2}}<span>{{app_name3}}</span>{{app_name4}}</h1>
+    </div>
+    <ul style="margin-left:auto; margin-right:0;">
+        <div>
+            <button class="menu-buttonToolbar" *ngIf="!isLogged" routerLink="/user/login">
+                <mat-icon>login</mat-icon>            
+            </button>
+            <button class="menu-buttonToolbar" *ngIf="!isLogged" routerLink="/">
+                <mat-icon>home</mat-icon>            
+            </button>
+            <button class="menu-buttonToolbar" *ngIf="isLogged" (click)="onLogout()">
+                <mat-icon>power_settings_new</mat-icon>            
+            </button>
+            <button class="menu-buttonToolbar" *ngIf="isLogged">
+                <a style="text-decoration: none;" class="menu-buttonToolbar" href="https://miespe.espe.edu.ec/"><mat-icon>home</mat-icon>Mi Espe</a>           
+            </button>
+            <button class="menu-buttonToolbar" *ngIf="isLogged" routerLink="/">
+                <mat-icon>info</mat-icon>            
+            </button>
+            <div class="menu-buttonToolbar searchBox">
+                <input class="menu-buttonToolbar  searchInput" style="background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);;
+                color: white;" type="text" name="" placeholder="Buscar">
+                <button class="menu-buttonToolbar searchButton">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </div>
+        </div>
+    </ul>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8" style="    padding-top: 50px;">
+        <div *ngIf="isLogged">
+            <img class="avatar mat-elevation-z8" src="{{pruebaphoto}}" />
+            <h5 class="name">{{pruebanombre}}</h5>
+            <h4 class="name">{{pruebaemail}}</h4>
+        </div>
+        <div *ngIf="!isLogged">
+            <img class="avatar mat-elevation-z8" src="https://d1bvpoagx8hqbg.cloudfront.net/259/2347b61ae2c02d0f2b100474e2c29f71.jpg" />
+            <h4 class="name">Inicia Sesión</h4>
+            <p class="designation"></p>
+        </div>
+
+        <mat-divider></mat-divider>
+        <mat-nav-list *ngIf="isLogged">
+            <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
+        </mat-nav-list>
+
+        <mat-nav-list *ngIf="!isLogged">
+            <app-menu-list-item *ngFor="let item of navItemsNoLogin" [item]="item"></app-menu-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

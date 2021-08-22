@@ -1,0 +1,28 @@
+<!-- Header -->
+<section id="header">
+    <div class="header container">
+        <div class="nav-bar">
+            <div class="brand">
+                <a href="#hero">
+                    <h1><span>C</span>omp<span>G</span>raf</h1>
+                </a>
+            </div>
+            <div class="nav-list">
+                <div #hamburger class="hamburger">
+                    <div class="bar"></div>
+                </div>
+                <ul>
+                    <li><a href="#" data-after="Home">Home</a></li>
+                    <li><a href="#services" data-after="Acerca">Acerca</a></li>
+                    <li><a href="#contact" data-after="Contacto">Contacto</a></li>
+                    <li><a (click)="onLoginGoogle()" data-after="Ingresar">Ingresar</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Header -->
+<app-hero [items]="carouselData"></app-hero>
+<app-service></app-service>
+<app-contact></app-contact>
+<app-footer></app-footer>

@@ -1,0 +1,46 @@
+.container {
+    height: 370px;
+    /*multiplos de 30 +10*/
+    width: 790px;
+    /*multiplos de 30 +10*/
+    border: 10px solid rgb(104, 121, 58);
+    background-image: url("src/assets/images/Games/snake/fondoCesped.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+
+.start {
+    height: 60px;
+    width: 120px;
+    margin: 0px auto;
+    margin-top: 150px;
+    text-align: center;
+    line-height: 60px;
+    border: 1px transparent rgb(207, 29, 29);
+    border-radius: 30%;
+    background-color: rgb(124, 199, 212);
+    background-origin: border-box;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.start:hover {
+    box-shadow: 0 0 0 12px rgba(0, 0, 0, .1);
+}
+
+.snake {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+}
+
+.snake_head {
+    border-radius: 50%;
+}
+
+.food {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+}
