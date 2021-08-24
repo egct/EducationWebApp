@@ -9,7 +9,7 @@ export const CAROUSEL_DATA_ITEMS: ICarouselItem[] = [
         },
         subtitle: 'COMPGRAF',
         link: '/',
-        image: '../../../assets/images/principal/4.jpg'
+        image: './assets/images/principal/4.jpg'
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ export const CAROUSEL_DATA_ITEMS: ICarouselItem[] = [
         },
         subtitle: '--Jim Ryun',
         link: '/',
-        image: '../../../assets/images/principal/1.jpg'
+        image: './assets/images/principal/1.jpg'
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ export const CAROUSEL_DATA_ITEMS: ICarouselItem[] = [
         },
         subtitle: '--Mahatma Gandhi',
         link: '/',
-        image: '../../../assets/images/principal/2.jpg'
+        image: './assets/images/principal/2.jpg'
     },
     {
         id: 4,
@@ -39,7 +39,7 @@ export const CAROUSEL_DATA_ITEMS: ICarouselItem[] = [
         },
         subtitle: '--Arnold Palmer',
         link: '/',
-        image: '../../../assets/images/principal/3.jpg'
+        image: './assets/images/principal/3.jpg'
     },
     {
         id: 5,
@@ -49,6 +49,6 @@ export const CAROUSEL_DATA_ITEMS: ICarouselItem[] = [
         },
         subtitle: '--Matt Biondi',
         link: '/',
-        image: '../../../assets/images/principal/5.jpg'
+        image: './assets/images/principal/5.jpg'
     }
 ];

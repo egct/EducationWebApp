@@ -109,7 +109,7 @@ rightPosition(){// Juzga si la serpiente golpea la pared
         clearInterval(this.intervalId);
         this.start=false;
         obj.innerHTML="Juego finalizado";
-        body.setAttribute("style","background-image:url('../../../assets/images/Games/snake/gameover.jpg')")
+        body.setAttribute("style","background-image:url('./assets/images/Games/snake/gameover.jpg')")
         this.start=false;
    }
 }
