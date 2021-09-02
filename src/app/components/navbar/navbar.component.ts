@@ -78,7 +78,7 @@ export class NavbarComponent implements OnInit {
    {
     displayName: 'Referencias',
     iconName: 'note',
-    route: ''
+    route: 'user/bibliography'
    },
    {
     displayName: 'Perfil',
@@ -129,5 +129,14 @@ export class NavbarComponent implements OnInit {
     } catch (error) {
       console.log(error);
     }
+  }
+
+  onClick(event) {
+    //    console.log(event);
+    //    console.log(event.srcElement.attributes.id);
+        var idAttr = event.srcElement.attributes.id;
+        var value = idAttr.nodeValue;
+        console.log(value);
+        window.open("https://miespe.espe.edu.ec/", '_blank');//otra pesta;a
   }
 }

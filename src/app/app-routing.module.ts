@@ -9,6 +9,8 @@ import { ChapterIComponent } from './components/user/chapter-i/chapter-i.compone
 import { ChapterIIIComponent } from './components/user/chapter-iii/chapter-iii.component';
 import { ChapterIIComponent } from './components/user/chapter-ii/chapter-ii.component';
 import { PrincipalComponent } from './components/principal/principal.component';
+import { BibliographyComponent } from './components/user/bibliography/bibliography.component';
+import { HelpComponent } from './components/user/help/help.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,6 +23,8 @@ const routes: Routes = [
     {path: 'chapterII', component: ChapterIIComponent},
     {path: 'chapterIII', component: ChapterIIIComponent}
   ]},
+  { path: 'user/help', component: HelpComponent },
+  { path: 'user/bibliography', component: BibliographyComponent },
   { path: '**', component: Page404Component }
 ];
 

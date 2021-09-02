@@ -44,6 +44,9 @@ import { MathjaxComponent } from './components/mathjax/mathjax.component';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { BackgroundDirective } from './components/quiz/background.directive';
+import { PageMaintenanceComponent } from './components/page-maintenance/page-maintenance.component';
+import { HelpComponent } from './components/user/help/help.component';
+import { BibliographyComponent } from './components/user/bibliography/bibliography.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +69,10 @@ import { BackgroundDirective } from './components/quiz/background.directive';
     SnakeComponent,
     MathjaxComponent,
     QuizComponent,
-    BackgroundDirective
+    BackgroundDirective,
+    PageMaintenanceComponent,
+    HelpComponent,
+    BibliographyComponent
   ],
   imports: [
     BrowserModule,

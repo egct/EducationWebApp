@@ -38,12 +38,12 @@
             <table>
                 <tr>
                     <td>
-                        <button class="menu-buttonToolbar" *ngIf="isLogged">
-                        <a style="text-decoration: none;" class="menu-buttonToolbar" href="https://miespe.espe.edu.ec/"><mat-icon>home</mat-icon>Mi Espe</a>           
+                        <button class="menu-buttonToolbar" *ngIf="isLogged" (click)="onClick($event)">
+                        <a style="text-decoration: none;" class="menu-buttonToolbar" id="MyRef1"><mat-icon>home</mat-icon>Mi Espe</a>           
                         </button>
                     </td>
                     <td>
-                        <button class="menu-buttonToolbar" *ngIf="isLogged" routerLink="/">
+                        <button class="menu-buttonToolbar" *ngIf="isLogged" routerLink="user/help">
                             <mat-icon>info</mat-icon>            
                         </button>
                     </td>
