@@ -11,15 +11,24 @@
         <h1><span>{{app_name1}}</span>{{app_name2}}<span>{{app_name3}}</span>{{app_name4}}</h1>
     </div>
     <ul style="margin-left:auto; margin-right:0;">
-        <div>
-            <div class="menu-buttonToolbar searchBox">
-                <input class="menu-buttonToolbar  searchInput" style="background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);;
-                color: white;" type="text" name="" placeholder="Buscar">
-                <button class="menu-buttonToolbar searchButton">
-                    <mat-icon>search</mat-icon>
-                </button>
-            </div>
-        </div>
+        <table>
+            <tr>
+                <td>
+                    <div class="menu-buttonToolbar searchBox">
+                        <input class="menu-buttonToolbar  searchInput" style="background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);;
+                        color: white;" type="text" name="" placeholder="Buscar">
+                        <button class="menu-buttonToolbar searchButton">
+                            <mat-icon>search</mat-icon>
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    <button class="menu-buttonToolbar" *ngIf="isLogged" (click)="onLogout()">
+                        <mat-icon>power_settings_new</mat-icon>            
+                    </button>
+                </td>
+            </tr>
+        </table>
     </ul>
 </mat-toolbar>
 <mat-sidenav-container>
@@ -44,12 +53,7 @@
                     </td>
                     <td>
                         <button class="menu-buttonToolbar" *ngIf="isLogged" routerLink="user/help">
-                            <mat-icon>info</mat-icon>            
-                        </button>
-                    </td>
-                    <td>
-                        <button class="menu-buttonToolbar" *ngIf="isLogged" (click)="onLogout()">
-                            <mat-icon>power_settings_new</mat-icon>            
+                            <a style="text-decoration: none;" class="menu-buttonToolbar"><mat-icon>info</mat-icon>Ayuda</a>            
                         </button>
                     </td>
                 </tr>
