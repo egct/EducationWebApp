@@ -1,0 +1,118 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Fjalla One', sans-serif;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+.container {
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+.section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+.section-title span {
+    color: crimson;
+}
+.gallery-top {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.accordion {
+    max-width: 990px;
+    background: rgba(0, 0, 0, 0.10);
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+    flex-direction: row;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+.box {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    background-position: left;
+    background-size: cover;
+    transition: .7s;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+}
+.box:hover{
+    flex: 7;
+    height: 400px;
+}
+.a1 {
+    background-image: url(../../../../assets/images/principal/img-1.png);
+}
+.a2 {
+    background-image: url(../../../../assets/images/principal/g_a.gif)
+}
+.a3 {
+    background-image: url(../../../../assets/images/principal/p_g.gif);
+    color: #fff;
+}
+.a4 {
+    background-image: url(../../../../assets/images/principal/frac.gif);
+    color: #fff;
+}
+.a5 {
+    background-image: url(../../../../assets/images/principal/5.jpg); 
+}
+p {
+    font-weight: normal;
+    font-family: 'Exo 2', sans-serif;
+}
+.text {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    padding: 10px;
+}
+.box:hover .text{
+    opacity:1;
+}
+
+
+/* Media Query For Tablet >> pantalla normal*/
+
+@media only screen and (max-width: 1000px){
+    body{
+        margin: 0;
+    }
+    .accordion {
+        flex-direction: column;
+        height: 700px;
+        box-shadow: none;
+    }
+    .box {
+        box-shadow: none;
+    }
+    .box:hover {
+        flex: 7;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Media Query For Desktop */
+
+@media only screen and (min-width: 1200px) {
+    /* End header */
+    #contact .contact-bottom .contac-item {
+        flex-basis: 29%;
+        margin: 1.5%;
+    }
+}

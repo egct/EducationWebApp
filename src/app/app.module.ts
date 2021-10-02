@@ -47,6 +47,7 @@ import { BackgroundDirective } from './components/quiz/background.directive';
 import { PageMaintenanceComponent } from './components/page-maintenance/page-maintenance.component';
 import { HelpComponent } from './components/user/help/help.component';
 import { BibliographyComponent } from './components/user/bibliography/bibliography.component';
+import { GalleryComponent } from './components/principal/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { BibliographyComponent } from './components/user/bibliography/bibliograp
     BackgroundDirective,
     PageMaintenanceComponent,
     HelpComponent,
-    BibliographyComponent
+    BibliographyComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
