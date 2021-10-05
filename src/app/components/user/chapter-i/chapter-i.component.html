@@ -19,13 +19,13 @@
                 <h1>Introducción</h1>
                 <p>La computación gráfica es una de las áreas de la informática visual, donde se utilizan las computadoras para generar imágenes o gráficos sintéticamente para integrar o cambiar la información visual y espacial del mundo real. La computación
                     gráfica se aplica en la creación de: motores gráficos, motores de videojuegos, modelamiento de objetos 2D y 3D, efectos especiales para películas, procesamiento de imágenes, procesamiento de video, visión por computadora, entre otros
-                    (Fuente).
+                    (Shirley, P., Ashikhmin, M., 2009).
                 </p>
                 <p>El padre de la computación gráfica es el científico de la computación Ivan Sutherland. A Ivan Sutherland le tomó varios años desarrollar el Sketckpad que fue un programa informático creado en 1963 que permitía la manipulación directa de
                     objetos gráficos, así como la interacción persona-computadora y fue el predecesor de los programas de diseño asistido por computadora o computer-aided design (CAD). Ivan Sutherland recibió a lo largo de su vida recibió varios premios
                     y reconocimientos como el Premio Turing de la Asociación de Maquinaria Computacional, el cual es considerado el premio más importante en las ciencias de la computación, en 1988. En el 2012 recibió el Premio Kioto de Tecnología Avanzada
                     por “logros pioneros en el desarrollo de la computación gráfica e interfaces interactivas”. Además, este científico de la computación es miembro de Academia Nacional de Ingeniería de Estados Unidos, así como de la Academia Nacional
-                    de Ciencias de Estados Unidos (Fuente).</p>
+                    de Ciencias de Estados Unidos (Hughes, J.F., et al., 2013).</p>
                 <p>La computación gráfica cubre conceptos y aspectos relacionados a las matemáticas, cálculo y geometría aplicada a la computación. En muchas aplicaciones se necesitan manejar puntos, líneas, figuras geométricas y polígonos para representar
                     objetos y modelos en 2D y 3D.</p>
             </ng-template>
@@ -35,61 +35,122 @@
                 <br>
                 <h1>Objetivos</h1>
                 <ul>
-                    <li>Crear, compilar, enlazar y ejecutar programas básicos en C#.</li>
-                    <li>Entender la estructura básica de un programa en C#.</li>
-                    <li>Aprender el funcionamiento de las funciones básicas de entrada y salida de datos.</li>
-                    <li>Entender el concepto de variable y tipos de datos.</li>
-                    <li>Revisar los operadores aritméticos, relacionales y lógicos que maneja el lenguaje C#.</li>
-                    <li>Revisar las principales fórmulas matemáticas que maneja el lenguaje C#.</li>
-                    <li>Diseñar y crear programas en lenguaje Java utilizando operadores aritméticos, relacionales y lógicos.</li>
+                    <li>Revisar los principales conceptos en torno a algoritmos para la solución de problemas de gráficas por computadora, enfocados a figuras geométricas.</li>
+                    <li>Entender cómo trabajan los algoritmos y las gráficas por computadora con el lenguaje C# en la construcción de programas, enfocados a figuras geométricas. </li>
+                    <li>Aprender a crear algoritmos de gráficas por computadora en Pseudocódigo y en el lenguaje C#, enfocados a figuras geométricas.</li>
+                    <li>Diseñar y crear programas con gráficas por computadora en el lenguaje C# y programación orientada a objetos con interfaces gráficas de usuario, enfocados a figuras geométricas.</li>
+                    <li>Resolver casos de estudio y pracniques con algoritmos y programación orientada a objetos aplicados a los fundamentos de la Computación Gráfica.</li>
                 </ul>
             </ng-template>
         </mat-tab>
         <mat-tab label="Teoría">
             <ng-template matTabContent>
                 <br>
-                <h1>Píxeles, Coordenadas y Figuras Geométricas</h1>
+                <h1>1.1. Píxeles, Coordenadas y Figuras Geométricas</h1>
                 <p>La forma más conveniente de especificar un segmento de línea en la pantalla de una computadora es proporcionando las coordenadas de sus dos puntos finales. En matemáticas, las coordenadas son números reales, pero las rutinas primitivas
                     de dibujo de líneas pueden requerir que sean enteros. Este es el caso, por ejemplo, en el lenguaje C#, que se utilizará a lo largo de este libro. El componente o subsistema GDI (Graphics Device Interface) trabaja junto con el núcleo
-                    y la API de Windows. Esta interfaz de programación de aplicaciones se encarga del control gráfico de los dispositivos de salida, como los monitores o las impresoras. Las tareas más comunes de GDI son:</p>
+                    y la API de Windows (Steeb, W.H., Hardy, A., 2008). Esta interfaz de programación de aplicaciones se encarga del control gráfico de los dispositivos de salida, como los monitores o las impresoras. Las tareas más comunes de GDI son:</p>
                 <ul>
                     <li>El dibujo de líneas, curvas, polígonos;</li>
                     <li>El relleno de cuadros, círculos, polígonos, etcétera;</li>
                     <li>Se encarga del renderizado de fuentes y textos;</li>
                     <li>Se encarga del manejo de paletas de colores.</li>
                 </ul>
+                <h2>Graficación de Líneas</h2>
                 <p>El componente GDI proporciona la clase Graphics que contiene el método DrawLine, que se lo utiliza de la siguiente manera para dibujar el segmento de línea que conecta A y B:</p>
                 <mathjax [content]='"$g.DrawLine\\left(xA, yA, xB, yB\\right);$"' class='box'></mathjax><br>
-                <p>El contexto gráfico g delante del método normalmente se proporciona como un parámetro del método de dibujo en el programa, y los cuatro argumentos de DrawLine son enteros, que van desde cero hasta algún valor máximo. La llamada anterior
-                    a DrawLine produce exactamente la misma salida en la pantalla que esta, donde se conecta B y A:</p>
+                <p>El contexto gráfico g delante del método normalmente se proporciona como un parámetro del método de dibujo en el programa, y los cuatro argumentos de DrawLine son enteros, que van desde cero hasta algún valor máximo (Ammeraal, L., Zhang,
+                    K., 2017). La llamada anterior a DrawLine produce exactamente la misma salida en la pantalla que esta, donde se conecta B y A:</p>
                 <mathjax [content]='"$g.DrawLine\\left(xB, yB, xA, yA\\right);$"' class='box'></mathjax><br>
                 <img src="./assets/images/Capitulos/I/media/image2.png" style="display:block; margin:auto; "><br>
                 <h5><strong>Figura 1.1. </strong>Dibujo de una línea a través de dos puntos.</h5><br>
+                <h2>Graficación de Rectángulos</h2>
                 <p>Para graficar un rectángulo se utiliza el contexto g con la función DrawRectangle, y se pueden utilizar cinco parámetros como son la pluma de dibujo, las coordenadas iniciales a partir de donde se grafica el rectángulo, el valor del ancho
-                    y el largo del rectángulo.</p>
+                    y el largo del rectángulo (Ammeraal, L., Zhang, K., 2017).</p>
                 <mathjax [content]='"$g.DrawRectangle\\left(Pen, 0, 0, Width, Height\\right);$"' class='box'></mathjax><br>
                 <img src="./assets/images/Capitulos/I/media/image3.png" style="display:block; margin:auto; "><br>
                 <h5><strong>Figura 1.2. </strong>Dibujo de un rectángulo.</h5><br>
-                <p>Para graficar un cuadrado se utiliza el contexto g con la función DrawRectangle, y se pueden utilizar cinco parámetros como son la pluma de dibujo, las coordenadas iniciales a partir de donde se grafica el cuadrado. En este caso el valor
-                    del ancho y del largo son iguales, por lo que se coloca en ambos parámetros el valor del lado del cuadrado, puesto que el cuadrado es un caso especial del rectángulo.</p>
+                <h2>Graficación de Cuadrados</h2>
+                <p>Para graficar un cuadrado se utiliza el contexto g con la función DrawRectangle, y se pueden utilizar cinco parámetros como son la pluma de dibujo, las coordenadas iniciales a partir de donde se grafica el cuadrado (Lengyel, E., 2011).
+                    En este caso el valor del ancho y del largo son iguales, por lo que se coloca en ambos parámetros el valor del lado del cuadrado, puesto que el cuadrado es un caso especial del rectángulo.</p>
                 <mathjax [content]='"$g.DrawRectangle\\left(Pen, 0, 0, Side, Side\\right);$"' class='box'></mathjax><br>
                 <img src="./assets/images/Capitulos/I/media/image4.png" style="display:block; margin:auto; "><br>
                 <h5><strong>Figura 1.3. </strong>Dibujo de un cuadrado a partir de un rectángulo.</h5><br>
+                <h2>Graficación de Elipses</h2>
                 <p>Para graficar una elipse se utiliza el contexto g con la función DrawEllipse, y se pueden utilizar cinco parámetros como son la pluma de dibujo, las coordenadas iniciales a partir de donde se grafica la elipse, el valor del ancho y el
-                    largo de la elipse.</p>
+                    largo de la elipse (Ammeraal, L., Zhang, K., 2017).</p>
                 <mathjax [content]='"$g.DrawEllipse\\left(Pen, 0, 0, Width, Height\\right);$"' class='box'></mathjax><br>
                 <img src="./assets/images/Capitulos/I/media/image5.png" style="display:block; margin:auto; "><br>
                 <h5><strong>Figura 1.4. </strong>Dibujo de una elipse.</h5><br>
-                <p>Para graficar un círculo se utiliza el contexto g con la función DrawEllipse, y se pueden utilizar cinco parámetros como son la pluma de dibujo, las coordenadas iniciales a partir de donde se grafica el círculo. En este caso el valor del
-                    ancho y del largo de la elipse son iguales y equivalentes al diámetro del círculo, por lo que se coloca en ambos parámetros el valor del diámetro del círculo, puesto que el círculo es un caso especial de la elipse.</p>
+                <h2>Graficación de Círculos</h2>
+                <p>Para graficar un círculo se utiliza el contexto g con la función DrawEllipse, y se pueden utilizar cinco parámetros como son la pluma de dibujo, las coordenadas iniciales a partir de donde se grafica el círculo (Lengyel, E., 2011). En
+                    este caso el valor del ancho y del largo de la elipse son iguales y equivalentes al diámetro del círculo, por lo que se coloca en ambos parámetros el valor del diámetro del círculo, puesto que el círculo es un caso especial de la elipse.</p>
                 <mathjax [content]='"$g.DrawEllipse\\left(Pen, 0, 0, Diameter, Diameter\\right);$"' class='box'></mathjax><br>
                 <img src="./assets/images/Capitulos/I/media/image6.png" style="display:block; margin:auto; "><br>
                 <h5><strong>Figura 1.5. </strong>Dibujo de un círculo a partir de una elipse.</h5><br>
+                <h2>Ejes Coordenados por Pantalla</h2>
                 <p>El eje de coordenadas por pantalla del mundo de la computación gráfica es un eje en el cual se conserva el eje positivo de las ‘x’ hacia la derecha tal y como el del mundo real, pero el eje positivo de las ‘y’ es hacia abajo, debido a
                     que el estándar de fabricación de los monitores y pantallas se basa en el movimiento de los electrones desde arriba hacia abajo y desde la izquierda hacia la derecha aplicando los principios de la energía potencial eléctrica, donde
                     el origen de coordenadas C(0,0) está en la esquina superior izquierda.</p>
                 <img src="./assets/images/Capitulos/I/media/image7.png" style="display:block; margin:auto; width: 100%;"><br>
                 <h5><strong>Figura 1.6. </strong>Eje de coordenadas del mundo real y del mundo de la Computación Gráfica. </h5><br>
+                <br>
+                <h1>1.2. Pinceles y Relleno de Figuras en GDI+</h1>
+                <p>La interfaz de programación de aplicaciones GDI+, proporciona una serie de clases de pincel (brush) para rellenar los interiores de figuras geométricas cerradas como: círculos, elipses, rectángulos, cuadrados, triángulos y polígonos. Una
+                    figura cerrada consta de un entorno (outline) y un interior, donde el contorno se dibuja con un bolígrafo (pen) y el interior se rellena con un pincel (brush). Para el relleno de figuras cerradas se pueden utilizar las clases: SolidBrush,
+                    HatchBrush, TextureBrush, LinearGradientBrush y PathGradientBrush, donde todas estas clases se derivan de la clase Brush (Steeb, W.H., Hardy, A., 2008). La Figura 1.7 muestra un rectángulo relleno con un pincel sólido y una elipse
+                    rellena con un pincel de sombreado.</p>
+                <img src="./assets/images/Capitulos/I/media/image008.gif" style="display:block; margin:auto;"><br>
+                <h5><strong>Figura 1.7. </strong>Rectángulo relleno y elipse rellena.</h5><br>
+                <p>Una figura cerrada, como un rectángulo o una elipse, consta de un contorno y un interior. El contorno se dibuja con un bolígrafo (pen) y el interior se rellena con un pincel (brush). GDI+ proporciona varias clases de pincel para rellenar
+                    los interiores de formas cerradas: SolidBrush, HatchBrush, TextureBrush, LinearGradientBrush y PathGradientBrush. Todas estas clases heredan de la clase Brush. La siguiente ilustración muestra un rectángulo relleno con un pincel sólido
+                    y una elipse rellena con un pincel de sombreado.</p>
+                <h2>Pinceles Sólidos (Solid Brushes)</h2>
+                <p>Para rellenar una figura geométrica cerrada se debe utilizar un objeto de la clase Graphics y un pincel de la clase Brush. El objeto de la clase Graphics proporciona métodos como: FillRectangle, FillEllipse y FillPolygon (Steeb, W.H.,
+                    Hardy, A., 2008). El objeto de la clase Brush almacena los atributos del relleno como el color. El objeto pincel (brush) se envía como uno de los argumentos a los parámetros de la función: FillRectangle, FillEllipse y FillPolygon.
+                    El siguiente código de ejemplo muestra cómo rellenar un rectángulo con un color azul sólido:</p>
+                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f1" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
+                <h2>Pinceles de Sombreado o de Escotilla (Hatch Brushes)</h2>
+                <p>Para rellenar una figura geométrica con un pincel de sombreado, se debe especificar un color de primer plano, un color de fondo y un estilo de sombreado, donde el color de primer plano es el color de la trama (hatching). La interfaz de
+                    programación de aplicaciones GDI+, proporciona más de 50 estilos de sombreado (Steeb, W.H., Hardy, A., 2008). Un código de ejemplo se muestra a continuación con un estilo de sombreado Vertical:</p>
+                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
+                <p>La Figura 1.8 muestra tres ejemplos de pinceles de sombreado: Horizontal, Diagonal hacia adelante (ForwardDiagonal) y Cruz (Cross).</p>
+                <img src="./assets/images/Capitulos/I/media/image009.gif" style="display:block; margin:auto;"><br>
+                <h5><strong>Figura 1.8. </strong>Ejemplos de pinceles de sombreado.</h5><br>
+                <h2>Pinceles de Textura (Texture Brushes)</h2>
+                <p>Para rellenar una figura geométrica con una textura almacenada en un mapa de bits (bitmap), se puede utilizar un pincel de textura (Steeb, W.H., Hardy, A., 2008). Así, por ejemplo, si se tiene una imagen almacenada en un archivo en el
+                    disco duro llamado MyTexture.bmp, se puede asignar a una elipse un relleno con esta imagen. El siguiente código de ejemplo muestra lo expuesto:</p>
+                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
+                <p>La Figura 1.9 muestra la elipse rellena con una imagen de un archivo de mapa de bits.</p>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="./assets/images/Capitulos/I/media/image010.gif" style="display:block; margin:auto; width: 45%;"><br>
+                            <h5><strong>a) </strong>Imagen MyTexture.bmp</h5><br>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <img src="./assets/images/Capitulos/I/media/image011.gif" style="display:block; margin:auto;"><br>
+                            <h5><strong>b) </strong>Elipse rellena con una imagen</h5><br>
+                        </td>
+                    </tr>
+                </table>
+                <h5><strong>Figura 1.9. </strong>Ejemplo de relleno de una elipse con una imagen.</h5><br>
+                <h2>Pinceles de Degradado (Gradient Brushes)</h2>
+                <p>Para rellenar una figura geométrica con un pincel de degradado, se debe especificar un primer color de plano que cambia gradualmente a un segundo color de plano a medida que se mueve a lo largo de la figura geométrica de manera horizontal,
+                    vertical o diagonalmente (Steeb, W.H., Hardy, A., 2008). La interfaz de programación de aplicaciones GDI+, proporciona dos tipos de pinceles de degradado que son el lineal y el de ruta. El siguiente código de ejemplo muestra cómo rellenar
+                    una elipse con un pincel de degradado horizontal que cambia de azul a verde a medida que se mueve desde el borde izquierdo de la elipse al borde derecho.</p>
+                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f4" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
+                <p>La Figura 1.10 muestra la elipse rellena con un pincel de degradado.</p>
+                <img src="./assets/images/Capitulos/I/media/image012.gif" style="display:block; margin:auto;"><br>
+                <h5><strong>Figura 1.10. </strong>Ejemplo de relleno de una elipse con un pincel de degradado.</h5><br>
+                <h2>Relleno de un Polígono (Fill Polygon)</h2>
+                <p>Para rellenar un polígono se debe cumplir con los siguientes pasos: 1) Crear un objeto de tipo pincel (brush) con un color de relleno; 2) Crear un arreglo de puntos (Point/PointF) para definir un polígono; 3) Rellenar el área poligonal
+                    correspondiente al polígono pintado en la pantalla, utilizando la función FillPolygon (Steeb, W.H., Hardy, A., 2008). El siguiente código de ejemplo está diseñado para su uso con Windows Forms y requiere un objeto ‘e’ de tipo PaintEventArgs,
+                    que es un parámetro del controlador del evento Paint.</p>
+                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f5" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
+
             </ng-template>
         </mat-tab>
         <mat-tab label="Video Tutorial">
@@ -137,6 +198,7 @@
                                 <mathjax [content]=item class='box'></mathjax>
                             </li>
                         </ul>
+                        <img src="{{tab.imagenCaso5}}" style="display:block; margin:auto; width: 75%;"><br>
                         <img src="{{tab.imagen1}}" style="display:block; margin:auto; "><br>
                         <h5><strong>{{tab.figuraNum1}}</strong>{{tab.figura1}}</h5><br>
                         <h3><strong>B)   Análisis</strong></h3>
@@ -157,12 +219,12 @@
                         </table>
                         <h4><strong>B.2) Diagrama de Entrada-Salida</strong></h4>
                         <p>{{tab.diagramaES}}</p>
-                        <img src="{{tab.imagen2}}" style="display:block; margin:auto; "><br>
+                        <img src="{{tab.imagen2}}" style="display:block; margin:auto; width: 75%;"><br>
                         <h5><strong>{{tab.figuraNum2}}</strong>{{tab.figura2}}</h5><br>
                         <h4><strong>B.3) Diagrama de Clases</strong></h4>
                         <p>{{tab.diagramaC1}}</p>
                         <p>{{tab.diagramaC2}}</p>
-                        <img src="{{tab.imagen3}}" style="display:block; margin:auto; "><br>
+                        <img src="{{tab.imagen3}}" style="display:block; margin:auto; width: 75%;"><br>
                         <h5><strong>{{tab.figuraNum3}}</strong>{{tab.figura3}}</h5><br>
                         <h3><strong>C)   Diseño</strong></h3>
                         <p>{{tab.diseno}}</p>
@@ -170,6 +232,7 @@
                             <h4><strong>{{item.t}}</strong></h4>
                             <p>{{item.a}}</p>
                             <p>{{item.b}}</p>
+                            <p>{{item.c}}</p>
                             <p>{{item.d}}</p>
                             <p>{{item.e}}</p>
                             <p>{{item.f}}</p>
@@ -214,14 +277,14 @@
                         <img src="{{tab.imagen7}}" style="display:block; margin:auto; width: 75%;"><br>
                         <h5><strong>{{tab.figuraNum7}}</strong>{{tab.figura7}}</h5><br>
                         <p>{{tab.implementacion6}}</p>
-                        <img src="{{tab.imagen8}}" style="display:block; margin:auto; "><br>
+                        <img src="{{tab.imagen8}}" style="display:block; margin:auto; width: 75%;"><br>
                         <h5><strong>{{tab.figuraNum8}}</strong>{{tab.figura8}}</h5><br>
                         <p>{{tab.implementacion7}}</p>
                         <img src="{{tab.imagen9}}" style="display:block; margin:auto; width: 75%;"><br>
                         <h5><strong>{{tab.figuraNum9}}</strong>{{tab.figura9}}</h5><br>
                         <p>{{tab.implementacion8}}</p>
                         <h5><strong>{{tab.tabla1}}</strong>{{tab.tabladetalle1}}</h5><br>
-                        <TABLE BORDER class="mat-elevation-z8" style="width: 100%; ">
+                        <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
                             <TR>
                                 <TH>Objeto</TH>
                                 <TH>Propiedad</TH>
@@ -231,6 +294,7 @@
                                 <TR ALIGN=center>
                                     <TD>
                                         <mathjax [content]=item.Objeto class='box'></mathjax>
+
                                     </TD>
                                     <TD>
                                         <ul *ngFor="let i of item.Propiedad">
@@ -292,24 +356,136 @@
         </mat-tab>
         <mat-tab label="Casos Propustos">
             <ng-template matTabContent>
-                <br>
-                <p>
-                    Utilizando la herramienta de desarrollo, implementar una aplicación en modo visual que resuelva lo siguiente:
-                </p>
-                <ul>
-                    <li>Crear una interfaz gráfica de usuario con controles visuales (botones, cajas de texto, cajas de grupo, etc.) que permita graficar y realizar los cálculos de áreas y perímetros de las siguientes figuras geométricas:</li>
-                    <ul>
-                        <li>Círculo. </li>
-                        <li>Rectángulo. </li>
-                        <li>Cuadrado. </li>
-                        <li>Líneas. </li>
-                        <li>Triángulos.</li>
-                    </ul>
-                    <li>Validar las opciones en el caso que el usuario ingrese un dato inválido.</li>
-                    <li>Implementar las clases: CCircle, CRectangle, CSquare, CLine, CTriangle, donde cada clase contemple datos y funciones miembros para cada una de las operaciones indicadas anteriormente.</li>
-                    <li>Cada opción deberá llamar a la función correspondiente utilizando un objeto.</li>
-                    <li>Mostrar en controles visuales el resultado de cada operación.</li>
-                </ul>
+                <mat-tab-group>
+                    <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
+                    <mat-tab *ngFor="let tab of casosPropuesto" label="{{tab.label}}">
+                        <br>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h2 style="color:green;"><strong>{{tab.tituloN}}</strong></h2>
+                                </td>
+                                <td>
+                                    <h2>{{tab.titulo}}</h2>
+                                </td>
+                            </tr>
+                        </table>
+                        <h3><strong>{{tab.subtitulo}}</strong></h3>
+                        <p>{{tab.problema}}</p>
+                        <p>{{tab.tareaDescrip}}</p>
+                        <ul *ngFor="let item of tab.tareas">
+                            <p>{{item.tarea}}</p>
+                        </ul>
+                        <img src="{{tab.fotoPath}}" style="display:block; margin:auto; width: 50%;"><br>
+                        <h5><strong>{{tab.fotoN}}</strong>{{tab.fotoDescrip}}</h5><br>
+                    </mat-tab>
+                </mat-tab-group>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Praqniques">
+            <ng-template matTabContent>
+                <mat-tab-group>
+                    <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
+                    <mat-tab *ngFor="let tab of praqnique" label="{{tab.label}}">
+                        <br>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h2 style="color:green;"><strong>{{tab.tituloN}}</strong></h2>
+                                </td>
+                                <td>
+                                    <h2>{{tab.titulo}}</h2>
+                                </td>
+                            </tr>
+                        </table>
+                        <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                            <TR>
+                                <TABLE>
+                                    <TR><strong>SINOPSIS</strong></TR>
+                                    <TR>{{tab.sinopsisDescrip}}</TR>
+                                </TABLE>
+                            </TR>
+                            <TR>
+                                <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                                    <TR *ngFor="let item of tab.sinopsis">
+                                        <TD><strong>{{item.titulo}}</strong>{{item.descrip}}</TD>
+                                    </TR>
+                                </TABLE>
+                            </TR>
+                        </TABLE><br>
+                        <h3><strong>{{tab.A.subtitulo}}</strong></h3>
+                        <p>{{tab.A.problema}}</p>
+                        <img src="{{tab.A.fotoPath}}" style="display:block; margin:auto; width: 50%;"><br>
+                        <h5><strong>{{tab.A.fotoN}}</strong>{{tab.A.fotoDescrip}}</h5><br>
+                        <h3><strong>{{tab.B.subtitulo}}</strong></h3>
+                        <p>{{tab.B.problema}}</p>
+                        <img src="{{tab.B.fotoPath}}" style="display:block; margin:auto; width: 50%;"><br>
+                        <h5><strong>{{tab.B.fotoN}}</strong>{{tab.B.fotoDescrip}}</h5><br>
+                        <ul *ngFor="let itemPasos of tab.B.listaB">
+                            <p>{{itemPasos.parrafo}}</p>
+                            <TABLE BORDER CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                                <TR *ngFor="let t of itemPasos.tabla">
+                                    <TD><img src="{{t.fotoPath}}" style="display:block; margin:auto; "></TD>
+                                    <TD>
+                                        <ul *ngFor="let f of t.formulas">
+                                            <mathjax [content]=f class='box'></mathjax><br>
+                                        </ul>
+                                    </TD>
+                                </TR>
+                            </TABLE>
+                            <h4><strong>{{itemPasos.teorema}}</strong></h4>
+                            <ul *ngFor="let k of itemPasos.formulas">
+                                <mathjax [content]=k class='box'></mathjax><br>
+                            </ul>
+                        </ul>
+                        <h3><strong>{{tab.C.subtitulo}}</strong></h3>
+                        <dl *ngFor="let itemAlgoritmos of tab.C.algoritmosC">
+                            <dt>{{itemAlgoritmos.titulo}}</dt>
+                            <dd>
+                                <ol *ngFor="let p of itemAlgoritmos.pasos; index as i">
+                                    <li value="{{i+1}}">{{p}}</li>
+                                </ol>
+                                <ol *ngFor="let p of itemAlgoritmos.pasosFormulas; index as i">
+                                    <li value="{{i+1}}">{{p}}</li>
+                                </ol>
+                            </dd>
+                        </dl>
+                        <h3><strong>{{tab.D.subtitulo}}</strong></h3>
+                        <div *ngFor="let itemCodigos of tab.D.listaCodigo">
+                            <p>{{itemCodigos.problema}}</p>
+                            <h5><strong>{{itemCodigos.tablaN}}</strong>{{itemCodigos.tablaDescrip}}</h5><br>
+                            <pre><code [highlight]="itemCodigos.tablaDatos" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
+                        </div>
+                        <h3><strong>{{tab.E.subtitulo}}</strong></h3>
+                        <p>{{tab.E.problema}}</p>
+                        <img src="{{tab.E.fotoPath}}" style="display:block; margin:auto; width: 75%;"><br>
+                        <h5><strong>{{tab.E.fotoN}}</strong>{{tab.E.fotoDescrip}}</h5><br>
+                    </mat-tab>
+                </mat-tab-group>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Praqniques Propuestos">
+            <ng-template matTabContent>
+                <mat-tab-group>
+                    <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
+                    <mat-tab *ngFor="let tab of praqniquePropuesto" label="{{tab.label}}">
+                        <br>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h2 style="color:green;"><strong>{{tab.tituloN}}</strong></h2>
+                                </td>
+                                <td>
+                                    <h2>{{tab.titulo}}</h2>
+                                </td>
+                            </tr>
+                        </table>
+                        <h3><strong>{{tab.subtitulo}}</strong></h3>
+                        <p>{{tab.problema}}</p>
+                        <img src="{{tab.fotoPath}}" style="display:block; margin:auto; width: 50%;"><br>
+                        <h5><strong>{{tab.fotoN}}</strong>{{tab.fotoDescrip}}</h5><br>
+                    </mat-tab>
+                </mat-tab-group>
             </ng-template>
         </mat-tab>
         <mat-tab label="Evaluación">
@@ -332,19 +508,15 @@
                 <br>
                 <h1>Resumen</h1>
                 <ul>
-                    <li>El compilador de Java traduce el código fuente a código bytecode. El intérprete luego combina el código objeto para producir el programa ejecutable que puede correr sobre un sistema operativo.</li>
-                    <li>Cada programa en lenguaje Java tiene una función principal (main), la cual define el punto de entrada a un programa.</li>
-                    <li>El archivo de la librería de clases System y Scanner contiene un sinnúmero de funciones para entrada y salida de datos. Entre las funciones más importantes para esta sección están la función ‘printf()’, la función ‘println()’, la función
-                        ‘print()’, que son funciones de salida de datos; y el objeto de tipo ‘Scanner’ que maneja varias funciones para entrada de datos. </li>
-                    <li>Una variable permite almacenar un elemento en la memoria de acceso aleatorio (RAM) un valor de algún tipo de dato definido en el lenguaje Java.</li>
-                    <li>Los cinco operadores aritméticos binarios que maneja el lenguaje Java son: suma (+), resta (-), multiplicación (*), división (/), módulo (%).</li>
-                    <li>Los seis operadores relacionales que maneja el lenguaje Java son: igual a (==), no igual a (!=), mayor que (>), menor que (
-                        <), mayor o igual que (>=), menor o igual que (
-                            <=).</li>
-                                <li>Los tres operadores lógicos que maneja el lenguaje Java son: operador lógico AND (&&), operador lógico OR (||), operador lógico de negación NOT (!).</li>
-                                <li>La clase Math, es una librería que tiene funciones para realizar operaciones matemáticas básicas, tales como: funciones trigonométricas, funciones exponenciales, funciones logarítmicas, funciones para calcular la raíz cuadrada,
-                                    funciones para calcular el valor absoluto de un número, etc.</li>
-                                <li>En el lenguaje Java se pueden crear programas que utilicen operadores aritméticos, relacionales y lógicos para resolver problemas de programación.</li>
+                    <li>El componente o subsistema GDI (Graphics Device Interface) trabaja junto con el núcleo y la API de Windows.</li>
+                    <li>Las tareas más comunes de GDI son: a) El dibujo de líneas, curvas, polígonos; b) El relleno de cuadros, círculos, polígonos, etcétera; c) Se encarga del renderizado de fuentes y textos; d) Se encarga del manejo de paletas de colores.</li>
+                    <li>La clase Graphics contiene el método DrawLine para dibujar líneas.</li>
+                    <li>La clase Graphics contiene el método DrawRectangle para dibujar rectángulos y cuadrados.</li>
+                    <li>La clase Graphics contiene el método DrawEllipse para dibujar elipses y círculos.</li>
+                    <li>En el mundo de la Computación Gráfica, se utiliza un eje de coordenadas donde eje positivo de las ‘x’ va hacia la derecha y el eje positivo de las ‘y’ va hacia abajo.</li>
+                    <li>GDI+, proporciona una serie de clases de pincel (brush) para rellenar los interiores de figuras geométricas cerradas como: círculos, elipses, rectángulos, cuadrados, triángulos y polígonos.</li>
+                    <li>Para el relleno de figuras cerradas se pueden utilizar las clases: SolidBrush, HatchBrush, TextureBrush, LinearGradientBrush y PathGradientBrush, donde todas estas clases se derivan de la clase Brush.</li>
+                    <li>La clase Graphics contiene el método FillPolygon para rellenar polígonos, dados sus vértices como puntos de tipo Point/PointF.</li>
                 </ul>
             </ng-template>
         </mat-tab>
@@ -353,20 +525,11 @@
                 <br>
                 <h1>Bibliografía</h1>
                 <ul>
-                    <li>Gosling, J., Joy, B., Steele., G., 1996. The Java Language Specification. Addison Wesley, USA. ISBN: 978-0201634518.</li>
-                    <li>Deitel, P., Deitel, H., 2016. Java. Cómo Programar. Décima Edición. Pearson, México. ISBN: 978-607-32-3802-1.</li>
-                    <li>Luján, J., 2017. Java desde Cero - y prepárate para tu entrevista de trabajo. 1ra Edición, Alfaomega. ISBN: 978-607-622-949-1.</li>
-                    <li>Martín, A., 2010. Programador certificado java 2 - curso práctico. 3ra Edición, Alfaomega. ISBN: 978-607-707-023-8. </li>
-                    <li>Sznajdleder, P., 2016. Java a Fondo. Curso de Programación. Alfaomega. Tercera Edición. ISBN: 978-987-383-211-6.</li>
-                    <li>Ceballos, F.J., 2008. Java 2 - interfaces gráficas y aplicaciones para internet, 3ra Edición, Alfaomega. ISBN: 978-970-15-1412-2.</li>
-                    <li>López, I., 2017. Curso Avanzado de Java - Manual práctico. 1ra Edición, Alfaomega. ISBN: 978-607-622-853-1.</li>
-                    <li>Joyanes, L., Zahonero, I., 2011. Programación en Java 6. Algoritmos y Programación Orientada a Objetos. McGraw-Hill, México. ISBN: 978-607-15-0618-4.</li>
-                    <li>Pérez, A., Quiroz, D., Zambrano, M., Aguilar, K., Parra, P., Guerra, P., Villacís, C., 2014. Programación en Java para Ingenieros. 1era Edición, Dreams Magnet. ISBN: 978-1-940600-69-7.</li>
-                    <li>Dean, J., Dean, R., 2009.Introducción a la Programación con Java. MCGraw-Hill. 1era Edición. ISBN: 978-970-10-7278-3.</li>
-                    <li>Sierra, K., Bates, B., 2005. Head First Java, 2nd Edition. O’Reilly Media. ISBN: 978-0596009205.</li>
-                    <li>Verhas, P., 2018. Java Projects: Learn the fundamentals of Java 11 programming by building industry grade practical projects, 2nd Edition. Packt Publishing. ISBN: 978-1789131895.</li>
-                    <li>Verhas, P., 2017. Java 9 Programming By Example: Your guide to software development. 1st Edition, Packt Publishing. ASIN: B01KOG6SWI. </li>
-                    <li>Baesens, B., Backiel, A., Broucke, S., 2015. Beginning Java Programming: The Object-Oriented Approach. 1st Edition, Wrox. ASIN: B018UF5M36.</li>
+                    <li>Ammeraal, L., Zhang, K., 2017. Computer Graphics for Java Programmers. Springer. Third Edition.</li>
+                    <li>Shirley, P., Ashikhmin, M., 2009. Fundamentals of Computer Graphics. AK Peters/CRC Press. Third Edition.</li>
+                    <li>Hughes, J.F., Van Damm, Andries, McGuire, M., 2013. Computer Graphics: Principles and Practice. Addison-Wesley Professional. Third Edition.</li>
+                    <li>Lengyel, E., 2011. Mathematics for 3D Game Programming and Computer Graphics. Charles River Media. Third Edition.</li>
+                    <li>Steeb, W.H., Hardy, A., 2008. Mathematical Tools in Computer Graphics with C# Implementations. World Scientific Pub. Co. Inc. First Edition.</li>
                 </ul>
             </ng-template>
         </mat-tab>

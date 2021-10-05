@@ -63,10 +63,11 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
+    z-index: 99;
 }
 
 .dsc-carousel__btns>i {
-    opacity: 0.7;
+    opacity: 0.3;
     color: #fff;
     font-size: 45px;
     cursor: pointer;
