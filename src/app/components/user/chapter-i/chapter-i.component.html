@@ -2,7 +2,20 @@
     <ng-container *ngIf="(asyncTabs | async) === null">
         Loading tabs...
     </ng-container>
-    <h1> CAPÍTULO I: CONCEPTOS ELEMENTALES </h1>
+    <table>
+        <tr>
+            <td>
+                <h1> CAPÍTULO I: CONCEPTOS ELEMENTALES </h1>
+            </td>
+            <td></td>
+            <td>
+                <a href="https://drive.google.com/uc?id=1dvC0teuoZEJA7V2oyqHyTSuObLv_QXTQ&export=download" download="Capitulo12021">
+                    <mat-icon>cloud_download</mat-icon>Descargar Archivo Capítulo I
+                </a>
+            </td>
+        </tr>
+    </table>
+
     <mat-tab-group [selectedIndex]="selectedIndex.value" (selectedIndexChange)="selectedIndex.setValue($event)">
         <!--<mat-tab label="Bienvenid@">
             <ng-template matTabContent>
@@ -191,6 +204,10 @@
                     <mat-tab *ngFor="let tab of prefTabs" label="{{tab.label}}">
                         <br>
                         <h2>{{tab.title}}</h2>
+                        <a href="" download="ProgramaCasos">
+                            <mat-icon>save_alt</mat-icon><strong>Descargar CasoCompGraf.zip</strong>
+                        </a>
+                        <br><br>
                         <h3><strong>A)   Problema</strong></h3>
                         <p>{{tab.problema}}</p>
                         <ul *ngFor="let item of tab.formulaA">
@@ -297,12 +314,12 @@
 
                                     </TD>
                                     <TD>
-                                        <ul *ngFor="let i of item.Propiedad">
+                                        <ul *ngFor="let i of item.Propiedad" style="list-style-type: none;">
                                             <li>{{i}}</li>
                                         </ul>
                                     </TD>
                                     <TD>
-                                        <ul *ngFor="let i of item.Valor">
+                                        <ul *ngFor="let i of item.Valor" style="list-style-type: none;">
                                             <li>{{i}}</li>
                                         </ul>
                                     </TD>
@@ -413,6 +430,10 @@
                                 </TABLE>
                             </TR>
                         </TABLE><br>
+                        <a href="" download="ProgramaPraqnique">
+                            <mat-icon>save_alt</mat-icon><strong>Descargar PraqniqueCompGraf.zip</strong>
+                        </a>
+                        <br><br>
                         <h3><strong>{{tab.A.subtitulo}}</strong></h3>
                         <p>{{tab.A.problema}}</p>
                         <img src="{{tab.A.fotoPath}}" style="display:block; margin:auto; width: 50%;"><br>

@@ -49,6 +49,10 @@ import { HelpComponent } from './components/user/help/help.component';
 import { BibliographyComponent } from './components/user/bibliography/bibliography.component';
 import { GalleryComponent } from './components/principal/gallery/gallery.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { UserCompGrafComponent} from './components/user/user-comp-graf/user-comp-graf.component';
+import { GestionComponent } from './components/user/gestion/gestion.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +78,9 @@ import { GalleryComponent } from './components/principal/gallery/gallery.compone
     PageMaintenanceComponent,
     HelpComponent,
     BibliographyComponent,
-    GalleryComponent
+    GalleryComponent,
+    UserCompGrafComponent,
+    GestionComponent
   ],
   imports: [
     BrowserModule,
@@ -89,6 +95,7 @@ import { GalleryComponent } from './components/principal/gallery/gallery.compone
     MatListModule,
     FormsModule,
     MatTabsModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(
       {
         apiKey: "AIzaSyDU_aYQbm7d9pSO9Ftb_40VOjFTXEHp3_k",

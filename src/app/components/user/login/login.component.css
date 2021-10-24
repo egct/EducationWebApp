@@ -1,129 +1,317 @@
-* {
-    box-sizing: border-box;
-}
-
-html {
-    background: #e2e2e2;
-}
-
-body {
-    background: #e2e2e2;
-    margin: 0;
-    padding: 0;
-    font-family: "Lato", sans-serif;
-}
-
-.login-form-wrap {
-    background: radial-gradient(ellipse at center, #51a2ad 0%, #358893 100%);
-    border: 1px solid #2d416d;
-    box-shadow: 0 1px #5670a4 inset, 0 0 10px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    width: 360px;
-    height: 380px;
-    margin: 60px auto;
-    padding: 50px 30px 0 30px;
-    text-align: center;
-}
-
-.login-form-wrap h1 {
-    margin: 0 0 50px 0;
-    padding: 0;
-    font-size: 26px;
-    color: #fff;
-}
-
-.login-form-wrap h5 {
-    margin-top: 40px;
-}
-
-.login-form-wrap h5>a {
-    font-size: 14px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 400;
-}
-
-.login-form input[type=email],
-.login-form input[type=password] {
-    width: 100%;
-    border: 1px solid #318985;
-    outline: none;
-    padding: 12px 20px;
-    color: #afafaf;
-    font-weight: 400;
-    font-family: "Lato", sans-serif;
+.modal-btn {
+    padding: 10px 20px;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
     cursor: pointer;
+    transition: 0.5s ease left;
 }
 
-.login-form input[type=email] {
-    border-bottom: none;
-    border-radius: 4px 4px 0 0;
-    padding-bottom: 13px;
-    box-shadow: 0 -1px 0 #e0e0e0 inset, 0 1px 2px rgba(0, 0, 0, 0.23) inset;
+.mensaje {
+    color: black;
+    font-size: 16px;
 }
 
-.login-form input[type=password] {
-    border-top: none;
-    border-radius: 0 0 4px 4px;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.23) inset, 0 1px 2px rgba(255, 255, 255, 0.1);
+.modal-btn:hover {
+    color: crimson;
 }
 
-.login-form input[type=submit] {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    background: linear-gradient(to bottom, #e0e0e0 0%, #cecece 100%);
-    display: block;
-    margin: 20px auto 0 auto;
+#modal-toggle {
+    display: none;
+    padding: 50%;
+}
+
+.modal-content,
+.modal-backdrop {
+    opacity: 0;
+    position: fixed;
+    padding: 15px;
+    padding-top: 50px;
+    z-index: -1;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-content {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: 550px;
+    max-height: 50%;
+    /*alto del popup*/
+    width: 70%;
+    max-width: 400px;
+    text-align: center;
+    transform: translateX(125%);
+}
+
+.modal-backdrop {
+    left: 0;
+    top: 0;
+    height: 100%;
+    height: 100vh;
     width: 100%;
-    border: none;
-    border-radius: 3px;
-    padding: 8px;
-    font-size: 17px;
-    color: #636363;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
-    font-weight: 700;
-    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.17), 0 1px 0 rgba(255, 255, 255, 0.36) inset;
+    width: 100vw;
+    transform: scale(0);
 }
 
-.login-form input[type=submit]:hover {
-    background: #ddd;
+#modal-toggle:checked~.modal-backdrop {
+    opacity: 1;
+    background-color: rgba(73, 82, 81, 0.5);
+    z-index: 998;
+    transform: scale(1);
 }
 
-.login-form input[type=submit]:active {
-    padding-top: 9px;
-    padding-bottom: 7px;
-    background: #c9c9c9;
+#modal-toggle:checked~.modal-content {
+    opacity: 1;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    pointer-events: auto;
+    cursor: auto;
+    z-index: 999;
+    transform: translateX(0%);
 }
 
+@media (max-width: 600px) {
+    #modal-toggle:checked~.modal-backdrop {
+        opacity: 1;
+    }
+    .modal-content {
+        height: 50vh;
+        width: 90vw;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+}
 
-/*************/
-
-#customBtn {
+.modal-close-btn {
+    margin-top: 5px;
     display: inline-block;
-    background: white;
-    color: #444;
-    width: 190px;
-    height: 35px;
-    border-radius: 5px;
-    border: thin solid #888;
-    box-shadow: 1px 1px 1px grey;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.modal-close-btn svg {
+    transition: 0.2s;
+}
+
+.modal-close-btn svg line {
+    stroke-width: 5px;
+    stroke: #485563;
+}
+
+.modal-close-btn:hover svg {
+    transform: rotate(90deg);
+}
+
+
+/* BASIC FUNCTIONALITY .tabs */
+
+.tabs {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.tabs>.radio {
+    display: none;
+}
+
+.tabs>.radio:checked+.table+.tabs-content {
+    display: block;
+}
+
+.tabs>.table {
+    order: -1;
+    flex-basis: 50%;
+    flex-shrink: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-#customBtn:hover {
-    cursor: pointer;
-    background-color: rgb(184, 184, 184);
+.tabs .tabs-content {
+    width: 100%;
+    display: none;
 }
 
-span.buttonText {
-    display: inline-block;
-    vertical-align: middle;
-    padding-left: 42px;
-    padding-right: 42px;
-    padding-bottom: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    /* Use the Roboto font that is loaded in the <head> */
-    font-family: 'Roboto', sans-serif;
+
+/* END BASIC FUNCTIONALITY .tabs */
+
+
+/*  THEME for .tabs with login & sign-in  */
+
+.tabs>.table {
+    padding: 20px 0;
     text-align: center;
+    border-bottom: solid #485563 5px;
+    color: #485563;
+    cursor: pointer;
+}
+
+.tabs>.table span {
+    font-weight: 600;
+}
+
+.tabs>.table:hover {
+    color: #000000;
+    background: rgba(104, 104, 104, 0.2);
+}
+
+.tabs>.radio:checked+.table {
+    color: #fff;
+    background: #485563;
+    cursor: auto;
+}
+
+.tabs>.radio:checked+.table span {
+    display: inline-block;
+    font-weight: 500;
+    transform: scale(1.2);
+    transition: 0.1s;
+}
+
+
+/*  END THEME for .tabs with login & sign-in  */
+
+
+/*  START style login & sign up  */
+
+.tabs>.tabs-content .login_socnet {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-around;
+}
+
+.tabs>.tabs-content .login_socnet a {
+    margin: 20px;
+    margin-bottom: 0;
+    width: 100%;
+    font-size: 60px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.tabs>.tabs-content .login_socnet a:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(1px 3px 2px rgba(0, 0, 0, 0.2));
+}
+
+.tabs>.tabs-content .login_socnet .fa-google-plus {
+    color: #E57373;
+}
+
+.tabs>.tabs-content form {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+
+.tabs>.tabs-content form input {
+    padding: 10px;
+    margin: 15px 0;
+    border: none;
+    border-bottom: solid 1px #485563;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: 0.1s;
+}
+
+.tabs>.tabs-content form input:focus {
+    transform: translateX(10px);
+    outline: none;
+}
+
+.tabs>.tabs-content input[type="submit"] {
+    padding: 15px 0;
+    width: 100%;
+    background: #485563;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.tabs>.tabs-content input[type="submit"]:focus {
+    transform: none;
+}
+
+.tabs>.tabs-content .forgot-password label {
+    margin: 0 auto;
+    width: 50%;
+    color: #485563;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.tabs>.tabs-content .forgot-password label:hover {
+    text-decoration: underline;
+}
+
+
+/*  END style login & sign up  */
+
+.forgot-password #forgot-password-toggle {
+    display: none;
+}
+
+.forgot-password .forgot-password-content {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in;
+}
+
+.forgot-password .forgot-password-content input[type="email"] {
+    width: 80%;
+    margin-right: 0px;
+    border-right: none;
+}
+
+.forgot-password .forgot-password-content input[type="submit"] {
+    width: 20%;
+    margin-left: 0px;
+}
+
+.forgot-password #forgot-password-toggle:checked~.forgot-password-content {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    pointer-events: auto;
+    cursor: auto;
+    visibility: visible;
 }

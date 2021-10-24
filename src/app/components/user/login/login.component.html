@@ -1,16 +1,53 @@
-<section class="login-form-wrap">
-    <h1>Iniciar Sesión</h1>
-    <form class="login-form">
-        <label>
-        <input type="email" name="email" required placeholder="Email">
-      </label>
-        <label>
-        <input type="password" name="password" required placeholder="Password">
-      </label>
-        <input type="submit" value="Aceptar"><br>
-        <button id="customBtn" (click)="onLoginGoogle()">
-            <img src="https://suotepower.com.mx/wp-content/uploads/2019/07/google-logo.png"  width="30" height="30">
-            <span class="buttonText">Google</span>
-        </button>
-    </form>
+<section>
+    <div class="rt-container">
+        <div class="col-rt-12">
+            <div>
+                <!-- Login Form Popup HTML -->
+                <label class="modal-btn" for="modal-toggle">Ingresar</label>
+                <input id="modal-toggle" type="checkbox">
+                <label class="modal-backdrop" for="modal-toggle"></label>
+                <div class="modal-content">
+                    <label class="modal-close-btn" for="modal-toggle" (click)="limpiarAll()">
+                    <svg width="30" height="30">
+                      <line x1="5" y1="5" x2="20" y2="20"/>
+                      <line x1="20" y1="5" x2="5" y2="20"/>
+                    </svg>
+                  </label>
+                    <div class="tabs">
+                        <!--  LOG IN  -->
+                        <input class="radio" id="tab-1" name="tabs-name" type="radio" checked>
+                        <label for="tab-1" class="table"><span>Login</span></label>
+                        <div class="tabs-content">
+                            <div *ngIf="isUserMDB">
+                                <div class="login_socnet">
+                                    <a (click)="onLoginGoogle()" class="fa fa-google-plus" aria-hidden="true"></a>
+                                </div>
+                                <br>
+                                <a class="mensaje">{{mensajeMDB}}</a>
+                                <br><br>
+                                <input type="submit" value="Check Again?" (click)="checkAgain()">
+                            </div>
+                            <div *ngIf="!isUserMDB">
+                                <form #userMDBCompGrafForm="ngForm" (ngSubmit)="onCheckMDB(userMDBCompGrafForm)">
+                                    <input type="text" name="_id" #name="ngModel" [(ngModel)]="userCompGrafService.selectedMDBUserCompGraf.email_user" placeholder="Email" required>
+                                    <input type="password" name="id_user" #name="ngModel" [(ngModel)]="userCompGrafService.selectedMDBUserCompGraf.id_user" placeholder="Password" required>
+                                    <table>
+                                        <td>
+                                            <input type="submit" value="Check user">
+                                            <td>
+                                                <td></td>
+                                                <td>
+                                                    <input type="submit" value="Clean" (click)="resetForm(userMDBCompGrafForm)">
+                                                </td>
+                                    </table>
+                                    <a class="mensaje">{{mensajeMDB}}</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- partial -->
+            </div>
+        </div>
+    </div>
 </section>

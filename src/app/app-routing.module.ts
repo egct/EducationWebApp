@@ -11,6 +11,9 @@ import { ChapterIIComponent } from './components/user/chapter-ii/chapter-ii.comp
 import { PrincipalComponent } from './components/principal/principal.component';
 import { BibliographyComponent } from './components/user/bibliography/bibliography.component';
 import { HelpComponent } from './components/user/help/help.component';
+import { GestionComponent } from './components/user/gestion/gestion.component';
+import { GalleryComponent } from './components/principal/gallery/gallery.component';
+import { ContactComponent } from './components/principal/contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,6 +28,8 @@ const routes: Routes = [
   ]},
   { path: 'user/help', component: HelpComponent },
   { path: 'user/bibliography', component: BibliographyComponent },
+  { path: 'user/gestion', component: GestionComponent },
+  { path: 'principal/contact', component: ContactComponent },
   { path: '**', component: Page404Component }
 ];
 

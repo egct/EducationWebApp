@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2,  Output,  EventEmitter  } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
@@ -7,6 +7,7 @@ import { UserInterface } from '../../models/user';
 import { ICarouselItem } from '../principal/hero/Icarousel-item.metadata';
 import { CAROUSEL_DATA_ITEMS } from '../principal/hero/carousel.const';
 import { ViewChild } from '@angular/core'
+import { UserCompGraf } from '../../models/userCompGraf';
 
 @Component({
   selector: 'app-principal',
@@ -16,6 +17,7 @@ import { ViewChild } from '@angular/core'
 export class PrincipalComponent implements OnInit {
 
   public carouselData: ICarouselItem[] = CAROUSEL_DATA_ITEMS;
+  @Output() propagar2 = new EventEmitter<UserCompGraf>();
 
   constructor(private renderer: Renderer2, public afAuth: AngularFireAuth, private router: Router, private authService: AuthService) { }
 
@@ -31,6 +33,7 @@ export class PrincipalComponent implements OnInit {
         document.querySelector('.header .nav-bar .nav-list ul').classList.toggle('active');
       });
     });
+
   }
 
   async onLoginGoogle() {
@@ -51,8 +54,11 @@ export class PrincipalComponent implements OnInit {
       this.router.navigate(['principal']);
     }
   }
-  /*********/
 
-
+/*************/ 
+  procesaPropagar(mensaje: UserCompGraf) {
+    console.log("Propaga1>"+mensaje.type_user);
+    this.propagar2.emit(mensaje);
+  }
 
 }

@@ -23,7 +23,7 @@
                     </div>
                 </td>
                 <td>
-                    <button class="menu-buttonToolbar" *ngIf="isLogged" (click)="onLogout()">
+                    <button class="menu-buttonToolbar" *ngIf="true" (click)="onLogout()">
                         <mat-icon>power_settings_new</mat-icon>            
                     </button>
                 </td>
@@ -33,26 +33,27 @@
 </mat-toolbar>
 <mat-sidenav-container>
     <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8" style="    padding-top: 50px;">
-        <div *ngIf="isLogged">
+        <div *ngIf="true">
             <img class="avatar mat-elevation-z8" src="{{pruebaphoto}}" />
             <h5 class="name">{{pruebanombre}}</h5>
+            <h4 class="name">{{pruebatype}}</h4>
             <h4 class="name">{{pruebaemail}}</h4>
         </div>
-        <div *ngIf="!isLogged">
+        <!--    <div *ngIf="!isLogged">
             <img class="avatar mat-elevation-z8" src="https://d1bvpoagx8hqbg.cloudfront.net/259/2347b61ae2c02d0f2b100474e2c29f71.jpg" />
             <h4 class="name">Inicia Sesión</h4>
             <p class="designation"></p>
-        </div>
+        </div>-->
         <div>
             <table>
                 <tr>
                     <td>
-                        <button class="menu-buttonToolbar" *ngIf="isLogged" (click)="onClick($event)">
+                        <button class="menu-buttonToolbar" *ngIf="true" (click)="onClick($event)">
                         <a style="text-decoration: none;" class="menu-buttonToolbar" id="MyRef1"><mat-icon>home</mat-icon>Mi Espe</a>           
                         </button>
                     </td>
                     <td>
-                        <button class="menu-buttonToolbar" *ngIf="isLogged" routerLink="user/help">
+                        <button class="menu-buttonToolbar" *ngIf="true" routerLink="user/help">
                             <a style="text-decoration: none;" class="menu-buttonToolbar"><mat-icon>info</mat-icon>Ayuda</a>            
                         </button>
                     </td>
@@ -64,10 +65,10 @@
             <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
         </mat-nav-list>
 
-        <mat-nav-list *ngIf="!isLogged">
-            <app-menu-list-item *ngFor="let item of navItemsNoLogin" [item]="item"></app-menu-list-item>
-        </mat-nav-list>
 
+        <mat-nav-list *ngIf="isAdmin">
+            <app-menu-list-item *ngFor="let item of navItemsAdmin" [item]="item"></app-menu-list-item>
+        </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
         <router-outlet></router-outlet>
