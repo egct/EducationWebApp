@@ -6,7 +6,6 @@
 }
 
 .container {
-    min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -49,7 +48,7 @@ p {
 #contact .contact {
     flex-direction: column;
     text-align: center;
-    max-width: 1500px;
+    max-width: 2000px;
     margin: 0 auto;
     padding: 80px 0;
 }
@@ -142,7 +141,7 @@ p {
 
 .card .card-body .name {
     margin-top: 30px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     color: #c74385;
     text-align: center;
@@ -150,7 +149,7 @@ p {
 
 .card .card-body .name:hover {
     margin-top: 30px;
-    font-size: 24px;
+    font-size: 20px;
     color: #d885af;
 }
 
@@ -194,7 +193,7 @@ p {
 }
 
 .card .social-links .social-icon:hover {
-    background-color: #d885af;
+    background-color: crimson;
     height: 50px;
     width: 50px;
     text-decoration: none;
@@ -218,7 +217,7 @@ p {
 
 /* Media Query For Tablet >> pantalla normal*/
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 800px) {
     .cta {
         font-size: 2.5rem;
         padding: 20px 60px;
@@ -243,7 +242,7 @@ p {
 @media only screen and (min-width: 1200px) {
     /* End header */
     #contact .contact-bottom .contact-item {
-        flex-basis: 29%;
+        flex-basis: 22%;
         margin: 1.5%;
     }
 }

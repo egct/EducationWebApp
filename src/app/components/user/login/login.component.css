@@ -13,7 +13,10 @@
 }
 
 .modal-btn:hover {
-    color: crimson;
+    background-color: crimson; 
+    color: rgb(255, 255, 255); 
+    border-radius: 10px; 
+    height: 55px;
 }
 
 #modal-toggle {
@@ -45,7 +48,7 @@
     width: 70%;
     max-width: 400px;
     text-align: center;
-    transform: translateX(125%);
+    transform: translateX(300%);
 }
 
 .modal-backdrop {
