@@ -80,6 +80,11 @@ export class QuizComponent implements OnInit {
     this.currentQuiz++;
   }
 
+  formatScore(valor) {
+    // si no es un número devuelve el valor, o lo convierte a número con 2 decimales
+    return isNaN(valor) ? valor : parseFloat(valor).toFixed(2);
+  }
+
   shuffle(array) {
     
     var currentIndex = array.length, temporaryValue, randomIndex;

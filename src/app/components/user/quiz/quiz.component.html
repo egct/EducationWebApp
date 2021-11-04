@@ -30,11 +30,12 @@
                                 <h4>{{pruebanombre}}</h4>
                                 <h5>{{pruebaemail}}</h5>
                             </div>
+                            <hr>
                             <div class="descripcion">
                                 <h1>Evaluación Finalizada !!</h1>
                                 <h3>Felicitaciones, buen trabajo </h3>
-                                <h2>Puntaje: {{ (correctAnswers*100)/lengthQuiz }} % </h2>
-                                <h5>Respuestas Correctas: {{ correctAnswers }} | Respuestas Incorrectas: {{ incorrectAnswers }} </h5>
+                                <h2 style="color: rgb(3, 148, 51);">Puntaje: {{ formatScore((correctAnswers*100)/lengthQuiz) }} % </h2>
+                                <h5 style="font-size: 15px;">Respuestas Correctas: {{ correctAnswers }} | Respuestas Incorrectas: {{ incorrectAnswers }} </h5>
                                 <!--<button class="btn btn-success btn-block" style="width:auto" (click)="resetQuiz()">Volver a Intentar</button>-->
                             </div>
                         </div>
@@ -48,11 +49,12 @@
                                 <h4>{{pruebanombre}}</h4>
                                 <h5>{{pruebaemail}}</h5>
                             </div>
+                            <hr>
                             <div class="descripcion">
                                 <h1>Evaluación Finalizada !!</h1>
                                 <h3>Vuelve a revisar el material de Estudio</h3>
-                                <h2>Puntaje: {{ (correctAnswers*100)/lengthQuiz }} % </h2>
-                                <h5>Respuestas Correctas: {{ correctAnswers }} | Respuestas Incorrectas: {{ incorrectAnswers }} </h5>
+                                <h2 style="color: crimson;">Puntaje: {{ formatScore((correctAnswers*100)/lengthQuiz) }} % </h2>
+                                <h5 style="font-size: 15px;">Respuestas Correctas: {{ correctAnswers }} | Respuestas Incorrectas: {{ incorrectAnswers }} </h5>
                                 <!--<button class="btn btn-success btn-block" style="width:auto" (click)="resetQuiz()">Volver a Intentar</button>-->
                             </div>
                         </div>
