@@ -28,6 +28,7 @@ export class ChapterIComponent implements OnInit {
   positionCurrentNext: boolean = true;
   positionCurrentBefore: boolean = false;
   titleNext: string = 'Siguiente';
+  num_capitulo = 1;
 
   constructor() {
     /*   this.asyncTabs = Observable.create((observer: Observer<ExampleTab[]>) => {

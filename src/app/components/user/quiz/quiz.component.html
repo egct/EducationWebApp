@@ -1,0 +1,64 @@
+<div class="container p-4">
+    <h1>EVALUACIÓN CAPITULO I</h1>
+    <p><strong>Instrucciones:</strong> Lea detenidamente la pregunta y escoja la respuesta correcta. La evaluación avanzará de pregunta automáticamente luego de que haya seleccionado una opción. </p>
+    
+    <div class="row">
+        <div class="col-sm-8">
+            <div *ngIf="currentQuiz < lengthQuiz">
+                <p class="text-center"> {{ currentQuiz + 1}} of {{ quizzes.length}}</p>
+                <h5 class="text-center"><strong>{{ quizzes[currentQuiz].question}}</strong></h5>
+
+                <ul class="list-group" *ngFor="let quiz of quizzes[currentQuiz].answer">
+                    <label>
+                        <li class="list-group-item" appBackground [correctAnswer] = "quiz.correct">
+                            <input type="radio" name="options" (change)="onAnswer(quiz.correct)" [disabled]="answerSelected">
+                            {{quiz.option}}</li>
+                            <br>
+                    </label>
+                </ul>
+            </div>
+            <div *ngIf="currentQuiz >= lengthQuiz">
+                <button class="btn btn-success btn-block" style="width:auto; text-align: center;" (click)="showResult()">Mostrar Resultados</button>
+                <div class="text-center" style=" margin-top: 15px;" *ngIf="result">
+                    
+                    <div *ngIf="((correctAnswers*100)/lengthQuiz) >= minimum_score">
+                        <div class="card-container">
+                            <div class="header">
+                                <a>
+                                    <img src="../../../assets/images/quiz/trophy.png">
+                                </a>
+                                <h4>{{pruebanombre}}</h4>
+                                <h5>{{pruebaemail}}</h5>
+                            </div>
+                            <div class="descripcion">
+                                <h1>Evaluación Finalizada !!</h1>
+                                <h3>Felicitaciones, buen trabajo </h3>
+                                <h2>Puntaje: {{ (correctAnswers*100)/lengthQuiz }} % </h2>
+                                <h5>Respuestas Correctas: {{ correctAnswers }} | Respuestas Incorrectas: {{ incorrectAnswers }} </h5>
+                                <!--<button class="btn btn-success btn-block" style="width:auto" (click)="resetQuiz()">Volver a Intentar</button>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="((correctAnswers*100)/lengthQuiz) < minimum_score">
+                        <div class="card-container">
+                            <div class="header">
+                                <a>
+                                    <img src="../../../assets/images/quiz/study.png">
+                                </a>
+                                <h4>{{pruebanombre}}</h4>
+                                <h5>{{pruebaemail}}</h5>
+                            </div>
+                            <div class="descripcion">
+                                <h1>Evaluación Finalizada !!</h1>
+                                <h3>Vuelve a revisar el material de Estudio</h3>
+                                <h2>Puntaje: {{ (correctAnswers*100)/lengthQuiz }} % </h2>
+                                <h5>Respuestas Correctas: {{ correctAnswers }} | Respuestas Incorrectas: {{ incorrectAnswers }} </h5>
+                                <!--<button class="btn btn-success btn-block" style="width:auto" (click)="resetQuiz()">Volver a Intentar</button>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
