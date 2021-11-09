@@ -1,84 +1,135 @@
-<div class="row" style="padding-left: 5%; width: 95%;">
+<div style="margin: 50px;">
+    <div class="row" style="padding-left: 5%; width: 95%;">
+        <mat-toolbar style="color: slategray;">
+            <span>Gestion de Usuarios CompGraf</span>
+            <div style="flex: 1 1 auto;"></div>
+            <mat-icon>contact_mail</mat-icon>
+        </mat-toolbar>
+        <h1></h1>
+        <br>
+        <!-- FORM -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body p-4">
+                    <mat-toolbar style="color:olivedrab;">
+                        <span>Agregar Usuario</span>
+                    </mat-toolbar>
+                    <!-- FORM -->
+                    <form #userCompGrafForm="ngForm" (ngSubmit)="addUserCompGraf(userCompGrafForm)">
+                        <!-- THE Id's User-->
+                        <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="userCompGrafService.selectedUserCompGraf._id">
 
-    <!-- FORM -->
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-body p-4">
-
-                <!-- FORM -->
-                <form #userCompGrafForm="ngForm" (ngSubmit)="addUserCompGraf(userCompGrafForm)">
-                    <!-- THE Id's User-->
-                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="userCompGrafService.selectedUserCompGraf._id">
-
-                    <div class="form-group">
-                        <input type="text" name="id_user" #name="ngModel" [(ngModel)]="userCompGrafService.selectedUserCompGraf.id_user" placeholder="Enter your L00 ID" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" name="name_user" #name="ngModel" [(ngModel)]="userCompGrafService.selectedUserCompGraf.name_user" placeholder="Enter your FullName" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-field col-s12">
-                            <input type="text" name="email_user" #name="ngModel" [(ngModel)]="userCompGrafService.selectedUserCompGraf.email_user" placeholder="Enter your Email" class="form-control">
+                        <div class="form-group">
+                            <input type="text" name="id_user" #name="ngModel" [(ngModel)]="userCompGrafService.selectedUserCompGraf.id_user" placeholder="Enter your L00 ID" class="form-control">
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <div class="input-field col-s12">
-                            <input type="text" name="name_tutor" #name="ngModel" [(ngModel)]="userCompGrafService.selectedUserCompGraf.name_tutor" placeholder="Enter your tutor" class="form-control">
+                        <div class="form-group">
+                            <input type="text" name="name_user" #name="ngModel" [(ngModel)]="userCompGrafService.selectedUserCompGraf.name_user" placeholder="Enter your FullName" class="form-control">
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="type_user" class="col-sm-2 col-form-label">Tipo usuario:</label>
-                        <select class="form-select form-control" name="type_user" [(ngModel)]="userCompGrafService.selectedUserCompGraf.type_user">
+                        <div class="form-group">
+                            <div class="input-field col-s12">
+                                <input type="text" name="email_user" #name="ngModel" [(ngModel)]="userCompGrafService.selectedUserCompGraf.email_user" placeholder="Enter your Email" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-field col-s12">
+                                <input type="text" name="name_tutor" #name="ngModel" [(ngModel)]="userCompGrafService.selectedUserCompGraf.name_tutor" placeholder="Enter your tutor" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="type_user" class="col-sm-2 col-form-label">Tipo usuario:</label>
+                            <select class="form-select form-control" name="type_user" [(ngModel)]="userCompGrafService.selectedUserCompGraf.type_user">
                             <option [value]="item" *ngFor="let item of lista">{{item}}</option>
                         </select>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-field col-s12">
-                            <input type="number" name="nrc_user" #name="ngModel" [(ngModel)]="userCompGrafService.selectedUserCompGraf.nrc_user" value="0" placeholder="Enter your Nrc" class="form-control">
                         </div>
-                    </div>
-                    <br>
-                    <button class="btn btn-primary mr-2" (click)="resetForm(userCompGrafForm)">Limpiar</button>
-                    <button class="btn btn-secondary">Guardar</button>
-                </form>
+
+                        <div class="form-group">
+                            <label for="nrc_user" class="col-sm-2 col-form-label">Nrc:</label>
+                            <div class="input-field col-s12">
+                                <input type="number" name="nrc_user" #name="ngModel" [(ngModel)]="userCompGrafService.selectedUserCompGraf.nrc_user" value="0" placeholder="Enter your Nrc" class="form-control">
+                            </div>
+                        </div>
+                        <br>
+                        <button style="margin-right: 20px;" class="btn btn-primary mr-2" (click)="resetForm(userCompGrafForm)">Limpiar</button>
+                        <button class="btn btn-secondary" style="background-color: olivedrab; color: white;">Guardar</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+        <br><br><br>
+        <h1></h1>
+        <mat-toolbar style="color: slategray;">
+            <span>Mis Usuarios</span>
+            <div style="flex: 1 1 auto;"></div>
+            <mat-icon>supervisor_account</mat-icon>
+        </mat-toolbar>
+        <!-- TABLE -->
+        <div class="example-container mat-elevation-z8">
+            <mat-form-field appearance="standard" style="width: 100%;">
+                <mat-label>Filtrar</mat-label>
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="L00..." autocomplete="off">
+            </mat-form-field>
 
-    <!-- TABLE -->
-    <div class="col-md-8">
-        <table class="table table-striped">
-            <thead>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Tipo</th>
-                <th>NRC</th>
-                <th>Tutor</th>
-            </thead>
-            <tbody>
-                <tr *ngFor="let userCompGraf of userCompGrafService.userCompGraf">
-                    <td>{{ userCompGraf.id_user }}</td>
-                    <td>{{ userCompGraf.name_user }}</td>
-                    <td>{{ userCompGraf.email_user }}</td>
-                    <td>{{ userCompGraf.type_user }}</td>
-                    <td>{{ userCompGraf.nrc_user }}</td>
-                    <td>{{ userCompGraf.name_tutor }}</td>
-                    <td>
-                        <a (click)="editUserCompGraf(userCompGraf)" class="btn btn-secondary btn-sm">
-                            <i class="material-icons">edit</i>
+            <mat-table [dataSource]="dataSource" matSort>
+                <!-- ID Column -->
+                <ng-container matColumnDef="ID">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+                    <mat-cell *matCellDef="let row" data-label="ID:"> {{row.id_user}} </mat-cell>
+                </ng-container>
+
+                <!-- Nombre Column -->
+                <ng-container matColumnDef="Nombre">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </mat-header-cell>
+                    <mat-cell *matCellDef="let row" data-label="Nombre:"> {{row.name_user}} </mat-cell>
+                </ng-container>
+
+                <!-- Email Column -->
+                <ng-container matColumnDef="Email">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+                    <mat-cell *matCellDef="let row" data-label="Email:"> {{row.email_user}} </mat-cell>
+                </ng-container>
+
+                <!-- Tipo Column -->
+                <ng-container matColumnDef="Tipo">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Tipo </mat-header-cell>
+                    <mat-cell *matCellDef="let row" [style.color]="red" data-label="Tipo:"> {{row.type_user}} </mat-cell>
+                </ng-container>
+
+                <!-- Nrc Column -->
+                <ng-container matColumnDef="Nrc">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Nrc </mat-header-cell>
+                    <mat-cell *matCellDef="let row" data-label="Nrc:"> {{row.nrc_user}} </mat-cell>
+                </ng-container>
+
+                <!-- Tutor Column -->
+                <ng-container matColumnDef="Tutor">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Tutor </mat-header-cell>
+                    <mat-cell *matCellDef="let row" data-label="Tutor:"> {{row.name_tutor}} </mat-cell>
+                </ng-container>
+
+                <!-- Acciones Column-->
+                <ng-container matColumnDef="Acciones">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Acciones</mat-header-cell>
+                    <mat-cell *matCellDef="let row" data-label="Acciones:">
+                        <a class="pointer" (click)="editUserCompGraf(row)" style="color:rgb(67, 111, 161)" matTooltip="Editar Alumno">
+                            <mat-icon>edit</mat-icon>
                         </a>
-                        <a (click)="deleteUserCompGraf(userCompGraf._id, userCompGrafForm)" class="btn btn-danger btn-sm">
-                            <i class="material-icons">delete</i>
+                        <a class="pointer" (click)="deleteUserCompGraf(row._id, userCompGrafForm)" style="color: rgb(228, 57, 57)" matTooltip="Eliminar Alumno">
+                            <mat-icon>delete</mat-icon>
                         </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+
+                    </mat-cell>
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;">
+                </mat-row>
+            </mat-table>
+
+            <mat-paginator [pageSizeOptions]="[1, 5, 10, 25, 100]"></mat-paginator>
+        </div>
     </div>
 </div>

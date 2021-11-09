@@ -15,7 +15,7 @@
  */
 
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap);
-:root {
+ :root {
     --bs-blue: #2196f3;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
@@ -70,15 +70,25 @@
 }
 
 *,
-::after,
-::before {
-    box-sizing: border-box
+ ::after,
+ ::before {
+    /*box-sizing: border-box;*/
 }
 
 @media (prefers-reduced-motion:no-preference) {
      :root {
         scroll-behavior: smooth
     }
+}
+
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.example-radio-button {
+    margin: 5px;
 }
 
 .pointer {
@@ -98,6 +108,27 @@ body {
     -webkit-tap-highlight-color: transparent
 }
 
+.mat-column-ID {
+    flex: 0 0 10%;
+}
+
+.mat-column-Capitulo {
+    flex: 0 0 10%;
+}
+
+.mat-column-Acciones {
+    flex: 0 0 10%;
+}
+
+.responsiveCell {
+    flex: 1;
+    display: grid;
+    align-items: center;
+    overflow: hidden;
+    word-wrap: break-word;
+    min-height: inherit;
+}
+
 
 /**Responsive table*/
 
@@ -110,39 +141,38 @@ body {
         font-size: 1em;
     }
     /*  Enable this to hide header
-    .mat-table .mat-header-cell {
-      
-      border: 10px solid;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
-    */
+     .mat-table .mat-header-cell {
+       
+       border: 10px solid;
+       clip: rect(0 0 0 0);
+       height: 1px;
+       margin: -1px;
+       padding: 0;
+       position: absolute;
+       width: 1px;
+     }
+     */
     .mat-table .mat-row {
         border-bottom: 5px solid #ddd;
         display: block;
     }
     /*
-    .mat-table .mat-row:nth-child(even) {background: #CCC}
-    .mat-table .mat-row:nth-child(odd) {background: #FFF}
-    */
+     .mat-table .mat-row:nth-child(even) {background: #CCC}
+     .mat-table .mat-row:nth-child(odd) {background: #FFF}
+     */
     .mat-table .mat-cell {
         border-bottom: 1px solid #ddd;
         display: block;
         font-size: 1em;
         text-align: right;
         font-weight: bold;
-        height: 30px;
         margin-bottom: 4%;
     }
     .mat-table .mat-cell:before {
         /*
-      * aria-label has no advantage, it won't be read inside a table
-      content: attr(aria-label);
-      */
+       * aria-label has no advantage, it won't be read inside a table
+       content: attr(aria-label);
+       */
         content: attr(data-label);
         float: left;
         text-transform: uppercase;
@@ -490,7 +520,7 @@ button:not(:disabled) {
     cursor: pointer
 }
 
-::-moz-focus-inner {
+ ::-moz-focus-inner {
     padding: 0;
     border-style: none
 }
@@ -525,17 +555,17 @@ legend+* {
     clear: left
 }
 
-::-webkit-datetime-edit-day-field,
-::-webkit-datetime-edit-fields-wrapper,
-::-webkit-datetime-edit-hour-field,
-::-webkit-datetime-edit-minute,
-::-webkit-datetime-edit-month-field,
-::-webkit-datetime-edit-text,
-::-webkit-datetime-edit-year-field {
+ ::-webkit-datetime-edit-day-field,
+ ::-webkit-datetime-edit-fields-wrapper,
+ ::-webkit-datetime-edit-hour-field,
+ ::-webkit-datetime-edit-minute,
+ ::-webkit-datetime-edit-month-field,
+ ::-webkit-datetime-edit-text,
+ ::-webkit-datetime-edit-year-field {
     padding: 0
 }
 
-::-webkit-inner-spin-button {
+ ::-webkit-inner-spin-button {
     height: auto
 }
 
@@ -544,19 +574,19 @@ legend+* {
     -webkit-appearance: textfield
 }
 
-::-webkit-search-decoration {
+ ::-webkit-search-decoration {
     -webkit-appearance: none
 }
 
-::-webkit-color-swatch-wrapper {
+ ::-webkit-color-swatch-wrapper {
     padding: 0
 }
 
-::file-selector-button {
+ ::file-selector-button {
     font: inherit
 }
 
-::-webkit-file-upload-button {
+ ::-webkit-file-upload-button {
     font: inherit;
     -webkit-appearance: button
 }
@@ -793,7 +823,7 @@ progress {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     display: -ms-flexbox;
-    display: flex;
+    /*display: flex;*/
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-top: calc(-1 * var(--bs-gutter-y));

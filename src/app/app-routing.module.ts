@@ -14,6 +14,8 @@ import { HelpComponent } from './components/user/help/help.component';
 import { GestionComponent } from './components/user/gestion/gestion.component';
 import { GalleryComponent } from './components/principal/gallery/gallery.component';
 import { ContactComponent } from './components/principal/contact/contact.component';
+import { UserCompGrafComponent } from './components/user/user-comp-graf/user-comp-graf.component'; 
+import { TestCompGrafComponent } from './components/user/test-comp-graf/test-comp-graf.component'; 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,6 +31,10 @@ const routes: Routes = [
   { path: 'user/help', component: HelpComponent },
   { path: 'user/bibliography', component: BibliographyComponent },
   { path: 'user/gestion', component: GestionComponent },
+  { path: 'user/gestion', children: [
+    {path: 'user-comp-graf', component: UserCompGrafComponent},
+    {path: 'test-comp-graf', component: TestCompGrafComponent}
+  ]},
   { path: 'principal/contact', component: ContactComponent },
   { path: '**', component: Page404Component }
 ];

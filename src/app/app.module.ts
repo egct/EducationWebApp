@@ -53,6 +53,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserCompGrafComponent} from './components/user/user-comp-graf/user-comp-graf.component';
 import { GestionComponent } from './components/user/gestion/gestion.component';
 
+import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { TestCompGrafComponent } from './components/user/test-comp-graf/test-comp-graf.component'; 
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -80,7 +90,8 @@ import { GestionComponent } from './components/user/gestion/gestion.component';
     BibliographyComponent,
     GalleryComponent,
     UserCompGrafComponent,
-    GestionComponent
+    GestionComponent,
+    TestCompGrafComponent
   ],
   imports: [
     BrowserModule,
@@ -110,7 +121,16 @@ import { GestionComponent } from './components/user/gestion/gestion.component';
     AngularFireDatabaseModule,
     AngularFireStorageModule,
     ReactiveFormsModule,
-    HighlightModule
+    HighlightModule, 
+    MatNativeDateModule,
+    MatRippleModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatRadioModule 
   ],
   providers: [NavService, AngularFireAuth, AngularFirestore,
     {

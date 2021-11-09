@@ -136,8 +136,20 @@ export class NavbarComponent implements OnInit {
    },
    {
     displayName: ' Gestión',
-    iconName: 'contact_mail',
-    route: 'user/gestion'
+    iconName: 'build',
+    route: 'user/gestion',
+    children: [
+      {
+        displayName: 'Usuarios',
+        iconName: 'contact_mail',
+        route: 'user/gestion/user-comp-graf'
+      },
+      {
+        displayName: 'Evaluaciones',
+        iconName: 'library_books',
+        route: 'user/gestion/test-comp-graf',
+      }
+    ]
    },
    {
     displayName: 'Perfil',

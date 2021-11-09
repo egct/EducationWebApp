@@ -1,0 +1,122 @@
+<div style="margin: 50px;">
+    <div class="row" style="padding-left: 5%; width: 95%;">
+        <mat-toolbar style="color: slategray;">
+            <span>Gestion de Evaluaciones CompGraf</span>
+            <div style="flex: 1 1 auto;"></div>
+            <mat-icon>file_copy</mat-icon>
+        </mat-toolbar>
+        <h1></h1>
+        <br>
+        <!-- FORM -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body p-4">
+                    <mat-toolbar style="color:olivedrab;">
+                        <span>Agregar Pregunta</span>
+                    </mat-toolbar>
+                    <!-- FORM -->
+                    <form #testCompGrafForm="ngForm" (ngSubmit)="addTestCompGraf(testCompGrafForm)">
+                        <!-- THE Id's User-->
+                        <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="testCompGrafService.selectedTestCompGraf._id">
+
+                        <div class="form-group">
+                            <label for="cap_question" class="col-sm-3 col-form-label">Capitulo:</label>
+                            <select class="form-select form-control" name="cap_question" [(ngModel)]="testCompGrafService.selectedTestCompGraf.cap_question" (change)="obtenerId_Question()">
+                            <option [value]="item" *ngFor="let item of lista">{{item}}</option>
+                        </select>
+                        </div>
+
+                        <!--                        <div class="form-group">
+                            <label for="id_question" class="col-sm-3 col-form-label"># de pregunta:</label>
+                            <div class="input-field col-s12">
+                                <input type="number" name="id_question" #name="ngModel" [(ngModel)]="testCompGrafService.selectedTestCompGraf.id_question" value="0" placeholder="Enter your # Question" class="form-control">
+                            </div>
+                        </div>-->
+
+                        <div class="form-group">
+                            <div class="input-field col-s12">
+                                <input type="text" name="question" #name="ngModel" [(ngModel)]="testCompGrafService.selectedTestCompGraf.question" placeholder="Enter your Question" class="form-control">
+                            </div>
+                        </div>
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label" name="myGroupCheck" class="example-radio-group" [(ngModel)]="favoriteSeason">
+                            <mat-radio-button class="example-radio-button" name="myCheck" *ngFor="let season of testCompGrafService.selectedTestCompGraf.answer" [value]="season.option">
+                                <input type="text" name="answer" #name="ngModel" [(ngModel)]="season.option" placeholder="Enter your Answer" class="form-control">
+                            </mat-radio-button>
+                        </mat-radio-group>
+                        <div>Respuesta Correcta: {{favoriteSeason}}</div>
+
+                        <br>
+                        <button style="margin-right: 20px;" class="btn btn-primary mr-2" (click)="resetForm(testCompGrafForm)">Limpiar</button>
+                        <button class="btn btn-secondary" style="background-color: olivedrab; color: white;">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <h1></h1>
+        <mat-toolbar style="color: slategray;">
+            <span>Mis Evaluaciones</span>
+            <div style="flex: 1 1 auto;"></div>
+            <mat-icon>library_books</mat-icon>
+        </mat-toolbar>
+        <!-- TABLE -->
+        <div class="example-container mat-elevation-z8">
+            <mat-form-field appearance="standard" style="width: 100%;">
+                <mat-label>Filtrar</mat-label>
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="L00..." autocomplete="off">
+            </mat-form-field>
+
+            <mat-table [dataSource]="dataSource" matSort>
+                <!-- ID Column -->
+                <ng-container matColumnDef="ID">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+                    <mat-cell *matCellDef="let row" data-label="ID:"> {{row.id_question}} </mat-cell>
+                </ng-container>
+
+                <!-- Capitulo Column -->
+                <ng-container matColumnDef="Capitulo">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Capitulo </mat-header-cell>
+                    <mat-cell *matCellDef="let row" data-label="Capitulo:"> {{row.cap_question}} </mat-cell>
+                </ng-container>
+
+                <!-- Pregunta Column -->
+                <ng-container matColumnDef="Pregunta">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Pregunta </mat-header-cell>
+                    <mat-cell *matCellDef="let row" data-label="Pregunta:"> {{row.question}} </mat-cell>
+                </ng-container>
+
+                <!-- answer Column -->
+                <ng-container matColumnDef="Respuestas">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Respuestas </mat-header-cell>
+                    <mat-cell class="responsiveCell" *matCellDef="let row" data-label="Respuestas:">
+                        <div *ngFor="let x of row.answer">
+                            <p>{{x.option}}</p>
+                            <p style="background-color: lightslategray; color: white;">({{x.correct}})</p>
+                        </div>
+                    </mat-cell>
+                </ng-container>
+
+                <!-- Acciones Column-->
+                <ng-container matColumnDef="Acciones">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Acciones</mat-header-cell>
+                    <mat-cell *matCellDef="let row" data-label="Acciones:">
+                        <a class="pointer" (click)="editTestCompGraf(row)" style="color:rgb(67, 111, 161)" matTooltip="Editar Pregunta">
+                            <mat-icon>edit</mat-icon>
+                        </a>
+                        <a class="pointer" (click)="deleteTestCompGraf(row._id, testCompGrafForm)" style="color: rgb(228, 57, 57)" matTooltip="Eliminar Pregunta">
+                            <mat-icon>delete</mat-icon>
+                        </a>
+
+                    </mat-cell>
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;">
+                </mat-row>
+            </mat-table>
+
+            <mat-paginator [pageSizeOptions]="[1, 5, 10, 25, 100]"></mat-paginator>
+        </div>
+    </div>
+</div>

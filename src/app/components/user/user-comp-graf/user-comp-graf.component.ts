@@ -1,10 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild  } from '@angular/core';
 
 import { UserCompGrafService } from '../../../services/userCompGraf.service';
 import { UserCompGraf } from '../../../models/userCompGraf';
 import { NgForm } from "@angular/forms";
 import { FormGroup, FormBuilder} from "@angular/forms";
 import * as shajs from 'sha.js';
+
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 @Component({
@@ -19,13 +25,42 @@ export class UserCompGrafComponent implements OnInit {
   lista:string[]=["Estudiante","Docente"];
   userForm: FormGroup;
   /***/
+  /*Responsive Table**/
+  displayedColumns: string[] = ['ID', 'Nombre', 'Email', 'Tipo', 'Nrc', 'Tutor', 'Acciones'];
+  dataSource: MatTableDataSource<UserCompGraf>;
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+  /***/
+
   constructor(public userCompGrafService: UserCompGrafService, private formBuiler: FormBuilder) {}
 
   ngOnInit() {
     this.getUserCompGraf();
     console.log("aqui1>"+this.getUserCompGraf());
+    /*Responsive Table**/
+    /***/
+  }
+ 
+  /*Responsive Table**/
+  ngAfterViewInit() {
+    
   }
 
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+    this.dataSource.filter = filterValue;
+  }
+
+  addbut(){
+    window.alert("addbutton");
+  }
+  editbut(){
+    window.alert("editbutton");
+  }
+
+  /***/
   addUserCompGraf(form?: NgForm) {
 
     console.log("aqui2>"+form.value);
@@ -53,6 +88,10 @@ export class UserCompGrafComponent implements OnInit {
   getUserCompGraf() {
     this.userCompGrafService.getUserCompGraf().subscribe((res) => {
       this.userCompGrafService.userCompGraf = res;
+      // Assign the data to the data source for the table to render
+      this.dataSource = new MatTableDataSource(this.userCompGrafService.userCompGraf);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     });
   }
 
