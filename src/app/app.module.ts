@@ -62,6 +62,7 @@ import { MatInputModule } from '@angular/material/input';
 import { TestCompGrafComponent } from './components/user/test-comp-graf/test-comp-graf.component'; 
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
+import { PopupEmailComponent } from './components/user/popup-email/popup-email.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import {MatRadioModule} from '@angular/material/radio';
     GalleryComponent,
     UserCompGrafComponent,
     GestionComponent,
-    TestCompGrafComponent
+    TestCompGrafComponent,
+    PopupEmailComponent
   ],
   imports: [
     BrowserModule,

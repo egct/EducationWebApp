@@ -1,0 +1,27 @@
+<section>
+<div class="chat-container">
+    <div  id="btn-email">
+        <button class="chat-btn" (click)="toggleChat('#body-email','#btn-email',true)">✉︎</button>
+    </div>
+    
+    <div class="chat-body" id="body-email">
+        <div class="chat-head"> ✉︎ Feedback  <span (click)="toggleChat('#body-email','#btn-email',false)">x</span></div>
+        <div class="chat-wrap">
+        <table class="chat-table">
+            <tr>
+              <td><input type="email" placeholder="E-mail" /></td>
+            </tr>
+            <tr>
+               <td><input type="text" placeholder="Asunto" /></td>
+            </tr>
+            <tr>
+               <td><textarea placeholder="Contenido"></textarea></td>
+            </tr>
+            <tr>
+               <td class="text-center"><button class="submit-bt">Enviar</button></td>
+            </tr>
+        </table>
+        </div>
+      </div>
+  </div>
+</section>
