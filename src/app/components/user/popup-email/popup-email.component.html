@@ -1,27 +1,47 @@
 <section>
-<div class="chat-container">
-    <div  id="btn-email">
-        <button class="chat-btn" (click)="toggleChat('#body-email','#btn-email',true)">✉︎</button>
-    </div>
-    
-    <div class="chat-body" id="body-email">
-        <div class="chat-head"> ✉︎ Feedback  <span (click)="toggleChat('#body-email','#btn-email',false)">x</span></div>
-        <div class="chat-wrap">
-        <table class="chat-table">
-            <tr>
-              <td><input type="email" placeholder="E-mail" /></td>
-            </tr>
-            <tr>
-               <td><input type="text" placeholder="Asunto" /></td>
-            </tr>
-            <tr>
-               <td><textarea placeholder="Contenido"></textarea></td>
-            </tr>
-            <tr>
-               <td class="text-center"><button class="submit-bt">Enviar</button></td>
-            </tr>
-        </table>
+    <div class="chat-container">
+        <div id="btn-email">
+            <button class="chat-btn" (click)="toggleChat('#body-email','#btn-email',true)">✉︎</button>
         </div>
-      </div>
-  </div>
+
+        <div class="chat-body" id="body-email">
+            <div class="chat-head"> ✉︎ Feedback <span (click)="toggleChat('#body-email','#btn-email',false)">x</span></div>
+            <div class="chat-wrap">
+                <!-- FORM -->
+                <form #pupUpEmailForm="ngForm" (ngSubmit)="sendmessage(pupUpEmailForm)">
+                    <table class="chat-table">
+                        <tr>
+                            <td><input type="hidden" name="from" #from="ngModel" [(ngModel)]="popUpEmailService.popupemail.from" /></td>
+                        </tr>
+                        <!--                    
+                        <tr>
+                          <td><input type="email" placeholder="E-mail" name="to" #to="ngModel" [(ngModel)]="popUpEmailService.popupemail.to" /></td>
+                        </tr>
+                        -->
+                        <tr>
+                            <td>
+                                <label for="to" style="color: white;">Docente:{{nombrecurrentDocente}}</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select style="width: 100%;" name="to" #to="ngModel" [(ngModel)]="popUpEmailService.popupemail.to" (ngModelChange)="obtenernombreDocente()">
+                                  <option [value]="item" *ngFor="let item of listaDocentes">{{item}}</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="Asunto" name="subject" #subject="ngModel" [(ngModel)]="popUpEmailService.popupemail.subject" /></td>
+                        </tr>
+                        <tr>
+                            <td><textarea placeholder="Contenido" name="text" #text="ngModel" [(ngModel)]="popUpEmailService.popupemail.text"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><button class="submit-bt">Enviar</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>
