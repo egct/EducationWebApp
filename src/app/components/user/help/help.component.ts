@@ -9,7 +9,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class HelpComponent {
 
   name = 'Angular 6';
-  s="https://www.youtube.com/embed/c9F5kMUfFKk";
+  s="https://www.youtube.com/embed/y9Rc6Vq3RcQ";
   safeSrc: SafeResourceUrl;
   constructor(private sanitizer: DomSanitizer) { 
     this.safeSrc =  this.sanitizer.bypassSecurityTrustResourceUrl(this.s);

@@ -1,0 +1,200 @@
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16/9 ratio */
+    padding-top: 30px;
+    /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed,
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*****************/
+
+
+/* Styles for tab labels */
+
+.mat-tab-label {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color: rgb(128, 128, 128);
+    font-weight: 700;
+}
+
+
+/* Styles for the active tab label */
+
+.mat-tab-label.mat-tab-label-active {
+    min-width: 25px !important;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    border-style: none;
+    border-radius: 10px;
+    /*    background: -webkit-linear-gradient(0deg, transparent, cadetblue, rgb(42, 207, 212), cadetblue, transparent);*/
+    background: -webkit-linear-gradient(bottom, cadetblue 8%, rgb(116, 189, 192) 9%, rgb(143, 217, 219) 12%, transparent);
+    /*background: -webkit-radial-gradient(center center, ellipse, cadetblue 30%, rgb(147, 209, 211) 50%, rgb(178, 234, 236) 60%, transparent 70%);*/
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background: -webkit-linear-gradient(0deg, transparent, cadetblue, rgb(42, 207, 212), cadetblue, transparent);
+}
+
+
+/*Botones next before */
+
+.mat-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    background-color: #535353;
+    /*background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);*/
+    color: white;
+    float: right;
+    border-radius: 50px;
+}
+
+.mat-button:hover {
+    background-color: cadetblue;
+    color: white;
+}
+
+
+/*********************************** Imagenes Frases ********************************/
+
+.Cbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    height: 62vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.Cbox h1 {
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+    z-index: 1;
+    font-size: 30px;
+}
+
+.Cbox h1 span {
+    color: crimson;
+}
+
+.Cbox p {
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+    z-index: 1;
+    font-size: 30px;
+}
+
+
+/*************************Snake***********************************/
+
+.Snake {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 62vh;
+}
+
+
+/****************table*****************/
+
+.table {
+    width: 100%;
+}
+
+
+/******************codigo**************/
+
+@import url('https://fonts.googleapis.com/css?family=Spectral+SC:700');
+@import '~highlight.js/styles/github.css';
+pre {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    word-wrap: break-word;
+}
+
+pre code {
+    flex: 1;
+    line-height: 1.5em;
+    font-size: 14px;
+    min-height: 100%;
+    padding: 1em 1.2em;
+}
+
+pre code.hljs-line-numbers {
+    padding: 0;
+}
+
+
+/** Line numbers styles */
+
+.hljs {
+    margin: 0 1em;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    transition: border ease 1s;
+}
+
+.hljs-ln {
+    padding: 8px 0;
+}
+
+.hljs-ln tr:first-child td {
+    padding-top: 8px !important;
+}
+
+.hljs-ln tr:last-child td {
+    padding-bottom: 8px !important;
+}
+
+
+/* for block of numbers */
+
+td.hljs-ln-numbers {
+    user-select: none;
+    text-align: center;
+    border-right: 1px solid gray;
+    vertical-align: top;
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+}
+
+
+/* for block of code */
+
+td.hljs-ln-code {
+    padding-left: 8px !important;
+}
+
+
+/***********Quiz***********/
+
+.Evaluacion {
+    width: 100%;
+}
