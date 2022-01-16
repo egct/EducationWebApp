@@ -187,7 +187,7 @@
                         </video>
                 </div>
                 <br>
-            </ng-template>
+            </ng-template> 
         </mat-tab>
 
         <mat-tab label="Casos de Estudio">
@@ -197,8 +197,8 @@
                     <mat-tab *ngFor="let tab of prefTabs" label="{{tab.label}}">
                         <br>
                         <h2>{{tab.title}}</h2>
-                        <a href="#" download="ProgramaCasos">
-                            <mat-icon>save_alt</mat-icon><strong>Descargar CasoCompGraf.zip</strong>
+                        <a href="{{tab.link}}" download="ProgramaCasos">
+                            <mat-icon>save_alt</mat-icon><strong>Descargar {{tab.label}} CompGraf.zip</strong>
                         </a>
                         <br><br>
                         <h3><strong>A)   Problema</strong></h3>
@@ -423,8 +423,8 @@
                                 </TABLE>
                             </TR>
                         </TABLE><br>
-                        <a href="" download="ProgramaPraqnique">
-                            <mat-icon>save_alt</mat-icon><strong>Descargar PraqniqueCompGraf.zip</strong>
+                        <a href="{{tab.link}}" download="ProgramaPraqnique">
+                            <mat-icon>save_alt</mat-icon><strong>Descargar {{tab.tituloN}} PraqniqueCompGraf.zip</strong>
                         </a>
                         <br><br>
                         <h3><strong>{{tab.A.subtitulo}}</strong></h3>

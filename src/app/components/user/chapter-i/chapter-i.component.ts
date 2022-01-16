@@ -96,6 +96,7 @@ export class ChapterIComponent implements OnInit {
 
     this.prefTabs = [
       {
+        link:'https://drive.google.com/uc?id=12KQht0YOhjqFzjuu5WgW29ZOEbCozM5U&export=download',
         label: 'Caso 1.1',
         title: 'Graficar un Rectángulo y Encontrar el Perímetro y su Área.',
         problema: 'Escribir un programa para graficar un rectángulo, calcular e imprimir el perímetro y su área. (Ver Figura 1.1.1)',
@@ -447,6 +448,7 @@ export class ChapterIComponent implements OnInit {
         
       },
       { label: 'Caso 1.2',
+      link:'https://drive.google.com/uc?id=1H8qICjtOsGOCOI0xgblvujvO4x99YdHZ&export=download',
         title: 'Graficar un Cuadrado y Encontrar el Perímetro y su Área.',
         problema: 'Escribir un programa para graficar un cuadrado, calcular e imprimir el perímetro y su área. (Ver Figura 1.2.1)',
         formulaA: ['$P=4l$',
@@ -823,6 +825,7 @@ export class ChapterIComponent implements OnInit {
         
       },
       { label: 'Caso 1.3',
+      link:'https://drive.google.com/uc?id=1lPw80g-VZS1HeTShlkdSLYjqZgoLnLpb&export=download',
         title: 'Graficar un Círculo y Encontrar el Perímetro y su Área.',
         problema: 'Escribir un programa para graficar un círculo, calcular e imprimir el perímetro y su área. (Ver Figura 1.3.1)',
         formulaA: ['$P=2\\pi r$',
@@ -1206,6 +1209,7 @@ export class ChapterIComponent implements OnInit {
         
       },
       { label: 'Caso 1.4',
+      link:'https://drive.google.com/uc?id=1Qbj5I3NDx8_kmQl7j8u-pjCsjxrEGy24&export=download',
         title: 'Graficar un Triángulo y Encontrar el Perímetro y su Área.',
         problema: 'Escribir un programa para graficar un triángulo, calcular e imprimir el perímetro y su área en función del semi-perímetro. Además, validar la existencia de un triángulo. (Ver Figura 1.4.1)',
         formulaA: ['$P=a+b+c$',
@@ -1873,6 +1877,7 @@ export class ChapterIComponent implements OnInit {
         
       },
       { label: 'Caso 1.5',
+      link:'https://drive.google.com/uc?id=17GUBj_CzW7L3A1Ib9EAJIZeaDm2R0Zva&export=download',
         title: 'Graficar un grupo de líneas utilizando el ratón.',
         problema: 'Escribir un programa para graficar un grupo de líneas continuas, donde cada línea se dibuja en función de dos puntos, utilizando el clic izquierdo del ratón. La línea inicial parte desde el origen O(0,0) y la segunda línea comienza en donde terminó la primera, la tercera línea comienza en donde terminó la segunda y así sucesivamente. Además, se debe considerar utilizar dos círculos pequeños o dos rectángulos pequeños para representar graficamente los dos puntos que tiene cada línea. (Ver Figura 1.5.1).',
         formulaA: [],
@@ -2211,7 +2216,9 @@ export class ChapterIComponent implements OnInit {
     ];
 
     this.praqnique=[
-        {label: 'Praqnique 1.1', 
+        {
+         link:'https://drive.google.com/uc?id=1qzWvOr4zObJAnqTutsf8s1Txog-R8JpS&export=download',
+         label: 'Praqnique 1.1', 
          tituloN:'Praqnique 1.1: ',
          titulo:'Hexágono de 6 Colores',
          sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un hexágono de 6 colores, dado el lado de un hexágono.',
@@ -2570,7 +2577,9 @@ export class ChapterIComponent implements OnInit {
          }
 
          },
-         {label: 'Praqnique 1.2', 
+         {
+        link:'https://drive.google.com/uc?id=100iRxgQ-l7y3e5B9BXQ3q5FljehtsvRt&export=download',
+        label: 'Praqnique 1.2', 
          tituloN:'Praqnique 1.2: ',
          titulo:'Flor de la Margarita de 5 Pétalos',
          sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar una flor de la Margarita de 5 pétalos, dado el lado de un pentágono.',
@@ -3159,7 +3168,9 @@ export class ChapterIComponent implements OnInit {
                 fotoDescrip:' Corrida del programa'
              }
         },
-         {label: 'Praqnique 1.3', 
+         {        
+        link:'https://drive.google.com/uc?id=1LpFnlZWVevOBnVYpL0_5z0K8JhlpiElq&export=download',
+         label: 'Praqnique 1.3', 
          tituloN:'Praqnique 1.3: ',
          titulo:'Polígonos Estrellados de 10 y 5 Puntas',
          sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un polígono estrellado de 10 puntas que contiene otros dos polígonos estrellados de 5 puntas, dado el lado de un decágono.',

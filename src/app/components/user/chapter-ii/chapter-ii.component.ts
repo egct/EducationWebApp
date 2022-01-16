@@ -552,7 +552,9 @@ export class ChapterIIComponent implements OnInit {
     ];
 
     this.praqnique=[
-        {label: 'Praqnique 3.1', 
+        {
+          link:'https://drive.google.com/uc?id=1egwN2u9pFA5YksGGot1bBMFel3bpc8I6&export=download',
+          label: 'Praqnique 3.1', 
          tituloN:'Praqnique 3.1: ',
          titulo:'Líneas y Puntos Notables de un Triángulo',
          sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un triángulo cualquiera y sus puntos y líneas notables.',
@@ -2296,1470 +2298,3172 @@ export class ChapterIIComponent implements OnInit {
               }
             ]
           }
-         }/*,
-         {label: 'Praqnique 1.2', 
-         tituloN:'Praqnique 1.2: ',
-         titulo:'Flor de la Margarita de 5 Pétalos',
-         sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar una flor de la Margarita de 5 pétalos, dado el lado de un pentágono.',
+         },
+         {
+          link:'https://drive.google.com/uc?id=1rqz2QCg86nSAIM0XqNLV2Sd63zl6ZLBh&export=download',
+          label: 'Praqnique 3.2', 
+         tituloN:'Praqnique 3.2: ',
+         titulo:'Operaciones entre Vectores 2D',
+         sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar vectores 2D y realizar diferentes operaciones entre ellos.',
          sinopsis:[
             {titulo:'Lenguaje:',descrip:'C#'},
             {titulo:'Compilador:',descrip:'Visual Studio .NET'},
-            {titulo:'Habilidades:',descrip:'Diseño de algoritmos, geometría computacional, clases y objetos, GUIs.'},
+            {titulo:'Habilidades:',descrip:'Diseño de algoritmos, geometría computacional aplicada, translación lineal, vectores 2D, GUIs, clases y objetos.'},
             {titulo:'Nivel de experiencia:',descrip:'Intermedio'}
             ],
          A:{
              subtitulo:'A)	Descripción del Problema',
-             problema:'Dado un pentágono regular, dibujar una flor de la Margarita de 5 pétalos a base de cinco pentágonos inscritos en uno más grande, considerando que uno de los vértices de los cinco pentágonos se encuentra sobre el eje de las ‘x’. Además, se debe rellenar de color rojo cada pentágono pequeño. (Ver Figura 1.2.1).',
-             fotoPath:'./assets/images/Capitulos/I/media/image114.png',
-             fotoN:'Figura 1.2.1 ',
-             fotoDescrip:' Flor margarita de 5 pétalos.'
+             problema:'Escribir un programa para realizar diferentes operaciones entre vectores 2D como: a) Sumar dos Vectores; b) Restar dos Vectores; c) Proyección de un Vector sobre otro; d) Vector Perpendicular. Además, se deben graficar los vectores de las diferentes operaciones realizadas entre ellos. En la Figura 3.2.1, se muestra la representación del vector V en el plano 2D.',
+             fotoPath:'./assets/images/Capitulos/II/media/cap2i1.png',
+             fotoN:'Figura 3.2.1. ',
+             fotoDescrip:'Vector V en el plano 2D.'
             },
-        B:{
-            subtitulo:'B)	Geometría de la Figura',problema:'Por construcción se completa la estrella pentagonal del pentágono que encierra los cinco pentágonos pequeños de la flor de la Margarita y se encuentran cinco ángulos para realizar los diferentes cálculos de las coordenadas de los diferentes puntos que conforman los vértices de los pentágonos pequeños. (Ver Figura 1.2.2).',fotoPath:'./assets/images/Capitulos/I/media/image115.png',fotoN:'Figura 1.2.2 ',fotoDescrip:'Vérties y ángulos de la flor margarita de 5 pétalos.',
-            listaB:
-                [
-                    {
-                        parrafo:'Calculamos los valores de a y b en el triángulo rectángulo ABV:',
-                        tabla:[{
-                            fotoPath:'./assets/images/Capitulos/I/media/image116.png',
-                            formulas:[
-                                '$\\cos(36)=\\frac{a}{l}$',
-                                '$a=l\\times\\cos(36)\\Rightarrow(1)$',
-                                '$\\sin(36)=\\frac{b}{l}$',
-                                '$b=l\\times\\sin(36)\\Rightarrow(2)$'
-                                ]
-                            }]
-                    },
-                    {
-                        parrafo:'Calculamos los valores de c y d en el triángulo rectángulo BDY:',
-                        tabla:[{
-                            fotoPath:'./assets/images/Capitulos/I/media/image121.png',
-                            formulas:[
-                                '$\\sin(72)=\\frac{c}{l}$',
-                                '$c=l\\times\\sin(72)\\Rightarrow(3)$',
-                                '$\\cos(72)=\\frac{d}{l}$',
-                                '$d=l\\times\\cos(72)\\Rightarrow(4)$'
-                                ]
-                            }]
-                    },
-                    {
-                        parrafo:'Obtenemos los siguientes puntos:',
-                        formulas:[
-                            '$A(x_{A},y_{A})=A(a,0)$',
-                            '$B(x_{B},y_{B})=B(0,b)$',
-                            '$C(x_{C},y_{C})=C(2a,b)$',
-                            '$D(x_{D},y_{D})=D(d,b+c)$',
-                            '$E(x_{E},y_{E})=E(d+l,b+c)$'
-                            ]
-                    },
-                    {
-                        parrafo:'Calculamos el valor de la pendiente AD:',
-                        formulas:[
-                            '$m_{AD}=\\frac{y_{D}-y_{A}}{x_{D}-x_{A}}$',
-                            '$m_{AD}=\\frac{(b+c)-0}{d-a}$',
-                            '$m_{AD}=\\frac{b+c}{d-a}\\Rightarrow(5)$'
-                            ]
-                    },
-                    {
-                        parrafo:'Calculamos el valor de la pendiente BC:',
-                        formulas:[
-                            '$m_{BC}=\\frac{y_{C}-y_{B}}{x_{C}-x_{B}}$',
-                            '$m_{BC}=\\frac{b-b}{2a-0}$',
-                            '$m_{BC}=\\frac{0}{2a}$',
-                            '$m_{BC}=0\\Rightarrow(6)$'
-                            ]
-                    },
-                    {
-                        parrafo:'Calculamos el valor de la pendiente BE:',
-                        formulas:[
-                            '$m_{BE}=\\frac{y_{E}-y_{B}}{x_{E}-x_{B}}$',
-                            '$m_{BE}=\\frac{(b+c)-b}{(d+l)-0}$',
-                            '$m_{BE}=\\frac{c}{d+l}\\Rightarrow(7)$'
-                            ]
-                    },
-                    {
-                        parrafo:'Calculamos la ecuación de la recta AD:',
-                        formulas:[
-                            '$y-y_{A}=m_{AD}(x-x_{A})$',
-                            '$y-0=m_{AD}(x-a)$',
-                            '$y=x\\times m_{AD}-a\\times m_{AD}\\Rightarrow(8)$'
-                            ]
-                    },
-                    {
-                        parrafo:'Calculamos la ecuación de la recta BC:',
-                        formulas:[
-                            '$y-y_{B}=m_{BC}(x-x_{B})$',
-                            '$y-b=0\\times (x-0)$',
-                            '$y=b\\Rightarrow(9)$'
-                            ]
-                    },
-                    {
-                        parrafo:'Calculamos la ecuación de la recta BE:',
-                        formulas:[
-                            '$y-y_{B}=m_{BE}(x-x_{B})$',
-                            '$y-b=m_{BE}(x-0)$',
-                            '$y-b=x\\times m_{BE}\\Rightarrow(10)$'
-                            ]
-                    },
-                    {
-                        parrafo:'Resolvemos el sistema de ecuaciones entre (8) y (9), para lo cual reemplazamos el valor de y de la ecuación (9) en la ecuación (8) y calculamos el valor de x:',
-                        formulas:[
-                            '$b=x\\times m_{AD}-a\\times m_{AD}$',
-                            '$x\\times m_{AD}=b+a\\times m_{AD}$',
-                            '$x=\\frac{b+a\\times m_{AD}}{m_{AD}}\\Rightarrow(11)$'
-                            ]
-                    },
-                    {
-                        parrafo:'De las ecuaciones (9) y (11) obtenemos las coordenadas del punto F:',
-                        formulas:[
-                            '$F(x_{F},y_{F})=F(\\frac{b+a\\times m_{AD}}{m_{AD}},b)$',
-                            ]
-                    },
-                    {
-                        parrafo:'Resolvemos el sistema de ecuaciones entre (8) y (10), para lo cual reemplazamos el valor de y de la ecuación (8) en la ecuación (10) y calculamos el valor de x:',
-                        formulas:[
-                            '$x\\times m_{AD}-a\\times m_{AD}-b=x\\times m_{BE}$',
-                            '$x\\times m_{AD}-x\\times m_{BE}=a\\times m_{AD}+b$',
-                            '$x\\times (m_{AD}-\\times m_{BE})=a\\times m_{AD}+b$',
-                            '$x=\\frac{a\\times m_{AD}+b}{m_{AD}-\\times m_{BE}}\\Rightarrow(12)$'
-                            ]
-                    },
-                    {
-                        parrafo:'En la ecuación (10) reemplazamos el valor de x:',
-                        formulas:[
-                            '$y-b=\\frac{a\\times m_{AD}+b}{m_{AD}-\\times m_{BE}}\\times m_{BE}$',
-                            '$y=\\frac{a\\times m_{AD}+b}{m_{AD}-\\times m_{BE}}\\times m_{BE}+b\\Rightarrow(13)$'
-                            ]
-                    },
-                    {
-                        parrafo:'De las ecuaciones (12) y (13) obtenemos las coordenadas del punto H:',
-                        formulas:[
-                            '$H(x_{H},y_{H})=H(\\frac{a\\times m_{AD}+b}{m_{AD}-\\times m_{BE}}, x_{H}\\times m_{BE}+b)$'
-                            ]
-                    },
-                    {
-                        parrafo:'Calculamos la distancia FH:',
-                        formulas:[
-                            '$d_{FH}=\\sqrt{(x_{H}-x_{F})^{2}+(y_{H}-y_{F})^{2}}$',
-                            '$d_{FH}=\\sqrt{(\\frac{a\\times m_{AD}+b}{m_{AD}-\\times m_{BE}}-\\frac{b+\\times m_{AD}}{m_{AD}})^{2}+((x_{H}\\times m_{BE}+b)-b)^{2}}$'
-                            ]
-                    },
-                    {
-                        parrafo:'Por lo tanto:',
-                        formulas:[
-                            '$FH=FG=GI=IJ=HJ$'
-                            ]
-                    },
-                    {
-                        parrafo:'También se puede concluir que:',
-                        formulas:[
-                            '$FH=BL=FL=KF$'
-                            ]
-                    },
-                    {
-                        parrafo:'Resolviendo el triángulo rectángulo BOL que forma parte del triángulo isósceles BFL, se tiene que:',
-                        tabla:[{
-                            fotoPath:'./assets/images/Capitulos/I/media/image165.png',
-                            formulas:[
-                                '$\\cos(36)=\\frac{BO}{BL}$',
-                                '$BO=BL\\times\\cos(36)=OF\\Rightarrow(14)$',
-                                '$BF=2\\times BO\\Rightarrow(15)$',
-                                '$\\sin(36)=\\frac{LO}{BL}$',
-                                '$LO=BL\\times\\sin(36)\\Rightarrow(16)$'
-                                ]
-                            }]    
-                    },
-                    {
-                        parrafo:'Resolviendo el triángulo rectángulo ZKF se tiene que:',
-                        tabla:[{
-                            fotoPath:'./assets/images/Capitulos/I/media/image171.png',
-                            formulas:[
-                                '$\\cos(72)=\\frac{ZF}{KF}$',
-                                '$ZF=KF\\times\\cos(72)\\Rightarrow(17)$',
-                                '$\\sin(72)=\\frac{KZ}{KF}$',
-                                '$KZ=KF\\times\\sin(72)\\Rightarrow(18)$'
-                                ]
-                            }]    
-                    },
-                    {
-                        parrafo:'Luego, obtenemos los siguientes puntos del pentágono interno:',
-                        formulas:[
-                            '$G(x_{G},y_{G})=G(BF+FH,b)$',
-                            '$I(x_{I},y_{I})=I(BF+FH+ZF,b+KZ)$',
-                            '$J(x_{J},y_{J})=J(d+FH+ZF,b+c-KZ)$'
-                            ]
-                    },
-                    {
-                        parrafo:'Finalmente, obtenemos los siguientes puntos de los pentágonos externos:',
-                        formulas:[
-                            '$L(x_{L},y_{L})=L(BO,b-LO)$',
-                            '$K(x_{K},y_{K})=K(BF-ZF,b-KZ)$',
-                            '$M(x_{M},y_{M})=M(BF+FH+ZF,b-KZ)$',
-                            '$N(x_{N},y_{N})=N(BF+FH+BO,b-LO)$',
-                            '$P(x_{P},y_{P})=P(ZF,b+KZ)$',
-                            '$R(x_{R},y_{R})=R(d-ZF,b+c-KZ)$',
-                            '$Q(x_{Q},y_{Q})=Q(ZF+2\\times FH+BF,b+KZ)$',
-                            '$S(x_{S},y_{S})=S(d+l+ZF,b+c-KZ)$',
-                            '$T(x_{T},y_{T})=T(d+FH,b+c)$',
-                            '$U(x_{U},y_{U})=U(d+FH+2\\times ZF,b+c)$'
-                            ]
-                    }
-                ]                          
-            },
-            C:{
-               subtitulo:'C)	Algoritmos',
-               algoritmosC:[
-                   {
-                       titulo:'1.2.1. Algoritmo de la Función ReadData()',
-                       pasos:[
-                           'Leer el lado del pentágono.'
-                       ]
-                   },
-                   {
-                       titulo:'1.2.2. Algoritmo de la Función CalculateMainVertex()',
-                       pasos:[
-                        'Convertir el ángulo ‘1’ de grados a radianes, multiplicando el valor del ángulo de 36 grados por PI radianes y dividiendo su resultado para 180 grados.',
-                        'Convertir el ángulo ‘2’ de grados a radianes, multiplicando el valor del ángulo de 72 grados por PI radianes y dividiendo su resultado para 180 grados.',
-                        'Calcular el valor del segmento \'a\' del contorno del pentágono.',
-                        'Calcular el valor del segmento \'b\' del contorno del pentágono.',
-                        'Calcular el valor del segmento \'c\' del contorno del pentágono.',
-                        'Calcular el valor del segmento \'d\' del contorno del pentágono.',
-                        'Calcular las coordenadas del vértice \'A\'.',
-                        'Calcular las coordenadas del vértice \'B\'.',
-                        'Calcular las coordenadas del vértice \'C\'.',
-                        'Calcular las coordenadas del vértice \'D\'.',
-                        'Calcular las coordenadas del vértice \'E\'.'                        
-                       ]
-                   },
-                   {
-                       titulo:'1.2.3. Algoritmo de la Función CalculateSlopes()',
-                       pasos:[
-                            'Calcular el valor de la pendiente AD.',
-                            'Calcular el valor de la pendiente BE.'
-                        ]
-                   },
-                   {
-                       titulo:'1.2.4. Algoritmo de la Función CalculateAuxiliarySegmentsVertex()',
-                       pasos:[
-                            'Asignar al objeto graph la funcionalidad de crear gráficos del PictureBox llamado picCanvas.',
-                            'Llamada a la función CalculateMainVertex.',
-                            'Llamada a la función CalculateSlopes.',
-                            'Calcular las coordenadas del vértice \'F\'.',
-                            'Calcular las coordenadas del vértice \'H\'.',
-                            'Calcular el valor del segmento \'FH\'.',
-                            'Calcular el valor del segmento \'BL\'.',
-                            'Calcular el valor del segmento \'KF\'.',
-                            'Calcular el valor del segmento \'BO\'.',
-                            'Calcular el valor del segmento \'LO\'.',
-                            'Calcular el valor del segmento \'BF\'.',
-                            'Calcular el valor del segmento \'ZF\'.',
-                            'Calcular el valor del segmento \'KZ\'.',
-                            'Calcular las coordenadas del vértice \'L\'.',
-                            'Calcular las coordenadas del vértice \'M\'.',
-                            'Calcular las coordenadas del vértice \'N\'.',
-                            'Calcular las coordenadas del vértice \'P\'.',
-                            'Calcular las coordenadas del vértice \'R\'.',
-                            'Calcular las coordenadas del vértice \'Q\'.',
-                            'Calcular las coordenadas del vértice \'S\'.',
-                            'Calcular las coordenadas del vértice \'T\'.',
-                            'Calcular las coordenadas del vértice \'U\'.',
-                            'Calcular las coordenadas del vértice \'G\'.',
-                            'Calcular las coordenadas del vértice \'I\'.',
-                            'Calcular las coordenadas del vértice \'J\'.'                        
-                       ]
-                   },
-                   {
-                       titulo:'1.2.5. Algoritmo de la Función FillPolygonPointF()',
-                       pasos:[
-                            'Asignar al objeto graph el valor de retorno de la función Graphics llamada por el objeto \'e\'.',
-                            'Actualizar el valor del vertice \'A\' con lo que tiene el vértice \'A\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'K\' con lo que tiene el vértice \'K\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'M\' con lo que tiene el vértice \'M\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'F\' con lo que tiene el vértice \'F\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'G\' con lo que tiene el vértice \'G\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'N\' con lo que tiene el vértice \'N\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'C\' con lo que tiene el vértice \'C\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'Q\' con lo que tiene el vértice \'Q\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'I\' con lo que tiene el vértice \'I\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'S\' con lo que tiene el vértice \'S\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'E\' con lo que tiene el vértice \'E\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'U\' con lo que tiene el vértice \'U\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'J\' con lo que tiene el vértice \'J\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'T\' con lo que tiene el vértice \'T\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'D\' con lo que tiene el vértice \'D\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'R\' con lo que tiene el vértice \'R\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'H\' con lo que tiene el vértice \'H\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'P\' con lo que tiene el vértice \'P\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'B\' con lo que tiene el vértice \'B\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'L\' con lo que tiene el vértice \'L\' multiplicado por un factor de escalamiento.',
-                            'Crear una brocha sólida de color rojo.',
-                            'Crear un arreglo de puntos de tipo Point con los vértices: A, M, G, F, K, A.',
-                            'Graficar un polígono relleno con la brocha y el arreglo de puntos del paso anterior.',
-                            'Crear un arreglo de puntos de tipo Point con los vértices: N, C, Q, I, G, N.',
-                            'Graficar un polígono relleno con la brocha y el arreglo de puntos del paso anterior.',
-                            'Crear un arreglo de puntos de tipo Point con los vértices: I, S, E, U, J, I.',
-                            'Graficar un polígono relleno con la brocha y el arreglo de puntos del paso anterior.',
-                            'Crear un arreglo de puntos de tipo Point con los vértices: H, J, T, D, R, H.',
-                            'Graficar un polígono relleno con la brocha y el arreglo de puntos del paso anterior.',
-                            'Crear un arreglo de puntos de tipo Point con los vértices: L, F, H, P, B, L.',
-                            'Graficar un polígono relleno con la brocha y el arreglo de puntos del paso anterior.'
-                       ]
-                   }
-               ]
-            },         
-            D:{
-                subtitulo:'D)	Código de la Aplicación',
-                listaCodigo:[
-                    {
-                        problema:'La implementación de la clase CDaisyFlower, se presenta a continuación en la Tabla 1.2.2, que contiene datos miembro y funciones miembro que realizan diferentes operaciones.',
-                        tablaN:'Tabla 1.2.2. ',
-                        tablaDescrip:'Código de la clase CDaisyFlower del programa.',
-                        tablaDatos:
-                        `
-                        using System;
-                        using System.Collections.Generic;
-                        using System.Linq;
-                        using System.Text;
-                        using System.Threading.Tasks;
-                        using System.Drawing;
-                        using System.Windows.Forms;
-
-                        namespace WinAppDaisyFlower
-                        {
-                            class CDaisyFlower
-                            {
-                                // Datos Miembro (Atributos).
-
-                                // Lado del pentágono.
-                                private float side;
-                                // Segmentos del pentágono.
-                                private float a, b, c, d;
-                                // Ángulos del pentágono.
-                                private float angle1, angle2;
-                                // Pendiente o gradiente de la línea AD.
-                                private float mAD;
-                                // Pendiente o gradiente de la línea BE.
-                                private float mBE;
-                                // Objeto que activa el modo gráfico.        
-                                private Graphics graph;
-                                // Objeto que maneja un pincel para el relleno.
-                                private SolidBrush redBrush;
-                                // Constante scale factor (Zoom In/Zoom Out).
-                                private const float SF = 20;
-                                // Objeto Punto que representa a los cinco vértices del pentágono.
-                                private PointF A, B, C, D, E;
-                                // Objeto Punto que representa a los vértices auxiliares del pentágono.
-                                private PointF F, G, H, I, J;
-                                // Objeto Punto que representa a los vértices auxiliares del pentágono.
-                                private PointF K, L, M, N, T, U, V, W, X, Y;
-
-                                // Funciones Miembro - Métodos.
-
-                                // Constructor sin parámetros.
-                                public CDaisyFlower()
-                                {
-                                    side = 0.0f;
-                                }
-
-                                // Función que lee el lado del pentágono.
-                                public void ReadData(TextBox txtSideSide)
-                                {
-                                    try
-                                    {
-                                        side = float.Parse(txtSideSide.Text);
-                                    }
-                                    catch
-                                    {
-                                        MessageBox.Show("Ingreso no válido...");
-                                    }            
-                                }
-
-                                // Función que inicializa los datos y controles del pentágono.
-                                public void InitializeData(TextBox txtSide,
-                                                        PictureBox picCanvas)
-                                {
-                                    side = 0.0f;
-                                    txtSide.Text = "";            
-                                    txtSide.Focus();
-                                    picCanvas.Refresh();
-                                }
-
-                                // Función que calcula los valores de los cinco vértices del pentágono.
-                                private void CalculateMainVertex()
-                                {            
-                                    angle1 = 36.0f * (float)Math.PI / 180.0f;            
-                                    angle2 = 72.0f * (float)Math.PI / 180.0f;
-                                    
-                                    a = side * (float)Math.Cos(angle1);            
-                                    b = side * (float)Math.Sin(angle1);            
-                                    c = side * (float)Math.Sin(angle2);            
-                                    d = side * (float)Math.Cos(angle2);
-                                    
-                                    A.X = a; A.Y = 0;
-                                    B.X = 0; B.Y = b;            
-                                    C.X = 2 * a; C.Y = b;            
-                                    D.X = d; D.Y = b + c;            
-                                    E.X = d + side; E.Y = b + c;
-                                }
-
-                                // Función que calcula los valores de las pendientes AD y BE.
-                                private void CalculateSlopes()
-                                {            
-                                    mAD = (b + c) / (d - a);            
-                                    mBE = c / (d + side);
-                                }
-
-                                // Función que calcula los vértices y segmentos de una flor de la Margarita de 5 
-                                // pétalos a base de cinco pentágonos inscritos en uno más grande.        
-                                public void CalculateAuxiliarySegmentsVertex(PictureBox picCanvas)
-                                {            
-                                    graph = picCanvas.CreateGraphics();
-                                    
-                                    CalculateMainVertex();
-                                    CalculateSlopes();
-                                    
-                                    F.X = (b + a * mAD) / mAD; F.Y = b;            
-                                    H.X = (a * mAD + b) / (mAD - mBE); H.Y = H.X * mBE + b;
-                                    
-                                    float FH = (float)Math.Sqrt((float)Math.Pow(H.X - F.X, 2) 
-                                            + (float)Math.Pow(H.Y - F.Y, 2));            
-                                    float BL = FH;            
-                                    float KF = FH;            
-                                    float BO = BL * (float)Math.Cos(angle1);            
-                                    float LO = BL * (float)Math.Sin(angle1);            
-                                    float BF = 2 * BO;            
-                                    float ZF = KF * (float)Math.Cos(angle2);            
-                                    float KZ = KF * (float)Math.Sin(angle2);
-                                    
-                                    L.X = BO; L.Y = b - LO; K.X = BF - ZF; K.Y = b - KZ;            
-                                    M.X = BF + FH + ZF; M.Y = b - KZ;            
-                                    N.X = BF + FH + BO; N.Y = b - LO;            
-                                    P.X = ZF; P.Y = b + KZ;            
-                                    R.X = d - ZF; R.Y = b + c - KZ;            
-                                    Q.X = ZF + 2 * FH + BF; Q.Y = b + KZ;            
-                                    S.X = d + side + ZF; S.Y = b + c - KZ;            
-                                    T.X = d + FH; T.Y = b + c;            
-                                    U.X = d + FH + 2 * ZF; U.Y = b + c;
-                                    
-                                    G.X = BF + FH; G.Y = b;            
-                                    I.X = BF + FH + ZF; I.Y = b + KZ;            
-                                    J.X = d + FH + ZF; J.Y = b + c - KZ;
-                                }
-
-                                // Función que grafica una flor de la Margarita de 5 pétalos 
-                                // a base de cinco pentágonos rellenados de color rojo.
-                                public void FillPolygonPointF(PaintEventArgs e)
-                                {
-                                    graph = e.Graphics;
-                                    
-                                    A.X = A.X * SF; A.Y = A.Y * SF;            
-                                    K.X = K.X * SF; K.Y = K.Y * SF;
-                                    M.X = M.X * SF; M.Y = M.Y * SF;
-                                    F.X = F.X * SF; F.Y = F.Y * SF;
-                                    G.X = G.X * SF; G.Y = G.Y * SF;
-                                    
-                                    N.X = N.X * SF; N.Y = N.Y * SF;
-                                    C.X = C.X * SF; C.Y = C.Y * SF;            
-                                    Q.X = Q.X * SF; Q.Y = Q.Y * SF;
-                                    I.X = I.X * SF; I.Y = I.Y * SF;            
-                                    
-                                    S.X = S.X * SF; S.Y = S.Y * SF;
-                                    E.X = E.X * SF; E.Y = E.Y * SF;
-                                    U.X = U.X * SF; U.Y = U.Y * SF;
-                                    J.X = J.X * SF; J.Y = J.Y * SF;
-                                    
-                                    T.X = T.X * SF; T.Y = T.Y * SF;
-                                    D.X = D.X * SF; D.Y = D.Y * SF;
-                                    R.X = R.X * SF; R.Y = R.Y * SF;           
-                                    H.X = H.X * SF; H.Y = H.Y * SF;
-                                    
-                                    P.X = P.X * SF; P.Y = P.Y * SF;            
-                                    B.X = B.X * SF; B.Y = B.Y * SF;
-                                    L.X = L.X * SF; L.Y = L.Y * SF;
-                                    
-                                    redBrush = new SolidBrush(Color.Red);
-                                    
-                                    PointF[] polPoints1 = { A, M, G, F, K, A };            
-                                    graph.FillPolygon(redBrush, polPoints1);
-                                    
-                                    PointF[] polPoints2 = { N, C, Q, I, G, N };            
-                                    graph.FillPolygon(redBrush, polPoints2);
-                                    
-                                    PointF[] polPoints3 = { I, S, E, U, J, I };            
-                                    graph.FillPolygon(redBrush, polPoints3);
-                                    
-                                    PointF[] polPoints4 = { H, J, T, D, R, H };            
-                                    graph.FillPolygon(redBrush, polPoints4);
-                                    
-                                    PointF[] polPoints5 = { L, F, H, P, B, L };            
-                                    graph.FillPolygon(redBrush, polPoints5);
-                                }
-
-                                // Función que cierra un formulario.
-                                public void CloseForm(Form ObjForm)
-                                {
-                                    ObjForm.Close();
-                                }
-                            }
-                        }
-                        `
-                    },
-                    {
-                        problema:'La implementación de la clase frmDaisyFlower, se presenta a continuación en la Tabla 1.2.3, que es la clase que representa a la interfaz gráfica de usuario de la flor margarita de 5 pétalos.',
-                        tablaN:'Tabla 1.2.3. ',
-                        tablaDescrip:'Código de la clase frmDaisyFlower del programa.',
-                        tablaDatos:
-                        `
-                        using System;
-                        using System.Collections.Generic;
-                        using System.ComponentModel;
-                        using System.Data;
-                        using System.Drawing;
-                        using System.Linq;
-                        using System.Text;
-                        using System.Threading.Tasks;
-                        using System.Windows.Forms;
-
-                        namespace WinAppDaisyFlower
-                        {
-                            public partial class frmDaisyFlower : Form
-                            {
-                                // Definición de un objeto de tipo CDaisyFlower.
-                                CDaisyFlower ObjDaisyFlower = new CDaisyFlower();
-
-                                public frmDaisyFlower()
-                                {
-                                    InitializeComponent();
-                                }
-
-                                private void frmDaisyFlower_Load(object sender, EventArgs e)
-                                {
-                                    // Inicialización de los datos y controles.
-                                    // Llamada a la función InitializeData.
-                                    ObjDaisyFlower.InitializeData(txtSide, picCanvas);
-                                }
-
-                                private void btnCalculate_Click(object sender, EventArgs e)
-                                {
-                                    // Lectura de datos.
-                                    // Llamada a la función ReadData.
-                                    ObjDaisyFlower.ReadData(txtSide);
-                                    // Cálculo de los segmentos y vértices auxiliares de la flor de la Margarita.
-                                    // Llamada a la función CalculateAuxiliarySegmentsVertex.
-                                    ObjDaisyFlower.CalculateAuxiliarySegmentsVertex(picCanvas);
-                                    // Redibujar el control picCanvas, llamando al evento Paint.
-                                    // Llamada a la función Invalidate.
-                                    picCanvas.Invalidate();
-                                }
-
-                                private void btnReset_Click(object sender, EventArgs e)
-                                {
-                                    // Inicialización de los datos y controles.
-                                    // Llamada a la función InitializeData.
-                                    ObjDaisyFlower.InitializeData(txtSide, picCanvas);
-                                }
-
-                                private void btnExit_Click(object sender, EventArgs e)
-                                {
-                                    // Cierre de un formulario.
-                                    // Llamada a la función CloseForm.
-                                    ObjDaisyFlower.CloseForm(this);
-                                }
-
-                                private void picCanvas_Paint(object sender, PaintEventArgs e)
-                                {
-                                    // Rellenar los polígonos pequeños de la flor de la Margarita de 5 pétalos.
-                                    // Llamada a la función FillPolygonPointF.
-                                    ObjDaisyFlower.FillPolygonPointF(e);
-                                }
-                            }
-                        }
-                        `
-                    } 
+         B:{
+             subtitulo:'B)	Geometría Vectorial',
+             pasosB:[
+               {
+                subtitulo2:'B.1.) Suma de Vectores',
+                tituloproblema:'Problema:',
+                parrafo:'Dados dos vectores 2D en el plano, calcular y graficar el vector resultante de la suma entre ellos. Utilizar el método del paralelogramo para realizar la representación gráfica de los tres vectores 2D en el plano.',
+                titulosolucion:'Solución:',  
+                solucion:[                  
+                  {
+                    parrafo:'Dados los siguientes vectores en el plano:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i2.png',    
+                  },
+                  {
+                    parrafo:'La suma entre los vectores A y B se obtiene utilizando la ecuación (54) de la sección 2.1.2.13:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i3.png',    
+                  },
+                  {
+                    parrafo:'En la representación gráfica de la Suma de dos Vectores, se forma un paralelogramo, donde el Vector $\\overrightarrow{C}$ es el Vector Resultante $\\overrightarrow{R}$. La Figura 3.2.2 muestra estos vectores en el plano del mundo real.',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i4.png',    
+                  },
+                  {
+                    parrafo:'Para poder representar gráficamente estos vectores en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i5.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i6.png',    
+                  },
+                  {
+                    parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i7.png',    
+                  },
+                  {
+                    parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de los vértices de los extremos de los vectores A, B y C:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i8.png',    
+                  },
+                  {
+                    parrafo:'Entonces los valores de los vértices de los extremos de los vectores en el mundo de la Computación Gráfica se calculan de la siguiente manera, para obtener los nuevos vectores A, B y C:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i9.png',    
+                  },
+                  {
+                    parrafo:'Finalmente, la gráfica de los vectores A, B y C en el mundo de la Computación Gráfica se muestra en la Figura 3.2.3:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i10.png',    
+                  }
                 ]
-            },
-            E:{
-                subtitulo:'E)	Pruebas de la Aplicación',
-                problema:'A continuación, en la Figura 1.2.3, se muestra un ejemplo de la corrida del programa:',
-                fotoPath:'./assets/images/Capitulos/I/media/image189.png',
-                fotoN:'Figura 1.2.3 ',
+               },
+               {
+                subtitulo2:'B.2.) Resta de Vectores',
+                tituloproblema:'Problema:',
+                parrafo:'Dados dos vectores 2D en el plano, calcular y graficar el vector resultante de la resta entre ellos. Utilizar el método del paralelogramo para realizar la representación gráfica de los tres vectores 2D en el plano.',
+                titulosolucion:'Solución:',  
+                solucion:[                  
+                  {
+                    parrafo:'Dados los siguientes vectores en el plano:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i11.png',    
+                  },
+                  {
+                    parrafo:'La resta entre los vectores A y B se obtiene utilizando la ecuación (58) de la sección 2.1.2.13:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i12.png',    
+                  },
+                  {
+                    parrafo:'En la representación gráfica de la Resta de dos Vectores, se forma un paralelogramo, donde el Vector \\overrightarrow{B} es opuesto al Vector \\overrightarrow{-B}, que es igual al Vector \\overrightarrow{D}, osea:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i13.png',    
+                  },
+                  {
+                    parrafo:'La Figura 3.2.4 muestra estos vectores en el plano del mundo real.',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i14.png',    
+                  },
+                  {
+                    parrafo:'Para poder representar gráficamente estos vectores en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i15.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i16.png',    
+                  },
+                  {
+                    parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i17.png',    
+                  },
+                  {
+                    parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de los vértices de los extremos de los vectores A, B y C:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i18.png',    
+                  },
+                  {
+                    parrafo:'Entonces los valores de los vértices de los extremos de los vectores en el mundo de la Computación Gráfica se calculan de la siguiente manera, para obtener los nuevos vectores A, -B y C:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i19.png',    
+                  },
+                  {
+                    parrafo:'Finalmente, la gráfica de los vectores A, -B y C en el mundo de la Computación Gráfica se muestra en la Figura 3.2.5:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i20.png',    
+                  }
+                ]
+               },
+               {
+                subtitulo2:'B.3.) Proyección de un Vector sobre otro Vector',
+                tituloproblema:'Problema:',
+                parrafo:'Dados dos vectores 2D en el plano, calcular y graficar el vector proyección del Vector A sobre el Vector B y el Vector Perpendicular entre ellos. Utilizar las ecuaciones de la sección 3.1.2.19 y 3.1.2.20.',
+                titulosolucion:'Solución:',  
+                solucion:[                  
+                  {
+                    parrafo:'Dados los siguientes vectores en el plano:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i21.png',    
+                  },
+                  {
+                    parrafo:'La proyección del vector A sobre el vector B se obtiene utilizando la ecuación (68) de la sección 3.1.2.19:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i22.png',    
+                  },
+                  {
+                    parrafo:'Primero se calcula el módulo o magnitud del vector B con la ecuación (13) de la sección 3.1.2.4:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i23.png',    
+                  },
+                  {
+                    parrafo:'Como segundo paso, se calcula el vector unitario o normalizado del vector B, utilizando la ecuación (26) de la sección 3.1.2.8:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i24.png',    
+                  },
+                  {
+                    parrafo:'Como tercer paso, se calcula el producto punto entre el vector A con el vector unitario o normalizado del vector B:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i25.png',    
+                  },
+                  {
+                    parrafo:'Finalmente, se calcula el producto entre un vector por un escalar, donde el vector representa al vector unitario de B y el escalar representa al producto punto calculado en el paso anterior:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i26.png',    
+                  },
+                  {
+                    parrafo:'Entonces, el vector proyección de A sobre el vector B es el vector C:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i27.png',    
+                  },
+                  {
+                    parrafo:'La Figura 3.2.6 muestra la proyección del vector A sobre el vector B.'
+                  },
+                  {
+                    parrafo:'Para poder representar gráficamente estos vectores en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 3.1.1.2 referentes a la traslación de un punto a otro que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i28.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i29.png',    
+                  },
+                  {
+                    parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i30.png',    
+                  },
+                  {
+                    parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de los vértices de los extremos de los vectores A, B y C:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i31.png',    
+                  },
+                  {
+                    parrafo:'Entonces los valores de los vértices de los extremos de los vectores en el mundo de la Computación Gráfica se calculan de la siguiente manera, para obtener los nuevos vectores A, B y C:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i32.png',    
+                  },
+                  {
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i33.png',    
+                  },
+                  {
+                    parrafo:'Finalmente, la gráfica de los vectores A, B y C en el mundo de la Computación Gráfica se muestra en la Figura 3.2.7:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i34.png',    
+                  },
+                  {
+                    parrafo:'El vector perpendicular formado por la proyección del vector A sobre el vector B se obtiene utilizando la ecuación (71) de la sección 3.1.2.20:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i35.png',    
+                  },
+                  {
+                    parrafo:'En esta ecuación se realiza una resta de vectores entre el vector A con el vector proyección de A sobre el vector B:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i36.png',    
+                  },
+                  {
+                    parrafo:'Entonces, el vector perpendicular resultante es D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i37.png',    
+                  },
+                  {
+                    parrafo:'La Figura 3.2.8 muestra el vector perpendicular a otro vector.'
+                  },
+                  {
+                    parrafo:'Para poder representar gráficamente estos vectores en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 3.1.1.2 referentes a la traslación de un punto a otro que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i38.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i39.png',    
+                  },
+                  {
+                    parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i40.png',    
+                  },
+                  {
+                    parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de los vértices de los extremos de los vectores A, B, C y D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i41.png',    
+                  },
+                  {
+                    parrafo:'Entonces los valores de los vértices de los extremos de los vectores en el mundo de la Computación Gráfica se calculan de la siguiente manera, para obtener los nuevos vectores A, B y C:',
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i42.png',    
+                  },
+                  {
+                    parrafo:'Finalmente, la gráfica de los vectores A, B, C y D en el mundo de la Computación Gráfica se muestra en la Figura 3.2.9.'
+                  }
+                ]
+               }
+             ]               
+           },
+         C:{
+            subtitulo:'C)	Algoritmos',
+            algoritmosC:[
+                {
+                    titulo:'3.2.1. Algoritmo de la Función ReadData()',
+                    pasos:[
+                      '1.	Leer el valor de la componente ‘X’ del vector 2D.',
+                      '2.	Leer el valor de la componente ‘Y’ del vector 2D.'  
+                    ]
+                },
+                {
+                    titulo:'3.2.2. Algoritmo de la Función PrintData()',
+                    pasos:[
+                        '1.	Imprimir el valor de la componente ‘X’ y de la componente ‘Y’ del vector 2D.'
+                    ]
+                },
+                {
+                    titulo:'3.2.3. Algoritmo de la Función Addition()',
+                    pasos:[
+                      '1.	Crear un objeto temporal de tipo CVector2D llamado Temp.',
+                      '2.	Calcular la suma entre dos vectores.',
+                      '2.1.	Asignar al campo mX del objeto Temp el resultado de la suma entre la componente ‘X’ del objeto U con la componente ‘X’ del objeto V.',
+                      '2.2.	Asignar al campo mY del objeto Temp el resultado de la suma entre la componente ‘Y’ del objeto U con la componente ‘Y’ del objeto V.',
+                      '3.	Retornar el valor del objeto Temp a la llamada de la función.'
+                    ]
+                },
+                {
+                    titulo:'3.2.4. Algoritmo de la Función Subtraction()',
+                    pasos:[
+                      '1.	Crear un objeto temporal de tipo CVector2D llamado Temp.',
+                      '2.	Calcular la resta entre dos vectores.',
+                      '2.1.	Asignar al campo mX del objeto Temp el resultado de la resta entre la componente ‘X’ del objeto U con la componente ‘X’ del objeto V.',
+                      '2.2.	Asignar al campo mY del objeto Temp el resultado de la resta entre la componente ‘Y’ del objeto U con la componente ‘Y’ del objeto V.',
+                      '3.	Retornar el valor del objeto Temp a la llamada de la función.'
+                    ]
+                },
+                {
+                    titulo:'3.2.5. Algoritmo de la Función InitializeData()',
+                    pasos:[
+                      '1.	Borrar el contenido del objeto picCanvas que representa al lienzo de dibujo.',
+                      '2.	Obtener el valor del ancho y del largo del lienzo (picCanvas).',
+                      '2.1.	Crear un objeto de tipo Rectangle.',
+                      '2.2.	Asignar a la componente X del rectángulo el valor del ancho del lienzo.',
+                      '2.3.	Asignar a la componente Y del rectángulo el valor del largo del lienzo.',
+                      '3.	Calcular el valor máximo de la resolución de X y de Y del lienzo.',
+                      '3.1.	Asignar al valor máximo de la resolución de X representado por la variable maxX, el valor de la componente X del rectángulo disminuida en uno.',
+                      '3.2.	Asignar al valor máximo de la resolución de Y representado por la variable maxY, el valor de la componente Y del rectángulo disminuida en uno.',
+                      '4.	Calcular el centro del lienzo (picCanvas).',
+                      '4.1.	Asignar a la variable ‘x’ del centro trasladado cuyo nombre es xCenter el valor de la división entre el valor máximo de la resolución de X con el valor de dos.',
+                      '4.2.	Asignar a la variable ‘y’ del centro trasladado cuyo nombre es yCenter el valor de la división entre el valor máximo de la resolución de Y con el valor de dos.'
+                    ]
+                },
+                {
+                    titulo:'3.2.6. Algoritmo de la Función PlotAxis()',
+                    pasos:[
+                      '1.	Dibujar el eje horizontal (x).',
+                      '1.1.	Asignar a la componente X del punto P1 el valor de cero.',
+                      '1.2.	Asignar a la componente Y del punto P1 el valor de yCenter.',
+                      '1.3.	Asignar a la componente X del punto P2 el valor de maxX.',
+                      '1.4.	Asignar a la componente Y del punto P2 el valor de yCenter.',
+                      '1.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el vértice P1 con el vértice P2.',
+                      '2.	Dibujar el eje vertical (y).',
+                      '2.1.	Asignar a la componente X del punto P1 el valor de xCenter.',
+                      '2.2.	Asignar a la componente Y del punto P1 el valor de cero.',
+                      '2.3.	Asignar a la componente X del punto P2 el valor de xCenter.',
+                      '2.4.	Asignar a la componente Y del punto P2 el valor de maxY.',
+                      '2.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el vértice P1 con el vértice P2.'
+                    ]
+                },
+                {
+                    titulo:'3.2.7. Algoritmo de la Función VectorToPointF()',
+                    pasos:[
+                      '1.	Retornar un objeto de tipo pointF con la conversión de coordenadas del mundo real a coordenadas por pantalla.',
+                      '1.1.	Asignar al campo ‘X’ de la estructura PointF el valor calculado con la ecuación (3) de la sección 3.1.1.2 referente a la traslación de un punto.',
+                      '1.2.	Asignar al campo ‘Y’ de la estructura PointF el valor calculado con la ecuación (4 de la sección 3.1.1.2 referente a la traslación de un punto.'
+                    ]
+                },
+                {
+                    titulo:'3.2.8. Algoritmo de la Función DrawVector(), con un objeto de tipo CVector2D como parámetro',
+                    pasos:[
+                      '1.	Asignar al objeto mGraph la funcionalidad de crear gráficos del pictureBox llamado picCanvas.',
+                      '2.	Creación de un esferográfico o pluma de dibujo de un color establecido en el parámetro de la función.',
+                      '2.1.	Setear el esferográfico o pluma con un ancla redonda al inicio del dibujo de una línea.',
+                      '2.2.	Setear el esferográfico o pluma con un ancla de flecha al final del dibujo de una línea.',
+                      '3.	Llamada a la función VectorToPointF, enviando al parámetro de la función un vértice con las coordenadas del mundo real que va a ser convertido a un vértice con coordenadas por pantalla, cuyo valor de retorno se asigna al objeto origin de tipo PointF.',
+                      '4.	Llamada a la función VectorToPointF, enviando al parámetro de la función un vértice con las coordenadas del mundo real que va a ser convertido a un vértice con coordenadas por pantalla, cuyo valor de retorno se asigna al objeto end de tipo PointF.',
+                      '5.	Bibujar una línea entre un punto inicial (origin) y un punto final (end).',
+                      '5.1.	 Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el vértice origin con el vértice end.'
+                    ]
+                },
+                {
+                    titulo:'3.2.9. Algoritmo de la Función DrawVector(), con dos objetos de tipo CVector2D como parámetros',
+                    pasos:[
+                      '1.	Crear un arreglo de flotantes para almacenar un patrón de puntos y líneas entrecortadas.',
+                      '2.	Asignar al objeto mGraph la funcionalidad de crear gráficos del pictureBox llamado picCanvas.',
+                      '3.	Creación de un esferográfico o pluma de dibujo de un color establecido en el parámetro de la función.',
+                      '3.1.	Setear el esferográfico o pluma con un patrón de puntos y líneas entrecortadas, utilizando un arreglo.',
+                      '4.	Llamada a la función VectorToPointF, enviando al parámetro de la función un vértice con las coordenadas del mundo real que va a ser convertido a un vértice con coordenadas por pantalla, cuyo valor de retorno se asigna al objeto origin de tipo PointF.',
+                      '5.	Llamada a la función VectorToPointF, enviando al parámetro de la función un vértice con las coordenadas del mundo real que va a ser convertido a un vértice con coordenadas por pantalla, cuyo valor de retorno se asigna al objeto end de tipo PointF.',
+                      '6.	Bibujar una línea entre un punto inicial (origin) y un punto final (end).',
+                      '6.1.	 Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el vértice origin con el vértice end.'
+                    ]
+                },
+                {
+                    titulo:'3.2.10. Algoritmo de la Función Magnitude()',
+                    pasos:[
+                      '1.	Retornar un valor que corresponde al módulo de un vector 2D en base a la ecuación (13) de la sección 3.1.2.4.'
+                    ]
+                },
+                {
+                    titulo:'3.2.11. Algoritmo de la Función Normalize()',
+                    pasos:[
+                      '1.	Retornar un valor que corresponde al vector unitario o normalizado de un vector 2D en base a la ecuación (26) de la sección 3.1.2.8.'
+                    ]
+                },
+                {
+                    titulo:'3.2.12. Algoritmo de la Función DotProduct (), con dos objetos de tipo CVector2D como parámetros',
+                    pasos:[
+                      '1.	Retornar un valor que corresponde al producto punto entre dos vectores en base a la ecuación (63) de la sección 3.1.2.16.'
+                    ]
+                },
+                {
+                    titulo:'3.2.13. Algoritmo de la Función VectorEscalarProduct(), con un objeto de tipo CVector2D y una variable de tipo flotante como parámetros.',
+                    pasos:[
+                      '1.	Crear un objeto temporal de tipo CVector2D llamado Temp.',
+                      '2.	Calcular la multiplicación entre un vector por un escalar.',
+                      '2.1.	Asignar al campo mX del objeto Temp el resultado de la multiplicación entre la componente ‘X’ del objeto V con un valor escalar.',
+                      '2.2.	Asignar al campo mY del objeto Temp el resultado de la multiplicación entre la componente ‘Y’ del objeto V con un valor escalar.',
+                      '3.	Retornar el valor del objeto Temp a la llamada de la función.'
+                    ]
+                },
+                {
+                    titulo:'3.2.14. Algoritmo de la Función Projection(), con dos objetos de tipo CVector2D como parámetros',
+                    pasos:[
+                      '1.	Crear un objeto temporal de tipo CVector2D llamado Proj.',
+                      '2.	Crear otro objeto temporal de tipo CVector2D llamado Nv.',
+                      '3.	Declarar una variable llamada escalar de tipo flotante.',
+                      '4.	Asignar al vector Nv el valor de retorno de la función Normalize invocada por el objeto V, para calcular el vector unitario del vector V.',
+                      '5.	Asignar a la variable escalar el valor de retorno de la función VectorEscalarProduct, para calcular el producto punto entre el vector U y el vector unitario de V, es decir, Nv.',
+                      '6.	Asignar al vector Proj el valor de retorno de la función VectorEscalarProduct, para calcular el producto de un vector por un escalar, representado por el vector Nv y la variable escalar.',
+                      '7.	Retornar el valor del objeto Proj a la llamada de la función.'
+                    ]
+                },
+                {
+                    titulo:'3.2.15. Algoritmo de la Función Perpendicular(), con dos objetos de tipo CVector2D como parámetros',
+                    pasos:[
+                      '1.	Crear un objeto temporal de tipo CVector2D llamado W.',
+                      '2.	Asignar al vector W el valor de retorno de la función Subtraction invocada por el objeto W, para calcular la resta de vectores entre el vector U y V.',
+                      '3.	Retornar el valor del objeto W a la llamada de la función.'
+                    ]
+                }
+            ]
+         },
+         D:{
+            subtitulo:'D)	Código de la Aplicación',
+            listaCodigo:[
+                {
+                    problema:'La implementación de la clase CVector2D, se presenta a continuación en la Tabla 3.2.1, que contiene datos miembro y funciones miembro que realizan diferentes operaciones.',
+                    tablaN:'Tabla 3.2.1. ',
+                    tablaDescrip:'Código de la clase CVector2D del programa.',
+                    tablaDatos:
+                    ` 
+                    /*
+                    * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
+                    * Edwin Cuichan, Kevin Sanipatín.
+                    * Creative Commons: BY-NC-ND 4.0 International license.
+                    * 
+                    * Except where otherwise noted, content on this program is licensed 
+                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    * Source Code by the developers.
+                    * 
+                    * Unless required by applicable law or agreed to in writing, software
+                    * distributed under the License is distributed on an "AS IS" BASIS,
+                    * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                    * See the License for the specific language governing permissions and
+                    * limitations under the License.
+                    */
+
+                    using System;
+                    using System.Collections.Generic;
+                    using System.Linq;
+                    using System.Text;
+                    using System.Threading.Tasks;
+                    using System.Drawing;
+                    using System.Drawing.Drawing2D;
+                    using System.Windows.Forms;
+
+                    namespace WinAppVectors2D
+                    {
+                        class CVector2D
+                        {
+                            #region Atributes of the class        
+                            /// <summary>
+                            /// Member Data
+                            /// </summary>
+
+                            // Componente 'X' del Vector 2D.
+                            private float mX;
+                            // Componente 'Y' del Vector 2D.
+                            private float mY;
+                            // Objeto que activa el modo gráfico.
+                            private Graphics mGraph;
+                            // Objeto bolígrafo que dibuja o escribe en un lienzo o canvas (PictureBox).
+                            private Pen mPen;
+                            // Constante scale factor (Zoom In/Zoom Out).
+                            private const float SF = 20;
+                            // Objeto que permite obtener el tamaño de un lienzo o canvas (PictureBox).
+                            private Rectangle d;
+                            // Dato que representa al valor máximo en el eje de las abcisas (x) del lienzo.
+                            private int maxX;
+                            // Dato que representa al valor máximo en el eje de las ordenadas (y) del lienzo.
+                            private int maxY;
+                            // Dato que representa al valor de x del centro del lienzo.
+                            private int xCenter;
+                            // Dato que representa al valor de y del centro del lienzo.
+                            private int yCenter;
+                            // Objeto Punto que representa a un punto cualquiera P1.
+                            private PointF P1;        
+                            // Objeto Punto que representa a un punto cualquiera P2.
+                            private PointF P2;
+
+                            #endregion
+
+                            #region Properties
+                            ///<summary>
+                            /// Getters and Setters.
+                            ///</summary>
+
+                            // Descriptores de acceso get/set de la Componente X del Vector 2D.
+                            public float X
+                            {
+                                get { return mX; }
+                                set { mX = value; }
+                            }
+
+                            // Descriptores de acceso get/set de la Componente Y del Vector 2D.
+                            public float Y
+                            {
+                                get { return mY; }
+                                set { mY = value; }
+                            }
+
+                            #endregion
+
+                            #region Constructors of the class
+                            ///<summary>
+                            /// Constructor Functions.
+                            ///</summary>
+                            
+                            // Constructor sin parámetros.
+                            public CVector2D()
+                            {
+                                mX = 0.0f; mY = 0.0f;
+                            }        
+
+                            // Constructor con dos parámetros.
+                            public CVector2D(float x, float y)
+                            {            
+                                mX = x; mY = y;
+                            }       
+
+                            // Constructor copia.
+                            public CVector2D(CVector2D V)
+                            {           
+                                mX = V.X; mY = V.Y;            
+                            }
+
+                            #endregion
+
+                            #region Methods of the class
+                            ///<summary>
+                            /// Funciones Miembro (Métodos).
+                            ///</summary>
+
+                            // Función que lee las componentes 'X' e 'Y' del vector 2D.
+                            public void ReadData(NumericUpDown nudXVectorV, 
+                                                NumericUpDown nudYVectorV)
+                            {            
+                                mX = (float)(nudXVectorV.Value);
+                                mY = (float)(nudYVectorV.Value);
+                            }
+
+                            // Función que imprime las componentes 'X' e 'Y' del vector 2D.
+                            public void PrintData(TextBox txtXVectorV, TextBox txtYVectorV)
+                            {            
+                                txtXVectorV.Text = mX.ToString();            
+                                txtYVectorV.Text = mY.ToString();
+                            }
+
+                            // Función que suma dos vectores, utilizando dos parámetros
+                            // que representan a los dos vectores.
+                            public CVector2D Addition(CVector2D U, CVector2D V)
+                            {
+                                CVector2D Temp = new CVector2D();
+
+                                Temp.mX = U.mX + V.mX;
+                                Temp.mY = U.mY + V.mY;
+
+                                return (Temp);
+                            }
+
+                            // Función optimizada que suma dos vectores, utilizando un parámetro,
+                            // donde uno de los vectores se representa por el objeto this.
+                            public CVector2D Addition(CVector2D V)
+                            {
+                                return (new CVector2D(mX + V.mX, mY + V.mY));
+                            }
+
+                            // Función que resta dos vectores, utilizando dos parámetros
+                            // que representan a los dos vectores.
+                            public CVector2D Subtraction(CVector2D U, CVector2D V)
+                            {
+                                CVector2D Temp = new CVector2D();
+
+                                Temp.mX = U.mX - V.mX;
+                                Temp.mY = U.mY - V.mY;
+
+                                return (Temp);
+                            }
+
+
+                            // Función optimizada que resta dos vectores, utilizando un parámetro,
+                            // donde uno de los vectores se representa por el objeto this.
+                            public CVector2D Subtraction(CVector2D V)
+                            {
+                                return (new CVector2D(mX - V.mX, mY - V.mY));
+                            }
+
+                            // Función que inicializa los valores del centro del lienzo o canvas. 
+                            public void InitializeData(PictureBox picCanvas)
+                            {
+                                picCanvas.Refresh();
+
+                                d = new Rectangle();
+                                d.X = picCanvas.Width;
+                                d.Y = picCanvas.Height;
+
+                                maxX = d.X - 1; maxY = d.Y - 1;
+                                xCenter = maxX / 2; yCenter = maxY / 2;            
+                            }
+
+                            // Función que grafica los ejes coordenados 'x' e 'y'.
+                            public void PlotAxis(PictureBox picCanvas)
+                            {
+                                mGraph = picCanvas.CreateGraphics();
+                                mPen = new Pen(Color.Black);
+
+                                // Dibujar el eje horizontal (x).
+                                P1.X = 0; P1.Y = yCenter;
+                                P2.X = maxX; P2.Y = yCenter;
+                                mGraph.DrawLine(mPen, P1.X, P1.Y, P2.X, P2.Y);
+
+                                // Dibujar el eje vertical (y).            
+                                P1.X = xCenter; P1.Y = 0;
+                                P2.X = xCenter; P2.Y = maxY;
+
+                                mGraph.DrawLine(mPen, P1.X, P1.Y, P2.X, P2.Y);
+                            }
+                                                
+                            // Función que convierte un punto del mundo real a un punto de coordenadas en
+                            // pantalla (mundo de la Computación Gráfica), utilizando un parámetro.
+                            public PointF VectorToPointF(CVector2D V)
+                            {
+                                return new PointF((float)V.X * SF + xCenter, (-1) * (float)V.Y * SF + yCenter);
+                            }
+
+                            // Función que grafica un vector definido con un color específico, que tiene
+                            // como parámetros el vector y el color del mismo.
+                            public void DrawVector(CVector2D V, Color color, PictureBox picCanvas)
+                            {            
+                                mGraph = picCanvas.CreateGraphics();
+                                mPen = new Pen(color, 4);
+                                mPen.StartCap = LineCap.RoundAnchor;
+                                mPen.EndCap = LineCap.ArrowAnchor; 
+                                
+                                PointF origin = VectorToPointF(new CVector2D(0, 0));            
+                                PointF end = VectorToPointF(V);
+
+                                mGraph.DrawLine(mPen, origin, end);
+                            }
+
+                            // Función que grafica un vector definido con un color específico, que tiene
+                            // como parámetros el color del vector. 
+                            public void DrawVector(Color color, PictureBox picCanvas)
+                            {
+                                mGraph = picCanvas.CreateGraphics();
+                                mPen = new Pen(color, 4);
+                                mPen.StartCap = LineCap.RoundAnchor;
+                                mPen.EndCap = LineCap.ArrowAnchor;            
+                                
+                                PointF origin = VectorToPointF(new CVector2D(0, 0));            
+                                PointF end = VectorToPointF(this);
+
+                                mGraph.DrawLine(mPen, origin, end);
+                            }
+
+                            // Función que grafica un vector auxiliar con un color específico en base
+                            // a otros dos vectores.
+                            public void DrawVector(CVector2D U, CVector2D V, Color color, PictureBox picCanvas)
+                            {
+                                float[] dashValues = { 2,1,2,1 };
+                                mGraph = picCanvas.CreateGraphics();
+                                mPen = new Pen(color, 4);
+                                mPen.DashPattern = dashValues;            
+
+                                PointF origin = VectorToPointF(U);
+                                PointF end = VectorToPointF(V);
+                                mGraph.DrawLine(mPen, origin, end);            
+                            }       
+
+                            // Función que calcula el módulo o la magnitud de un vector 2D.
+                            public float Magnitude()
+                            {
+                                return ((float)Math.Sqrt(mX * mX + mY * mY));
+                            }
+
+                            // Función que calcula el vector unitario o normalizado de un vector 2D.
+                            public CVector2D Normalize()
+                            {
+                                return (new CVector2D(mX / Magnitude(), mY / Magnitude()));
+                            }
+
+                            // Función que calcula el Producto Punto entre dos vectores, 
+                            // utilizando dos parámetros.
+                            public float DotProduct(CVector2D U, CVector2D V)
+                            {
+                                return (U.mX * V.mX + U.mY * V.mY);
+                            }
+
+                            // Función que calcula el Producto Punto entre dos vectores, 
+                            // utilizando un parámetro.
+                            public float DotProduct(CVector2D V)
+                            {
+                                return (mX * V.mX + mY * V.mY);
+                            }
+
+                            // Función que calcula el producto entre un vector y un escalar,
+                            // utilizando dos parámetros.
+                            public CVector2D VectorEscalarProduct(CVector2D V, float escalar)
+                            {
+                                CVector2D Temp = new CVector2D();
+
+                                Temp.mX = V.mX * escalar;
+                                Temp.mY = V.mY * escalar;
+
+                                return (Temp);
+                            }
+
+                            // Función que calcula el producto entre un vector y un escalar,
+                            // utilizando un parámetro y el objeto this.
+                            public CVector2D VectorEscalarProduct(float escalar)
+                            {            
+                                return (new CVector2D(mX * escalar, mY * escalar));            
+                            }
+
+                            // Función que calcula el vector Proyección de un vector sobre otro,
+                            // utilizando dos parámetros.
+                            public CVector2D Projection(CVector2D U, CVector2D V)
+                            {            
+                                CVector2D Proj = new CVector2D();
+                                CVector2D Nv = new CVector2D();
+                                float escalar;
+
+                                Nv = V.Normalize();
+                                escalar = DotProduct(U, Nv);            
+                                Proj = VectorEscalarProduct(Nv, escalar);            
+
+                                return (Proj);
+                            }
+
+                            // Función que calcula el vector Proyección de un vector sobre otro,
+                            // utilizando un parámetro y el objeto this.
+                            public CVector2D Projection(CVector2D V)
+                            {            
+                                CVector2D Nv = new CVector2D(V.Normalize());
+                                float escalar = this.DotProduct(Nv);
+                                //float escalar = DotProduct(Nv);
+                                return (new CVector2D(Nv.VectorEscalarProduct(escalar)));
+                            }
+                            // Función que calcula el vector perpendicular o vector ortogonal
+                            // a otro vector, utilizando dos parámetros.
+                            public CVector2D Perpendicular(CVector2D U, CVector2D V)
+                            {
+                                CVector2D W = new CVector2D();
+                                W = W.Subtraction(U, V);
+                                return (W);
+                            }
+
+                            // Función que calcula el vector perpendicular o vector ortogonal
+                            // a otro vector, utilizando un parámetro y el objeto this.
+                            public CVector2D Perpendicular(CVector2D V)
+                            {
+                                return (new CVector2D(this.Subtraction(V)));         
+                            }
+
+                            #endregion
+                        }
+                    }
+
+                    `
+                },
+                {
+                    problema:'La implementación de la clase frmVectors2D, se presenta a continuación en la Tabla 3.2.2, que es la clase que representa a la interfaz gráfica de usuario de los vectores en 2D.',
+                    tablaN:'Tabla 3.2.2. ',
+                    tablaDescrip:'Código de la clase frmVectors2D del programa.',
+                    tablaDatos:
+                    `
+                    /*
+                    * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
+                    * Edwin Cuichan, Kevin Sanipatín.
+                    * Creative Commons: BY-NC-ND 4.0 International license.
+                    * 
+                    * Except where otherwise noted, content on this program is licensed 
+                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    * Source Code by the developers.
+                    * 
+                    * Unless required by applicable law or agreed to in writing, software
+                    * distributed under the License is distributed on an "AS IS" BASIS,
+                    * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                    * See the License for the specific language governing permissions and
+                    * limitations under the License.
+                    */
+
+                    using System;
+                    using System.Collections.Generic;
+                    using System.ComponentModel;
+                    using System.Data;
+                    using System.Drawing;
+                    using System.Linq;
+                    using System.Text;
+                    using System.Threading.Tasks;
+                    using System.Windows.Forms;
+
+                    namespace WinAppVectors2D
+                    {
+                        public partial class frmVectors2D : Form
+                        {
+                            // Definición de cuatro objetos de tipo CVector2D.        
+                            CVector2D A = new CVector2D();
+                            CVector2D B = new CVector2D();
+                            CVector2D C = new CVector2D();
+                            CVector2D D = new CVector2D();        
+
+                            // Constructor del formulario frmVector2D.
+                            public frmVectors2D()
+                            {
+                                InitializeComponent();
+                            }
+
+                            // Función que inicializa los datos de graficación de
+                            // los cuatro objetos de tipo CVector2D.
+                            private void InitializeData()
+                            {
+                                // Inicialización de los datos de graficación del objeto A.
+                                // Llamada a la función InitializeData.
+                                A.InitializeData(picCanvas);
+                                // Inicialización de los datos de graficación del objeto B.
+                                // Llamada a la función InitializeData.
+                                B.InitializeData(picCanvas);
+                                // Inicialización de los datos de graficación del objeto C.
+                                // Llamada a la función InitializeData.
+                                C.InitializeData(picCanvas);
+                                // Inicialización de los datos de graficación del objeto D.
+                                // Llamada a la función InitializeData.
+                                D.InitializeData(picCanvas);
+                            }
+
+                            // Función de carga del formulario frmVectors2D.
+                            private void frmVectors2D_Load(object sender, EventArgs e)
+                            {
+                                // Llamada a la función InitializeData.
+                                InitializeData();
+                            }
+
+                            // Función del evento Click del botón btnAddition.
+                            private void btnAddition_Click(object sender, EventArgs e)
+                            {
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto A y B.
+                                A.ReadData(nudXVectorA, nudYVectorA);
+                                B.ReadData(nudXVectorB, nudYVectorB);
+                                // Cálculo de la suma de dos vectores.
+                                // Llamada a la función Addition.
+                                C = A.Addition(B);
+                                // Impresión de datos.
+                                // Llamada a la función PrintData con el objeto C.
+                                C.PrintData(txtXVectorC, txtYVectorC);            
+                                // Llamada a la función InitializeData.
+                                InitializeData();
+                                // Graficación de los ejes coordenados.
+                                // Llamada a la función PlotAxis.
+                                C.PlotAxis(picCanvas);
+                                // Graficación del vector A.
+                                // Llamada a la función DrawVector.
+                                A.DrawVector(A, Color.Red, picCanvas);
+                                // Graficación del vector B.
+                                // Llamada a la función DrawVector.
+                                B.DrawVector(B, Color.Blue, picCanvas);
+                                // Graficación del vector C.
+                                // Llamada a la función DrawVector.
+                                C.DrawVector(C, Color.Green, picCanvas);
+                                // Graficación del vector A' (auxiliar).
+                                // Llamada a la función DrawVector.
+                                A.DrawVector(B, C, Color.Red, picCanvas);
+                                // Graficación del vector B' (auxiliar).
+                                // Llamada a la función DrawVector.
+                                B.DrawVector(A, C, Color.Blue, picCanvas);
+                            }
+
+                            // Función del evento Click del botón btnSubtraction.
+                            private void btnSubtraction_Click(object sender, EventArgs e)
+                            {
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto A y B.
+                                A.ReadData(nudXVectorA, nudYVectorA);
+                                B.ReadData(nudXVectorB, nudYVectorB);
+                                // Cálculo de la resta de dos vectores.
+                                // Llamada a la función Subtraction.
+                                C = A.Subtraction(B);
+                                // Impresión de datos.
+                                // Llamada a la función PrintData con el objeto C.
+                                C.PrintData(txtXVectorC, txtYVectorC);
+                                // Llamada a la función InitializeData.
+                                InitializeData();
+                                // Graficación de los ejes coordenados.
+                                // Llamada a la función PlotAxis.
+                                C.PlotAxis(picCanvas);
+                                // Graficación del vector A.
+                                // Llamada a la función DrawVector.
+                                A.DrawVector(A, Color.Red, picCanvas);
+                                // Obtentión del vector -B.
+                                // Llamada a las propiedades (get/set) de la clase CVector2D.
+                                B.X = B.X * (-1.0f); B.Y = B.Y * (-1.0f);
+                                // Graficación del vector -B.
+                                // Llamada a la función DrawVector.
+                                B.DrawVector(B, Color.Blue, picCanvas);
+                                // Graficación del vector C.
+                                // Llamada a la función DrawVector.
+                                C.DrawVector(C, Color.Green, picCanvas);
+                                // Graficación del vector A' (auxiliar).
+                                // Llamada a la función DrawVector.
+                                A.DrawVector(B, C, Color.Red, picCanvas);
+                                // Graficación del vector B' (auxiliar).
+                                // Llamada a la función DrawVector.
+                                B.DrawVector(A, C, Color.Blue, picCanvas);
+                            }
+
+                            // Función del evento Click del botón btnProjection.
+                            private void btnProjection_Click(object sender, EventArgs e)
+                            {
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto A y B.
+                                A.ReadData(nudXVectorA, nudYVectorA);
+                                B.ReadData(nudXVectorB, nudYVectorB);
+                                // Cálculo del vector proyección.
+                                // Llamada a la función Projection.
+                                C = C.Projection(A, B);
+                                // Impresión de datos.
+                                // Llamada a la función PrintData con el objeto C.
+                                C.PrintData(txtXVectorPro, txtYVectorPro);
+                                // Cálculo del vector perpendicular.
+                                // Llamada a la función Perpendicular.
+                                D = D.Perpendicular(A, C);
+                                // Impresión de datos.
+                                // Llamada a la función PrintData con el objeto D.
+                                D.PrintData(txtXVectorPer, txtYVectorPer);            
+                                // Llamada a la función InitializeData.
+                                InitializeData();
+                                // Graficación de los ejes coordenados.
+                                // Llamada a la función PlotAxis.
+                                C.PlotAxis(picCanvas);
+                                // Graficación del vector A.
+                                // Llamada a la función DrawVector.
+                                A.DrawVector(A, Color.Red, picCanvas);
+                                // Graficación del vector B.
+                                // Llamada a la función DrawVector.
+                                B.DrawVector(B, Color.Blue, picCanvas);
+                                // Graficación del vector proyección.
+                                // Llamada a la función DrawVector.            
+                                C.DrawVector(C, Color.ForestGreen, picCanvas);
+                                // Graficación del vector perpendicular.
+                                // Llamada a la función DrawVector.
+                                D.DrawVector(C, A, Color.BlueViolet, picCanvas);
+                            }
+
+                            // Función del evento Click del botón btnExit.
+                            private void btnExit_Click(object sender, EventArgs e)
+                            {
+                                // Cierre de un formulario.
+                                // Llamada a la función Close.
+                                Close();
+                            }
+                        }
+                    }
+
+                    `
+                } 
+            ]
+         },
+          E:{
+            subtitulo:'E)	Pruebas de la Aplicación',
+            listaPrueba:[
+              {
+              problema:'A continuación, en la Figura 3.2.10, se muestra un ejemplo de la corrida del programa, donde se calcula la suma entre dos vectores y además se grafica el resultado obtenido de acuerdo al método del Paralelogramo:',
+              fotoPath:'./assets/images/Capitulos/II/media/13.png',
+              fotoN:'Figura 3.2.10. ',
+              fotoDescrip:' Corrida del programa'
+              },
+              {
+                problema:'A continuación, en la Figura 3.2.11, se muestra un ejemplo de la corrida del programa, donde se calcula la resta entre dos vectores y además se grafica el resultado obtenido de acuerdo al método del Paralelogramo:',
+                fotoPath:'./assets/images/Capitulos/II/media/14.png',
+                fotoN:'Figura 3.2.11.',
                 fotoDescrip:' Corrida del programa'
-             }
-        },
-         {label: 'Praqnique 1.3', 
-         tituloN:'Praqnique 1.3: ',
-         titulo:'Polígonos Estrellados de 10 y 5 Puntas',
-         sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un polígono estrellado de 10 puntas que contiene otros dos polígonos estrellados de 5 puntas, dado el lado de un decágono.',
+              },
+              {
+                problema:'A continuación, en la Figura 3.2.12, se muestra un ejemplo de la corrida del programa, donde se calcula la proyección del vector A sobre B y el vector perpendicular a otro vector. Además, se grafica el resultado obtenido de acuerdo a las ecuaciones utilizadas en estos cálculos:',
+                fotoPath:'./assets/images/Capitulos/II/media/15.png',
+                fotoN:'Figura 3.2.12.',
+                fotoDescrip:' Corrida del programa'
+              }
+            ]
+          }
+         },
+         {
+          link:'https://drive.google.com/uc?id=1qXzTyckEquZYTH26v_pTbBulHIqBKxd0&export=download',
+          label: 'Praqnique 3.3', 
+         tituloN:'Praqnique 3.3: ',
+         titulo:'Operaciones entre Vectores 3D',
+         sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar vectores 3D y realizar diferentes operaciones entre ellos.',
          sinopsis:[
             {titulo:'Lenguaje:',descrip:'C#'},
             {titulo:'Compilador:',descrip:'Visual Studio .NET'},
-            {titulo:'Habilidades:',descrip:'Diseño de algoritmos, geometría computacional, clases y objetos, GUIs.'},
+            {titulo:'Habilidades:',descrip:'Diseño de algoritmos, geometría computacional aplicada, translación lineal, vectores 3D, GUIs, clases y objetos.'},
             {titulo:'Nivel de experiencia:',descrip:'Avanzado'}
             ],
          A:{
              subtitulo:'A)	Descripción del Problema',
-             problema:'Dado el lado de un decágono regular, dibujar un polígono regular de 10 lados, un polígono estrellado de 10 puntas, un polígono estrellado mediano de 5 puntas ubicado con respecto al centro y otro polígono estrellado pequeño de 5 puntas. Se debe considerar que las figuras geométricas se grafican con respecto al punto O(0,0). (Ver Figura 1.3.1).',
-             fotoPath:'./assets/images/Capitulos/I/media/image001.jpg',
-             fotoN:'Figura 1.3.1 ',
-             fotoDescrip:'Polígonos estrellados de 10 y 5 puntas.'
+             problema:'Escribir un programa para realizar diferentes operaciones entre vectores 3D como: a) Sumar dos Vectores; b) Restar dos Vectores; c) Proyección de un Vector sobre otro; d) Vector Perpendicular. Además, se deben graficar los vectores de las diferentes operaciones realizadas entre ellos. En la Figura 3.2.1, se muestra la representación de la suma de dos vectores 3D en el espacio, aplicando el método del paralelogramo.',
+             fotoPath:'./assets/images/Capitulos/II/media/+1.png',
+             fotoN:'Figura 3.2.1. ',
+             fotoDescrip:'Suma de dos vectores 3D en el espacio.'
             },
          B:{
-             subtitulo:'B)	Geometría de la Figura',problema:'Por construcción se encierra a la figura geométrica dentro de un rectángulo, luego se extienden algunos vértices hacia los lados del rectángulo formándose los segmentos ‘a’, ‘b’, ‘c’, ‘d’, ‘e’, que se calculan resolviendo tres triángulos rectángulos cuyos 5 ángulos forman parte del decágono regular. Por construcción se obtiene también el ángulo ‘alpha’ con el cual se calcula el valor del segmento ‘a’. Todos estos segmentos permiten obtener los valores de los vértices del decágono regular que se utilizarán para graficar el polígono estrellado de 10 puntas. Además, se requieren calcular los valores de los vértices que forman los polígonos estrellados de 5 puntas, para lo cual es necesario calcular sus pendientes y resolver varios sistemas de ecuaciones con dos incógnitas. (Ver Figura 1.3.2).',fotoPath:'./assets/images/Capitulos/I/media/image190.png',fotoN:'Figura 1.3.2 ',fotoDescrip:'Vérties y ángulos de los polígonos estrellados de 10 y 5 puntas.',
-             listaB:
-                [
-                    {
-                        parrafo:'Calculamos el valor del segmento ‘a’ en el triángulo isósceles HMI que contiene al triángulo rectángulo MNI: ',
-                        tabla:[{
-                            fotoPath:'./assets/images/Capitulos/I/media/image191.png',
-                            formulas:[
-                                '$HI=l; NI=\\frac{l}{2}; MN=a\\Rightarrow(1)$',
-                                '$\\tan(10)=\\frac{MN}{NI}$',
-                                '$a=\\frac{l}{2}\\times\\tan(10)\\Rightarrow(2)$'
-                                ]
-                            }]
-                    },
-                    {
-                        parrafo:'Calculamos los valores de los segementos ‘e’ y ‘b’ en el triángulo rectángulo IJL:',
-                        tabla:[{
-                            fotoPath:'./assets/images/Capitulos/I/media/image195.png',
-                            formulas:[
-                                '$IJ=l; LI=e; LJ=b$',
-                                '$\\cos(36)=\\frac{LI}{l}$',
-                                '$e=l\\times\\cos(36)\\Rightarrow(3)$',
-                                '$\\sin(36)=\\frac{LJ}{l}$',
-                                '$b=l\\times\\sin(36)\\Rightarrow(4)$'
-                                ]
-                            }]
-                    },
-                    {
-                        parrafo:'Calculamos los valores de los segementos ‘c’ y ‘d’ en el triángulo rectángulo AJK:',
-                        tabla:[{
-                            fotoPath:'./assets/images/Capitulos/I/media/image200.png',
-                            formulas:[
-                                '$AJ=l; AK=c; JK=d$',
-                                '$\\sin(18)=\\frac{JK}{l}$',
-                                '$d=l\\times\\sin(18)\\Rightarrow(5)$',
-                                '$\\cos(18)=\\frac{AK}{l}$',
-                                '$c=l\\times\\cos(18)\\Rightarrow(6)$'
-                                ]
-                            }]
-                    },
-                    {
-                        parrafo:'Obtenemos los siguientes puntos:',
-                        formulas:[
-                            '$A(x_{A},y_{A})=A(a+b+c,0)$',
-                            '$B(x_{B},y_{B})=B(a+b+2c,d)$',
-                            '$C(x_{C},y_{C})=C(a+2b+2c,d+e )$',
-                            '$D(x_{D},y_{D})=D(a+2b+2c,d+e+l)$',
-                            '$E(x_{E},y_{E})=E(a+b+2c,d+2e+l )$',
-                            '$F(x_{F},y_{F})=F(a+b+c,2d+2e+l )$',
-                            '$G(x_{G},y_{G})=G(a+b,d+2e+l )$',
-                            '$H(x_{H},y_{H})=H(a,d+e+l )$',
-                            '$I(x_{I},y_{I})=I(a,d+e )$',
-                            '$J(x_{J},y_{J})=J(a+b,d )$',
-                            '$O(x_{O},y_{O})=O(a+b+c,d+e+l/2 )$'
-                            ]
-                    },
-                    {
-                        parrafo:'Con los puntos obtenidos se pueden graficar con líneas las siguientes figuras geométricas: a) Un decágono regular grande ABCDEFGHIJ, de color azul obscuro (DarkBlue); b) un pentágono regular ACEGI, de color verde mar claro (LightSeaGreen); c) Un pentágono regular BDFHJ, de color verde bosque (ForestGreen); d) Las estrellas de 5 puntas de color azul violeta (BlueViolet).',
-                    },
-                    {
-                        teorema:'Teorema 1: ',
-                        formulas:[
-                            'Si $P_1(x_1,y_1 )$ y $P_2 (x_2,y_2 )$ son los extremos de un segmento $P_1 P_2;$ Si $P_3(x_3,y_3 )$ y $P_4(x_4,y_4 )$ son los extremos de un segmento $P_3 P_4$ (ver Figura 1.3.3). Las coordenadas $(x_P,y_P )$ del punto P de intersección de las dos rectas están dadas por la siguiente expresión:',
-                            '$P(x_P,y_P)=P(\\frac{y_3-y_1+m_1\\times x_1-m_2\\times x_3}{m_1-m_2},y_1+m_1(x_P,x_1));m_1-m_2\\neq0\\Rightarrow(7)$'
-                            ]
-                    },
-                    {
-                        tabla:[{
-                            fotoPath:'./assets/images/Capitulos/I/media/image226.png',
-                            formulas:[
-                                '$Figura 1.3.3.\\bf$ Cálculo de las coordenadas del punto P'
-                                ]
-                            }]
-                    },
-                    {
-                        teorema:'Demostración: ',
-                        formulas:[
-                            'La recta $P_1 P_2$, se cruza con la recta $P_3 P_4$ en el punto $P(x_P,y_P )$, por lo tanto, para calcular las coordenadas del punto de intersección P, se requiere resolver un sistema de ecuaciones de dos incógnitas que contiene los puntos de las rectas y sus pendientes, como se indica a continuación:'
-                            ]
-                    },
-                    {
-                        parrafo:'Calculamos el valor de la pendiente:',
-                        formulas:[
-                            '$\\Rightarrow$ Pendiente: $P_1P_2=m_1$',
-                            '$m_{P_1P_2}=\\frac{y_2-y_1}{x_2-x_1}=m_1\\Rightarrow(8)$'
-                            ]
-                    },
-                    {
-                        parrafo:'Calculamos la ecuación de la recta:',
-                        formulas:[
-                            '$\\Rightarrow$ Recta: $P_1P_2$',
-                            '$y-y_1=m_1(x-x_1)$',
-                            '$y=y_1+m_1\\times x-m_1\\times x_1\\Rightarrow(9)$'
-                            ]
-                    },
-                    {
-                        parrafo:'Calculamos el valor de la pendiente:',
-                        formulas:[
-                            '$\\Rightarrow$ Pendiente: $P_3P_4=m_2$',
-                            '$m_{P_3P_4}=\\frac{y_4-y_3}{x_4-x_3}=m_2\\Rightarrow(10)$'
-                            ]
-                    },
-                    {
-                        parrafo:'Calculamos la ecuacición de la recta: ',
-                        formulas:[
-                            '$\\Rightarrow$ Recta: $P_3P_4$',
-                            '$y-y_3=m_2(x_-x_3)$',
-                            '$y=y_3+m_2\\times x-m_2\\times x_3\\Rightarrow(11)$'
-                            ]
-                    },
-                    {
-                        parrafo:'',
-                        formulas:[
-                            'Resolvemos el sistema de ecuaciones entre (9) y (11), para lo cual igualamos el valor de $y$ de la ecuación (9) con el valor de $y$ de la ecuación (11) y calculamos el valor de $ x$: ',
-                            '$y_1+m_1\\times x-m_1\\times x_1=y_3+m_2\\times x-m_2\\times x_3$',
-                            '$m_1\\times x-m_2\\times x=y_3-m_2\\times x_3-y_1+m_1\\times x_1$',
-                            '$x(m_1-m_2)=y_3-y_1+m_1\\times x_1-m_2\\times x_3$',
-                            '$x=\\frac{(y_3-y_1+m_1\\times x_1-m_2\\times x_3)}{(m_1-m_2)}; m_1-m_2\\neq0\\Rightarrow(12)$'
-                            ]
-                    },
-                    {
-                        parrafo:'En la ecuación (9) reemplazamos el valor de x:',
-                        formulas:[
-                            '$y=y_1-m_1\\times x_1+m_1(\\frac{(y_3-y_1+m_1\\times x_1-m_2\\times x_3)}{(m_1-m_2 )})\\Rightarrow(13)$'
-                            ]
-                    },
-                    {
-                        parrafo:'De las ecuaciones (12) y (13) obtenemos las coordenadas del punto P:',
-                        formulas:[
-                            '$P(x_P,y_P)=P(\\frac{y_3-y_1+m_1\\times x_1-m_2\\times x_3}{m_1-m_2},y_1-m_1\\times x_1+m_1\\times x_P)$',
-                            '$P(x_P,y_P)=P(\\frac{y_3-y_1+m_1\\times x_1-m_2\\times x_3}{m_1-m_2},y_1+m_1\\times x_P-m_1\\times x_1)$',
-                            '$P(x_P,y_P)=P(\\frac{y_3-y_1+m_1\\times x_1-m_2\\times x_3}{m_1-m_2},y_1+m_1(x_P-x_1)); m_1-m_2\\neq0\\Rightarrow(14)$'
-                            ]
-                    },
-                    {
-                        parrafo:'Con el Teorema 1 se pueden calcular los puntos de intersección entre las diferentes rectas que conforman los dos polígonos estrellados de 5 puntas, como sigue:'
-                    },
-                    {
-                        parrafo:'Polígono estrellado grande de 5 puntas, de color azul obscuro (DarkBlue): ',
-                        formulas:[
-                            '$PQRST:$',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{JC}$ y $l_{BI}$, para obtener el punto $P$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{ID}$ y $l_{AH}$, para obtener el punto $T$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{AD}$ y $l_{CH}$, para obtener el punto $Q$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{IF}$ y $l_{BG}$, para obtener el punto $S$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{JE}$ y $l_{CF}$, para obtener el punto $R$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{TQ}$ y $l_{PS}$, para obtener el punto $P_1$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{TQ}$ y $l_{PR}$, para obtener el punto $P_2$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{PR}$ y $l_{QS}$, para obtener el punto $P_3$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{TR}$ y $l_{QS}$, para obtener el punto $P_4$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{TR}$ y $l_{PS}$, para obtener el punto $P_5$.',    
-                        ]
-                    },
-                    {
-                        parrafo:'Polígono estrellado pequeño de 5 puntas, relleno de color azur (Azure):',
-                        formulas:[
-                            '$P\'Q\'R\'S\'T\':$',
-                            '⊛  El punto $P\'(x_P,y_P )= P\'(x_O,y_T )$',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{ID}$ y $l_{PS}$, para obtener el punto $T\'$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{PR}$ y $l_{CH}$, para obtener el punto $Q\'$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{TR}$ y $l_{BG}$, para obtener el punto $S\'$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{QS}$ y $l_{JE}$, para obtener el punto $R\'$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{T\'Q\'}$ y $l_{P\'S\'}$, para obtener el punto $P_6$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{T\'Q\'}$ y $l_{P\'R\'}$, para obtener el punto $P_7$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{P\'R\'}$ y $l_{Q\'S\'}$, para obtener el punto $P_8$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{T\'R\'}$ y $l_{Q\'S\'}$, para obtener el punto $P_9$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{T\'R\'}$ y $l_{P\'S\'}$, para obtener el punto $P_{10}$.'
-                        ]
-                    },
-                    {
-                        parrafo:'Decágono regular pequeño, de color flor de maíz azul (CornflowerBlue):',
-                        formulas:[
-                            '$PB\'QD\'RF\'SH\'TJ\':$',
-                            '⊛  Resolver el sistema de ecuaciones entre las rectas $l_{JC}$ y $l_{BI}$, para obtener el punto $P.$',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{ID}$ y $l_{AH}$, para obtener el punto $T$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{AD}$ y $l_{CH}$, para obtener el punto $Q$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{IF}$ y $l_{BG}$, para obtener el punto $S$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{JE}$ y $l_{CF}$, para obtener el punto $R$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{JC}$ y $l_{BG}$, para obtener el punto $B\'$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{ID}$ y $l_{CF}$, para obtener el punto $D\'$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{HE}$ y $l_{DG}$, para obtener el punto $F\'$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{IF}$ y $l_{CH}$, para obtener el punto $H\'$.',
-                            '⊛	Resolver el sistema de ecuaciones entre las rectas $l_{JE}$ y $l_{BI}$, para obtener el punto $J\'$.'
-                        ]
-                    },
-                    {
-                        parrafo:'Finalmente calculamos el valor del diámetro del círculo circunscrito al decágono, de color gris (Gray):',
-                        formulas:[
-                            '$D=AF=\\sqrt{(x_F-x_A)^2+(y_F-y_A)^2}\\Rightarrow(15)$'
-                        ]
-                    }
-                    
+             subtitulo:'B)	Geometría Vectorial',
+             pasosB:[
+              {
+                subtitulo2:'B.1.) Inicialización del Punto Central',
+                solucion:[                  
+                  {
+                    parrafo:'Dado el punto $O$ que representa al centro de los ejes coordenados de un plano en el mundo real:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+2.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas representado por un rectángulo de 400x300, donde el ancho (width) del rectángulo es igual a 400 y el largo (height) es igual a 300, entonces el punto $O$ se calcula diviendo para dos tanto el ancho como el largo del rectángulo:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+3.png',    
+                  },
+                  {
+                    parrafo:'Estos valores permiten representar al punto $O$ como el nuevo centro trasladado en un sistema de coordenadas cartesianas en el plano, de acuerdo al mundo de la Computación Gráfica:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+4.png',    
+                  }
                 ]
-            },            
-            C:{
-                subtitulo:'C)	Algoritmos',
-                algoritmosC:[
-                    {
-                        titulo:'1.3.1. Algoritmo de la Función ReadData()',
-                        pasos:[
-                            'Leer el lado del decágono.'
-                        ]
-                    },
-                    {
-                        titulo:'1.3.2. Algoritmo de la Función CalculateVertexBigDecagon()',
-                        pasos:[
-                            'Convertir el ángulo ‘1’ de grados a radianes, multiplicando el valor del ángulo de 36 grados por PI radianes y dividiendo su resultado para 180 grados.',
-                            'Convertir el ángulo ‘2’ de grados a radianes, multiplicando el valor del ángulo de 18 grados por PI radianes y dividiendo su resultado para 180 grados.',
-                            'Convertir el ángulo ‘alpha’ de grados a radianes, multiplicando el valor del ángulo de 10 grados por PI radianes y dividiendo su resultado para 180 grados.',
-                            'Calcular el valor del segmento \'a\' del contorno del dodecágono.',
-                            'Calcular el valor del segmento \'b\' del contorno del dodecágono.',
-                            'Calcular el valor del segmento \'c\' del contorno del dodecágono.',
-                            'Calcular el valor del segmento \'d\' del contorno del dodecágono.',
-                            'Calcular el valor del segmento \'e\' del contorno del dodecágono.',
-                            'Calcular las coordenadas del vértice \'A\'.',
-                            'Calcular las coordenadas del vértice \'B\'.',
-                            'Calcular las coordenadas del vértice \'C\'.',
-                            'Calcular las coordenadas del vértice \'D\'.',
-                            'Calcular las coordenadas del vértice \'E\'.',
-                            'Calcular las coordenadas del vértice \'F\'.',
-                            'Calcular las coordenadas del vértice \'G\'.',
-                            'Calcular las coordenadas del vértice \'H\'.',
-                            'Calcular las coordenadas del vértice \'I\'.',
-                            'Calcular las coordenadas del vértice \'J\'.',
-                            'Calcular las coordenadas del vértice \'O\'.'
-                        ]
-                    },
-                    {
-                        titulo:'1.3.3. Algoritmo de la Función PlotBigDecagon()',
-                        pasos:[
-                            'Asignar al objeto graph la funcionalidad de crear gráficos del PictureBox llamado picCanvas.',
-                            'Llamar a la función CalculateVertexBigDecagon().',
-                            'Actualizar el valor del vertice \'A\' con lo que tiene el vértice \'A\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'B\' con lo que tiene el vértice \'B\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'C\' con lo que tiene el vértice \'C\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'D\' con lo que tiene el vértice \'D\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'E\' con lo que tiene el vértice \'E\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'F\' con lo que tiene el vértice \'F\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'G\' con lo que tiene el vértice \'G\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'H\' con lo que tiene el vértice \'H\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'I\' con lo que tiene el vértice \'I\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'J\' con lo que tiene el vértice \'J\' multiplicado por un factor de escalamiento.',
-                            'Crear un bolígrafo de color azul obscuro (DarkBlue).',
-                            'Graficar el decágono grande de la figura geométrica uniendo con líneas los puntos: A, B, C, D, E, F, G, H, I, J.',
-                            'Crear un bolígrafo de color verde mar claro (LightSeaGreen).',
-                            'Graficar el primer pentágono regular grande de la figura geométrica uniendo con líneas los puntos: A, C, E, G, I.',
-                            'Crear un bolígrafo de color verde bosque (ForestGreen).',
-                            'Graficar el segundo pentágono regular grande de la figura geométrica uniendo con líneas los puntos: B, D, F, H, J.',
-                            'Crear un bolígrafo de color azul violeta (BlueViolet).',
-                            'Graficar estrellas de 5 puntas uniendo el punto A con D, E, F, G, H.',
-                            'Graficar estrellas de 5 puntas uniendo el punto B con E, F, G, H, I.',
-                            'Graficar estrellas de 5 puntas uniendo el punto C con F, G, H, I, J.',
-                            'Graficar estrellas de 5 puntas uniendo el punto D con G, H, I, J.',
-                            'Graficar estrellas de 5 puntas uniendo el punto E con H, I, J.',
-                            'Graficar estrellas de 5 puntas uniendo el punto F con I, J.',
-                            'Graficar estrellas de 5 puntas uniendo el punto G con J.'                         ]
-                    },
-                    {
-                        titulo:'1.3.4. Algoritmo de la Función CalculateIntersectionPoint()',
-                        pasosFormulas:[
-                            'Calcular el valor de la pendiente $m_1$.',
-                            'Calcular el valor de la pendiente $m_2$.',
-                            'Si el valor de la resta entre las dos pendientes es diferente de cero, entonces:',
-                            '.1. Calcular el valor de ‘x’ del punto de intersección aplicando el Teorema 1.',
-                            '.2. Calcular el valor de ‘y’ del punto de intersección aplicando el Teorema 1.'                      
-                        ]
-                    },
-                    {
-                        titulo:'1.3.5. Algoritmo de la Función CalculateVertexFivePointedBigStar()',
-                        pasosFormulas:[
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{JC}$ y $l_{BI}$, para obtener el punto $P$.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{ID}$ y $l_{AH}$, para obtener el punto $T$.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{AD}$ y $l_{CH}$, para obtener el punto $Q$.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{IF}$ y $l_{BG}$, para obtener el punto $S$.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{JE}$ y $l_{CF}$, para obtener el punto $R$.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{TQ}$ y $l_{PS}$, para obtener el punto $P_1$.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{TQ}$ y $l_{PR}$, para obtener el punto $P_2$.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{PR}$ y $l_{QS}$, para obtener el punto $P_3$.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{TR}$ y $l_{QS}$, para obtener el punto $P_4$.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{TR}$ y $l_{PS}$, para obtener el punto $P_5$.'
-                        ]
-                    },
-                    {
-                        titulo:'1.3.6. Algoritmo de la Función PlotFivePointedBigStar()',
-                        pasosFormulas:[
-                            'Asignar al objeto graph la funcionalidad de crear gráficos del PictureBox llamado picCanvas.',
-                            'Llamada a la función CalculateVertexBigDecagon.',
-                            'Llamada a la función CalculateVertexFivePointedBigStar.',
-                            'Actualizar el valor del vertice \'P\' con lo que tiene el vértice \'P\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'T\' con lo que tiene el vértice \'T\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'Q\' con lo que tiene el vértice \'Q\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'S\' con lo que tiene el vértice \'S\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice \'R\' con lo que tiene el vértice \'R\' multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice $P_1$ con lo que tiene el vértice $P_1$ multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice $P_2$ con lo que tiene el vértice $P_2$ multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice $P_3$ con lo que tiene el vértice $P_3$ multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice $P_4$ con lo que tiene el vértice $P_4$ multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice $P_5$ con lo que tiene el vértice $P_5$ multiplicado por un factor de escalamiento.',
-                            'Crear un bolígrafo de color verde azul obscuro (DarkBlue).',
-                            'Graficar la estrella grande de 5 puntas, uniendo con líneas los puntos: $P, P_2, Q, P_3, R, P_4, S, P_5,T, P_1$.'
-                        ]
-                    },
-                    {
-                        titulo:'1.3.7. Algoritmo de la Función CalculateVertexFivePointedSmallStar()',
-                        pasosFormulas:[
-                            'Asignar a la coordenada ‘x’ del punto P el valor de la coordenada ‘x’ del punto O.',
-                            'Asignar a la coordenada ‘y’ del punto P el valor de la coordenada ‘y’ del punto T.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{ID}$ y $l_{PS}$, para obtener el punto T\'.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{PR}$ y $l_{CH}$, para obtener el punto Q\'.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{TR}$ y $l_{BG}$, para obtener el punto S\'.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{QS}$ y $l_{JE}$, para obtener el punto R\'.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{T\'Q\'}$ y $l_{P\'S\'}$, para obtener el punto $P_6$.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{T\'Q\'}$ y $l_{P\'R\'}$, para obtener el punto $P_7$.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{P\'R\'}$ y $l_{Q\'S\'}$, para obtener el punto $P_8$.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{T\'R\'}$ y $l_{Q\'S\'}$, para obtener el punto $P_9$.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{T\'R\'}$ y $l_{P\'S\'}$, para obtener el punto $P_{10}$.'
-                        ]
-                    },
-                    {
-                        titulo:'1.3.8. Algoritmo de la Función PlotFivePointedSmallStar()',
-                        pasosFormulas:[
-                            'Asignar al objeto graph la funcionalidad de crear gráficos del PictureBox llamado picCanvas.',
-                            'Llamada a la función CalculateVertexBigDecagon.',
-                            'Llamada a la función CalculateVertexFivePointedBigStar.',
-                            'Llamada a la función CalculateVertexFivePointedSmallStar.',
-                            'Actualizar el valor del vertice P’ con lo que tiene el vértice P’ multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice T’ con lo que tiene el vértice T’ multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice Q’ con lo que tiene el vértice Q’ multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice S’ con lo que tiene el vértice S’ multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice R’ con lo que tiene el vértice R’ multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice $P_6$ con lo que tiene el vértice P6 multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice $P_7$ con lo que tiene el vértice P7 multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice $P_8$ con lo que tiene el vértice P8 multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice $P_9$ con lo que tiene el vértice P9 multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice $P_{10}$ con lo que tiene el vértice P10 multiplicado por un factor de escalamiento.',
-                            'Crear una brocha sólida de color azur (Azure).',
-                            'Crear un arreglo de puntos de tipo Point con los vértices:$P’, P_7, Q’, P_8, R’, P_9, S’, P_{10}, T’, P_6, P’$.',
-                            'Graficar un polígono estrellado de cinco puntas relleno con la brocha y el arreglo de puntos del paso anterior.'
-                        ]
-                    },
-                    {
-                        titulo:'1.3.9. Algoritmo de la Función CalculateVertexSmallDodecagon()',
-                        pasosFormulas:[
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{JC}$ y $l_{BI}$, para obtener el punto P.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{ID}$ y $l_{AH}$, para obtener el punto T.', 
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{AD}$ y $l_{CH}$, para obtener el punto Q.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{IF}$ y $l_{BG}$, para obtener el punto S.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{JE}$ y $l_{CF}$, para obtener el punto R.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{JC}$ y $l_{BG}$, para obtener el punto B\'.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{ID}$ y $l_{CF}$, para obtener el punto D\'.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{HE}$ y $l_{DG}$, para obtener el punto F\'.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{IF}$ y $l_{CH}$, para obtener el punto H\'.',
-                            'Resolver el sistema de ecuaciones entre las rectas $l_{JE}$ y $l_{BI}$, para obtener el punto J\'.'
-                        ]
-                    },
-                    {
-                        titulo:'1.3.10. Algoritmo de la Función PlotSmallDecagon()',
-                        pasosFormulas:[
-                            'Asignar al objeto graph la funcionalidad de crear gráficos del PictureBox llamado picCanvas.',
-                            'Llamada a la función CalculateVertexBigDecagon.',
-                            'Llamada a la función CalculateVertexSmallDodecagon.',
-                            'Actualizar el valor del vertice P con lo que tiene el vértice P multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice Q con lo que tiene el vértice Q multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice R con lo que tiene el vértice R multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice S con lo que tiene el vértice S multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice T con lo que tiene el vértice T multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice B’ con lo que tiene el vértice B’ multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice D’ con lo que tiene el vértice D’ multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice F’ con lo que tiene el vértice F’ multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice H’ con lo que tiene el vértice H’ multiplicado por un factor de escalamiento.',
-                            'Actualizar el valor del vertice J’ con lo que tiene el vértice J’ multiplicado por un factor de escalamiento.',
-                            'Crear un bolígrafo de color maíz azul (CornflowerBlue).',
-                            'Graficar el decágono pequeño de la figura geométrica uniendo con líneas los puntos: $P, B’, Q, D’, R, F’, S, H’, T, J’$.'
-                        ]
-                    },
-                    {
-                        titulo:'1.3.11. Algoritmo de la Función PlotCircle()',
-                        pasosFormulas:[
-                            'Asignar al objeto graph la funcionalidad de crear gráficos del PictureBox llamado picCanvas.', 
-                            'Crear un bolígrafo de color gris (Gray).',
-                            'Llamada a la función CalculateVertexBigDecagon.',
-                            'Asignar a la variable diameter el valor de la Ec. (15).',
-                            'Graficar el círculo circumscrito al decágono de la figura geométrica utilizando el objeto graph con la función DrawEllipse y el diámetro del círculo.'
-                        ]
-                    }
+               },
+               {
+                subtitulo2:'B.1.) Graficación de un sistema de coordenadas cartesianas en el espacio',
+                tituloproblema:'Problema:',
+                parrafo:'Problema: Graficar un sistema de coordenadas cartesianas en el espacio formado por los siguientes elementos: a) tres ejes concurrentes en un punto O (origen de coordenadas); b) eje ‘x’; c) eje ‘y’; d) eje ‘z’, como se muestra en la Figura 3.2.2. ',
+                fotoPath:'./assets/images/Capitulos/II/media/+5.png',
+                titulosolucion:'Solución:',  
+                solucion:[                  
+                  {
+                    parrafo:'Para graficar un sistema de coordenadas cartesianas en el espacio, se va a utilizar una proyección isométrica, que es un dibujo tridimensional con los ejes inclinados formando un ángulo de 30° con la horizontal. (Ver Figura 3.2.3).',
+                    fotoPath:'./assets/images/Capitulos/II/media/+6.png',    
+                  },
+                  {
+                    parrafo:'Considerando este sistema de coordenadas cartesianas en el espacio, se construyen los tres ejes (x, y, z) y considerando el valor del ángulo central igual a 30°, se construye el triángulo rectángulo AGO, como se muestra en la Figura 3.2.4.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+7.png',    
+                  },
+                  {
+                    parrafo:'Calculamos el valor del segmento ‘a’, sabiendo que el segmento ‘b’ es igual a 8u, en el triángulo rectángulo AGO:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+8.png',    
+                  },
+                  {
+                    parrafo:'Luego obtenemos los siguientes puntos:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+9.png',    
+                  },
+                  {
+                    parrafo:'Para poder representar gráficamente estos puntos en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+10.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
+                    fotoPath:'./assets/images/Capitulos/II/media/+11.png',    
+                  },
+                  {
+                    parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de las coordenadas de los puntos A, B, C y D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/#12.png',    
+                  },
+                  {
+                    parrafo:'Entonces los valores de las coordenadas de los puntos en el mundo de la Computación Gráfica se calculan de la siguiente manera, para obtener los nuevos puntos A, B, C y D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+13.png',    
+                  },
+                  {
+                    parrafo:'Finalmente se unen con una línea los puntos A y D y también se unen con una línea los puntos B y C, para obtener el sistema de coordenadas en el espacio de acuerdo al mundo de la Computación Gráfica, como se muestra en la Figura 3.2.5.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+14.png',    
+                  }
                 ]
-             },
-             D:{
-                subtitulo:'D)	Código de la Aplicación',
-                listaCodigo:[
-                    {
-                        problema:'La implementación de la clase CTenPointedStarPolygon, se presenta a continuación en la Tabla 1.3.1, que contiene datos miembro y funciones miembro que realizan diferentes operaciones.',
-                        tablaN:'Tabla 1.3.1. ',
-                        tablaDescrip:'Código de la clase CTenPointedStarPolygon del programa.',
-                        tablaDatos:
-                        `
-                        using System;
-                        using System.Collections.Generic;
-                        using System.Linq;
-                        using System.Text;
-                        using System.Threading.Tasks;
-                        using System.Drawing;
-                        using System.Windows.Forms;
-
-                        namespace WinAppGeometricFiguresV2
-                        {
-                            class CTenPointedStarPolygon
-                            {
-                                // Datos Miembro (Atributos).
-
-                                // Lado del decágono.
-                                private float side;
-                                // Segmentos del decágono.
-                                private float a, b, c, d, e;
-                                // Ángulos del decágono.
-                                private float angle1, angle2, alpha;
-                                // Objeto que activa el modo gráfico.
-                                private Graphics graph;
-                                // Objeto bolígrafo para dibujar en un lienzo.
-                                private Pen pen;
-                                // Constante scale factor (Zoom In/Zoom Out).
-                                private const float SF = 20;
-                                // Objeto Punto que representa a los diez vértices del 
-                                // decágono grande.
-                                private PointF A, B, C, D, E, F, G, H, I, J;
-                                // Objeto Punto que representa a los vértices de la estrella 
-                                // grande de cinco puntas.
-                                private PointF P, Q, R, S, T, O;
-                                private PointF P1, P2, P3, P4, P5;
-                                // Objeto Punto que representa a los vértices de la estrella 
-                                // pequeña de cinco puntas.
-                                private PointF Bp, Dp, Fp, Hp, Jp;
-                                private PointF P6, P7, P8, P9, P10;
-                                // Objeto Punto que representa a cinco de los diez vértices 
-                                // del decágono pequeño.
-                                private PointF Pp, Qp, Rp, Sp, Tp;
-
-                                // Funciones miembro - Métodos.
-
-                                // Constructor sin parámetros.
-                                public CTenPointedStarPolygon()
-                                {
-                                    side = 0.0f;
-                                }
-
-                                // Función que lee el lado del decágono.
-                                public void ReadData(TextBox txtSideSide)
-                                {            
-                                    try
-                                    {
-                                        side = float.Parse(txtSideSide.Text);
-                                    }
-                                    catch
-                                    {
-                                        MessageBox.Show("Ingreso no válido...");
-                                    }
-                                }
-
-                                // Función que inicializa los datos y controles de la figura.
-                                public void InitializeData(TextBox txtSide,
-                                                        PictureBox picCanvas)
-                                {
-                                    txtSide.Text = ""; txtSide.Focus();
-                                    side = 0.0f; picCanvas.Refresh();
-                                }
-
-                                // Función que calcula los valores de los diez vértices del 
-                                // decágono grande.
-                                private void CalculateVertexBigDecagon()
-                                {            
-                                    angle1 = 36.0f * (float)Math.PI / 180.0f;
-                                    angle2 = 18.0f * (float)Math.PI / 180.0f;
-                                    alpha = 10.0f * (float)Math.PI / 180.0f;
-
-                                    a = (side/2.0f) * (float)Math.Tan(alpha);
-                                    b = side * (float)Math.Sin(angle1);
-                                    e = side * (float)Math.Cos(angle1);
-                                    c = side * (float)Math.Cos(angle2);
-                                    d = side * (float)Math.Sin(angle2);           
-
-                                    A.X = a + b + c; A.Y = 0;
-                                    B.X = a +b + 2 * c; B.Y = d;
-                                    C.X = a + 2 * b + 2 * c; C.Y = d + e;
-                                    D.X = a + 2 * b + 2 * c; D.Y = d + e + side;
-                                    E.X = a + b + 2 * c; E.Y = d + 2 * e + side;
-                                    F.X = a + b + c; F.Y = 2 * d + 2 * e + side;
-                                    G.X = a + b; G.Y = d + 2 * e + side;
-                                    H.X = a; H.Y = d + e + side;
-                                    I.X = a; I.Y = d + e;
-                                    J.X = a + b; J.Y = d;
-
-                                    O.X = a + b + c; O.Y = d + e + side / 2.0f;
-                                }
-
-                                // Función que grafica:
-                                // a) Un decágono grande a base de diez vértices
-                                // y líneas de color azul obscuro (DarkBlue).
-                                // b) Un primer pentágono regular grande de color 
-                                // verde mar claro (LightSeaGreen).
-                                // c) Un segundo pentágono regular grande de color
-                                // color verde bosque (ForestGreen).
-                                // d) Estrellas de 5 puntas de color azul violeta 
-                                // (BlueViolet).
-                                public void PlotBigDecagon(PictureBox picCanvas)
-                                {
-                                    graph = picCanvas.CreateGraphics();
-                                    CalculateVertexBigDecagon();
-
-                                    A.X = A.X * SF; A.Y = A.Y * SF;
-                                    B.X = B.X * SF; B.Y = B.Y * SF;
-                                    C.X = C.X * SF; C.Y = C.Y * SF;
-                                    D.X = D.X * SF; D.Y = D.Y * SF;
-                                    E.X = E.X * SF; E.Y = E.Y * SF;
-                                    F.X = F.X * SF; F.Y = F.Y * SF;
-                                    G.X = G.X * SF; G.Y = G.Y * SF;
-                                    H.X = H.X * SF; H.Y = H.Y * SF;
-                                    I.X = I.X * SF; I.Y = I.Y * SF;
-                                    J.X = J.X * SF; J.Y = J.Y * SF;
-
-                                    pen = new Pen(Color.DarkBlue, 3);
-                                    graph.DrawLine(pen, A.X, A.Y, B.X, B.Y);
-                                    graph.DrawLine(pen, B.X, B.Y, C.X, C.Y);
-                                    graph.DrawLine(pen, C.X, C.Y, D.X, D.Y);
-                                    graph.DrawLine(pen, D.X, D.Y, E.X, E.Y);
-                                    graph.DrawLine(pen, E.X, E.Y, F.X, F.Y);
-                                    graph.DrawLine(pen, F.X, F.Y, G.X, G.Y);
-                                    graph.DrawLine(pen, G.X, G.Y, H.X, H.Y);
-                                    graph.DrawLine(pen, H.X, H.Y, I.X, I.Y);
-                                    graph.DrawLine(pen, I.X, I.Y, J.X, J.Y);
-                                    graph.DrawLine(pen, A.X, A.Y, J.X, J.Y);
-
-                                    pen = new Pen(Color.LightSeaGreen, 3);
-                                    graph.DrawLine(pen, A.X, A.Y, I.X, I.Y);
-                                    graph.DrawLine(pen, A.X, A.Y, C.X, C.Y);
-                                    graph.DrawLine(pen, C.X, C.Y, E.X, E.Y);
-                                    graph.DrawLine(pen, G.X, G.Y, I.X, I.Y);
-                                    graph.DrawLine(pen, E.X, E.Y, G.X, G.Y);
-                                    
-                                    pen = new Pen(Color.ForestGreen, 3);
-                                    graph.DrawLine(pen, B.X, B.Y, J.X, J.Y);
-                                    graph.DrawLine(pen, H.X, H.Y, J.X, J.Y);
-                                    graph.DrawLine(pen, B.X, B.Y, D.X, D.Y);
-                                    graph.DrawLine(pen, F.X, F.Y, H.X, H.Y);
-                                    graph.DrawLine(pen, D.X, D.Y, F.X, F.Y);
-
-                                    pen = new Pen(Color.BlueViolet, 3);            
-                                    graph.DrawLine(pen, A.X, A.Y, D.X, D.Y);
-                                    graph.DrawLine(pen, A.X, A.Y, E.X, E.Y);
-                                    graph.DrawLine(pen, A.X, A.Y, F.X, F.Y);
-                                    graph.DrawLine(pen, A.X, A.Y, G.X, G.Y);
-                                    graph.DrawLine(pen, A.X, A.Y, H.X, H.Y);           
-                                    
-                                    graph.DrawLine(pen, B.X, B.Y, E.X, E.Y);
-                                    graph.DrawLine(pen, B.X, B.Y, F.X, F.Y);
-                                    graph.DrawLine(pen, B.X, B.Y, G.X, G.Y);
-                                    graph.DrawLine(pen, B.X, B.Y, H.X, H.Y);
-                                    graph.DrawLine(pen, B.X, B.Y, I.X, I.Y);           
-                                    
-                                    graph.DrawLine(pen, C.X, C.Y, F.X, F.Y);
-                                    graph.DrawLine(pen, C.X, C.Y, G.X, G.Y);
-                                    graph.DrawLine(pen, C.X, C.Y, H.X, H.Y);
-                                    graph.DrawLine(pen, C.X, C.Y, I.X, I.Y);
-                                    graph.DrawLine(pen, C.X, C.Y, J.X, J.Y);           
-                                    
-                                    graph.DrawLine(pen, D.X, D.Y, G.X, G.Y);
-                                    graph.DrawLine(pen, D.X, D.Y, H.X, H.Y);
-                                    graph.DrawLine(pen, D.X, D.Y, I.X, I.Y);
-                                    graph.DrawLine(pen, D.X, D.Y, J.X, J.Y);            
-                                    
-                                    graph.DrawLine(pen, E.X, E.Y, H.X, H.Y);
-                                    graph.DrawLine(pen, E.X, E.Y, I.X, I.Y);
-                                    graph.DrawLine(pen, E.X, E.Y, J.X, J.Y);            
-                                    
-                                    graph.DrawLine(pen, F.X, F.Y, I.X, I.Y);
-                                    graph.DrawLine(pen, F.X, F.Y, J.X, J.Y);            
-                                    
-                                    graph.DrawLine(pen, G.X, G.Y, J.X, J.Y);                        
-                                }
-
-                                // Función que calcula el punto de intersección entre dos rectas
-                                // utilizando el Teorema 1.
-                                private PointF CalculateIntersectionPoint(PointF P1, PointF P2,
-                                                                        PointF P3, PointF P4)
-                                {
-                                    PointF P = new PointF();
-                                    float m1 = (P2.Y - P1.Y) / (P2.X - P1.X);
-                                    float m2 = (P4.Y - P3.Y) / (P4.X - P3.X);
-
-                                    if((m1 - m2) != 0)
-                                    {
-                                        P.X = (P3.Y - P1.Y + m1 * P1.X - m2 * P3.X) / (m1 - m2);
-                                        P.Y = P1.Y + m1 * (P.X - P1.X);                
-                                    }
-                                    return (P);
-                                }
-
-                                // Función que calcula los valores de los diez vértices de 
-                                // la estrella grande de cinco puntas.
-                                private void CalculateVertexFivePointedBigStar()
-                                {
-                                    P = CalculateIntersectionPoint(J, C, B, I);
-                                    T = CalculateIntersectionPoint(I, D, A, H);
-                                    Q = CalculateIntersectionPoint(A, D, C, H);
-                                    S = CalculateIntersectionPoint(I, F, B, G);
-                                    R = CalculateIntersectionPoint(J, E, C, F);
-
-                                    P1 = CalculateIntersectionPoint(T, Q, P, S);
-                                    P2 = CalculateIntersectionPoint(T, Q, P, R);
-                                    P3 = CalculateIntersectionPoint(P, R, Q, S);
-                                    P4 = CalculateIntersectionPoint(T, R, Q, S);
-                                    P5 = CalculateIntersectionPoint(T, R, P, S);
-                                }
-
-                                // Función que grafica una estrella grande de cinco puntas 
-                                // con un líneas de color azul obscuro (DarkBlue).
-                                public void PlotFivePointedBigStar(PictureBox picCanvas)
-                                {
-                                    graph = picCanvas.CreateGraphics();
-
-                                    CalculateVertexBigDecagon();
-                                    CalculateVertexFivePointedBigStar();
-
-                                    P.X = P.X * SF; P.Y = P.Y * SF;
-                                    T.X = T.X * SF; T.Y = T.Y * SF;
-                                    Q.X = Q.X * SF; Q.Y = Q.Y * SF;
-                                    S.X = S.X * SF; S.Y = S.Y * SF;
-                                    R.X = R.X * SF; R.Y = R.Y * SF;
-
-                                    P1.X = P1.X * SF; P1.Y = P1.Y * SF;
-                                    P2.X = P2.X * SF; P2.Y = P2.Y * SF;
-                                    P3.X = P3.X * SF; P3.Y = P3.Y * SF;
-                                    P4.X = P4.X * SF; P4.Y = P4.Y * SF;
-                                    P5.X = P5.X * SF; P5.Y = P5.Y * SF;
-
-                                    pen = new Pen(Color.DarkBlue, 3);            
-
-                                    graph.DrawLine(pen, P.X, P.Y, P2.X, P2.Y);
-                                    graph.DrawLine(pen, P2.X, P2.Y, Q.X, Q.Y);
-                                    graph.DrawLine(pen, Q.X, Q.Y, P3.X, P3.Y);
-                                    graph.DrawLine(pen, P3.X, P3.Y, R.X, R.Y);
-                                    graph.DrawLine(pen, R.X, R.Y, P4.X, P4.Y);
-                                    graph.DrawLine(pen, P4.X, P4.Y, S.X, S.Y);
-                                    graph.DrawLine(pen, S.X, S.Y, P5.X, P5.Y);
-                                    graph.DrawLine(pen, P5.X, P5.Y, T.X, T.Y);
-                                    graph.DrawLine(pen, T.X, T.Y, P1.X, P1.Y);
-                                    graph.DrawLine(pen, P1.X, P1.Y, P.X, P.Y);
-                                }
-
-                                // Función que calcula los valores de los diez vértices de 
-                                // la estrella pqueña de cinco puntas.
-                                private void CalculateVertexFivePointedSmallStar()
-                                {
-                                    Pp.X = O.X; Pp.Y = T.Y;            
-                                    Tp = CalculateIntersectionPoint(I, D, P, S);
-                                    Qp = CalculateIntersectionPoint(P, R, C, H);
-                                    Sp = CalculateIntersectionPoint(T, R, B, G);
-                                    Rp = CalculateIntersectionPoint(J, E, Q, S);
-
-                                    P6 = CalculateIntersectionPoint(Tp, Qp, Pp, Sp);
-                                    P7 = CalculateIntersectionPoint(Tp, Qp, Pp, Rp);
-                                    P8 = CalculateIntersectionPoint(Pp, Rp, Qp, Sp);
-                                    P9 = CalculateIntersectionPoint(Tp, Rp, Qp, Sp);
-                                    P10 = CalculateIntersectionPoint(Tp, Rp, Pp, Sp);
-                                }
-
-                                // Función que grafica una estrella pequeña de cinco puntas 
-                                // con un relleno de color azur (Azure).
-                                public void PlotFivePointedSmallStar(PictureBox picCanvas)
-                                {
-                                    graph = picCanvas.CreateGraphics();
-
-                                    CalculateVertexBigDecagon();
-                                    CalculateVertexFivePointedBigStar();
-                                    CalculateVertexFivePointedSmallStar();
-
-                                    Pp.X = Pp.X * SF; Pp.Y = Pp.Y * SF;
-                                    Tp.X = Tp.X * SF; Tp.Y = Tp.Y * SF;
-                                    Qp.X = Qp.X * SF; Qp.Y = Qp.Y * SF;
-                                    Sp.X = Sp.X * SF; Sp.Y = Sp.Y * SF;
-                                    Rp.X = Rp.X * SF; Rp.Y = Rp.Y * SF;
-
-                                    P6.X = P6.X * SF; P6.Y = P6.Y * SF;
-                                    P7.X = P7.X * SF; P7.Y = P7.Y * SF;
-                                    P8.X = P8.X * SF; P8.Y = P8.Y * SF;
-                                    P9.X = P9.X * SF; P9.Y = P9.Y * SF;
-                                    P10.X = P10.X * SF; P10.Y = P10.Y * SF;
-                                    
-                                    SolidBrush brush = new SolidBrush(Color.Azure);
-                                    PointF[] polPoints1 = { Pp, P7, Qp, P8, Rp, P9,
-                                                            Sp, P10, Tp, P6, Pp };
-                                    graph.FillPolygon(brush, polPoints1);            
-                                }
-
-                                // Función que calcula los valores de los diez vértices del 
-                                // decágono pequeño.
-                                private void CalculateVertexSmallDodecagon()
-                                {
-                                    P = CalculateIntersectionPoint(J, C, B, I);
-                                    T = CalculateIntersectionPoint(I, D, A, H);
-                                    Q = CalculateIntersectionPoint(A, D, C, H);
-                                    S = CalculateIntersectionPoint(I, F, B, G);
-                                    R = CalculateIntersectionPoint(J, E, C, F);
-
-                                    Bp = CalculateIntersectionPoint(J, C, B, G);
-                                    Dp = CalculateIntersectionPoint(I, D, C, F);
-                                    Fp = CalculateIntersectionPoint(H, E, D, G);
-                                    Hp = CalculateIntersectionPoint(I,F, C, H);
-                                    Jp = CalculateIntersectionPoint(J, E, B, I);            
-                                }
-
-                                // Función que grafica un decágono pequeño a base de diez
-                                // vértices y líneas de color azul maíz azul (CornflowerBlue).
-                                public void PlotSmallDecagon(PictureBox picCanvas)
-                                {
-                                    graph = picCanvas.CreateGraphics();
-
-                                    CalculateVertexBigDecagon();
-                                    CalculateVertexSmallDodecagon();
-
-                                    P.X = P.X * SF; P.Y = P.Y * SF;
-                                    Q.X = Q.X * SF; Q.Y = Q.Y * SF;
-                                    R.X = R.X * SF; R.Y = R.Y * SF;
-                                    S.X = S.X * SF; S.Y = S.Y * SF;
-                                    T.X = T.X * SF; T.Y = T.Y * SF;
-
-                                    Bp.X = Bp.X * SF; Bp.Y = Bp.Y * SF;
-                                    Dp.X = Dp.X * SF; Dp.Y = Dp.Y * SF;
-                                    Fp.X = Fp.X * SF; Fp.Y = Fp.Y * SF;
-                                    Hp.X = Hp.X * SF; Hp.Y = Hp.Y * SF;
-                                    Jp.X = Jp.X * SF; Jp.Y = Jp.Y * SF;
-                                    
-                                    pen = new Pen(Color.CornflowerBlue, 3);
-                                    graph.DrawLine(pen, P.X, P.Y, Bp.X, Bp.Y);
-                                    graph.DrawLine(pen, Bp.X, Bp.Y, Q.X, Q.Y);
-                                    graph.DrawLine(pen, Q.X, Q.Y, Dp.X, Dp.Y);
-                                    graph.DrawLine(pen, Dp.X, Dp.Y, R.X, R.Y);
-                                    graph.DrawLine(pen, R.X, R.Y, Fp.X, Fp.Y);
-                                    graph.DrawLine(pen, Fp.X, Fp.Y, S.X, S.Y);
-                                    graph.DrawLine(pen, S.X, S.Y, Hp.X, Hp.Y);
-                                    graph.DrawLine(pen, Hp.X, Hp.Y, T.X, T.Y);
-                                    graph.DrawLine(pen, T.X, T.Y, Jp.X, Jp.Y);
-                                    graph.DrawLine(pen, Jp.X, Jp.Y, P.X, P.Y);
-                                }
-
-                                // Función que grafica el círculo circumscrito al decágono grande
-                                // de color gris (Gray).
-                                public void PlotCircle(PictureBox picCanvas)
-                                {
-                                    float diameter;
-                                    graph = picCanvas.CreateGraphics();
-                                    pen = new Pen(Color.Gray, 3);            
-
-                                    CalculateVertexBigDecagon();
-                                    diameter = (float)Math.Sqrt((F.X - A.X) * (F.X - A.X) + 
-                                                                (F.Y - A.Y) * (F.Y - A.Y));
-                                                
-                                    graph.DrawEllipse(pen, 0, 0, diameter * SF, diameter * SF);
-                                }
-
-                                // Función que cierra un formulario.
-                                public void CloseForm(Form ObjForm)
-                                {
-                                    ObjForm.Close();
-                                }
-                            }
-                        }
-                        `
-                    },
-                    {
-                        problema:'La implementación de la clase frmTenPointedStarPolygon, se presenta a continuación en la Tabla 1.3.2, que es la clase que representa a la interfaz gráfica de usuario de la figura geométrica plantada en este praqnique.',
-                        tablaN:'Tabla 1.3.2. ',
-                        tablaDescrip:'Código de la clase frmTenPointedStarPolygon del programa.',
-                        tablaDatos:
-                        `
-                        using System;
-                        using System.Collections.Generic;
-                        using System.ComponentModel;
-                        using System.Data;
-                        using System.Drawing;
-                        using System.Linq;
-                        using System.Text;
-                        using System.Threading.Tasks;
-                        using System.Windows.Forms;
-
-                        namespace WinAppGeometricFiguresV2
-                        {
-                            public partial class frmTenPointedStarPolygon : Form
-                            {
-                                // Definición de un objeto de tipo CTenPointedStarPolygon.
-                                CTenPointedStarPolygon ObjTenPointedStarPolygon = new CTenPointedStarPolygon();
-                                
-                                public frmTenPointedStarPolygon()
-                                {
-                                    InitializeComponent();
-                                }
-
-                                private void frmTenPointedStarPolygon_Load(object sender, EventArgs e)
-                                {
-                                    // Inicialización de los datos y controles.
-                                    // Llamada a la función InitializeData.
-                                    ObjTenPointedStarPolygon.InitializeData(txtSide, picCanvas);
-                                }
-
-                                private void btnCalculate_Click(object sender, EventArgs e)
-                                {
-                                    // Lectura de datos.
-                                    // Llamada a la función ReadData.
-                                    ObjTenPointedStarPolygon.ReadData(txtSide);
-                                    // Gráfica del círculo circumscrito al decágono grande.
-                                    // Llamada a la función PlotCircle.
-                                    ObjTenPointedStarPolygon.PlotCircle(picCanvas);
-                                    // Gráfica del decágono grande.
-                                    // Llamada a la función PlotBigDecagon.
-                                    ObjTenPointedStarPolygon.PlotBigDecagon(picCanvas);
-                                    // Gráfica de la estrella grande de cinco puntas.
-                                    // Llamada a la función PlotBigDecagon.
-                                    ObjTenPointedStarPolygon.PlotFivePointedBigStar(picCanvas);
-                                    // Gráfica de la estrella pequeña de cinco puntas.
-                                    // Llamada a la función PlotBigDecagon.
-                                    ObjTenPointedStarPolygon.PlotFivePointedSmallStar(picCanvas);
-                                    // Gráfica del decágono pequeño.
-                                    // Llamada a la función PlotSmallDecagon.
-                                    ObjTenPointedStarPolygon.PlotSmallDecagon(picCanvas);
-                                }
-
-                                private void btnReset_Click(object sender, EventArgs e)
-                                {
-                                    // Inicialización de los datos y controles.
-                                    // Llamada a la función InitializeData.
-                                    ObjTenPointedStarPolygon.InitializeData(txtSide, picCanvas);
-                                }
-
-                                private void btnExit_Click(object sender, EventArgs e)
-                                {
-                                    // Cierre de un formulario.
-                                    // Llamada a la función CloseForm.
-                                    ObjTenPointedStarPolygon.CloseForm(this);
-                                }
-                            }
-                        }
-                        `
-                    } 
+               },
+               {
+                subtitulo2:'B.2.) Graficación de un plano en el espacio',
+                solucion:[                  
+                  {
+                    parrafo:'Para graficar un plano en el espacio de acuerdo a una proyección isométrica se debe considerar que la figura que representa al plano es un rombo ABCD cuyos cuatro lados son de igual longitud y dos de sus ángulos son menores que los otros dos.'
+                  },
+                  {
+                    parrafo:'Para encontrar los vértices del rombo se divide esta figura en cuatro triángulos rectángulos congruentes, como se muestra en la Figura 3.2.4.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+15.png',    
+                  },
+                  {
+                    parrafo:'Luego calculamos el valor del segmento ‘a’, sabiendo que el segmento ‘b’ es igual a 4u, en el triángulo rectángulo AOB:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+16.png',    
+                  },
+                  {
+                    parrafo:'Luego obtenemos los siguientes puntos:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+17.png',    
+                  },
+                  {
+                    parrafo:'Para poder representar gráficamente estos puntos en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+18.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
+                    fotoPath:'./assets/images/Capitulos/II/media/+19.png',    
+                  },
+                  {
+                    parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de las coordenadas de los puntos A, B, C y D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+20.png',    
+                  },
+                  {
+                    parrafo:'Entonces los valores de las coordenadas de los puntos en el mundo de la Computación Gráfica se calculan de la siguiente manera, para obtener los nuevos puntos A, B, C y D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+21.png',    
+                  },
+                  {
+                    parrafo:'Finalmente se unen con una línea: a) los puntos A y B; b) los puntos A y D; c) los puntos B y C; d) los puntos C y D; para obtener el plano en el espacio representado por el rombo ABCD de acuerdo al mundo de la Computación Gráfica, como se muestra en la Figura 3.2.5.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+22.png',    
+                  },
+                  {
+                    parrafo:'Para dibujar los segmentos del rombo ABCD, se toma como base uno de sus rombos pequeños, como por ejemplo el rombo AIJK. Para encontrar los vértices del rombo pequeño AIJK, se divide esta figura en cuatro triángulos rectángulos congruentes, como se muestra en la Figura 3.2.4.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+23.png',    
+                  },
+                  {
+                    parrafo:'Luego calculamos el valor del segmento ‘q’, sabiendo que el segmento ‘p’ es igual a 0.25u, en el triángulo rectángulo ALI:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+24.png',    
+                  },
+                  {
+                    parrafo:'Con los valores de los segmentos a, b, p, q, que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+25.png',    
+                  },
+                  {
+                    parrafo:'Se calculan los valores de los 15 puntos que forman parte del lado BA del rombo ABCD, utilizando las siguientes ecuaciones y el arreglo de puntos P[15], para almacenar los valores de las coordenadas:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+26.png',    
+                  },
+                  {
+                    parrafo:'Luego, se calculan los valores de los 15 puntos que forman parte del lado DC del rombo ABCD, utilizando las siguientes ecuaciones y el arreglo de puntos Q[15], para almacenar los valores de las coordenadas:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+27.png',    
+                  },
+                  {
+                    parrafo:'Con estas ecuaciones se obtienen los siguientes puntos que forman parte del arreglo de puntos P[15] y Q[15] del mundo real, que se muestra en la Figura 3.2.5.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+28.png',    
+                  },
+                  {
+                    parrafo:'Para poder representar gráficamente estos puntos en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+29.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
+                    fotoPath:'./assets/images/Capitulos/II/media/+30.png',    
+                  },
+                  {
+                    parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de las coordenadas de los arreglos de puntos P[15] y Q[15] del mundo real, se obtienen dos nuevos arreglos de puntos P[15] y Q[15] del mundo de la Computación Gráfica, como se muestra en la Figura 3.2.6.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+31.png',    
+                  },
+                  {
+                    parrafo:'Luego, se unen con líneas los arreglos de puntos P[15] y Q[15] del mundo de la Computación Gráfica. Para unir los puntos con líneas se sigue el siguiente procedimiento: a) El primer punto P[0] del arreglo de puntos se une con el último punto Q[14] del otro arreglo de puntos; b) El segundo punto P[1] del arreglo de puntos se une con el penúltimo punto Q[13] del otro arreglo de puntos; c) El tercer punto P[2] del arreglo de puntos se une con el antepenúltimo punto Q[12] del otro arreglo de puntos; d) Este procedimiento continúa hasta que el último punto P[14] del arreglo de puntos se une con el primer punto Q[0] del otro arreglo de puntos. '
+                  },
+                  {
+                    parrafo:'El proceso de cálculo de los puntos del arreglo P[] que cruzan por el segmento BA sigue el siguiente principio: a) La coordenada \'x\' va desde la derecha hacia el centro; b) La coordenada \'y\' va desde abajo hacia arriba. (Ver Figura 3.2.7).'
+                  },
+                  {
+                    parrafo:'El proceso de cálculo de los puntos del arreglo Q[] que cruzan por el segmento DC sigue el siguiente principio: a) La coordenada \'x\' va desde la izquierda hacia el centro; b) La coordenada \'y\' va desde arriba hacia abajo. (Ver Figura 3.2.7).'
+                  },
+                  {
+                    parrafo:'Finalmente, se puede concluir que este primer grupo de 15 líneas graficadas en base a los puntos P[15] y Q[15], son paralelas entre sí y también son paralelas con los segmentos DA y CB del rombo ABCD, como se muestra en la Figura 3.2.7.     ',
+                    fotoPath:'./assets/images/Capitulos/II/media/+32.png',    
+                  },
+                  {
+                    parrafo:'Con los valores de los segmentos a, b, p, q, que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+33.png',    
+                  },
+                  {
+                    parrafo:'Se calculan los valores de los 15 puntos que forman parte del lado DA del rombo ABCD, utilizando las siguientes ecuaciones y el arreglo de puntos P[15], para almacenar los valores de las coordenadas:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+34.png',    
+                  },
+                  {
+                    parrafo:'Luego, se calculan los valores de los 15 puntos que forman parte del lado BC del rombo ABCD, utilizando las siguientes ecuaciones y el arreglo de puntos Q[15], para almacenar los valores de las coordenadas:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+35.png',    
+                  },
+                  {
+                    parrafo:'Con estas ecuaciones se obtienen los siguientes puntos que forman parte del arreglo de puntos P[15] y Q[15] del mundo real, que se muestra en la Figura 3.2.5.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+36.png',    
+                  },
+                  {
+                    parrafo:'Para poder representar gráficamente estos puntos en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+37.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
+                    fotoPath:'./assets/images/Capitulos/II/media/+38.png',    
+                  },
+                  {
+                    parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de las coordenadas de los arreglos de puntos P[15] y Q[15] del mundo real, se obtienen dos nuevos arreglos de puntos P[15] y Q[15] del mundo de la Computación Gráfica, como se muestra en la Figura 3.2.6.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+39.png',    
+                  },
+                  {
+                    parrafo:'Luego, se unen con líneas los arreglos de puntos P[15] y Q[15] del mundo de la Computación Gráfica. Para unir los puntos con líneas se sigue el siguiente procedimiento: a) El primer punto P[0] del arreglo de puntos se une con el último punto Q[14] del otro arreglo de puntos; b) El segundo punto P[1] del arreglo de puntos se une con el penúltimo punto Q[13] del otro arreglo de puntos; c) El tercer punto P[2] del arreglo de puntos se une con el antepenúltimo punto Q[12] del otro arreglo de puntos; d) Este procedimiento continúa hasta que el último punto P[14] del arreglo de puntos se une con el primer punto Q[0] del otro arreglo de puntos. '
+                  },
+                  {
+                    parrafo:'El proceso de cálculo de los puntos del arreglo P[] que cruzan por el segmento DA sigue el siguiente principio: a) La coordenada \'x\' va desde la izquierda hacia el centro; b) La coordenada \'y\' va desde abajo hacia arriba. (Ver Figura 3.2.7).'
+                  },
+                  {
+                    parrafo:'El proceso de cálculo de los puntos del arreglo Q[] que cruzan por el segmento BC sigue el siguiente principio: a) La coordenada \'x\' va desde la derecha hacia el centro; b) La coordenada \'y\' va desde arriba hacia abajo. (Ver Figura 3.2.7).'
+                  },
+                  {
+                    parrafo:'Finalmente, se puede concluir que este primer grupo de 15 líneas graficadas en base a los puntos P[15] y Q[15], son paralelas entre sí y también son paralelas con los segmentos DC y AB del rombo ABCD, como se muestra en la Figura 3.2.7.     ',
+                    fotoPath:'./assets/images/Capitulos/II/media/+40.png',    
+                  }
                 ]
-            },
-            E:{
-              subtitulo:'E)	Pruebas de la Aplicación',
-              listaPrueba:[
+               },
+               {
+                subtitulo2:'B.3.) Representación de un Vector en el Espacio dentro de una Caja',
+                tituloproblema:'Problema:',
+                parrafo:'Dado un vector 3D en el espacio, dibujar el vector y la caja que encierra al vector.',
+                titulosolucion:'Solución:',  
+                solucion:[                  
+                  {
+                    parrafo:'Dado el siguiente vector en el espacio:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+41.png',    
+                  },
+                  {
+                    parrafo:'Dado el punto $O$ que representa al centro de los ejes coordenados de un plano en el mundo real:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+42.png',    
+                  },
+                  {
+                    parrafo:'Lo primero que se hace es cambiar la escala del vector V de 1u a 0.5 u, de acuerdo a los valores del plano, para lo cual se divide a cada una de las componentes del vector para dos y se obtienen las siguientes ecuaciones:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+43.png',    
+                  },
+                  {
+                    parrafo:'Los segmentos ‘a’, ‘b’, ‘c’, representan a las componentes ‘x’, ‘y’, ‘z’ del vector V respectivamente. Para calcular las coordenadas de los vértices A, B y C se aplica una solución geométrica, como se muestra en la Figura 3.2.7.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+44.png',    
+                  },
+                  {
+                    parrafo:'Dados los siguientes puntos:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+45.png',    
+                  },
+                  {
+                    parrafo:'Dado el valor del ángulo A, por ejemplo: A=30°'  
+                  },
+                  {
+                    parrafo:'Calculamos el valor de la pendiente OB que en este caso es negativa, debido a que el segmento de la recta OB se encuentra en el cuarto cuadrante:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+46.png',    
+                  },
+                  {
+                    parrafo:'Despejamos el valor de $y_2$ donde obtenemos la siguiente ecuación:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+47.png',    
+                  },
+                  {
+                    parrafo:'Calculamos la distancia $OB$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+48.png',    
+                  },
+                  {
+                    parrafo:'Reemplazamos el valor de $y_2$  de la ecuación (6) en la ecuación (7) y calculamos el valor de $x_2$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+49.png',    
+                  },
+                  {
+                    parrafo:'Despejamos el valor de $x_2$ y luego racionalizamos la expresión:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+50.png',    
+                  },
+                  {
+                    parrafo:'Reemplazamos el valor de $x_2$ de la ecuación (8) en la ecuación (6) y calculamos el valor de $y_3$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+51.png',    
+                  },
+                  {
+                    parrafo:'Por lo tanto, las coordenadas del punto $P_3$ son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+52.png',    
+                  },
+                  {
+                    parrafo:'Aplicando las siguientes identidades trigonométricas:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+53.png',    
+                  },
+                  {
+                    parrafo:'Se simplicifica la ecuación (10) de la siguiente manera:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+54.png',    
+                  },
+                  {
+                    parrafo:'Entonces, se obtienen las coordenadas del punto $P_2$ en función de senos y cosenos:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+55.png',    
+                  },
+                  {
+                    parrafo:'Luego, se calculan las coordenadas del punto $P_1$ en función del punto $P_2$, donde analizando el gráfico se puede observar que la coordenada $x_1=x_2$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+56.png',    
+                  },
+                  {
+                    parrafo:'Calculamos la distancia $BA$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+57.png',    
+                  },
+                  {
+                    parrafo:'Despejamos el valor de $y_1$ y obtenemos la expresión:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+58.png',    
+                  },
+                  {
+                    parrafo:'Entonces, se obtienen las coordenadas del punto $P_1=A$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+59.png',    
+                  },
+                  {
+                    parrafo:'Por construcción, obtenemos los puntos M, N y P que permiten formar los triángulos rectángulos BMO, OND y APD. Además, se forma el trapecio OMPD. (Ver Figura 3.2.7).',
+                    fotoPath:'./assets/images/Capitulos/II/media/+60.png',    
+                  },
+                  {
+                    parrafo:'Luego resolvemos el triángulo rectángulo BMO, para calcular el valor de los segmentos BM y OM.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+61.png',    
+                  },
+                  {
+                    parrafo:'Después, resolvemos el triángulo rectángulo DPA, para calcular el valor de los segmentos AP y DP.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+62.png',    
+                  },
+                  {
+                    parrafo:'Finalmente, calculamos los valores de los segmentos PM, NM y ON del trapecio OMPD:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+63.png',    
+                  },
+                  {
+                    parrafo:'Entonces, se obtienen las coordenadas del punto $P_3$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+64.png',    
+                  },
+                  {
+                    parrafo:'Conociendo el Punto O y el Punto D, ya se puede dibujar el vector V, utilizando una línea.'
+                  },
+                  {
+                    parrafo:'Para dibujar la caja completa que contiene al vector V es necesario calcular los valores de las coordenadas de los puntos (ver Figura 3.2.8):',
+                    fotoPath:'./assets/images/Capitulos/II/media/+65.png',    
+                  },
+                  {
+                    parrafo:'',
+                    fotoPath:'./assets/images/Capitulos/II/media/+66.png',    
+                  },
+                  {
+                    parrafo:'A continuación, se calculan las coordenadas del punto $P_4$ en función del punto $P_3$, donde analizando el gráfico se puede observar que la coordenada $x_4=x_3$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+67.png',    
+                  },
+                  {
+                    parrafo:'Calculamos la distancia $CD$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+68.png',    
+                  },
+                  {
+                    parrafo:'Despejamos el valor de $y_4$ y obtenemos la expresión:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+69.png',    
+                  },
+                  {
+                    parrafo:'Entonces, se obtienen las coordenadas del punto $P_4=C$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+70.png',    
+                  },
+                  {
+                    parrafo:'Luego resolvemos el triángulo rectángulo OJK, para calcular el valor de los segmentos OJ y KJ.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+71.png',    
+                  },
+                  {
+                    parrafo:'Entonces, se obtienen las coordenadas del vértice K:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+72.png',    
+                  },
+                  {
+                    parrafo:'Considerando que los triángulos rectángulos OJK y EHO son iguales y además el triángulo rectángulo EHO se encuentra ubicado en el tercer cuadrante, debido a que la recta l auxiliar construida, atraviesa por el centro de todos los ejes coordenados (x, y, z). (Ver Figura 3.2.8).',
+                    fotoPath:'./assets/images/Capitulos/II/media/+73.png',    
+                  },
+                  {
+                    parrafo:'Entonces, los valores de los segmentos DP y AP son negativos, es decir: ',
+                    fotoPath:'./assets/images/Capitulos/II/media/+74.png',    
+                  },
+                  {
+                    parrafo:'Finalmente, se obtienen las coordenadas del punto $P_5=E$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+75.png',    
+                  },
+                  {
+                    parrafo:'Luego resolvemos el triángulo rectángulo FIG, para calcular el valor de los segmentos FI y GI.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+76.png',    
+                  },
+                  {
+                    parrafo:'Considerando que los triángulos rectángulos EOH y FGI son iguales y además el triángulo rectángulo FGI se encuentra ubicado en el segundo cuadrante, debido a que la recta l auxiliar construida, atraviesa por el centro de todos los ejes coordenados (x, y, z). (Ver Figura 3.2.8).',
+                    fotoPath:'./assets/images/Capitulos/II/media/+77.png',    
+                  },
+                  {
+                    parrafo:'Entonces, el valor del segmento DP es negativo y el valor del segmento AP es positivo, es decir: ',
+                    fotoPath:'./assets/images/Capitulos/II/media/+78.png',    
+                  },
+                  {
+                    parrafo:'Finalmente, se obtienen las coordenadas del punto $P_6=F$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+79.png',    
+                  },
+                  {
+                    parrafo:'A continuación, se calculan las coordenadas del punto $P_7$ en función del punto $P_0$, donde analizando el gráfico se puede observar que la coordenada $x_7=x_0$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+80.png',    
+                  },
+                  {
+                    parrafo:'Calculamos la distancia $OG$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+81.png',    
+                  },
+                  {
+                    parrafo:'Entonces, se obtienen las coordenadas del punto $P_7=G$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+82.png',    
+                  },
+                  {
+                    parrafo:'Finalmente, se unen con líneas entre cortadas los puntos OB, AB, AD, CD, BC, OE, CE, OG, AG, FG, FD, EF. Además, se grafica con línea continua el vector V uniendo los puntos OD. '
+                  }
+                ]
+               },
+               {
+                subtitulo2:'B.4.) Suma de Vectores',
+                tituloproblema:'Problema:',
+                parrafo:'Dados dos vectores 3D en el espacio, calcular y graficar el vector resultante de la suma entre ellos. Utilizar el método del paralelogramo para realizar la representación gráfica de los tres vectores 3D en el espacio.',
+                titulosolucion:'Solución:',  
+                solucion:[                  
+                  {
+                    parrafo:'Dados los siguientes vectores en el espacio:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+83.png',    
+                  },
+                  {
+                    parrafo:'La suma entre los vectores A y B se obtiene utilizando la ecuación (51) de la sección 3.1.3.10:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+84.png',    
+                  },
+                  {
+                    parrafo:'En la representación gráfica de la Suma de dos Vectores, se forma un paralelogramo en el espacio, donde el Vector $\\overrightarrow{C}$ es el Vector Resultante $\\overrightarrow{R}$. La Figura 3.2.2 muestra estos vectores en el espacio 3D del mundo real.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+85.png',    
+                  },
+                  {
+                    parrafo:'1.	Representación Geométrica del Vector A:'
+                  },
+                  {
+                    parrafo:'Dados los puntos:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+86.png',    
+                  },
+                  {
+                    parrafo:'Se calculan los valores de los segmentos a, b, c:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+87.png',    
+                  },
+                  {
+                    parrafo:'Se calculan los valores de los segmentos BM, OM, DP, AP, PM, NM y ON:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+88.png',    
+                  },
+                  {
+                    parrafo:'Entonces, se obtienen las coordenadas del punto D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+89.png',    
+                  },
+                  {
+                    parrafo:'Para poder representar gráficamente este vector en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+90.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+91.png',
+                  },
+                  {
+                    parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+92.png',    
+                  },
+                  {
+                    parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando el valor del vértice del extremo del vector A, que es el punto $D(-6.5,5.75)$, se obtiene $D^{\'}(x_{D^{\'}},y_{D^{\'}})$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+93.png',    
+                  },
+                  {
+                    parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
+                  },
+                  {
+                    parrafo:'2.	Representación Geométrica del Vector B:'    
+                  },
+                  {
+                    parrafo:'Dados los puntos:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+94.png',     
+                  },
+                  {
+                    parrafo:'Se calculan los valores de los segmentos a, b, c:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+95.png',    
+                  },
+                  {
+                    parrafo:'Se calculan los valores de los segmentos BM, OM, DP, AP, PM, NM y ON:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+96.png',    
+                  },
+                  {
+                    parrafo:'Entonces, se obtienen las coordenadas del punto D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+97.png',    
+                  },
+                  {
+                    parrafo:'Para poder representar gráficamente este vector en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+98.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+99.png',    
+                  },
+                  {
+                    parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+100.png',    
+                  },
+                  {
+                    parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando el valor del vértice del extremo del vector A, que es el punto $D(-4.76,3.25)$, se obtiene $D^{\'}(x_{D^{\'}},y_{D^{\'}})$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+101.png',    
+                  },
+                  {
+                    parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
+                  },
+                  {
+                    parrafo:'3.	Representación Geométrica del Vector C:'    
+                  },
+                  {
+                    parrafo:'Dados los puntos:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+102.png',    
+                  },
+                  {
+                    parrafo:'Se calculan los valores de los segmentos a, b, c:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+103.png',    
+                  },
+                  {
+                    parrafo:'Se calculan los valores de los segmentos BM, OM, DP, AP, PM, NM y ON:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+104.png',    
+                  },
+                  {
+                    parrafo:'Entonces, se obtienen las coordenadas del punto D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+105.png',    
+                  },
+                  {
+                    parrafo:'Para poder representar gráficamente este vector en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+106.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+107.png',    
+                  },
+                  {
+                    parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+108.png',    
+                  },
+                  {
+                    parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando el valor del vértice del extremo del vector A, que es el punto $D(-11.25,9)$, se obtiene $D^{\'}(x_{D^{\'}},y_{D^{\'}})$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+109.png',    
+                  },
+                  {
+                    parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
+                  },
+                  {
+                    parrafo:'Finalmente, la gráfica de los vectores A, B y C en el mundo de la Computación Gráfica se muestra en la Figura 3.2.3:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+110.png',    
+                  }
+                ]
+               },
+               {
+                subtitulo2:'B.5.) Resta de Vectores',
+                tituloproblema:'Problema:',
+                parrafo:'Dados dos vectores 3D en el espacio, calcular y graficar el vector resultante de la resta entre ellos. Utilizar el método del paralelogramo para realizar la representación gráfica de los tres vectores 3D en el espacio.',                
+                titulosolucion:'Solución:',  
+                solucion:[                  
+                  {
+                    parrafo:'Dados los siguientes vectores en el espacio:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+111.png',    
+                  },
+                  {
+                    parrafo:'La resta entre los vectores A y B se obtiene utilizando la ecuación (51) de la sección 3.1.3.10:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+112.png',    
+                  },
+                  {
+                    parrafo:'En la representación gráfica de la Resta de dos Vectores, se forma un paralelogramo en el espacio, donde el Vector $\\overrightarrow{B}$ es opuesto al Vector $\\overrightarrow{-B}$, que es igual al Vector $\\overrightarrow{E}, es decir:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+113.png',    
+                  },
+                  {
+                    parrafo:'La Figura 3.2.4 muestra estos vectores en el espacio 3D del mundo real.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+114.png',    
+                  },
+                  {
+                    parrafo:'1.	Representación Geométrica del Vector A:'   
+                  },
+                  {
+                    parrafo:'Dados los puntos:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+115.png',    
+                  },
+                  {
+                    parrafo:'Se obtienen las coordenadas del punto D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+116.png',    
+                  },
+                  {
+                    parrafo:'Considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+117.png',    
+                  },
+                  {
+                    parrafo:'Conociendo el punto D, se puede calcular el punto $D^{\'}$, aplicando las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+118.png',    
+                  },
+                  {
+                    parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
+                  },
+                  {
+                    parrafo:'2.	Representación Geométrica del Vector $\\overrightarrow{E }=\\overrightarrow{-B }$:'
+                  },
+                  {
+                    parrafo:'Dados los puntos:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+119.png',    
+                  },
+                  {
+                    parrafo:'Se calculan las coordenadas del punto $E$ que corresponde al vector opuesto $\\overrightarrow{E }$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+120.png',    
+                  },
+                  {
+                    parrafo:'Se calculan los valores de los segmentos a, b, c:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+121.png',        
+                  },
+                  {
+                    parrafo:'Se calculan los valores de los segmentos BM, OM, DP, AP, PM, NM y ON:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+122.png',    
+                  },
+                  {
+                    parrafo:'Entonces, se obtienen las coordenadas del punto D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+123.png',    
+                  },
+                  {
+                    parrafo:'Para poder representar gráficamente este vector en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+124.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+125.png',    
+                  },
+                  {
+                    parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+126.png',    
+                  },
+                  {
+                    parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando el valor del vértice del extremo del vector A, que es el punto $D(4.76,-3.25)$, se obtiene $D^{\'}(x_{D^{\'}},y_{D^{\'}})$: ',
+                    fotoPath:'./assets/images/Capitulos/II/media/+127.png',    
+                  },
+                  {
+                    parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
+                  },
+                  {
+                    parrafo:'3.	Representación Geométrica del Vector C:'    
+                  },
+                  {
+                    parrafo:'Dados los puntos:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+128.png',    
+                  },
+                  {
+                    parrafo:'Se calculan los valores de los segmentos a, b, c:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+129.png',    
+                  },
+                  {
+                    parrafo:'Se calculan los valores de los segmentos BM, OM, DP, AP, PM, NM y ON:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+130.png',    
+                  },
+                  {
+                    parrafo:'Entonces, se obtienen las coordenadas del punto D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+131.png',    
+                  },
+                  {
+                    parrafo:'Para poder representar gráficamente este vector en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+132.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+133.png',    
+                  },
+                  {
+                    parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+134.png',    
+                  },
+                  {
+                    parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando el valor del vértice del extremo del vector A, que es el punto $D(-1.74,2.5)$, se obtiene $D^{\'}(x_{D^{\'}},y_{D^{\'}})$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+135.png',    
+                  },
+                  {
+                    parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
+                  },
+                  {
+                    parrafo:'Finalmente, la gráfica de los vectores A, -B y C en el mundo de la Computación Gráfica se muestra en la Figura 3.2.3:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+136.png',    
+                  }
+                ]
+               },
+               {
+                subtitulo2:'B.6.) Proyección de un Vector sobre otro Vector',
+                tituloproblema:'Problema:',
+                parrafo:'Dados dos vectores 3D en el espacio, calcular y graficar el vector proyección del Vector A  sobre el Vector B  y el Vector Perpendicular entre ellos. Utilizar las ecuaciones de la sección 3.1.3.17 y 3.1.3.18.',
+                titulosolucion:'Solución:',  
+                solucion:[                  
+                  {
+                    parrafo:'Dados los siguientes vectores en el espacio:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+137.png',    
+                  },
+                  {
+                    parrafo:'La proyección del vector A sobre el vector B se obtiene utilizando la ecuación (71) de la sección 3.1.3.17:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+138.png',    
+                  },
+                  {
+                    parrafo:'Primero se calcula el módulo o magnitud del vector B con la ecuación (18) de la sección 3.1.3.4:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+139.png',    
+                  },
+                  {
+                    parrafo:'Como segundo paso, se calcula el vector unitario o normalizado del vector B, utilizando la ecuación (32) de la sección 3.1.3.8:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+140.png',    
+                  },
+                  {
+                    parrafo:'Como tercer paso, se calcula el producto punto entre el vector A con el vector unitario o normalizado del vector B:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+141.png',    
+                  },
+                  {
+                    parrafo:'Finalmente, se calcula el producto entre un vector por un escalar, donde el vector representa al vector unitario de B y el escalar representa al producto punto calculado en el paso anterior:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+142.png',    
+                  },
+                  {
+                    parrafo:'Entonces, el vector proyección de A sobre el vector B es el vector C:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+143.png',    
+                  },
+                  {
+                    parrafo:'La Figura 3.2.6 muestra la proyección del vector A sobre el vector B.',
+                    fotoPath:'./assets/images/Capitulos/II/media/+144.png',    
+                  },
+                  {
+                    parrafo:'4.	Representación Geométrica del Vector A:'    
+                  },
+                  {
+                    parrafo:'Dados los puntos:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+145.png',    
+                  },
+                  {
+                    parrafo:'Se obtienen las coordenadas del punto D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+146.png',    
+                  },
+                  {
+                    parrafo:'Considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+147.png',    
+                  },
+                  {
+                    parrafo:'Conociendo el punto D, se puede calcular el punto $D^{\'}$, aplicando las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+148.png',    
+                  },
+                  {
+                    parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
+                  },
+                  {
+                    parrafo:'1.	Representación Geométrica del Vector B:'   
+                  },
+                  {
+                    parrafo:'Dados los puntos:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+149.png',    
+                  },
+                  {
+                    parrafo:'Se obtienen las coordenadas del punto D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+150.png',    
+                  },
+                  {
+                    parrafo:'Considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+151.png',    
+                  },
+                  {
+                    parrafo:'Conociendo el punto $D$, se puede calcular el punto $D^{\'}$, aplicando las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+152.png',    
+                  },
+                  {
+                    parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
+                  },
+                  {
+                    parrafo:'2.	Representación Geométrica del Vector $\\overrightarrow{C}=\\overrightarrow{V_{A/B}}$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+153.png',    
+                  },
+                  {
+                    parrafo:'Se calculan los valores de los segmentos a, b, c:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+154.png',    
+                  },
+                  {
+                    parrafo:'Se calculan los valores de los segmentos BM, OM, DP, AP, PM, NM y ON:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+155.png',    
+                  },
+                  {
+                    parrafo:'Entonces, se obtienen las coordenadas del punto D:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+156.png',    
+                  },
+                  {
+                    parrafo:'Para poder representar gráficamente este vector en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+157.png',    
+                  },
+                  {
+                    parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+158.png',    
+                  },
+                  {
+                    parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+159.png',    
+                  },
+                  {
+                    parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando el valor del vértice del extremo del vector A, que es el punto $D(-7.01,4.78)$, se obtiene $D^{\'}(x_{D^{\'}},y_{D^{\'}})$:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+160.png',    
+                  },
+                  {
+                    parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
+                  },
+                  {
+                    parrafo:'Finalmente, la gráfica de los vectores A, B y C en el mundo de la Computación Gráfica se muestra en la Figura 3.2.3:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+161.png',    
+                  },
+                  {
+                    parrafo:'El vector perpendicular formado por la proyección del vector A sobre el vector B se obtiene utilizando la ecuación (75) de la sección 3.1.3.18:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+162.png',    
+                  },
+                  {
+                    parrafo:'En esta ecuación se realiza una resta de vectores entre el vector A con el vector proyección de A sobre el vector B:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+163.png',    
+                  },
+                  {
+                    parrafo:'Entonces, el vector perpendicular resultante es $\\overrightarrow{D} $:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+164.png',    
+                  },
+                  {
+                    parrafo:'La representación geométrica del punto D en coordenadas por pantalla no es necesario realizar puesto que este vector perpendicular se grafica uniendo con una línea los puntos C y D.'
+                  },
+                  {
+                    parrafo:'Finalmente, la gráfica de los vectores A, B, C y D en el mundo de la Computación Gráfica se muestra en la Figura 3.2.9'
+                  }
+                ]
+               },
+               {
+                subtitulo2:'B.7.) Reflexiones sobre los ejes y Vectores Opuestos',
+                tituloproblema:'Problema:',
+                parrafo:'Dado un vector 3D en el espacio, calcular y graficar las reflexiones del vector en los tres planos y obtener los vectores opuestos de cada reflexión en los cuatro planos.',
+                titulosolucion:'Solución:',  
+                solucion:[                  
+                  {
+                    parrafo:'Dado el siguiente vector en el espacio:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+165.png',    
+                  },
+                  {
+                    parrafo:'Las reflexiones del vector A en los tres planos son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+166.png',    
+                  },
+                  {
+                    parrafo:'Entonces las fórmulas para encontrar las reflexiones de un vector V cualquiera son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+167.png',    
+                  },
+                  {
+                    parrafo:'Los vectores opuestos de cada reflexión y el vector opuesto del vector original son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+168.png',    
+                  },
+                  {
+                    parrafo:'Entonces las fórmulas para encontrar los vectores opuestos de las reflexiones de un vector V cualquiera y el vector opuesto del vector original son:',
+                    fotoPath:'./assets/images/Capitulos/II/media/+169.png',    
+                  },
+                  {
+                    parrafo:'$\\color{red} {\\bf{Conjetura Vectorial de Villacís-Zambrano}}$: Considerando un espacio vectorial $R^2$, se puede aseverar que hay una reflexión de un vector y 2 vectores opuestos formados. Considerando un espacio vectorial $R^3$, se puede aseverar que hay 3 reflexiones de un vector y 4 vectores opuestos formados. Entonces en un espacio vectorial $R^n$, habría $2^{n-1}-1$ reflexiones de un vector y $2^{n-1}$ vectores opuestos formados. Así, por ejemplo, en un espacio vectorial $R^4$, habría 7 reflexiones de un vector y 8 vectores opuestos formados, donde: $7=2^{4-1}-1.$'
+                  }
+                ]
+               }
+
+             ]               
+           },
+         C:{
+            subtitulo:'C)	Algoritmos',
+            algoritmosC:[
+/*                {
+                    titulo:'3.1.1. Algoritmo de la Función ReadData()',
+                    pasos:[
+                      '1.	Leer el lado 1 del triángulo.',
+                      '2.	Leer el lado 2 del triángulo.',
+                      '3.	Leer el lado 3 del triángulo.'                      
+                    ]
+                },
                 {
-                problema:'A continuación, en la Figura 1.3.4, se muestra un ejemplo de la corrida del programa:',
-                fotoPath:'./assets/images/Capitulos/II/media/7.png',
-                fotoN:'Figura 1.3.4 ',
+                    titulo:'3.1.2. Algoritmo de la Función CheckTriangle()',
+                    pasos:[
+                        '1.	Si la suma de cualquiera de los dos lados es mayor que el tercero, es decir, si se cumple la condición del teorema: (a+b>c)∧(a+c>b)∧(b+c>a), retornar un valor booleano con verdadero, caso contrario retornar un valor booleano con falso.'
+                    ]
+                },
+                {
+                    titulo:'3.1.3. Algoritmo de la Función SemiperimeterTriangle()',
+                    pasos:[
+                      '1.	Calcular el semi-perímetro.',
+                      '1.1.	Asignar el resultado de la división entre la suma de los tres lados dividido para dos, a la variable ‘s’.'
+                    ]
+                },
+                {
+                    titulo:'3.1.4. Algoritmo de la Función PerimeterTriangle()',
+                    pasos:[
+                      '1.	Calcular el perímetro.',
+                      '1.1.	Asignar el resultado del producto entre el semi-perímetro por dos a la variable ‘perimetro’.'
+                    ]
+                },
+                {
+                    titulo:'3.1.5. Algoritmo de la Función AreaTriangle()',
+                    pasos:[
+                      '1.	Calcular el área.',
+                      '1.1.	Asignar el valor de la raíz cuadrada del semi-perímetro multiplicado por la diferencia entre el semi-perímetro por cada uno de los lados del triángulo, a la variable ‘area’.'                    
+                    ]
+                },
+                {
+                    titulo:'3.1.6. Algoritmo de la Función PrintData()',
+                    pasos:[
+                      '1.	Imprimir el valor de la variable ‘perimeter’ y de la variable ‘area’.'
+                    ]
+                },
+                {
+                    titulo:'3.1.7. Algoritmo de la Función InitializeData()',
+                    pasos:['1.	Obtener el valor del ancho y del largo del lienzo (picCanvas).',
+                    '1.1.	Crear un objeto de tipo Rectangle.',
+                    '1.2.	Asignar a la componente X del rectángulo el valor del ancho del lienzo.',
+                    '1.3.	Asignar a la componente Y del rectángulo el valor del largo del lienzo.',
+                    '2.	Calcular el valor máximo de la resolución de X y de Y del lienzo.',
+                    '2.1.	Asignar al valor máximo de la resolución de X representado por la variable maxX, el valor de la componente X del rectángulo disminuida en uno.',
+                    '2.2.	Asignar al valor máximo de la resolución de Y representado por la variable maxY, el valor de la componente Y del rectángulo disminuida en uno.',
+                    '3.	Calcular el centro del lienzo (picCanvas).',
+                    '3.1.	Asignar a la variable ‘x’ del centro trasladado cuyo nombre es xCenter el valor de la división entre el valor máximo de la resolución de X con el valor de dos.',
+                    '3.2.	Asignar a la variable ‘y’ del centro trasladado cuyo nombre es yCenter el valor de la división entre el valor máximo de la resolución de Y con el valor de dos.'
+                    ]
+                },
+                {
+                    titulo:'3.1.8. Algoritmo de la Función PlotAxis()',
+                    pasos:['1.	Dibujar el eje horizontal (x).',
+                    '1.1.	Asignar a la componente X del punto P1 el valor de cero.',
+                    '1.2.	Asignar a la componente Y del punto P1 el valor de yCenter.',
+                    '1.3.	Asignar a la componente X del punto P2 el valor de maxX.',
+                    '1.4.	Asignar a la componente Y del punto P2 el valor de yCenter.',
+                    '1.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el vértice P1 con el vértice P2.',
+                    '2.	Dibujar el eje vertical (y).',
+                    '2.1.	Asignar a la componente X del punto P1 el valor de xCenter.',
+                    '2.2.	Asignar a la componente Y del punto P1 el valor de cero.',
+                    '2.3.	Asignar a la componente X del punto P2 el valor de xCenter.',
+                    '2.4.	Asignar a la componente Y del punto P2 el valor de maxY.',
+                    '2.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el vértice P1 con el vértice P2.'
+                    ]
+                },
+                {
+                    titulo:'3.1.9. Algoritmo de la Función CalculateAngles()',
+                    pasos:[
+                      '1.	Calcular el valor del ángulo A del triángulo utilizando la Ley de Cosenos.',
+                      '2.	Calcular el valor del ángulo B del triángulo utilizando la Ley de Cosenos.'
+                    ]
+                },
+                {
+                    titulo:'3.1.10. Algoritmo de la Función CalculateVertex()',
+                    pasos:[
+                      '1.	Calcular el valor del vértice A del triángulo.',
+                      '2.	Calcular el valor del vértice B del triángulo.',
+                      '3.	Llamada a la función CalculateAngles(), para calcular los ángulos A y B del triángulo.',
+                      '4.	Calcular el valor del vértice C del triángulo, en función del ángulo A.'
+                    ]
+                },
+                {
+                    titulo:'3.1.11. Algoritmo de la Función PlotShape()',
+                    pasos:[
+                      '1.	Graficar un triángulo.',
+                      '1.1.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ tres líneas que unen los vértices A, B y C del triángulo.'
+                    ]
+                },
+                {
+                    titulo:'3.1.12. Algoritmo de la Función CalculateBarycenter()',
+                    pasos:[
+                      '1.	Calcular el valor del Baricentro G del triángulo con la ecuación (4) de la sección B.2.'
+                    ]
+                },
+                {
+                    titulo:'3.1.13. Algoritmo de la Función PlotMedians()',
+                    pasos:[
+                      '1.	Graficar las medianas del triángulo.',
+                      '1.1.	Calcular las coordenadas de la mediana G1, utilizando la ecuación (8) de la sección B.2.',
+                      '1.2.	Calcular las coordenadas de la mediana G2, utilizando la ecuación (7) de la sección B.2.',
+                      '1.3.	Calcular las coordenadas de la mediana G3, utilizando la ecuación (6) de la sección B.2.',
+                      '1.4.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G1 con el vértice A del triángulo.',
+                      '1.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G2 con el vértice B del triángulo.',
+                      '1.6.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G3 con el vértice C del triángulo.'
+                    ]
+                },
+                {
+                    titulo:'3.1.14. Algoritmo de la Función CalculateCircumcenter()',
+                    pasos:[
+                      '1.	Calcular el valor del Circuncentro O del triángulo con la ecuación (11) de la sección B.3.'
+                    ]
+                },
+                {
+                    titulo:'3.1.15. Algoritmo de la Función PlotPerpendicularBisectors()',
+                    pasos:[
+                      '1.	Graficar las mediatrices del triángulo.',
+                      '1.1.	Llamada a la función CalculateCircumcenter().',
+                      '1.2.	Calcular las coordenadas de la mediana G1, utilizando la ecuación (8) de la sección B.2.',
+                      '1.3.	Calcular las coordenadas de la mediana G2, utilizando la ecuación (7) de la sección B.2.',
+                      '1.4.	Calcular las coordenadas de la mediana G3, utilizando la ecuación (6) de la sección B.2.',
+                      '1.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G1 con el vértice O del triángulo.',
+                      '1.6.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G2 con el vértice O del triángulo.',
+                      '1.7.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G3 con el vértice O del triángulo.',
+                      '1.8.	Calcular el radio R del círculo circunscrito al triángulo, utilizando la ecuación (12) de la sección B.3.',
+                      '1.9.	Llamada a la función PlotCircle(), utilizando el objeto ObjCircle, para graficar un círculo, en función del radio R y del vértice O.',
+                      '1.10.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice O con el vértice A del triángulo, que representa al radio del círculo circunscrito al triángulo ABC.'
+                    ]
+                },
+                {
+                    titulo:'3.1.16. Algoritmo de la Función CalculateOrthocenter()',
+                    pasos:[
+                      '1.	Calcular el valor del Ortocentro H del triángulo con la ecuación (17) de la sección B.4.'
+                    ]
+                },
+                {
+                    titulo:'3.1.17. Algoritmo de la Función PlotAltitudes()',
+                    pasos:[
+                      '1.	Graficar las alturas del triángulo.',
+                      '1.1.	Calcular las pendientes BC y AH1 que es perpendicular a la pendiente BC.',
+                      '1.2.	Calcular las coordenadas de la altura H1, utilizando la ecuación (24) de la sección B.4.',
+                      '1.3.	Calcular las coordenadas de la altura H2, utilizando la ecuación (17) de la sección B.4.',
+                      '1.4.	Calcular las coordenadas de la altura H3, utilizando la ecuación (5) de la sección B.4.',
+                      '1.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice H1 con el vértice A del triángulo.',
+                      '1.6.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice H2 con el vértice B del triángulo.',
+                      '1.7.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice H3 con el vértice C del triángulo.',
+                      '2.	Graficar el triángulo órtico.',
+                      '2.1.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice H1 con el vértice H2 del triángulo.',
+                      '2.2.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice H1 con el vértice H3 del triángulo.',
+                      '2.3.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice H2 con el vértice H3 del triángulo.',
+                      '2.4.	Llamada a la función CalculateOrthocenter().',
+                      '2.5.	Calcular las pendientes H2H3 y HT1 que es perpendicular a la pendiente H2H3.',
+                      '2.6.	Calcular las coordenadas del punto de tangencia T1, utilizando la ecuación (30) de la sección B.4.',
+                      '2.7.	Calcular el radio ro del triángulo órtico, utilizando la ecuación (31) de la sección B.4.',
+                      '2.8.	Llamada a la función PlotCircle(), utilizando el objeto ObjCircle, para graficar un círculo, en función del radio ro y del vértice H.',
+                      '2.9.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice H con el vértice T1 del triángulo órtico, que representa al radio del círculo inscrito a ese triángulo.'
+                    ]
+                },
+                {
+                    titulo:'3.1.18. Algoritmo de la Función CalculateIncenter()',
+                    pasos:[
+                      '1.	Calcular el valor del Incentro I del triángulo con la ecuación (4) de la sección B.5.'
+                    ]
+                },
+                {
+                    titulo:'3.1.19. Algoritmo de la Función PlotBisectors()',
+                    pasos:[
+                      '1.	Graficar las bisectrices del triángulo y los círculos exinscritos e inscrito al triángulo ABC.',
+                      '1.1.	Llamada a la función CalculateIncenter().',
+                      '1.2.	Calcular el radio r del círculo inscrito al triángulo, utilizando la ecuación (22) de la sección B.5.',
+                      '1.3.	Calcular las coordenadas del punto de tangencia T3, utilizando la ecuación (21) de la sección B.5.',
+                      '1.4.	Llamada a la función PlotCircle(), utilizando el objeto ObjCircle, para graficar un círculo, en función del radio r y del vértice I.',
+                      '1.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice I con el vértice T3 del triángulo ABC, que representa al radio del círculo inscrito al triángulo.',
+                      '1.6.	Llamada a la función PerimeterTriangle().',
+                      '1.7.	Llamada a la función SemiperimeterTriangle().',
+                      '1.8.	Calcular el radio de cada uno de los tres círculos exinscritos al triángulo, utilizando las ecuaciones (6), (7) y (8) de la sección B.5.',
+                      '1.9.	Calcular los valores de los vértices del triángulo DEF.',
+                      '1.9.1.	Llamada a la función CalculateAngles().',
+                      '1.9.2.	Calcular los valores de los ángulos alpha y beta que son externos del triángulo, utilizando las ecuaciones (12) y (13) de la sección B.5.',
+                      '1.9.3.	Calcular los segmentos LA, BQ y AK del triángulo ABC, utilizando las ecuaciones (15), (16) y (17) de la sección B.5.',
+                      '1.9.4.	Calcular los vértices del triángulo DEF, utilizando las utilizando las ecuaciones (18), (19) y (20) de la sección B.5.',
+                      '1.9.5.	Graficar el triángulo DEF.',
+                      '1.9.5.1.	Utilizar el objeto \'Graph\' con la función DrawLine para graficar con la pluma \'Pen\' tres líneas que unen los vértices D, E y F del triángulo.',
+                      '1.10.	Llamada a la función PlotCircle(), utilizando el objeto ObjCircle, para graficar uno de los círculos exinscritos, en función del radio Ra y del vértice D.',
+                      '1.11.	Llamada a la función PlotCircle(), utilizando el objeto ObjCircle, para graficar uno de los círculos exinscritos, en función del radio Rb y del vértice E.',
+                      '1.12.	Llamada a la función PlotCircle(), utilizando el objeto ObjCircle, para graficar uno de los círculos exinscritos, en función del radio Rc y del vértice F.',
+                      '1.13.	Graficar las bisectrices del triángulo ABC.',
+                      '1.13.1.	Utilizar el objeto \'Graph\' con la función DrawLine para graficar con la pluma \'Pen\' una de las bisectrices que une los vértices A y D.',
+                      '1.13.2.	Utilizar el objeto \'Graph\' con la función DrawLine para graficar con la pluma \'Pen\' una de las bisectrices que une los vértices B y E.',
+                      '1.13.3.	Utilizar el objeto \'Graph\' con la función DrawLine para graficar con la pluma \'Pen\' una de las bisectrices que une los vértices C y F.',
+                      '1.14.	Calcular los valores de las pendientes AB, AC y BC.',
+                      '1.15.	Graficar las líneas de tangencia entre el triángulo ABC y los círculos exinscritos.',
+                      '1.15.1.	Llamada a la función PlotLine(), utilizando el objeto ObjLine, para graficar una de las líneas de tangencia entre el triángulo ABC y uno de los círculos exinscritos, en función de la pendiente AB.',
+                      '1.15.2.	Llamada a la función PlotLine(), utilizando el objeto ObjLine, para graficar una de las líneas de tangencia entre el triángulo ABC y uno de los círculos exinscritos, en función de la pendiente AC.',
+                      '1.15.3.	Llamada a la función PlotLine(), utilizando el objeto ObjLine, para graficar una de las líneas de tangencia entre el triángulo ABC y uno de los círculos exinscritos, en función de la pendiente BC.'
+                    ]
+                },
+                {
+                    titulo:'3.1.20. Algoritmo de la Función PlotEulersLine()',
+                    pasos:[
+                      '1.1.	Llamada a la función CalculateBarycenter().',
+                      '1.2.	Llamada a la función CalculateCircumcenter().',
+                      '1.3.	Llamada a la función CalculateOrthocenter().',
+                      '1.4.	Graficar la recta de Euler.',
+                      '1.4.1.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G con el vértice O del triángulo.',
+                      '1.4.2.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G con el vértice H del triángulo.'
+                    ]
+                }*/
+            ]
+         },
+         D:{
+            subtitulo:'D)	Código de la Aplicación',
+            listaCodigo:[
+                {
+                    problema:'La implementación de la clase CVector3D, se presenta a continuación en la Tabla 3.2.1, que contiene datos miembro y funciones miembro que realizan diferentes operaciones.',
+                    tablaN:'Tabla 3.2.1. ',
+                    tablaDescrip:'Código de la clase CVector3D del programa.',
+                    tablaDatos:
+                    ` 
+                    /*
+                    * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
+                    * Edwin Cuichan, Kevin Sanipatín.
+                    * Creative Commons: BY-NC-ND 4.0 International license.
+                    * 
+                    * Except where otherwise noted, content on this program is licensed 
+                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    * Source Code by the developers.
+                    * 
+                    * Unless required by applicable law or agreed to in writing, software
+                    * distributed under the License is distributed on an "AS IS" BASIS,
+                    * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                    * See the License for the specific language governing permissions and
+                    * limitations under the License.
+                    */
+
+                    using System;
+                    using System.Collections.Generic;
+                    using System.Linq;
+                    using System.Text;
+                    using System.Threading.Tasks;
+                    using System.Drawing;
+                    using System.Drawing.Drawing2D;
+                    using System.Windows.Forms;
+
+                    namespace WinAppVectors3D
+                    {
+                        class CVector3D
+                        {
+                            #region Atributes of the class        
+                            /// <summary>
+                            /// Member Data
+                            /// </summary>
+
+                            // Componente 'X' del Vector 3D.
+                            private float mX;
+                            // Componente 'Y' del Vector 3D.
+                            private float mY;
+                            // Componente 'Z' del Vector 3D.
+                            private float mZ;
+                            // Objeto que activa el modo gráfico.
+                            private Graphics mGraph;
+                            // Objeto bolígrafo que dibuja o escribe en un lienzo o canvas (PictureBox).
+                            private Pen mPen;
+                            // Constante scale factor (Zoom In/Zoom Out).
+                            private const float SF = 20;
+                            // Objeto que permite obtener el tamaño de un lienzo o canvas (PictureBox).
+                            private Rectangle d;
+                            // Dato que representa al valor máximo en el eje de las abcisas (x) del lienzo.
+                            private int maxX;
+                            // Dato que representa al valor máximo en el eje de las ordenadas (y) del lienzo.
+                            private int maxY;
+                            // Dato que representa al valor de x del centro del lienzo.
+                            private int xCenter;
+                            // Dato que representa al valor de y del centro del lienzo.
+                            private int yCenter;
+                            // Objeto Punto que representa al punto central de los ejes coordenados.
+                            PointF O;
+                            // Objeto Punto que representa a un punto cualquiera P1.
+                            PointF P1;
+                            // Objeto Punto que representa a un punto cualquiera P2.
+                            PointF P2;
+                            // Objetos de tipo Punto que representan a los vértices de la caja, donde
+                            // el punto D representa al punto final del vector V.
+                            PointF A, B, C, D, E, F, G;
+                            // Ángulo de inclinación de los ejes 'x' y 'z'.
+                            float mAngle;
+                            // Segmentos 'a' y 'b' de los ejes coordenados.
+                            float a, b;
+                            // Segmentos 'p' y 'q' del rombo AIJK.
+                            float p, q;
+                            // Coordenadas 'x' e 'y' del mundo real.
+                            float x, y;
+                            // Coordenadas de pantalla 'xp' e 'yp'.
+                            float Xp, Yp;
+                            // Arreglo de puntos para representar las líneas del rombo ABCD.
+                            PointF[] P = new PointF[15];
+                            // Arreglo de puntos para representar las líneas del rombo ABCD.
+                            PointF[] Q = new PointF[15];
+
+                            #endregion
+
+                            #region Properties
+                            ///<summary>
+                            /// Getters and Setters.
+                            ///</summary>
+                                    
+                            // Descriptores de acceso get/set del punto D que define a un Vector 3D.
+                            public PointF R { get => D; set => D = value; }
+                            // Descriptores de acceso get/set de la Componente X del Vector 3D.
+                            public float X { get => mX; set => mX = value; }
+                            // Descriptores de acceso get/set de la Componente Y del Vector 3D.
+                            public float Y { get => mY; set => mY = value; }
+                            // Descriptores de acceso get/set de la Componente Z del Vector 3D.
+                            public float Z { get => mZ; set => mZ = value; }
+
+                            #endregion
+
+                            #region Constructors of the class
+                            ///<summary>
+                            /// Constructor Functions.
+                            ///</summary>
+
+                            // Constructor sin parámetros.
+                            public CVector3D()
+                            {
+                                mX = 0.0f; mY = 0.0f; mZ = 0.0f;
+                                mAngle = 30.0f * (float)Math.PI / 180.0f;
+                                // 10<=mAngle<=40 (proyección isométrica)
+                                // slider
+                            }
+
+                            #endregion
+
+                            #region Methods of the class
+                            ///<summary>
+                            /// Funciones Miembro (Métodos).
+                            ///</summary>
+
+                            // Función que lee las componentes 'X' e 'Y' del vector 2D.
+                            public void ReadData(NumericUpDown nudXVectorV,
+                                                NumericUpDown nudYVectorV,
+                                                NumericUpDown nudZVectorV)
+                            {            
+                                mX = (float)(nudXVectorV.Value);
+                                mY = (float)(nudYVectorV.Value);
+                                mZ = (float)(nudZVectorV.Value);
+                            }
+
+                            // Función que inicializa los valores del centro del lienzo o canvas.
+                            public void InitializeData(PictureBox picCanvas)
+                            {
+                                d = new Rectangle();
+                                d.X = picCanvas.Width;
+                                d.Y = picCanvas.Height;
+                                
+                                maxX = d.X - 1; maxY = d.Y - 1;            
+                                xCenter = maxX / 2; yCenter = maxY / 2;            
+                                O.X = xCenter; O.Y = yCenter;
+                            }
+
+                            // Función que grafica los ejes coordenados 'x','y' y 'z'.
+                            public void PlotAxis(PictureBox picCanvas)
+                            {
+                                mGraph = picCanvas.CreateGraphics();
+
+                                //mPen = new Pen(Color.Gray);
+                                //P1.X = 0; P1.Y = yCenter;
+                                //P2.X = maxX; P2.Y = yCenter;
+                                //mGraph.DrawLine(mPen, P1.X, P1.Y, P2.X, P2.Y);
+
+                                // Dibujar el eje (y).
+                                mPen = new Pen(Color.Blue);
+                                P1.X = xCenter; P1.Y = 0;
+                                P2.X = xCenter; P2.Y = maxY;
+                                mGraph.DrawLine(mPen, P1.X, P1.Y, P2.X, P2.Y);
+                                // Ubicar el punto central de los ejes coordenados.
+                                O.X = xCenter; O.Y = yCenter;                     
+
+                                // Resolver el Triángulo Rectángulo AOG del Rectángulo ABCD.
+                                b = 8.0f;
+                                a = b / (float)Math.Tan(mAngle);
+                                // Ubicar las coordenadas de los puntos del Rectángulo que abarca el
+                                // dibujo, en función de los lados del triángulo ABC.
+                                A.X = (-a) * SF + xCenter; A.Y = (-1) * b * SF + yCenter;
+                                B.X = a * SF + xCenter; B.Y = (-1) * b * SF + yCenter;
+                                C.X = (-a) * SF + xCenter; C.Y = b * SF + yCenter;
+                                D.X = a * SF + xCenter; D.Y = b * SF + yCenter;
+                                // Dibujar el eje (x).
+                                mPen = new Pen(Color.Red);
+                                mGraph.DrawLine(mPen, A, D);
+                                // Dibujar el eje (z).
+                                mPen = new Pen(Color.Green);
+                                mGraph.DrawLine(mPen, B, C);
+                            }
+
+                            // Función que dibuja el Rombo ABCD que representa al plano.
+                            public void PlotPlane(PictureBox picCanvas)
+                            {
+                                mGraph = picCanvas.CreateGraphics();
+                                ///////////////////////////////////////
+                                // Dibujar el contorno del Rombo ABCD.
+                                ///////////////////////////////////////
+                                mPen = new Pen(Color.Gray);            
+                                O.X = xCenter; O.Y = yCenter;
+                                // Calcular los segmentos 'a' y 'b' del Triángulo Rectángulo ABO 
+                                // del Rombo ABCD.
+                                b = 4.0f;
+                                a = b / (float)Math.Tan(mAngle);
+                                // Calcular las coordenadas de los cuatro puntos del Rombo que
+                                // encierra al plano, en función de los lados del triángulo ABO.
+                                A.X = xCenter; A.Y = ((-1) * b * SF) + yCenter;
+                                B.X = a * SF + xCenter; B.Y = yCenter;
+                                C.X = xCenter; C.Y = ((-1) * -b * SF) + yCenter;
+                                D.X = -a * SF + xCenter; D.Y = yCenter;
+                                // Dibujar las cuatro líneas del rombo ABCD.
+                                mGraph.DrawLine(mPen, A, B);
+                                mGraph.DrawLine(mPen, A, D);
+                                mGraph.DrawLine(mPen, B, C);
+                                mGraph.DrawLine(mPen, C, D);
+                                //////////////////////////////////////////////////
+                                // Dibujar los segmentos internos del Rombo ABCD.
+                                //////////////////////////////////////////////////
+                                mPen = new Pen(Color.Gray);
+                                // Calcular los segmentos 'p' y 'q' del Triángulo Rectángulo AIL 
+                                // del Rombo ABCD.
+                                p = 0.25f;
+                                q = p / (float)Math.Tan(mAngle);            
+                                int i, j;
+                                // Calcular los puntos del arreglo P[] que cruzan por el segmento BA            
+                                // El cálculo de la coordenada 'x' va desde la derecha hacia el
+                                // centro. Mientras que el cálculo de la coordenada 'y' va desde
+                                // abajo hacia arriba.            
+                                for (i = 1, j = 0; i <= 15; i++, j++)
+                                {
+                                    x = (float)(a - i * q);
+                                    y = (float)(i * p);
+                                    Xp = (float)(x * SF + xCenter);
+                                    Yp = (float)((-1) * y * SF + yCenter);               
+                                    P[j] = new PointF(Xp, Yp);
+                                }
+                                // Calcular los puntos del arreglo Q[] que cruzan por el segmento DC            
+                                // El cálculo de la coordenada 'x' va desde la izquierda hacia el
+                                // centro. Mientras que el cálculo de la coordenada 'y' va desde
+                                // arriba hacia abajo.            
+                                for (i = 1, j = 0; i <= 15; i++, j++)
+                                {
+                                    x = (float)((-1) * (a - i * q));
+                                    y = (float)(-1)*((i * p));
+                                    Xp = (float)(x * SF + xCenter);
+                                    Yp = (float)((-1) * y * SF + yCenter);                
+                                    Q[j] = new PointF(Xp, Yp);
+                                }
+                                // Dibujar una línea que permite unir el primer punto del arreglo P[] 
+                                // con el último punto del arreglo Q[], hasta unir el último punto del
+                                // arreglo P[] con el primer punto del arreglo Q[].
+                                for (i = 0, j = 14; i < 15; i++, j--)
+                                {
+                                    mGraph.DrawLine(mPen, P[i], Q[j]);
+                                }
+                                // Calcular los puntos del arreglo P[] que cruzan por el segmento DA            
+                                // El cálculo de la coordenada 'x' va desde la izquierda hacia el
+                                // centro. Mientras que el cálculo de la coordenada 'y' va desde
+                                // abajo hacia arriba.              
+                                for (i = 1, j = 0; i <= 15; i++, j++)
+                                {
+                                    x = (float)((-1) * (a - i * q));
+                                    y = (float)((i * p));
+                                    Xp = (float)(x * SF + xCenter);
+                                    Yp = (float)((-1) * y * SF + yCenter);                
+                                    P[j] = new PointF(Xp, Yp);
+                                }
+                                // Calcular los puntos del arreglo Q[] que cruzan por el segmento BC            
+                                // El cálculo de la coordenada 'x' va desde la derecha hacia el
+                                // centro. Mientras que el cálculo de la coordenada 'y' va desde
+                                // arriba hacia abajo.  
+                                for (i = 1, j = 0; i <= 15; i++, j++)
+                                {
+                                    x = (float)(a - i * q);
+                                    y = (float)((-1) * i * p);
+                                    Xp = (float)(x * SF + xCenter);
+                                    Yp = (float)((-1) * y * SF + yCenter);                
+                                    Q[j] = new PointF(Xp, Yp);
+                                }
+                                // Dibujar una línea que permite unir el primer punto del arreglo P[] 
+                                // con el último punto del arreglo Q[], hasta unir el último punto del
+                                // arreglo P[] con el primer punto del arreglo Q[].
+                                for (i = 0, j = 14; i < 15; i++, j--)
+                                {
+                                    mGraph.DrawLine(mPen, P[i], Q[j]);
+                                }
+                            }
+
+                            // Función que dibuja un vector 3D y la caja que encierra al vector.
+                            public void PlotBox(PictureBox picCanvas, Color colorVector, Color colorBox)
+                            {            
+                                // Asignar la funcionalidad de crear gráficos del picCanvas 
+                                // al objeto mGraph.
+                                mGraph = picCanvas.CreateGraphics();
+                                // Crear un patrón de línea de puntos para dibujarlo con un esferográfico.
+                                float[] dashValues = { 2, 1, 2, 1 };
+                                mPen = new Pen(colorBox, 2);
+                                mPen.DashPattern = dashValues;
+                                // Escalar al vector V a la mitad.
+                                float a = mX / 2.0f;
+                                float b = mY / 2.0f;
+                                float c = mZ / 2.0f;                        
+                                // Calcular el valor del vértice B y del vértice A, utilizando 
+                                // fórmulas de Geometría Analítica y Trigonometría.
+                                B.X = a * (float)Math.Cos(mAngle);
+                                B.Y = (-1) * a * (float)Math.Sin(mAngle);
+                                A.X = a * (float)Math.Cos(mAngle);
+                                A.Y = (b - a * (float)Math.Sin(mAngle));
+                                // Calcular las coordenadas de los puntos A y B que forman parte
+                                // de la caja que encierra al vector V, utilizando las fórmulas de
+                                // traslación de un punto a otro en el mundo de la Computación Gráfica.
+                                B.X = B.X * SF + xCenter; B.Y = yCenter + ((-1) * B.Y * SF);
+                                A.X = A.X * SF + xCenter; A.Y = yCenter + ((-1) * A.Y * SF); 
+                                // Dibujar una línea que una el punto O con el punto B.
+                                mGraph.DrawLine(mPen, O, B);
+                                // Dibujar una línea que una el punto A con el punto B.
+                                mGraph.DrawLine(mPen, A, B);
+                                // Calcular los segmentos BM y OM del triángulo rectángulo BMO.
+                                float BM = a * (float)Math.Sin(mAngle);
+                                float OM = a * (float)Math.Cos(mAngle);
+                                // Calcular los segmentos DP y AP del triángulo rectángulo DPA.
+                                float DP = c * (float)Math.Cos(mAngle);
+                                float AP = c * (float)Math.Sin(mAngle);
+                                // Calcular los segmentos PM, NM y ON del trapecio OMPD.
+                                float PM = b - BM - AP;
+                                float NM = DP;
+                                float ON = OM - DP;
+                                // Calcular las coordenadas de los puntos D, C, E, G y F que forman 
+                                // parte de la caja que encierra al vector V, utilizando las fórmulas 
+                                // de traslación de un punto a otro en el mundo de la Computación 
+                                // Gráfica y dibujar las líneas que unen dichos puntos.
+                                D.X = ON * SF + xCenter; D.Y = yCenter + ((-1) * PM * SF);            
+                                mGraph.DrawLine(mPen, A, D);
+                                C.X = ON * SF + xCenter; C.Y = yCenter + ((-1) * (PM - b) * SF);            
+                                mGraph.DrawLine(mPen, C, D);
+                                mGraph.DrawLine(mPen, B, C);
+                                E.X = (-1) * DP * SF + xCenter; E.Y = yCenter + ((-1) * (-1) * AP * SF);            
+                                mGraph.DrawLine(mPen, O, E);
+                                mGraph.DrawLine(mPen, C, E);
+                                G.X = 0 * SF + xCenter; G.Y = yCenter + ((-1) * b * SF);            
+                                mGraph.DrawLine(mPen, O, G);
+                                mGraph.DrawLine(mPen, A, G);
+                                F.X = (-1) * DP * SF + xCenter; F.Y = yCenter + ((-1) * (b - AP) * SF);            
+                                mGraph.DrawLine(mPen, F, G);
+                                mGraph.DrawLine(mPen, F, D);
+                                mGraph.DrawLine(mPen, E, F);
+                                // Crear una línea con flecha y base redondeada para dibujarla con un 
+                                // esferográfico.
+                                mPen = new Pen(colorVector, 2);
+                                mPen.StartCap = LineCap.RoundAnchor;
+                                mPen.EndCap = LineCap.ArrowAnchor;
+                                // Dibujar una línea que una el punto O con el punto D, que representa
+                                // al vector V.
+                                mGraph.DrawLine(mPen, O, D);                      
+                            }
+
+                            // Función que dibuja un vector 3D.
+                            public void PlotVector(PictureBox picCanvas, Color colorVector, Color colorBox)
+                            {
+                                // Asignar la funcionalidad de crear gráficos del picCanvas 
+                                // al objeto mGraph.
+                                mGraph = picCanvas.CreateGraphics();            
+                                // Escalar al vector V a la mitad.
+                                float a = mX / 2.0f;
+                                float b = mY / 2.0f;
+                                float c = mZ / 2.0f;
+                                // Calcular los segmentos BM y OM del triángulo rectángulo BMO.
+                                float BM = a * (float)Math.Sin(mAngle);
+                                float OM = a * (float)Math.Cos(mAngle);
+                                // Calcular los segmentos DP y AP del triángulo rectángulo DPA.
+                                float DP = c * (float)Math.Cos(mAngle);
+                                float AP = c * (float)Math.Sin(mAngle);
+                                // Calcular los segmentos PM, NM y ON del trapecio OMPD.
+                                float PM = b - BM - AP;
+                                float NM = DP;
+                                float ON = OM - DP;
+                                // Calcular las coordenadas del punto D que define al vector V, 
+                                // utilizando las fórmulas de traslación de un punto a otro en el 
+                                // mundo de la Computación Gráfica.
+                                D.X = ON * SF + xCenter; D.Y = yCenter + ((-1) * PM * SF);
+                                // Crear una línea con flecha y base redondeada para dibujarla con un 
+                                // esferográfico.
+                                mPen = new Pen(colorVector, 2);
+                                mPen.StartCap = LineCap.RoundAnchor;
+                                mPen.EndCap = LineCap.ArrowAnchor;
+                                // Dibujar una línea que una el punto O con el punto D, que representa
+                                // al vector V.
+                                mGraph.DrawLine(mPen, O, D);                       
+                            }
+
+                            // Función que grafica el vector Proyección de un vector sobre otro.
+                            public void PlotProjection(PictureBox picCanvas,
+                                          CVector3D U, CVector3D V)
+                            {
+                                mGraph = picCanvas.CreateGraphics();
+                                mPen = new Pen(Color.Violet, 2);            
+                                mGraph.DrawLine(mPen, U.R, V.R);            
+                            }
+
+                            // Función que grafica el paralelogramo correspondiente a la suma
+                            // o resta entre dos vectores 3D.
+                            public void PlotParallelogram(PictureBox picCanvas,
+                                          CVector3D U, CVector3D V, CVector3D W)
+                            {
+                                mGraph = picCanvas.CreateGraphics();
+                                mPen = new Pen(Color.Red, 2);            
+                                mGraph.DrawLine(mPen, V.R, W.R);
+                                mPen = new Pen(Color.DarkBlue, 2);            
+                                mGraph.DrawLine(mPen, U.R, W.R);
+                            }
+
+                            // Función que suma dos vectores, utilizando dos parámetros
+                            // que representan a los dos vectores 3D.
+                            public CVector3D Addition(CVector3D U, CVector3D V)
+                            {
+                                CVector3D Temp = new CVector3D();
+                                Temp.mX = U.mX + V.mX;
+                                Temp.mY = U.mY + V.mY; 
+                                Temp.mZ = U.mZ + V.mZ;
+                                return (Temp);
+                            }
+
+                            // Función que resta dos vectores, utilizando dos parámetros
+                            // que representan a los dos vectores 3D.
+                            public CVector3D Subtraction(CVector3D U, CVector3D V)
+                            {
+                                CVector3D Temp = new CVector3D();
+                                Temp.mX = U.mX - V.mX;
+                                Temp.mY = U.mY - V.mY;
+                                Temp.mZ = U.mZ - V.mZ;
+                                return (Temp);
+                            }
+
+                            // Función que imprime las componentes 'X', 'Y' y 'Z' del vector 3D.
+                            public void PrintData(TextBox txtXVectorV, 
+                                                  TextBox txtYVectorV,
+                                                  TextBox txtZVectorV)
+                            {            
+                                txtXVectorV.Text = mX.ToString();
+                                txtYVectorV.Text = mY.ToString();
+                                txtZVectorV.Text = mZ.ToString();
+                            }
+
+                            // Función que calcula el módulo o la magnitud de un vector 3D.
+                            public float Magnitude()
+                            {
+                                return ((float)Math.Sqrt(mX * mX + mY * mY + mZ * mZ));
+                            }
+
+                            // Función que calcula el vector unitario o normalizado de un vector 3D.
+                            public CVector3D Normalize()
+                            {
+                                CVector3D Temp = new CVector3D();
+                                Temp.mX = mX / Magnitude();
+                                Temp.mY = mY / Magnitude();
+                                Temp.mZ = mZ / Magnitude();
+                                return (Temp);
+                            }
+
+                            // Función que calcula el Producto Punto entre dos vectores, 
+                            // utilizando dos parámetros.
+                            public float DotProduct(CVector3D U, CVector3D V)
+                            {
+                                return (U.mX * V.mX + U.mY * V.mY + U.mZ * V.mZ);
+                            }
+
+                            // Función que calcula el producto entre un vector y un escalar,
+                            // utilizando un parámetro.
+                            public CVector3D VectorEscalarProduct(float escalar)
+                            {
+                                CVector3D Temp = new CVector3D();
+                                Temp.mX = mX * escalar;
+                                Temp.mY = mY * escalar;
+                                Temp.mZ = mZ * escalar;
+                                return (Temp);
+                            }
+
+                            // Función que calcula el vector Proyección de un vector sobre otro,
+                            // utilizando dos parámetros.
+                            public CVector3D Projection(CVector3D U, CVector3D V)
+                            {
+                                CVector3D Proj = new CVector3D();
+                                CVector3D Nv = new CVector3D();
+                                float escalar;
+                                Nv = V.Normalize();
+                                escalar = DotProduct(U, Nv);                      
+                                Proj = Nv.VectorEscalarProduct(escalar);
+                                return (Proj);
+                            }
+
+                            // Función que calcula el vector perpendicular o vector ortogonal
+                            // a otro vector, utilizando dos parámetros.
+                            public CVector3D Perpendicular(CVector3D U, CVector3D V)
+                            {
+                                CVector3D W = new CVector3D();
+                                W = W.Subtraction(U, V);
+                                return (W);
+                            }
+
+                            // Función que calcula los tres vectores reflejados cada uno en un plano
+                            // y el vector original en otro plano.
+                            public void ReflectionsOverAxis(CVector3D V, CVector3D[] VR,
+                                                            List<TextBox> mListTextBoxVectorRef)
+                            {
+                                VR[0].X = V.X; VR[0].Y = V.Y; VR[0].Z = V.Z;
+                                VR[1].X = (-1) * V.X; VR[1].Y = V.Y; VR[1].Z = V.Z;
+                                VR[2].X = V.X; VR[2].Y = V.Y; VR[2].Z = (-1) * V.Z;
+                                VR[3].X = (-1) * V.X; VR[3].Y = V.Y; VR[3].Z = (-1) * V.Z;
+                                int i, j;
+                                for (i = 0, j = 0; i < mListTextBoxVectorRef.Count; i+=3, j++)
+                                {
+                                    mListTextBoxVectorRef[i].Text = VR[j].X.ToString();
+                                    mListTextBoxVectorRef[i + 1].Text = VR[j].Y.ToString();
+                                    mListTextBoxVectorRef[i + 2].Text = VR[j].Z.ToString();                
+                                }
+                            }
+
+                            // Función que calcula los tres vectores opuestos de cada uno de tres vectores 
+                            // reflejados y el vector opuesto del original en otro plano.
+                            public void OppositeVectors(CVector3D[] VR, CVector3D[] VO,
+                                                        List<TextBox> mListTextBoxVectorOpp)
+                            {
+                                VO[0].X = (-1) * VR[0].X; VO[0].Y = (-1) * VR[0].Y; VO[0].Z = (-1) * VR[0].Z;
+                                VO[1].X = (-1) * VR[1].X; VO[1].Y = (-1) * VR[1].Y; VO[1].Z = (-1) * VR[1].Z;
+                                VO[2].X = (-1) * VR[2].X; VO[2].Y = (-1) * VR[2].Y; VO[2].Z = (-1) * VR[2].Z;
+                                VO[3].X = (-1) * VR[3].X; VO[3].Y = (-1) * VR[3].Y; VO[3].Z = (-1) * VR[3].Z;
+                                int i, j;
+                                for (i = 0, j = 0; i < mListTextBoxVectorOpp.Count; i += 3, j++)
+                                {
+                                    mListTextBoxVectorOpp[i].Text = VO[j].X.ToString();
+                                    mListTextBoxVectorOpp[i + 1].Text = VO[j].Y.ToString();
+                                    mListTextBoxVectorOpp[i + 2].Text = VO[j].Z.ToString();
+                                }
+                            }
+
+                            #endregion
+                        }
+                    }
+                    `
+                },
+                {
+                    problema:'La implementación de la clase frmVectors3D, se presenta a continuación en la Tabla 3.2.2, que es la clase que representa a la interfaz gráfica de usuario de los vectores en 2D.',
+                    tablaN:'Tabla 3.2.2. ',
+                    tablaDescrip:'Código de la clase frmVectors3D del programa.',
+                    tablaDatos:
+                    `
+                    /*
+                    * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
+                    * Edwin Cuichan, Kevin Sanipatín.
+                    * Creative Commons: BY-NC-ND 4.0 International license.
+                    * 
+                    * Except where otherwise noted, content on this program is licensed 
+                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    * Source Code by the developers.
+                    * 
+                    * Unless required by applicable law or agreed to in writing, software
+                    * distributed under the License is distributed on an "AS IS" BASIS,
+                    * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                    * See the License for the specific language governing permissions and
+                    * limitations under the License.
+                    */
+
+                    using System;
+                    using System.Collections.Generic;
+                    using System.ComponentModel;
+                    using System.Data;
+                    using System.Drawing;
+                    using System.Linq;
+                    using System.Text;
+                    using System.Threading.Tasks;
+                    using System.Windows.Forms;
+
+                    namespace WinAppVectors3D
+                    {
+                        public partial class frmVectors3D : Form
+                        {
+                            // Definición de cuatro objetos de tipo CVector3D.
+                            CVector3D A = new CVector3D();
+                            CVector3D B = new CVector3D();
+                            CVector3D C = new CVector3D();
+                            CVector3D D = new CVector3D();
+                            // Definición de dos arreglos de objetos de tipo CVector3D.
+                            CVector3D[] VR = new CVector3D[4];
+                            CVector3D[] VO = new CVector3D[4];
+                            // Definición de una collección de cajas de texto (lista de objetos),
+                            // para almacenar los cuatro valores de los vectores reflejados.
+                            private List<TextBox> mListTextBoxVectorRef = new List<TextBox>();
+                            // Definición de una collección de cajas de texto (lista de objetos),
+                            // para almacenar los cuatro valores de los vectores opuestos.
+                            private List<TextBox> mListTextBoxVectorOpp = new List<TextBox>();
+
+                            // Constructor del formulario frmVector3D.
+                            public frmVectors3D()
+                            {
+                                InitializeComponent();
+                                // Inserción de las ocho cajas de texto a las listas de objetos
+                                // de los vectores reflejados y de los vectores opuestos.
+                                // Llamada a la función InsertDataList.
+                                InsertDataList();
+                            }
+
+                            // Función que inserta ocho cajas de texto a las listas de objetos
+                            // de los vectores reflejados y de los vectores opuestos.
+                            private void InsertDataList()
+                            {
+                                mListTextBoxVectorRef.Add(txtXVectorVR1); 
+                                mListTextBoxVectorRef.Add(txtYVectorVR1); 
+                                mListTextBoxVectorRef.Add(txtZVectorVR1);
+                                mListTextBoxVectorRef.Add(txtXVectorVR2); 
+                                mListTextBoxVectorRef.Add(txtYVectorVR2); 
+                                mListTextBoxVectorRef.Add(txtZVectorVR2);
+                                mListTextBoxVectorRef.Add(txtXVectorVR3); 
+                                mListTextBoxVectorRef.Add(txtYVectorVR3); 
+                                mListTextBoxVectorRef.Add(txtZVectorVR3);
+                                mListTextBoxVectorRef.Add(txtXVectorVR4); 
+                                mListTextBoxVectorRef.Add(txtYVectorVR4); 
+                                mListTextBoxVectorRef.Add(txtZVectorVR4);
+
+                                mListTextBoxVectorOpp.Add(txtXVectorVO1); 
+                                mListTextBoxVectorOpp.Add(txtYVectorVO1); 
+                                mListTextBoxVectorOpp.Add(txtZVectorVO1);
+                                mListTextBoxVectorOpp.Add(txtXVectorVO2); 
+                                mListTextBoxVectorOpp.Add(txtYVectorVO2); 
+                                mListTextBoxVectorOpp.Add(txtZVectorVO2);
+                                mListTextBoxVectorOpp.Add(txtXVectorVO3); 
+                                mListTextBoxVectorOpp.Add(txtYVectorVO3); 
+                                mListTextBoxVectorOpp.Add(txtZVectorVO3);
+                                mListTextBoxVectorOpp.Add(txtXVectorVO4); 
+                                mListTextBoxVectorOpp.Add(txtYVectorVO4); 
+                                mListTextBoxVectorOpp.Add(txtZVectorVO4);
+                            }        
+
+                            // Función del evento de carga del formulario frmVectors3D.
+                            private void frmVectors3D_Load(object sender, EventArgs e)
+                            {
+                                
+                            }
+
+                            // Función del evento Click del botón btnAddition.
+                            private void btnAddition_Click(object sender, EventArgs e)
+                            {
+                                // Borrar el contenido del lienzo (canvas).
+                                picCanvas.Refresh();
+                                // Inicialización de los datos de graficación del objeto A.
+                                // Llamada a la función InitializeData.
+                                A.InitializeData(picCanvas);
+                                // Graficación del plano auxiliar de los cuadrantes.
+                                // Llamada a la función PlotPlane.
+                                A.PlotPlane(picCanvas);
+                                // Graficación de los tres ejes coordenados del espacio.
+                                // Llamada a la función PlotAxis.
+                                A.PlotAxis(picCanvas);
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto A.
+                                A.ReadData(nudXVectorA, nudYVectorA, nudZVectorA);
+                                // Graficación del vector A en 3D.
+                                // Llamada a la función PlotVector con el objeto A.
+                                A.PlotVector(picCanvas, Color.Red, Color.Maroon);
+                                // Inicialización de los datos de graficación del objeto B.
+                                // Llamada a la función InitializeData.
+                                B.InitializeData(picCanvas);
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto B.
+                                B.ReadData(nudXVectorB, nudYVectorB, nudZVectorB);
+                                // Graficación del vector B en 3D.
+                                // Llamada a la función PlotVector con el objeto B.
+                                B.PlotVector(picCanvas, Color.DarkBlue, Color.Blue);
+                                // Cálculo de la suma de dos vectores en el espacio.
+                                // Llamada a la función Addition.
+                                C = C.Addition(A, B);
+                                // Inicialización de los datos de graficación del objeto C.
+                                // Llamada a la función InitializeData.
+                                C.InitializeData(picCanvas);
+                                // Impresión de datos.
+                                // Llamada a la función PrintData con el objeto C.
+                                C.PrintData(txtXVectorC, txtYVectorC, txtZVectorC);
+                                // Graficación del vector C en 3D.
+                                // Llamada a la función PlotVector con el objeto C.
+                                C.PlotVector(picCanvas, Color.DarkGreen, Color.Green);
+                                // Graficación del paralelogramo que representa la suma
+                                // entre dos vectores en el espacio y el vector resultante.
+                                // Llamada a la función PlotParallelogram con el objeto C.
+                                C.PlotParallelogram(picCanvas, A, B, C);
+                            }
+
+                            // Función del evento Click del botón btnBoxAddition.
+                            private void btnBoxAddition_Click(object sender, EventArgs e)
+                            {
+                                // Borrar el contenido del lienzo (canvas).
+                                picCanvas.Refresh();
+                                // Inicialización de los datos de graficación del objeto A.
+                                // Llamada a la función InitializeData.
+                                A.InitializeData(picCanvas);
+                                // Graficación del plano auxiliar de los cuadrantes.
+                                // Llamada a la función PlotPlane.
+                                A.PlotPlane(picCanvas);
+                                // Graficación de los tres ejes coordenados del espacio.
+                                // Llamada a la función PlotAxis.
+                                A.PlotAxis(picCanvas);
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto A.
+                                A.ReadData(nudXVectorA, nudYVectorA, nudZVectorA);
+                                // Graficación del vector A y la caja que encierra al vector en 3D.
+                                // Llamada a la función PlotVector con el objeto A.
+                                A.PlotBox(picCanvas, Color.Red, Color.Maroon);
+                                // Inicialización de los datos de graficación del objeto B.
+                                // Llamada a la función InitializeData.
+                                B.InitializeData(picCanvas);
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto B.
+                                B.ReadData(nudXVectorB, nudYVectorB, nudZVectorB);
+                                // Graficación del vector B y la caja que encierra al vector en 3D.
+                                // Llamada a la función PlotBox con el objeto B.
+                                B.PlotBox(picCanvas, Color.DarkBlue, Color.Blue);
+                                // Cálculo de la suma de dos vectores en el espacio.
+                                // Llamada a la función Addition.
+                                C = C.Addition(A, B);
+                                // Inicialización de los datos de graficación del objeto C.
+                                // Llamada a la función InitializeData.
+                                C.InitializeData(picCanvas);
+                                // Impresión de datos.
+                                // Llamada a la función PrintData con el objeto C.
+                                C.PrintData(txtXVectorC, txtYVectorC, txtZVectorC);
+                                // Graficación del vector C y la caja que encierra al vector en 3D.
+                                // Llamada a la función PlotVector con el objeto C.
+                                C.PlotBox(picCanvas, Color.DarkGreen, Color.Green);
+                                // Graficación del paralelogramo que representa la suma
+                                // entre dos vectores en el espacio y el vector resultante.
+                                // Llamada a la función PlotParallelogram con el objeto C.
+                                C.PlotParallelogram(picCanvas, A, B, C);
+                            }
+
+                            // Función del evento Click del botón btnSubtraction.
+                            private void btnSubtraction_Click(object sender, EventArgs e)
+                            {
+                                // Borrar el contenido del lienzo (canvas).
+                                picCanvas.Refresh();
+                                // Inicialización de los datos de graficación del objeto A.
+                                // Llamada a la función InitializeData.
+                                A.InitializeData(picCanvas);
+                                // Graficación del plano auxiliar de los cuadrantes.
+                                // Llamada a la función PlotPlane.
+                                A.PlotPlane(picCanvas);
+                                // Graficación de los tres ejes coordenados del espacio.
+                                // Llamada a la función PlotAxis.
+                                A.PlotAxis(picCanvas);
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto A.
+                                A.ReadData(nudXVectorA, nudYVectorA, nudZVectorA);
+                                // Graficación del vector A en 3D.
+                                // Llamada a la función PlotVector con el objeto A.
+                                A.PlotVector(picCanvas, Color.Red, Color.Maroon);
+                                // Inicialización de los datos de graficación del objeto B.
+                                // Llamada a la función InitializeData.
+                                B.InitializeData(picCanvas);
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto B.
+                                B.ReadData(nudXVectorB, nudYVectorB, nudZVectorB);
+                                // Cálculo de la resta de dos vectores en el espacio.
+                                // Llamada a la función Addition.
+                                C = C.Subtraction(A, B);
+                                // Inicialización de los datos de graficación del objeto C.
+                                // Llamada a la función InitializeData.
+                                C.InitializeData(picCanvas);
+                                // Obtentión del vector -B.
+                                // Llamada a las propiedades (get/set) de la clase CVector3D.
+                                B.X = -B.X; B.Y = -B.Y; B.Z = -B.Z;
+                                // Graficación del vector B en 3D.
+                                // Llamada a la función PlotVector con el objeto B.
+                                B.PlotVector(picCanvas, Color.DarkBlue, Color.Blue);
+                                // Impresión de datos.
+                                // Llamada a la función PrintData con el objeto C.
+                                C.PrintData(txtXVectorC, txtYVectorC, txtZVectorC);
+                                // Graficación del vector C en 3D.
+                                // Llamada a la función PlotVector con el objeto C.
+                                C.PlotVector(picCanvas, Color.DarkGreen, Color.Green);
+                                // Graficación del paralelogramo que representa la resta
+                                // entre dos vectores en el espacio y el vector resultante.
+                                // Llamada a la función PlotParallelogram con el objeto C.
+                                C.PlotParallelogram(picCanvas, A, B, C);
+                            }
+
+                            // Función del evento Click del botón btnBoxSubtraction.
+                            private void btnBoxSubtraction_Click(object sender, EventArgs e)
+                            {
+                                // Borrar el contenido del lienzo (canvas).
+                                picCanvas.Refresh();
+                                // Inicialización de los datos de graficación del objeto A.
+                                // Llamada a la función InitializeData.
+                                A.InitializeData(picCanvas);
+                                // Graficación del plano auxiliar de los cuadrantes.
+                                // Llamada a la función PlotPlane.
+                                A.PlotPlane(picCanvas);
+                                // Graficación de los tres ejes coordenados del espacio.
+                                // Llamada a la función PlotAxis.
+                                A.PlotAxis(picCanvas);
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto A.
+                                A.ReadData(nudXVectorA, nudYVectorA, nudZVectorA);
+                                // Graficación del vector A y la caja que encierra al vector en 3D.
+                                // Llamada a la función PlotBox con el objeto A.
+                                A.PlotBox(picCanvas, Color.Red, Color.Maroon);
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto B.
+                                B.ReadData(nudXVectorB, nudYVectorB, nudZVectorB);
+                                // Inicialización de los datos de graficación del objeto B.
+                                // Llamada a la función InitializeData.
+                                B.InitializeData(picCanvas);
+                                // Cálculo de la resta de dos vectores en el espacio.
+                                // Llamada a la función Addition.
+                                C = C.Subtraction(A, B);
+                                // Inicialización de los datos de graficación del objeto C.
+                                // Llamada a la función InitializeData.
+                                C.InitializeData(picCanvas);
+                                // Obtentión del vector -B.
+                                // Llamada a las propiedades (get/set) de la clase CVector3D.
+                                B.X = -B.X; B.Y = -B.Y; B.Z = -B.Z;
+                                // Graficación del vector B y la caja que encierra al vector en 3D.
+                                // Llamada a la función PlotBox con el objeto B.
+                                B.PlotBox(picCanvas, Color.DarkBlue, Color.Blue);
+                                // Impresión de datos.
+                                // Llamada a la función PrintData con el objeto C.
+                                C.PrintData(txtXVectorC, txtYVectorC, txtZVectorC);
+                                // Graficación del vector C y la caja que encierra al vector en 3D.
+                                // Llamada a la función PlotBox con el objeto C.
+                                C.PlotBox(picCanvas, Color.DarkGreen, Color.Green);
+                                // Graficación del paralelogramo que representa la resta
+                                // entre dos vectores en el espacio y el vector resultante.
+                                // Llamada a la función PlotParallelogram con el objeto C.
+                                C.PlotParallelogram(picCanvas, A, B, C);
+                            }
+
+                            // Función del evento Click del botón btnProjection.
+                            private void btnProjection_Click(object sender, EventArgs e)
+                            {
+                                // Borrar el contenido del lienzo (canvas).
+                                picCanvas.Refresh();
+                                // Inicialización de los datos de graficación del objeto A.
+                                // Llamada a la función InitializeData.
+                                A.InitializeData(picCanvas);
+                                // Graficación del plano auxiliar de los cuadrantes.
+                                // Llamada a la función PlotPlane.
+                                A.PlotPlane(picCanvas);
+                                // Graficación de los tres ejes coordenados del espacio.
+                                // Llamada a la función PlotAxis.
+                                A.PlotAxis(picCanvas);
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto A.
+                                A.ReadData(nudXVectorA, nudYVectorA, nudZVectorA);
+                                // Graficación del vector A en 3D.
+                                // Llamada a la función PlotVector con el objeto A.
+                                A.PlotVector(picCanvas, Color.Red, Color.Maroon);
+                                // Inicialización de los datos de graficación del objeto B.
+                                // Llamada a la función InitializeData.
+                                B.InitializeData(picCanvas);
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto B.
+                                B.ReadData(nudXVectorB, nudYVectorB, nudZVectorB);
+                                // Graficación del vector B en 3D.
+                                // Llamada a la función PlotVector con el objeto B.
+                                B.PlotVector(picCanvas, Color.DarkBlue, Color.Blue);
+                                // Cálculo del vector proyección.
+                                // Llamada a la función Projection.
+                                C = C.Projection(A, B);
+                                // Inicialización de los datos de graficación del objeto C.
+                                // Llamada a la función InitializeData.
+                                C.InitializeData(picCanvas);
+                                // Impresión de datos.
+                                // Llamada a la función PrintData con el objeto C.
+                                C.PrintData(txtXVectorPro, txtYVectorPro, txtZVectorPro);
+                                // Graficación del vector proyección C en 3D.
+                                // Llamada a la función PlotVector con el objeto C.
+                                C.PlotVector(picCanvas, Color.DarkGreen, Color.Green);
+                                // Cálculo del vector perpendicular.
+                                // Llamada a la función Perpendicular.
+                                D = D.Perpendicular(A, C);
+                                // Inicialización de los datos de graficación del objeto D.
+                                // Llamada a la función InitializeData.
+                                D.InitializeData(picCanvas);
+                                // Impresión de datos.
+                                // Llamada a la función PrintData con el objeto D.
+                                D.PrintData(txtXVectorPer, txtYVectorPer, txtZVectorPer);
+                                // Graficación del vector perpendicular D en 3D.
+                                // Llamada a la función PlotProjection con el objeto D.
+                                D.PlotProjection(picCanvas, C, A);           
+                            }
+
+                            // Función del evento Click del botón btnBoxProjection.
+                            private void btnBoxProjection_Click(object sender, EventArgs e)
+                            {
+                                // Borrar el contenido del lienzo (canvas).
+                                picCanvas.Refresh();
+                                // Inicialización de los datos de graficación del objeto A.
+                                // Llamada a la función InitializeData.
+                                A.InitializeData(picCanvas);
+                                // Graficación del plano auxiliar de los cuadrantes.
+                                // Llamada a la función PlotPlane.
+                                A.PlotPlane(picCanvas);
+                                // Graficación de los tres ejes coordenados del espacio.
+                                // Llamada a la función PlotAxis.
+                                A.PlotAxis(picCanvas);
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto A.
+                                A.ReadData(nudXVectorA, nudYVectorA, nudZVectorA);
+                                // Graficación del vector A y la caja que encierra al vector en 3D.
+                                // Llamada a la función PlotBox con el objeto A.
+                                A.PlotBox(picCanvas, Color.Red, Color.Maroon);
+                                // Inicialización de los datos de graficación del objeto B.
+                                // Llamada a la función InitializeData.
+                                B.InitializeData(picCanvas);
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto B.
+                                B.ReadData(nudXVectorB, nudYVectorB, nudZVectorB);
+                                // Graficación del vector B y la caja que encierra al vector en 3D.
+                                // Llamada a la función PlotBox con el objeto B.
+                                B.PlotBox(picCanvas, Color.DarkBlue, Color.Blue);
+                                // Cálculo del vector proyección.
+                                // Llamada a la función Projection.
+                                C = C.Projection(A, B);
+                                // Inicialización de los datos de graficación del objeto C.
+                                // Llamada a la función InitializeData.
+                                C.InitializeData(picCanvas);
+                                // Impresión de datos.
+                                // Llamada a la función PrintData con el objeto C.
+                                C.PrintData(txtXVectorPro, txtYVectorPro, txtZVectorPro);
+                                // Graficación del vector proyección C y la caja que encierra al
+                                // vector en 3D.
+                                // Llamada a la función PlotBox con el objeto C.
+                                C.PlotBox(picCanvas, Color.DarkGreen, Color.Green);
+                                // Cálculo del vector perpendicular.
+                                // Llamada a la función Perpendicular.
+                                D = D.Perpendicular(A, C);
+                                // Inicialización de los datos de graficación del objeto D.
+                                // Llamada a la función InitializeData.
+                                D.InitializeData(picCanvas);
+                                // Impresión de datos.
+                                // Llamada a la función PrintData con el objeto D.
+                                D.PrintData(txtXVectorPer, txtYVectorPer, txtZVectorPer);
+                                // Graficación del vector perpendicular D en 3D.
+                                // Llamada a la función PlotProjection con el objeto D.
+                                D.PlotProjection(picCanvas, C, A);
+                            }
+
+                            // Función del evento Click del botón btnSetVectorsA.
+                            private void btnSetVectorsA_Click(object sender, EventArgs e)
+                            {
+                                int i;
+                                // Borrar el contenido del lienzo (canvas).
+                                picCanvas.Refresh();
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto A.
+                                A.ReadData(nudXVectorA, nudYVectorA, nudZVectorA);
+                                // Bucle que permite crear los objetos internos de cada uno de 
+                                // los arreglos de objetos VR y VO.
+                                for (i = 0; i < VR.Length; i++)
+                                {
+                                    VR[i] = new CVector3D();
+                                    VO[i] = new CVector3D();
+                                }
+                                // Bucle que permite inicializar los objetos internos de cada 
+                                // uno de los arreglos de objetos VR y VO.
+                                for (i = 0; i < VR.Length; i++)
+                                {
+                                    VR[i].InitializeData(picCanvas);
+                                    VO[i].InitializeData(picCanvas);
+                                }
+                                // Bucle que permite graficar los planos y los ejes coordenados de los
+                                // objetos internos de cada uno de los arreglos de objetos VR y VO.
+                                for (i = 0; i < VR.Length; i++)
+                                {                
+                                    VR[i].PlotPlane(picCanvas);
+                                    VR[i].PlotAxis(picCanvas);                
+                                    VO[i].PlotPlane(picCanvas);
+                                    VO[i].PlotAxis(picCanvas);
+                                }
+                                // Calcular los vectores reflejados.
+                                // Llamada a la función ReflectionsOverAxis con el objeto A.
+                                A.ReflectionsOverAxis(A, VR, mListTextBoxVectorRef);
+                                // Calcular los vectores opuestos.
+                                // Llamada a la función OppositeVectors con el objeto A.
+                                A.OppositeVectors(VR, VO, mListTextBoxVectorOpp);            
+                                // Bucle que permite graficar los vectores de los objetos internos 
+                                // de cada uno de los arreglos de objetos VR y VO.
+                                for (i = 0; i < VR.Length; i++)
+                                {
+                                    VR[i].PlotVector(picCanvas, Color.Red, Color.Maroon);
+                                    VO[i].PlotVector(picCanvas, Color.Red, Color.Maroon);
+                                }            
+                            }
+
+                            // Función del evento Click del botón btnBoxSetVectorsA.
+                            private void btnBoxSetVectorsA_Click(object sender, EventArgs e)
+                            {
+                                int i;
+                                // Borrar el contenido del lienzo (canvas).
+                                picCanvas.Refresh();
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto A.
+                                A.ReadData(nudXVectorA, nudYVectorA, nudZVectorA);
+                                // Bucle que permite crear los objetos internos de cada uno de 
+                                // los arreglos de objetos VR y VO.
+                                for (i = 0; i < VR.Length; i++)
+                                {
+                                    VR[i] = new CVector3D();
+                                    VO[i] = new CVector3D();
+                                }
+                                // Bucle que permite inicializar los objetos internos de cada 
+                                // uno de los arreglos de objetos VR y VO.
+                                for (i = 0; i < VR.Length; i++)
+                                {
+                                    VR[i].InitializeData(picCanvas);
+                                    VO[i].InitializeData(picCanvas);
+                                }
+                                // Bucle que permite graficar los planos y los ejes coordenados de los
+                                // objetos internos de cada uno de los arreglos de objetos VR y VO.
+                                for (i = 0; i < VR.Length; i++)
+                                {                
+                                    VR[i].PlotPlane(picCanvas);
+                                    VR[i].PlotAxis(picCanvas);                
+                                    VO[i].PlotPlane(picCanvas);
+                                    VO[i].PlotAxis(picCanvas);
+                                }
+                                // Calcular los vectores reflejados.
+                                // Llamada a la función ReflectionsOverAxis con el objeto A.
+                                A.ReflectionsOverAxis(A, VR, mListTextBoxVectorRef);
+                                // Calcular los vectores opuestos.
+                                // Llamada a la función OppositeVectors con el objeto A.
+                                A.OppositeVectors(VR, VO, mListTextBoxVectorOpp);
+                                // Bucle que permite graficar los vectores y las cajas que encierran
+                                // a los vectores 3D de los objetos internos, de cada uno de los 
+                                // arreglos de objetos VR y VO.            
+                                for (i = 0; i < VR.Length; i++)
+                                {
+                                    VR[i].PlotBox(picCanvas, Color.Red, Color.Maroon);
+                                    VO[i].PlotBox(picCanvas, Color.Red, Color.Maroon);
+                                }
+                            }
+
+                            // Función del evento Click del botón btnSetVectorsB.
+                            private void btnSetVectorsB_Click(object sender, EventArgs e)
+                            {
+                                int i;
+                                // Borrar el contenido del lienzo (canvas).
+                                picCanvas.Refresh();
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto B.
+                                B.ReadData(nudXVectorB, nudYVectorB, nudZVectorB);
+                                // Bucle que permite crear los objetos internos de cada uno de 
+                                // los arreglos de objetos VR y VO.
+                                for (i = 0; i < VR.Length; i++)
+                                {
+                                    VR[i] = new CVector3D();
+                                    VO[i] = new CVector3D();
+                                }
+                                // Bucle que permite inicializar los objetos internos de cada 
+                                // uno de los arreglos de objetos VR y VO.
+                                for (i = 0; i < VR.Length; i++)
+                                {
+                                    VR[i].InitializeData(picCanvas);
+                                    VO[i].InitializeData(picCanvas);
+                                }
+                                // Bucle que permite graficar los planos y los ejes coordenados de los
+                                // objetos internos de cada uno de los arreglos de objetos VR y VO.
+                                for (i = 0; i < VR.Length; i++)
+                                {                
+                                    VR[i].PlotPlane(picCanvas);
+                                    VR[i].PlotAxis(picCanvas);                
+                                    VO[i].PlotPlane(picCanvas);
+                                    VO[i].PlotAxis(picCanvas);
+                                }
+                                // Calcular los vectores reflejados.
+                                // Llamada a la función ReflectionsOverAxis con el objeto B.
+                                B.ReflectionsOverAxis(B, VR, mListTextBoxVectorRef);
+                                // Calcular los vectores opuestos.
+                                // Llamada a la función OppositeVectors con el objeto B.
+                                B.OppositeVectors(VR, VO, mListTextBoxVectorOpp);
+                                // Bucle que permite graficar los vectores de los objetos internos 
+                                // de cada uno de los arreglos de objetos VR y VO.
+                                for (i = 0; i < VR.Length; i++)
+                                {
+                                    VR[i].PlotVector(picCanvas, Color.DarkBlue, Color.Blue);
+                                    VO[i].PlotVector(picCanvas, Color.DarkBlue, Color.Blue);
+                                }            
+                            }
+
+                            // Función del evento Click del botón btnBoxSetVectorsB.
+                            private void btnBoxSetVectorsB_Click(object sender, EventArgs e)
+                            {
+                                int i;
+                                // Borrar el contenido del lienzo (canvas).
+                                picCanvas.Refresh();
+                                // Lectura de datos.
+                                // Llamada a la función ReadData con el objeto A.
+                                B.ReadData(nudXVectorB, nudYVectorB, nudZVectorB);
+                                // Bucle que permite crear los objetos internos de cada uno de 
+                                // los arreglos de objetos VR y VO.
+                                for (i = 0; i < VR.Length; i++)
+                                {
+                                    VR[i] = new CVector3D();
+                                    VO[i] = new CVector3D();
+                                }
+                                // Bucle que permite inicializar los objetos internos de cada 
+                                // uno de los arreglos de objetos VR y VO.
+                                for (i = 0; i < VR.Length; i++)
+                                {
+                                    VR[i].InitializeData(picCanvas);
+                                    VO[i].InitializeData(picCanvas);
+                                }
+                                // Bucle que permite graficar los planos y los ejes coordenados de los
+                                // objetos internos de cada uno de los arreglos de objetos VR y VO.
+                                for (i = 0; i < VR.Length; i++)
+                                {                
+                                    VR[i].PlotPlane(picCanvas);
+                                    VR[i].PlotAxis(picCanvas);                
+                                    VO[i].PlotPlane(picCanvas);
+                                    VO[i].PlotAxis(picCanvas);
+                                }
+                                // Calcular los vectores reflejados.
+                                // Llamada a la función ReflectionsOverAxis con el objeto B.
+                                B.ReflectionsOverAxis(B, VR, mListTextBoxVectorRef);
+                                // Calcular los vectores opuestos.
+                                // Llamada a la función OppositeVectors con el objeto B.
+                                B.OppositeVectors(VR, VO, mListTextBoxVectorOpp);
+                                // Bucle que permite graficar los vectores y las cajas que encierran
+                                // a los vectores 3D de los objetos internos, de cada uno de los 
+                                // arreglos de objetos VR y VO.  
+                                for (i = 0; i < VR.Length; i++)
+                                {
+                                    VR[i].PlotBox(picCanvas, Color.DarkBlue, Color.Blue);
+                                    VO[i].PlotBox(picCanvas, Color.DarkBlue, Color.Blue);
+                                }
+                            }
+
+                            // Función del evento Click del botón btnExit.
+                            private void btnExit_Click(object sender, EventArgs e)
+                            {
+                                Close();
+                            }
+                        }
+                    }
+                    `
+                } 
+            ]
+         },
+          E:{
+            subtitulo:'E)	Pruebas de la Aplicación',
+            listaPrueba:[
+              {
+              problema:'A continuación, en la Figura 3.2.10, se muestra un ejemplo de la corrida del programa, donde se calcula la suma entre dos vectores y además se grafica el resultado obtenido de acuerdo al método del Paralelogramo:',
+              fotoPath:'./assets/images/Capitulos/II/media/+.png',
+              fotoN:'Figura 3.2.10.  ',
+              fotoDescrip:' Corrida del programa'
+              },
+              {
+                problema:'A continuación, en la Figura 3.2.11, se muestra un ejemplo de la corrida del programa, donde se calcula la resta entre dos vectores y además se grafica el resultado obtenido de acuerdo al método del Paralelogramo:',
+                fotoPath:'./assets/images/Capitulos/II/media/+.png',
+                fotoN:'Figura 3.2.11.',
                 fotoDescrip:' Corrida del programa'
-                }
-              ]
-            }
-        }*/
+              },
+              {
+                problema:'A continuación, en la Figura 3.2.12, se muestra un ejemplo de la corrida del programa, donde se calcula la proyección del vector A sobre B y el vector perpendicular a otro vector. Además, se grafica el resultado obtenido de acuerdo a las ecuaciones utilizadas en estos cálculos:',
+                fotoPath:'./assets/images/Capitulos/II/media/+.png',
+                fotoN:'Figura 3.1.12.',
+                fotoDescrip:' Corrida del programa'
+              }
+            ]
+          }
+         }
     ];
 
     this.casosPropuesto=[
@@ -3769,10 +5473,10 @@ export class ChapterIIComponent implements OnInit {
     ];
 
     this.praqniquePropuesto=[
-        {label: 'Praqnique Propuesto 1.1', tituloN:'Praqnique 1.1: ',titulo:'Polígonos Estrellados de 16 y 8 Puntas.',subtitulo:'A)   Problema',problema:'Dado el lado de un polígono regular de 16 lados, dibujar la figura geométrica correspondiente y los diferentes polígonos estrellados de 8 puntas, tal y como se muestra en la figura 1.1.1. Se debe considerar que las figuras geométricas se grafican con respecto al punto O(0,0).',fotoPath:'./assets/images/Capitulos/I/media/image299.jpg',fotoN:'Figura 1.1.1 ',fotoDescrip:'Polígonos estrellados de 16 y 8 puntas.'},
+/*        {label: 'Praqnique Propuesto 1.1', tituloN:'Praqnique 1.1: ',titulo:'Polígonos Estrellados de 16 y 8 Puntas.',subtitulo:'A)   Problema',problema:'Dado el lado de un polígono regular de 16 lados, dibujar la figura geométrica correspondiente y los diferentes polígonos estrellados de 8 puntas, tal y como se muestra en la figura 1.1.1. Se debe considerar que las figuras geométricas se grafican con respecto al punto O(0,0).',fotoPath:'./assets/images/Capitulos/I/media/image299.jpg',fotoN:'Figura 1.1.1 ',fotoDescrip:'Polígonos estrellados de 16 y 8 puntas.'},
         {label: 'Praqnique Propuesto 1.2', tituloN:'Praqnique 1.2: ',titulo:'Pentágonos y Polígonos Estrellados de 5 Puntas.',subtitulo:'A)   Problema',problema:'Dado el lado de un pentágono, dibujar la figura geométrica correspondiente y los diferentes polígonos estrellados de 5 puntas, tal y como se muestra en la figura 1.2.1. Se debe considerar que las figuras geométricas se grafican con respecto al punto O(0,0).',fotoPath:'./assets/images/Capitulos/I/media/image300.jpg',fotoN:'Figura 1.2.1 ',fotoDescrip:'Pentágonos y polígonos estrellados de 5 puntas.'},
         {label: 'Praqnique Propuesto 1.3', tituloN:'Praqnique 1.3: ',titulo:'Gema de 10 Lados y Polígonos Estrellados de 5 Puntas.',subtitulo:'A)   Problema',problema:'Dado el lado de un decágono, dibujar la figura geométrica correspondiente a una gema y los diferentes polígonos estrellados de 5 puntas, tal y como se muestra en la figura 1.3.1. Se debe considerar que las figuras geométricas se grafican con respecto al punto O(0,0).',fotoPath:'./assets/images/Capitulos/I/media/image301.jpg',fotoN:'Figura 1.3.1 ',fotoDescrip:'Gema de 10 lados y polígonos estrellados de 5 puntas.'}
-    ];
+*/   ];
   }
 
   selectTabNext() {
