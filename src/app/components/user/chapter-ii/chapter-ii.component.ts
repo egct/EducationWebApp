@@ -23,11 +23,11 @@ export class ChapterIIComponent implements OnInit {
   praqniquePropuesto: any; 
   casosPropuesto: any;
   selectedIndex = new FormControl(0); // define a FormControl with value 0. Value means index.
-  numberTabs = 12;
+  numberTabs = 10;
   positionCurrentNext: boolean = true;
   positionCurrentBefore: boolean = false;
   titleNext: string = 'Siguiente';
-  num_capitulo = 1;
+  num_capitulo = 2;
 
   constructor() {
     /*   this.asyncTabs = Observable.create((observer: Observer<ExampleTab[]>) => {
@@ -1234,6 +1234,21 @@ export class ChapterIIComponent implements OnInit {
                     tablaDescrip:'Código de la clase CTriangle del programa.',
                     tablaDatos:
                     ` 
+                    /*
+                    * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
+                    * Edwin Cuichan, Kevin Sanipatín.
+                    * Creative Commons: BY-NC-ND 4.0 International license.
+                    * 
+                    * Except where otherwise noted, content on this program is licensed 
+                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    * Source Code by the developers.
+                    * 
+                    * Unless required by applicable law or agreed to in writing, software
+                    * distributed under the License is distributed on an "AS IS" BASIS,
+                    * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                    * See the License for the specific language governing permissions and
+                    * limitations under the License.
+                    */
                     using System;
                     using System.Collections.Generic;
                     using System.Linq;
@@ -1823,6 +1838,21 @@ export class ChapterIIComponent implements OnInit {
                     tablaDescrip:'Código de la clase CCircle del programa.',
                     tablaDatos:
                     `
+                    /*
+                    * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
+                    * Edwin Cuichan, Kevin Sanipatín.
+                    * Creative Commons: BY-NC-ND 4.0 International license.
+                    * 
+                    * Except where otherwise noted, content on this program is licensed 
+                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    * Source Code by the developers.
+                    * 
+                    * Unless required by applicable law or agreed to in writing, software
+                    * distributed under the License is distributed on an "AS IS" BASIS,
+                    * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                    * See the License for the specific language governing permissions and
+                    * limitations under the License.
+                    */          
                     using System;
                     using System.Collections.Generic;
                     using System.Linq;
@@ -1971,6 +2001,21 @@ export class ChapterIIComponent implements OnInit {
                     tablaDescrip:'Código de la clase CLine del programa.',
                     tablaDatos:
                     `
+                    /*
+                    * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
+                    * Edwin Cuichan, Kevin Sanipatín.
+                    * Creative Commons: BY-NC-ND 4.0 International license.
+                    * 
+                    * Except where otherwise noted, content on this program is licensed 
+                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    * Source Code by the developers.
+                    * 
+                    * Unless required by applicable law or agreed to in writing, software
+                    * distributed under the License is distributed on an "AS IS" BASIS,
+                    * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                    * See the License for the specific language governing permissions and
+                    * limitations under the License.
+                    */
                     using System;
                     using System.Collections.Generic;
                     using System.Linq;
@@ -2078,6 +2123,21 @@ export class ChapterIIComponent implements OnInit {
                     tablaDescrip:'Código de la clase frmTriangle del programa.',
                     tablaDatos:
                     `
+                    /*
+                    * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
+                    * Edwin Cuichan, Kevin Sanipatín.
+                    * Creative Commons: BY-NC-ND 4.0 International license.
+                    * 
+                    * Except where otherwise noted, content on this program is licensed 
+                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    * Source Code by the developers.
+                    * 
+                    * Unless required by applicable law or agreed to in writing, software
+                    * distributed under the License is distributed on an "AS IS" BASIS,
+                    * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                    * See the License for the specific language governing permissions and
+                    * limitations under the License.
+                    */
                     using System;
                     using System.Collections.Generic;
                     using System.ComponentModel;
@@ -4087,219 +4147,159 @@ export class ChapterIIComponent implements OnInit {
          C:{
             subtitulo:'C)	Algoritmos',
             algoritmosC:[
-/*                {
-                    titulo:'3.1.1. Algoritmo de la Función ReadData()',
+                {
+                    titulo:'3.3.1. Algoritmo de la Función ReadData()',
                     pasos:[
-                      '1.	Leer el lado 1 del triángulo.',
-                      '2.	Leer el lado 2 del triángulo.',
-                      '3.	Leer el lado 3 del triángulo.'                      
+                        '1.	Leer el valor de la componente ‘X’ del vector 3D. ',
+                        '2.	Leer el valor de la componente ‘Y’ del vector 3D. ',
+                        '3.	Leer el valor de la componente ‘Z’ del vector 3D. '
                     ]
                 },
                 {
-                    titulo:'3.1.2. Algoritmo de la Función CheckTriangle()',
+                    titulo:'3.3.2. Algoritmo de la Función PrintData()',
                     pasos:[
-                        '1.	Si la suma de cualquiera de los dos lados es mayor que el tercero, es decir, si se cumple la condición del teorema: (a+b>c)∧(a+c>b)∧(b+c>a), retornar un valor booleano con verdadero, caso contrario retornar un valor booleano con falso.'
+                        '1.	Imprimir el valor de la componente ‘X’, de la compoente ‘Y’ y de la componente ‘Z’ del vector 3D.'
                     ]
                 },
                 {
-                    titulo:'3.1.3. Algoritmo de la Función SemiperimeterTriangle()',
+                    titulo:'3.3.3. Algoritmo de la Función InitializeData()',
                     pasos:[
-                      '1.	Calcular el semi-perímetro.',
-                      '1.1.	Asignar el resultado de la división entre la suma de los tres lados dividido para dos, a la variable ‘s’.'
+                        '1.	Obtener el valor del ancho y del largo del lienzo (picCanvas).',
+                        '1.1.	Crear un objeto de tipo Rectangle.',
+                        '1.2.	Asignar a la componente X del rectángulo el valor del ancho del lienzo.',
+                        '1.3.	Asignar a la componente Y del rectángulo el valor del largo del lienzo.',
+                        '2.	Calcular el valor máximo de la resolución de X y de Y del lienzo.',
+                        '2.1.	Asignar al valor máximo de la resolución de X representado por la variable maxX, el valor de la componente X del rectángulo disminuida en uno.',
+                        '2.2.	Asignar al valor máximo de la resolución de Y representado por la variable maxY, el valor de la componente Y del rectángulo disminuida en uno.',
+                        '3.	Calcular el centro del lienzo (picCanvas).',
+                        '3.1.	Asignar a la variable ‘xCenter’ el valor de la división entre el valor máximo de la resolución de ‘X’ (maxX) para el valor de dos.',
+                        '3.2.	Asignar a la variable ‘yCenter’ el valor de la división entre el valor máximo de la resolución de ‘Y’ (maxY) para el valor de dos.',
+                        '4.	Asignar a la componente ‘X’ del punto O el valor de ‘x’ del centro trasladado (xCenter).',
+                        '5.	Asignar a la componente ‘Y’ del punto O el valor de ‘y’ del centro trasladado (yCenter).'
                     ]
                 },
                 {
-                    titulo:'3.1.4. Algoritmo de la Función PerimeterTriangle()',
+                    titulo:'3.3.4. Algoritmo de la Función PlotAxis()',
                     pasos:[
-                      '1.	Calcular el perímetro.',
-                      '1.1.	Asignar el resultado del producto entre el semi-perímetro por dos a la variable ‘perimetro’.'
+                        '1.	Borrar el contenido del objeto picCanvas que representa al lienzo de dibujo.',
+                        '2.	Dibujar el eje vertical (y).',
+                        '2.1.	Asignar a la componente X del punto P1 el valor de xCenter.',
+                        '2.2.	Asignar a la componente Y del punto P1 el valor de cero.',
+                        '2.3.	Asignar a la componente X del punto P2 el valor de xCenter.',
+                        '2.4.	Asignar a la componente Y del punto P2 el valor de maxY.',
+                        '2.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el punto P1 con el punto P2.',
+                        '3.	Calcular el punto central de los ejes coordenados.',
+                        '3.1.	Asignar a la componente ‘X’ del punto O el valor de ‘x’ del centro trasladado (xCenter).',
+                        '3.2.	Asignar a la componente ‘Y’ del punto O el valor de ‘y’ del centro trasladado (yCenter).',
+                        '4.	Resolver el triángulo rectángulo AOG del rectángulo ABCD.',
+                        '4.1.	Asignar a la variable ‘b’ el valor de 8.0f.',
+                        '4.2.	Asignar a la variable ‘a’ el resultado de la división entre ‘b’ para la tangente del ángulo central.',
+                        '5.	Calcular las coordenadas de los puntos del Rectángulo que encierra al dibujo, en función de los segmentos a y b del Triángulo Rectángulo AOG.',
+                        '5.1.	Asignar a la componente X del punto A el valor de -a y asignar a la componente Y del punto A el valor de b.',
+                        '5.2.	Convertir el punto A en coordenadas por pantalla utilizando las fórmulas de traslación de ejes.',
+                        '5.3.	Asignar a la componente X del punto B el valor de a y asignar a la componente Y del punto B el valor de b.',
+                        '5.4.	Convertir el punto B en coordenadas por pantalla utilizando las fórmulas de traslación de ejes.',
+                        '5.5.	Asignar a la componente X del punto C el valor de -a y asignar a la componente Y del punto C el valor de -b.',
+                        '5.6.	Convertir el punto C en coordenadas por pantalla utilizando las fórmulas de traslación de ejes.',
+                        '5.7.	Asignar a la componente X del punto D el valor de a y asignar a la componente Y del punto D el valor de -b.',
+                        '5.8.	Convertir el punto D en coordenadas por pantalla utilizando las fórmulas de traslación de ejes.',
+                        '6.	Dibujar el eje (x).',
+                        '6.1.	Definir un bolígrafo de color rojo.',
+                        '6.2.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el vértice A con el vértice D.',
+                        '7.	Dibujar el eje (z).',
+                        '7.1.	Definir un bolígrafo de color verde.',
+                        '7.2.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el vértice B con el vértice C.'
                     ]
                 },
                 {
-                    titulo:'3.1.5. Algoritmo de la Función AreaTriangle()',
+                    titulo:'3.3.5. Algoritmo de la Función PlotPlane()',
                     pasos:[
-                      '1.	Calcular el área.',
-                      '1.1.	Asignar el valor de la raíz cuadrada del semi-perímetro multiplicado por la diferencia entre el semi-perímetro por cada uno de los lados del triángulo, a la variable ‘area’.'                    
+                        '1.	Asignar al objeto mGraph la funcionalidad de crear gráficos del pictureBox picCanvas.',
+                        '2.	Dibujar el contorno del rombo ABCD.',
+                        '2.1.	Definir un bolígrafo de color gris.',
+                        '2.2.	Asignar a la componente ‘X’ del punto O el valor de ‘x’ del centro trasladado (xCenter).',
+                        '2.3.	Asignar a la componente ‘Y’ del punto O el valor de ‘y’ del centro trasladado (yCenter).',
+                        '2.4.	Calcular los segmentos \'a\' y \'b\' del triángulo rectángulo ABO del Rombo ABCD.',
+                        '2.4.1.	Asignar a la variable ‘b’ el valor de 4.0f.',
+                        '2.4.2.	Asignar a la variable ‘a’ el resultado de la división entre ‘b’ para la tangente del ángulo central.',
+                        '2.5.	Calcular las coordenadas de los cuatro puntos del Rombo que encierra al plano, en función de los lados del triángulo ABO.',
+                        '2.5.1.	Asignar a la componente X del punto A el valor de 0 y asignar a la componente Y del punto A el valor de b.',
+                        '2.5.2.	Convertir el punto A en coordenadas por pantalla utilizando las fórmulas de traslación de ejes.',
+                        '2.5.3.	Asignar a la componente X del punto B el valor de a y asignar a la componente Y del punto B el valor de 0.',
+                        '2.5.4.	Convertir el punto B en coordenadas por pantalla utilizando las fórmulas de traslación de ejes.',
+                        '2.5.5.	Asignar a la componente X del punto C el valor de 0 y asignar a la componente Y del punto C el valor de -b.',
+                        '2.5.6.	Convertir el punto C en coordenadas por pantalla utilizando las fórmulas de traslación de ejes.',
+                        '2.5.7.	Asignar a la componente X del punto D el valor de -a y asignar a la componente Y del punto D el valor de 0.',
+                        '2.5.8.	Convertir el punto D en coordenadas por pantalla utilizando las fórmulas de traslación de ejes.',
+                        '2.5.9.	Dibujar las cuatro líneas del rombo ABCD.',
+                        '2.5.9.1.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el vértice A con el vértice B.',
+                        '2.5.9.2.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el vértice A con el vértice D.',
+                        '2.5.9.3.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el vértice B con el vértice C.',
+                        '2.5.9.4.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el vértice C con el vértice D.',
+                        '2.6.	Dibujar los segmentos internos del rombo ABCD.',
+                        '2.6.1.	Calcular los segmentos \'p\' y \'q\' del triángulo rectángulo AIL del rombo ABCD.',
+                        '2.6.1.1.	Asignar a la variable ‘p’ el valor de 0.25f.',
+                        '2.6.1.2.	Asignar a la variable ‘q’ el resultado de la división entre ‘p’ para la tangente del ángulo central.',
+                        '2.6.2.	Utilizando un bucle for(), calcular los puntos del arreglo P[] que cruzan por el segmento BA. El cálculo de la coordenada \'x\' va desde la derecha hacia el centro. Mientras que el cálculo de la coordenada \'y\' va desde abajo hacia arriba.',
+                        '2.6.3.	Utilizando un bucle for(), calcular los puntos del arreglo Q[] que cruzan por el segmento DC. El cálculo de la coordenada \'x\' va desde la izquierda hacia el centro. Mientras que el cálculo de la coordenada \'y\' va desde arriba hacia abajo.',
+                        '2.6.4.	Utilizando un bucle for(), dibujar una línea que permite unir el primer punto del arreglo P[] con el último punto del arreglo Q[], hasta unir el último punto del arreglo P[] con el primer punto del arreglo Q[].',
+                        '2.6.5.	Utilizando un bucle for(), calcular los puntos del arreglo P[] que cruzan por el segmento DA. El cálculo de la coordenada \'x\' va desde la izquierda hacia el centro. Mientras que el cálculo de la coordenada \'y\' va desde abajo hacia arriba.',
+                        '2.6.6.	Utilizando un bucle for(), calcular los puntos del arreglo Q[] que cruzan por el segmento BC. El cálculo de la coordenada \'x\' va desde la derecha hacia el centro. Mientras que el cálculo de la coordenada \'y\' va desde arriba hacia abajo.',
+                        '2.6.7.	Utilizando un bucle for(), dibujar una línea que permite unir el primer punto del arreglo P[] con el último punto del arreglo Q[], hasta unir el último punto del arreglo P[] con el primer punto del arreglo Q[].'
                     ]
                 },
                 {
-                    titulo:'3.1.6. Algoritmo de la Función PrintData()',
+                    titulo:'3.3.6. Algoritmo de la Función PlotBox()',
                     pasos:[
-                      '1.	Imprimir el valor de la variable ‘perimeter’ y de la variable ‘area’.'
+                        '1.	Asignar al objeto mGraph la funcionalidad de crear gráficos del pictureBox picCanvas.',
+                        '2.	Definir un patrón de línea de puntos para dibujarlo con un esferográfico.',
+                        '3.	Escalar al vector V a la mitad.',
+                        '3.1.	Asignar a la variable ‘a’ el valor de la componente ‘X’ dividido para dos.',
+                        '3.2.	Asignar a la variable ‘b’ el valor de la componente ‘Y’ dividido para dos.',
+                        '3.3.	Asignar a la variable ‘c’ el valor de la componente ‘Z’ dividido para dos.',
+                        '4.	Calcular el valor del vértice B y del vértice A en el mundo real.',
+                        '4.1.	Calcular el valor del vértice B en el mundo real utilizando la ecuación (16) de la sección B.1.',
+                        '4.2.	Calcular el valor del vértice A en el mundo real utilizando la ecuación (19) de la sección B.1.',
+                        '5.	Calcular las coordenadas de los puntos A y B que forman parte de la caja que encierra al vector V, utilizando las fórmulas de traslación de un punto a otro en el mundo de la Computación Gráfica.',
+                        '6.	Dibujar una línea que una el punto O con el punto B.',
+                        '7.	Dibujar una línea que una el punto A con el punto B.',
+                        '8.	Calcular los segmentos BM y OM del triángulo rectángulo BMO.',
+                        '9.	Calcular los segmentos DP y AP del triángulo rectángulo DPA.',
+                        '10.	Calcular los segmentos PM, NM y ON del trapecio OMPD.',
+                        '11.	Calcular las coordenadas de los puntos D, C, E, G y F que forman parte de la caja que encierra al vector V, utilizando las fórmulas de traslación de un punto a otro en el mundo de la Computación Gráfica y dibujar las líneas que unen dichos puntos.',
+                        '11.1.	Dibujar una línea que una el punto A con el punto D.',
+                        '11.2.	Dibujar una línea que una el punto C con el punto D.',
+                        '11.3.	Dibujar una línea que una el punto B con el punto C.',
+                        '11.4.	Dibujar una línea que una el punto O con el punto E.',
+                        '11.5.	Dibujar una línea que una el punto C con el punto E.',
+                        '11.6.	Dibujar una línea que una el punto O con el punto G.',
+                        '11.7.	Dibujar una línea que una el punto A con el punto G.',
+                        '11.8.	Dibujar una línea que una el punto F con el punto G.',
+                        '11.9.	Dibujar una línea que una el punto F con el punto D.',
+                        '11.10.	Dibujar una línea que una el punto E con el punto F.',
+                        '12.	Dibujar el vector OD que representa al vector V que está proyectado dentro de una caja.',
+                        '12.1.	Crear una línea con flecha y base redondeada para dibujarla con un esferográfico.',
+                        '12.2.	Dibujar una línea que una el punto O con el punto D, que representa al vector V.'
                     ]
                 },
                 {
-                    titulo:'3.1.7. Algoritmo de la Función InitializeData()',
-                    pasos:['1.	Obtener el valor del ancho y del largo del lienzo (picCanvas).',
-                    '1.1.	Crear un objeto de tipo Rectangle.',
-                    '1.2.	Asignar a la componente X del rectángulo el valor del ancho del lienzo.',
-                    '1.3.	Asignar a la componente Y del rectángulo el valor del largo del lienzo.',
-                    '2.	Calcular el valor máximo de la resolución de X y de Y del lienzo.',
-                    '2.1.	Asignar al valor máximo de la resolución de X representado por la variable maxX, el valor de la componente X del rectángulo disminuida en uno.',
-                    '2.2.	Asignar al valor máximo de la resolución de Y representado por la variable maxY, el valor de la componente Y del rectángulo disminuida en uno.',
-                    '3.	Calcular el centro del lienzo (picCanvas).',
-                    '3.1.	Asignar a la variable ‘x’ del centro trasladado cuyo nombre es xCenter el valor de la división entre el valor máximo de la resolución de X con el valor de dos.',
-                    '3.2.	Asignar a la variable ‘y’ del centro trasladado cuyo nombre es yCenter el valor de la división entre el valor máximo de la resolución de Y con el valor de dos.'
-                    ]
-                },
-                {
-                    titulo:'3.1.8. Algoritmo de la Función PlotAxis()',
-                    pasos:['1.	Dibujar el eje horizontal (x).',
-                    '1.1.	Asignar a la componente X del punto P1 el valor de cero.',
-                    '1.2.	Asignar a la componente Y del punto P1 el valor de yCenter.',
-                    '1.3.	Asignar a la componente X del punto P2 el valor de maxX.',
-                    '1.4.	Asignar a la componente Y del punto P2 el valor de yCenter.',
-                    '1.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el vértice P1 con el vértice P2.',
-                    '2.	Dibujar el eje vertical (y).',
-                    '2.1.	Asignar a la componente X del punto P1 el valor de xCenter.',
-                    '2.2.	Asignar a la componente Y del punto P1 el valor de cero.',
-                    '2.3.	Asignar a la componente X del punto P2 el valor de xCenter.',
-                    '2.4.	Asignar a la componente Y del punto P2 el valor de maxY.',
-                    '2.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que una el vértice P1 con el vértice P2.'
-                    ]
-                },
-                {
-                    titulo:'3.1.9. Algoritmo de la Función CalculateAngles()',
+                    titulo:'3.3.7. Algoritmo de la Función PlotVector()',
                     pasos:[
-                      '1.	Calcular el valor del ángulo A del triángulo utilizando la Ley de Cosenos.',
-                      '2.	Calcular el valor del ángulo B del triángulo utilizando la Ley de Cosenos.'
+                      '1.	Asignar al objeto mGraph la funcionalidad de crear gráficos del pictureBox picCanvas.',
+                      '2.	Definir un patrón de línea de puntos para dibujarlo con un esferográfico.',
+                      '3.	Escalar al vector V a la mitad.',
+                      '3.1.	Asignar a la variable ‘a’ el valor de la componente ‘X’ dividido para dos.',
+                      '3.2.	Asignar a la variable ‘b’ el valor de la componente ‘Y’ dividido para dos.',
+                      '3.3.	Asignar a la variable ‘c’ el valor de la componente ‘Z’ dividido para dos.',
+                      '4.	Calcular los segmentos BM y OM del triángulo rectángulo BMO.',
+                      '5.	Calcular los segmentos DP y AP del triángulo rectángulo DPA.',
+                      '6.	Calcular los segmentos PM, NM y ON del trapecio OMPD.',
+                      '7.	Calcular las coordenadas de los puntos D que forman parte de la caja que encierra al vector V, utilizando las fórmulas de traslación de un punto a otro en el mundo de la Computación Gráfica.',
+                      '8.	Dibujar el vector OD que representa al vector V que está proyectado dentro de una caja.',
+                      '8.1.	Crear una línea con flecha y base redondeada para dibujarla con un esferográfico.',
+                      '8.2.	Dibujar una línea que una el punto O con el punto D, que representa al vector V.'
                     ]
-                },
-                {
-                    titulo:'3.1.10. Algoritmo de la Función CalculateVertex()',
-                    pasos:[
-                      '1.	Calcular el valor del vértice A del triángulo.',
-                      '2.	Calcular el valor del vértice B del triángulo.',
-                      '3.	Llamada a la función CalculateAngles(), para calcular los ángulos A y B del triángulo.',
-                      '4.	Calcular el valor del vértice C del triángulo, en función del ángulo A.'
-                    ]
-                },
-                {
-                    titulo:'3.1.11. Algoritmo de la Función PlotShape()',
-                    pasos:[
-                      '1.	Graficar un triángulo.',
-                      '1.1.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ tres líneas que unen los vértices A, B y C del triángulo.'
-                    ]
-                },
-                {
-                    titulo:'3.1.12. Algoritmo de la Función CalculateBarycenter()',
-                    pasos:[
-                      '1.	Calcular el valor del Baricentro G del triángulo con la ecuación (4) de la sección B.2.'
-                    ]
-                },
-                {
-                    titulo:'3.1.13. Algoritmo de la Función PlotMedians()',
-                    pasos:[
-                      '1.	Graficar las medianas del triángulo.',
-                      '1.1.	Calcular las coordenadas de la mediana G1, utilizando la ecuación (8) de la sección B.2.',
-                      '1.2.	Calcular las coordenadas de la mediana G2, utilizando la ecuación (7) de la sección B.2.',
-                      '1.3.	Calcular las coordenadas de la mediana G3, utilizando la ecuación (6) de la sección B.2.',
-                      '1.4.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G1 con el vértice A del triángulo.',
-                      '1.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G2 con el vértice B del triángulo.',
-                      '1.6.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G3 con el vértice C del triángulo.'
-                    ]
-                },
-                {
-                    titulo:'3.1.14. Algoritmo de la Función CalculateCircumcenter()',
-                    pasos:[
-                      '1.	Calcular el valor del Circuncentro O del triángulo con la ecuación (11) de la sección B.3.'
-                    ]
-                },
-                {
-                    titulo:'3.1.15. Algoritmo de la Función PlotPerpendicularBisectors()',
-                    pasos:[
-                      '1.	Graficar las mediatrices del triángulo.',
-                      '1.1.	Llamada a la función CalculateCircumcenter().',
-                      '1.2.	Calcular las coordenadas de la mediana G1, utilizando la ecuación (8) de la sección B.2.',
-                      '1.3.	Calcular las coordenadas de la mediana G2, utilizando la ecuación (7) de la sección B.2.',
-                      '1.4.	Calcular las coordenadas de la mediana G3, utilizando la ecuación (6) de la sección B.2.',
-                      '1.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G1 con el vértice O del triángulo.',
-                      '1.6.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G2 con el vértice O del triángulo.',
-                      '1.7.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G3 con el vértice O del triángulo.',
-                      '1.8.	Calcular el radio R del círculo circunscrito al triángulo, utilizando la ecuación (12) de la sección B.3.',
-                      '1.9.	Llamada a la función PlotCircle(), utilizando el objeto ObjCircle, para graficar un círculo, en función del radio R y del vértice O.',
-                      '1.10.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice O con el vértice A del triángulo, que representa al radio del círculo circunscrito al triángulo ABC.'
-                    ]
-                },
-                {
-                    titulo:'3.1.16. Algoritmo de la Función CalculateOrthocenter()',
-                    pasos:[
-                      '1.	Calcular el valor del Ortocentro H del triángulo con la ecuación (17) de la sección B.4.'
-                    ]
-                },
-                {
-                    titulo:'3.1.17. Algoritmo de la Función PlotAltitudes()',
-                    pasos:[
-                      '1.	Graficar las alturas del triángulo.',
-                      '1.1.	Calcular las pendientes BC y AH1 que es perpendicular a la pendiente BC.',
-                      '1.2.	Calcular las coordenadas de la altura H1, utilizando la ecuación (24) de la sección B.4.',
-                      '1.3.	Calcular las coordenadas de la altura H2, utilizando la ecuación (17) de la sección B.4.',
-                      '1.4.	Calcular las coordenadas de la altura H3, utilizando la ecuación (5) de la sección B.4.',
-                      '1.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice H1 con el vértice A del triángulo.',
-                      '1.6.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice H2 con el vértice B del triángulo.',
-                      '1.7.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice H3 con el vértice C del triángulo.',
-                      '2.	Graficar el triángulo órtico.',
-                      '2.1.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice H1 con el vértice H2 del triángulo.',
-                      '2.2.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice H1 con el vértice H3 del triángulo.',
-                      '2.3.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice H2 con el vértice H3 del triángulo.',
-                      '2.4.	Llamada a la función CalculateOrthocenter().',
-                      '2.5.	Calcular las pendientes H2H3 y HT1 que es perpendicular a la pendiente H2H3.',
-                      '2.6.	Calcular las coordenadas del punto de tangencia T1, utilizando la ecuación (30) de la sección B.4.',
-                      '2.7.	Calcular el radio ro del triángulo órtico, utilizando la ecuación (31) de la sección B.4.',
-                      '2.8.	Llamada a la función PlotCircle(), utilizando el objeto ObjCircle, para graficar un círculo, en función del radio ro y del vértice H.',
-                      '2.9.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice H con el vértice T1 del triángulo órtico, que representa al radio del círculo inscrito a ese triángulo.'
-                    ]
-                },
-                {
-                    titulo:'3.1.18. Algoritmo de la Función CalculateIncenter()',
-                    pasos:[
-                      '1.	Calcular el valor del Incentro I del triángulo con la ecuación (4) de la sección B.5.'
-                    ]
-                },
-                {
-                    titulo:'3.1.19. Algoritmo de la Función PlotBisectors()',
-                    pasos:[
-                      '1.	Graficar las bisectrices del triángulo y los círculos exinscritos e inscrito al triángulo ABC.',
-                      '1.1.	Llamada a la función CalculateIncenter().',
-                      '1.2.	Calcular el radio r del círculo inscrito al triángulo, utilizando la ecuación (22) de la sección B.5.',
-                      '1.3.	Calcular las coordenadas del punto de tangencia T3, utilizando la ecuación (21) de la sección B.5.',
-                      '1.4.	Llamada a la función PlotCircle(), utilizando el objeto ObjCircle, para graficar un círculo, en función del radio r y del vértice I.',
-                      '1.5.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice I con el vértice T3 del triángulo ABC, que representa al radio del círculo inscrito al triángulo.',
-                      '1.6.	Llamada a la función PerimeterTriangle().',
-                      '1.7.	Llamada a la función SemiperimeterTriangle().',
-                      '1.8.	Calcular el radio de cada uno de los tres círculos exinscritos al triángulo, utilizando las ecuaciones (6), (7) y (8) de la sección B.5.',
-                      '1.9.	Calcular los valores de los vértices del triángulo DEF.',
-                      '1.9.1.	Llamada a la función CalculateAngles().',
-                      '1.9.2.	Calcular los valores de los ángulos alpha y beta que son externos del triángulo, utilizando las ecuaciones (12) y (13) de la sección B.5.',
-                      '1.9.3.	Calcular los segmentos LA, BQ y AK del triángulo ABC, utilizando las ecuaciones (15), (16) y (17) de la sección B.5.',
-                      '1.9.4.	Calcular los vértices del triángulo DEF, utilizando las utilizando las ecuaciones (18), (19) y (20) de la sección B.5.',
-                      '1.9.5.	Graficar el triángulo DEF.',
-                      '1.9.5.1.	Utilizar el objeto \'Graph\' con la función DrawLine para graficar con la pluma \'Pen\' tres líneas que unen los vértices D, E y F del triángulo.',
-                      '1.10.	Llamada a la función PlotCircle(), utilizando el objeto ObjCircle, para graficar uno de los círculos exinscritos, en función del radio Ra y del vértice D.',
-                      '1.11.	Llamada a la función PlotCircle(), utilizando el objeto ObjCircle, para graficar uno de los círculos exinscritos, en función del radio Rb y del vértice E.',
-                      '1.12.	Llamada a la función PlotCircle(), utilizando el objeto ObjCircle, para graficar uno de los círculos exinscritos, en función del radio Rc y del vértice F.',
-                      '1.13.	Graficar las bisectrices del triángulo ABC.',
-                      '1.13.1.	Utilizar el objeto \'Graph\' con la función DrawLine para graficar con la pluma \'Pen\' una de las bisectrices que une los vértices A y D.',
-                      '1.13.2.	Utilizar el objeto \'Graph\' con la función DrawLine para graficar con la pluma \'Pen\' una de las bisectrices que une los vértices B y E.',
-                      '1.13.3.	Utilizar el objeto \'Graph\' con la función DrawLine para graficar con la pluma \'Pen\' una de las bisectrices que une los vértices C y F.',
-                      '1.14.	Calcular los valores de las pendientes AB, AC y BC.',
-                      '1.15.	Graficar las líneas de tangencia entre el triángulo ABC y los círculos exinscritos.',
-                      '1.15.1.	Llamada a la función PlotLine(), utilizando el objeto ObjLine, para graficar una de las líneas de tangencia entre el triángulo ABC y uno de los círculos exinscritos, en función de la pendiente AB.',
-                      '1.15.2.	Llamada a la función PlotLine(), utilizando el objeto ObjLine, para graficar una de las líneas de tangencia entre el triángulo ABC y uno de los círculos exinscritos, en función de la pendiente AC.',
-                      '1.15.3.	Llamada a la función PlotLine(), utilizando el objeto ObjLine, para graficar una de las líneas de tangencia entre el triángulo ABC y uno de los círculos exinscritos, en función de la pendiente BC.'
-                    ]
-                },
-                {
-                    titulo:'3.1.20. Algoritmo de la Función PlotEulersLine()',
-                    pasos:[
-                      '1.1.	Llamada a la función CalculateBarycenter().',
-                      '1.2.	Llamada a la función CalculateCircumcenter().',
-                      '1.3.	Llamada a la función CalculateOrthocenter().',
-                      '1.4.	Graficar la recta de Euler.',
-                      '1.4.1.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G con el vértice O del triángulo.',
-                      '1.4.2.	Utilizar el objeto ‘Graph’ con la función DrawLine para graficar con la pluma ‘Pen’ una línea que une el vértice G con el vértice H del triángulo.'
-                    ]
-                }*/
+                }
             ]
          },
          D:{
@@ -5444,21 +5444,63 @@ export class ChapterIIComponent implements OnInit {
             subtitulo:'E)	Pruebas de la Aplicación',
             listaPrueba:[
               {
-              problema:'A continuación, en la Figura 3.2.10, se muestra un ejemplo de la corrida del programa, donde se calcula la suma entre dos vectores y además se grafica el resultado obtenido de acuerdo al método del Paralelogramo:',
-              fotoPath:'./assets/images/Capitulos/II/media/+.png',
-              fotoN:'Figura 3.2.10.  ',
+              problema:'A continuación, en la Figura 3.3.26, se muestra un ejemplo de la corrida del programa, donde se calcula la suma entre dos vectores y además se grafica el resultado obtenido de acuerdo al método del Paralelogramo:',
+              fotoPath:'./assets/images/Capitulos/II/media/+170.png',
+              fotoN:'Figura 3.3.26.  ',
               fotoDescrip:' Corrida del programa'
               },
               {
-                problema:'A continuación, en la Figura 3.2.11, se muestra un ejemplo de la corrida del programa, donde se calcula la resta entre dos vectores y además se grafica el resultado obtenido de acuerdo al método del Paralelogramo:',
-                fotoPath:'./assets/images/Capitulos/II/media/+.png',
-                fotoN:'Figura 3.2.11.',
+                problema:'A continuación, en la Figura 3.3.27, se muestra un ejemplo de la corrida del programa, donde se calcula la suma entre dos vectores y además se grafica el resultado obtenido de acuerdo al método del Paralelogramo. También, se grafican las cajas que encierran a cada uno de los tres vectores:',
+                fotoPath:'./assets/images/Capitulos/II/media/+171.png',
+                fotoN:'Figura 3.2.27.',
                 fotoDescrip:' Corrida del programa'
               },
               {
-                problema:'A continuación, en la Figura 3.2.12, se muestra un ejemplo de la corrida del programa, donde se calcula la proyección del vector A sobre B y el vector perpendicular a otro vector. Además, se grafica el resultado obtenido de acuerdo a las ecuaciones utilizadas en estos cálculos:',
-                fotoPath:'./assets/images/Capitulos/II/media/+.png',
-                fotoN:'Figura 3.1.12.',
+                problema:'A continuación, en la Figura 3.3.28, se muestra un ejemplo de la corrida del programa, donde se calcula la resta entre dos vectores y además se grafica el resultado obtenido de acuerdo al método del Paralelogramo:',
+                fotoPath:'./assets/images/Capitulos/II/media/+172.png',
+                fotoN:'Figura 3.1.28.',
+                fotoDescrip:' Corrida del programa'
+              },
+              {
+                problema:'A continuación, en la Figura 3.3.29, se muestra un ejemplo de la corrida del programa, donde se calcula la resta entre dos vectores y además se grafica el resultado obtenido de acuerdo al método del Paralelogramo. También, se grafican las cajas que encierran a cada uno de los tres vectores:',
+                fotoPath:'./assets/images/Capitulos/II/media/+173.png',
+                fotoN:'Figura 3.1.29.',
+                fotoDescrip:' Corrida del programa'
+              },
+              {
+                problema:'A continuación, en la Figura 3.3.30, se muestra un ejemplo de la corrida del programa, donde se calcula la proyección del vector A sobre B y el vector perpendicular a otro vector. Además, se grafica el resultado obtenido de acuerdo a las ecuaciones utilizadas en estos cálculos:',
+                fotoPath:'./assets/images/Capitulos/II/media/+174.png',
+                fotoN:'Figura 3.1.30.',
+                fotoDescrip:' Corrida del programa'
+              },
+              {
+                problema:'A continuación, en la Figura 3.3.31, se muestra un ejemplo de la corrida del programa, donde se calcula la proyección del vector A sobre B y el vector perpendicular a otro vector. Luego, se grafica el resultado obtenido de acuerdo a las ecuaciones utilizadas en estos cálculos. Además, se grafican las cajas que encierran a cada uno de los tres vectores (A, B y V_(A/B)), así como también el vector perpendicular D:',
+                fotoPath:'./assets/images/Capitulos/II/media/+175.png',
+                fotoN:'Figura 3.1.31.',
+                fotoDescrip:' Corrida del programa'
+              },
+              {
+                problema:'A continuación, en la Figura 3.3.32, se muestra un ejemplo de la corrida del programa, donde se calculan los vectores reflejados en los cuatro planos y los vectores opuestos del vector A. Además, se grafica el resultado obtenido de acuerdo a las ecuaciones utilizadas en estos cálculos:',
+                fotoPath:'./assets/images/Capitulos/II/media/+176.png',
+                fotoN:'Figura 3.1.32.',
+                fotoDescrip:' Corrida del programa'
+              },
+              {
+                problema:'A continuación, en la Figura 3.3.33, se muestra un ejemplo de la corrida del programa, donde se calculan los vectores reflejados en los cuatro planos y los vectores opuestos del vector A. Luego, se grafica el resultado obtenido de acuerdo a las ecuaciones utilizadas en estos cálculos. Además, se grafican las cajas que encierran a cada uno de los ocho vectores:',
+                fotoPath:'./assets/images/Capitulos/II/media/+177.png',
+                fotoN:'Figura 3.1.33.',
+                fotoDescrip:' Corrida del programa'
+              },
+              {
+                problema:'A continuación, en la Figura 3.3.34, se muestra un ejemplo de la corrida del programa, donde se calculan los vectores reflejados en los cuatro planos y los vectores opuestos del vector B. Además, se grafica el resultado obtenido de acuerdo a las ecuaciones utilizadas en estos cálculos:',
+                fotoPath:'./assets/images/Capitulos/II/media/+178.png',
+                fotoN:'Figura 3.1.34.',
+                fotoDescrip:' Corrida del programa'
+              },
+              {
+                problema:'A continuación, en la Figura 3.3.35, se muestra un ejemplo de la corrida del programa, donde se calculan los vectores reflejados en los cuatro planos y los vectores opuestos del vector B. Luego, se grafica el resultado obtenido de acuerdo a las ecuaciones utilizadas en estos cálculos. Además, se grafican las cajas que encierran a cada uno de los ocho vectores:',
+                fotoPath:'./assets/images/Capitulos/II/media/+179.png',
+                fotoN:'Figura 3.1.35.',
                 fotoDescrip:' Corrida del programa'
               }
             ]
@@ -5473,10 +5515,208 @@ export class ChapterIIComponent implements OnInit {
     ];
 
     this.praqniquePropuesto=[
-/*        {label: 'Praqnique Propuesto 1.1', tituloN:'Praqnique 1.1: ',titulo:'Polígonos Estrellados de 16 y 8 Puntas.',subtitulo:'A)   Problema',problema:'Dado el lado de un polígono regular de 16 lados, dibujar la figura geométrica correspondiente y los diferentes polígonos estrellados de 8 puntas, tal y como se muestra en la figura 1.1.1. Se debe considerar que las figuras geométricas se grafican con respecto al punto O(0,0).',fotoPath:'./assets/images/Capitulos/I/media/image299.jpg',fotoN:'Figura 1.1.1 ',fotoDescrip:'Polígonos estrellados de 16 y 8 puntas.'},
-        {label: 'Praqnique Propuesto 1.2', tituloN:'Praqnique 1.2: ',titulo:'Pentágonos y Polígonos Estrellados de 5 Puntas.',subtitulo:'A)   Problema',problema:'Dado el lado de un pentágono, dibujar la figura geométrica correspondiente y los diferentes polígonos estrellados de 5 puntas, tal y como se muestra en la figura 1.2.1. Se debe considerar que las figuras geométricas se grafican con respecto al punto O(0,0).',fotoPath:'./assets/images/Capitulos/I/media/image300.jpg',fotoN:'Figura 1.2.1 ',fotoDescrip:'Pentágonos y polígonos estrellados de 5 puntas.'},
-        {label: 'Praqnique Propuesto 1.3', tituloN:'Praqnique 1.3: ',titulo:'Gema de 10 Lados y Polígonos Estrellados de 5 Puntas.',subtitulo:'A)   Problema',problema:'Dado el lado de un decágono, dibujar la figura geométrica correspondiente a una gema y los diferentes polígonos estrellados de 5 puntas, tal y como se muestra en la figura 1.3.1. Se debe considerar que las figuras geométricas se grafican con respecto al punto O(0,0).',fotoPath:'./assets/images/Capitulos/I/media/image301.jpg',fotoN:'Figura 1.3.1 ',fotoDescrip:'Gema de 10 lados y polígonos estrellados de 5 puntas.'}
-*/   ];
+        {label: 'Praqnique Propuesto 3.4', tituloN:'Praqnique 3.4: ',titulo:'Puntos y Líneas Notables del Triángulo.',subtitulo:'A)   Problema',
+        listaGeneral:[
+          {
+            listaParrafoFotos:[
+            {
+            problema:'Escribir un programa donde primeramente se grafique un triángulo, se calcule y se imprima el perímetro y su área en función del semi-perímetro, considerando que se debe validar también la existencia de un triángulo. (Ver Figura 3.4.1)',
+            fotoPath:'./assets/images/Capitulos/II/media/+180.png',
+            fotoN:'Figura 3.4.1.  ',
+            fotoDescrip:'El Triángulo y sus fórmulas.'
+            }
+            ],
+            listaParrafos:[
+            {
+              problema:'a.	Punto de Exeter: El punto de Exeter es un punto especial que está presente en cualquier triángulo (ver Figura 3.4.2). Es uno de los puntos característicos o “centros” de un triángulo, designado como centro X(22) en la Enciclopedia Clark Kimberling de Puntos Notables del Triángulo (Kimberling, C., 1994). Este punto notable fue descubierto en un taller de matemáticas por computadora en la Academia Phillips Exeter en 1986 (Exeter, New Hampshire).',
+            },
+            {
+              problema:'b.	Circunferencia de los nueve puntos o de Feuerbach: Es una circunferencia especial presente en cualquier triángulo y fue descubierta por Karl Feuerbach (ver Figura 3.4.3). Esta circunferencia pasa por los siguientes nueve puntos notables:',
+            },
+            {
+              problema:'1.-	Los puntos medios de los tres lados del triángulo.',
+            },
+            {
+              problema:'2.-	Los pies de las alturas de tal triángulo.',
+            },
+            {
+              problema:'3.-	Los puntos medios de los segmentos que unen los tres vértices con el Ortocentro del triángulo.',
+            },
+            {
+              problema:'4.-	Es tangente exterior a los círculos exinscritos e inscrito al triángulo.',
+            }],
+            listaFotos:[
+            {
+              fotoPath:'./assets/images/Capitulos/II/media/+181.png',
+              fotoN:'Figura 3.4.2.  ',
+              fotoDescrip:'Punto de Exeter y los Triángulos Externos.'
+            },
+            {
+              fotoPath:'./assets/images/Capitulos/II/media/+182.png',
+              fotoN:'Figura 3.4.3.  ',
+              fotoDescrip:'Circunferencia de los Nueve Puntos.'
+            }
+            ]
+          }
+         ]
+        },
+        {label: 'Praqnique Propuesto 3.5', tituloN:'Praqnique 3.5: ',titulo:'Aplicación de Vectores y Dos Fuerzas en el Plano.',subtitulo:'A)   Problema', linkAnexo:'https://drive.google.com/uc?id=...&export=download',tituloAnexo:'Descargar Anexo 1.pdf',iconodescarga:'save_alt',
+        listaGeneral:[
+          {
+            listaParrafoFotos:[
+            {
+            problema:'La resultante de las fuerzas ejercidas por $\\overrightarrow{T_{1}}$ y $\\overrightarrow{T_{2}}$ es una fuerza $\\overrightarrow{T_{R}}$  dirigida a lo largo del eje $x$. Determine la tensión de las fuerzas $\\overrightarrow{T_{1}}$ y $\\overrightarrow{T_{2}}$, sabiendo que se conocen los valores de los ángulos $ θ $ y $ α$, como se muestra en la Figura 3.5.1, que representa a la solución gráfica por el Método del Paralelogramo dentro de los ejes coordenados (Beer, F., et al., 2010). Diseñar un programa que realice lo siguiente: a) Calcular los valores de la tensión $T_1$ y $T_2$; b) Graficar el Método del Paralelogramo para la tensión resultante.',
+            fotoPath:'./assets/images/Capitulos/II/media/+183.png',
+            fotoN:'Figura 3.5.1.  ',
+            fotoDescrip:'Método del Paralelogramo dentro de los ejes coordenados.'
+            }
+            ],
+            listaParrafos:[
+            {
+              problema:'Dados los ángulos: $α$ y $θ$',
+            },
+            {
+              problema:'En el paralelogramo se calcula el ángulo $φ$ y el ángulo $β$:',
+            },
+            {
+              problema:'$φ= 360-α (1)$',
+            },
+            {
+              problema:'$β =180-θ-α	(2)$',
+            },
+            {
+              problema:'Luego se calcula el valor de la tensión $T_1$ y $T_2$:',
+            },
+            {
+              problema:'$T_1=-\\frac{T_R sin(φ)}{sin(θ-φ)} (3)$',
+            },
+            {
+              problema:'$T_2=-\\frac{T_R sin(θ)}{sin(θ-φ)} (4)$',
+            },
+            {
+              problema:'La demostración y obtención de las ecuaciones (3) y (4) utilizando Física y Matemáticas, se muestra en el Anexo 1. Además, se presenta un ejercicio resuelto aplicando estas fórmulas.',
+            }]
+          }
+         ]
+        },
+        {label: 'Praqnique Propuesto 3.6', tituloN:'Praqnique 3.6: ',titulo:'Aplicación de Vectores y Varias Fuerzas en el Plano.',subtitulo:'A)   Problema', linkAnexo:'https://drive.google.com/uc?id=...&export=download',tituloAnexo:'Descargar Anexo 2.pdf',iconodescarga:'save_alt',
+        listaGeneral:[
+          {
+            listaParrafoFotos:[
+            {
+            problema:'Cuatro fuerzas ubicadas en cualquier cuadrante, actúan sobre un perno $O$. Determinar la resultante de las fuerzas sobre el perno y la dirección del ángulo de esta fuerza. Diseñar un Programa que realice lo siguiente: a) Determinar la fuerza definida en términos de su magnitud y dos puntos sobre su línea de acción, para calcular las componentes $F_{1_x}$ y $ F_{1_y} $ de la fuerza $ F_1$ en cualquier cuadrante; b) Determinar la fuerza definida en términos de su magnitud y dos puntos sobre su línea de acción, para calcular las componentes $ F_{2_x} $ y $ F_{2_y}$ de la fuerza $ F_2 $ en cualquier cuadrante; c) Determinar la fuerza definida en términos de su magnitud y dos puntos sobre su línea de acción, para calcular las componentes $ F_{3_x} $ y $ F_{3_y} $ de la fuerza $ F_3 $ en cualquier cuadrante; d) Determinar la resultante de las fuerzas sobre el perno y la dirección del ángulo de esta fuerza; e) Graficar las tres fuerzas con sus componentes representados por líneas de puntos, las mismas que intervienen en el perno representado por el punto $O$; f) Graficar la fuerza resultante con sus componentes representados por líneas de puntos. Un ejemplo específico con tres fuerzas se muestra en la Figura 3.6.1 (Beer, F., et al., 2010).',
+            fotoPath:'./assets/images/Capitulos/II/media/+184.png',
+            fotoN:'Figura 3.6.1.  ',
+            fotoDescrip:'Varias fuerzas en el plano.'
+            }
+            ],
+            listaParrafos:[
+            {
+              problema:'La solución utilizando Física y Matemáticas del ejemplo de la Figura 3.6.1, se muestra en el Anexo 2.',
+            }
+           ]
+          }
+         ]
+        },
+        {label: 'Praqnique Propuesto 3.7', tituloN:'Praqnique 3.7: ',titulo:'Aplicación de Vectores y Fuerzas Coplanares.',subtitulo:'A)   Problema',
+        listaGeneral:[
+          {
+            listaParrafoFotos:[
+            {
+            problema:'Con el empleo de software, grafique las fuerzas, determine la magnitud y la dirección de la resultante de $n$ fuerzas aplicadas en el punto $A$ (Beer, F., et al., 2010). Utilice este software para resolver los siguientes problemas (ver Figura 3.7.1): ',
+            fotoPath:'./assets/images/Capitulos/II/media/+185.png',
+            fotoN:'Figura 3.7.1.  ',
+            fotoDescrip:' Varias fuerzas coplanares.'
+            },
+            {
+              problema:'$\\bf{Ejercicio 1:}$ Determine las componentes $x$ e $y$ de cada una de las fuerzas de la Figura 3.7.2 (Beer, F., et al., 2010). Además, determine la resultante de las tres fuerzas del problema. (Resp. 251 N;85.3°).',
+              fotoPath:'./assets/images/Capitulos/II/media/+186.png',
+              fotoN:'Figura 3.7.2.  ',
+              fotoDescrip:'Tres fuerzas coplanares.'
+            },
+            {
+              problema:'$\\bf{Ejercicio 2:}$ Si se sabe que $α=35°$, determine la resultante de las tres fuerzas mostradas en la Figura 3.7.3 (Beer, F., et al., 2010). (Resp. 309 N;86.6°).',
+              fotoPath:'./assets/images/Capitulos/II/media/+187.png',
+              fotoN:'Figura 3.7.3.  ',
+              fotoDescrip:' Tres fuerzas coplanares.'
+              }
+            ]
+          }
+         ]
+        },
+        {label: 'Praqnique Propuesto 3.8', tituloN:'Praqnique 3.8: ',titulo:'Aplicación de Vectores y Tensiones.',subtitulo:'A)   Problema',
+        listaGeneral:[
+          {
+            listaParrafoFotos:[
+            {
+            problema:'Una carga P está sostenida por dos cables como se muestra en la Figura 3.8.1. Determine, empleando software, la tensión en cada cable para cualquiera de los valores $P$ y $θ$ que se encuentra desde $θ_1=β-90$ hasta $ θ_2=90-α$, con incrementos dados $∆θ $(Beer, F., et al., 2010). Con el software determine para los siguientes tres conjuntos de números: a) la tensión en cada cable para valores de $θ$ que van de $θ_1$ a $θ_2$; b) el valor de $θ$ para el cual la tensión en los dos cables es la mínima posible; c) el valor correspondiente de la tensión.',
+            fotoPath:'./assets/images/Capitulos/II/media/+188.png',
+            fotoN:'Figura 3.8.1.  ',
+            fotoDescrip:'Tensiones en cables.'
+            }
+            ]
+          }
+         ]
+        },
+        {label: 'Praqnique Propuesto 3.9', tituloN:'Praqnique 3.9: ',titulo:'Aplicación de Vectores y Fuerzas en el Espacio.',subtitulo:'A)   Problema',
+        listaGeneral:[
+          {
+            listaParrafoFotos:[
+            {
+            problema:'Utilice software para determinar la magnitud y la dirección de la resultante de $n $ fuerzas $F_i$, donde $i=1,2,3,…,n$, que se aplican en el punto $A_0$ con coordenadas $x_0$, $ y_0$ y $z_0$ (ver Figura 3.9.1), si se sabe que la línea de acción de $F_i$ pasa a través del punto $A_i$ con coordenadas $x_i$, $y_i$ y $z_i$, (Beer, F., et al., 2010). Use este software para graficar y resolver los problemas siguientes:',
+            fotoPath:'./assets/images/Capitulos/II/media/+189.png',
+            fotoN:'Figura 3.9.1.  ',
+            fotoDescrip:'Fuerzas en el espacio.'
+            },
+            {
+              problema:'$\\bf{Ejercicio 1:}$ Si se sabe que las tensiones en los cables $AB $ y $AC$ son de $ 510 lb$ y de $425 lb$ respectivamente (ver Figura 3.9.2), determine la magnitud y la dirección de la resultante de las fuerzas ejercidas en A por los dos cables (Beer, F., et al., 2010). $(Resp. 913 lb;θ_x=50.6°;θ_y=117.6°;θ_z=51.8°)$.',
+              fotoPath:'./assets/images/Capitulos/II/media/+190.png',
+              fotoN:'Figura 3.9.2.  ',
+              fotoDescrip:'Tensiones en cables y marcos.'
+            },
+            {
+              problema:'$\\bf{Ejercicio 2: }$ Para el marco de la Figura 3.9.3, determine la magnitud y la dirección de la resultante de las fuerzas ejercidas por el cable en $B$ si la tensión en el cable es de $385 N$. Si se sabe que este marco $ABC$ está sostendio por el cable $DBE$, el cual pasa a través de un anillo sin fricción en $B$ (Beer, F., et al., 2010). $(Resp. 748 N;θ_x=120.1°;θ_y=52.5°;θ_z=128.0°)$.',
+              fotoPath:'./assets/images/Capitulos/II/media/+191.png',
+              fotoN:'Figura 3.9.3.  ',
+              fotoDescrip:'Tensiones en cables y marcos.'
+            },
+            {
+              problema:'$\\bf{Ejercicio 3:}$ $A$ fin de mover un camión volcado, se atan dos cables en $ A$ y se jalan mediante las grúas $B$ y $C$ como se muestra en la Figura 3.9.4. Si se sabe que la tensión en el cable $AB$ es de $10 kN$ y en el cable $AC$ es de $7.5 kN$, determine la magnitud y la dirección de la resultante de las fuerzas ejercidas en $A$ por los dos cables (Beer, F., et al., 2010). $(Resp. 15.13 kN;θ_x=133.4°;θ_y=43.6°;θ_z=86.6°)$.',
+              fotoPath:'./assets/images/Capitulos/II/media/+192.png',
+              fotoN:'Figura 3.9.4.  ',
+              fotoDescrip:'Tensiones en cables en un camión volcado.'
+            }
+            ]
+          }
+         ]
+        },
+        {label: 'Praqnique Propuesto 3.10', tituloN:'Praqnique 3.10: ',titulo:'Aplicación de Vectores y Tensiones en el Espacio.',subtitulo:'A)   Problema',
+        listaGeneral:[
+          {
+            listaParrafoFotos:[
+            {
+            problema:'Tres cables se unen en los puntos $A_1, A_2$ y $A_3$, respectivamente, y están conectados en el punto $A_0$, al cual se le aplica una carga $P$ como se muestra en la Figura 3.10.1. Utilice software para graficar y determinar la tensión en cada uno de los cables (Beer, F., et al., 2010). Use este software para graficar y resolver los problemas siguientes:',
+            fotoPath:'./assets/images/Capitulos/II/media/+193.png',
+            fotoN:'Figura 3.10.1.  ',
+            fotoDescrip:'Tensiones en el espacio.'
+            },
+            {
+              problema:'$\\bf{Ejercicio 1: }$Tres cables están conectados en $A$, donde se aplican las fuerzas $P$ y $Q$, como se muestra en la Figura 3.10.2. Si se sabe que $Q=0$, encuentre el valor de $P$ para el cual la tensión en el cable $AD$ es de $305 N$ (Beer, F., et al., 2010). $(Resp. 960 N)$',
+              fotoPath:'./assets/images/Capitulos/II/media/+194.png',
+              fotoN:'Figura 3.10.2.  ',
+              fotoDescrip:'Tensiones en cables en 3D.'
+              },
+              {
+                problema:'$\\bf{Ejercicio 2:}$ Para la placa rectangular de la Figura 3.10.3, determine la tensión en cada uno de los tres cables, si se sabe que el peso de la placa es de $792 N$ (Beer, F., et al., 2010). $(Resp. T_AB=510 N;T_AC=56.2 N; T_AD=536 N).$',
+                fotoPath:'./assets/images/Capitulos/II/media/+195.png',
+                fotoN:'Figura 3.10.3.  ',
+                fotoDescrip:'Tensiones en cables y placas.'
+              }      
+            ]
+          }
+        ]
+      }
+   ];
   }
 
   selectTabNext() {

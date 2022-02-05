@@ -1,9 +1,293 @@
 <div style="margin: 50px;">
-    <p>chapter-iii works!</p>
-    <p>chapter-iii works!</p>
-    <p>chapter-iii works!</p>
-    <p>chapter-iii works!</p>
-    <p>chapter-iii works!</p>
-    <p>chapter-iii works!</p>
-    <p>chapter-iii works!</p>
+    <ng-container *ngIf="(asyncTabs | async) === null">
+        Loading tabs...
+    </ng-container>
+    <table>
+        <tr>
+            <td>
+                <h1> CAPÍTULO III: OPENGL Y OPEN TK CON C# </h1>
+            </td>
+            <td></td>
+            <td>
+                <a href="https://drive.google.com/uc?id=1aXoe-qBHu-8JLA1YuT0RU0522ZTdhVsF&export=download" download="Capitulo12021">
+                    <mat-icon>cloud_download</mat-icon>Descargar Archivo Capítulo III
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <mat-tab-group [selectedIndex]="selectedIndex.value" (selectedIndexChange)="selectedIndex.setValue($event)">
+        <mat-tab label="Introducción">
+            <ng-template matTabContent>
+                <br>
+                <h1>Introducción</h1>
+                <p>OpenGL (Open Graphics Library) es una especifiación estándar para desarrollar gráficos por computadora en 2D y 3D. Este estándar define una API multilenguaje y multiplataforma cuya interfaz consiste en más de 250 funciones diferentes que pueden utilizarse para dibujar escenas bidimensionales básicas y escenas tridimensionales complejas a partir de primitivas geómetricas 2D tales como puntos, líneas y triángulos (Woo, M., et al., 2005). </p>
+                <img src="./assets/images/Capitulos/III/media/z1.png" style="display:block; margin:auto; width: 50%;"><br>
+                <h5><strong>Figura 5. </strong>Capítulo III.</h5><br>
+                <p>El API y las librerías de OpenGL fue desarrollado por la empresa Silicon Graphics, Inc. (SGI), en 1992 y se lo utiliza en aplicaciones de CAD, realidad virtual, realidad aumentada, representación científica, visualización de información, simuladores de carros, simuladores de vuelo, entre otras aplicaciones (ver Figura 5.1). Además, OpenGL es ampliamente utilizado en el desarrollo de videojuegos donde compite con Direct3D de la empresa Microsoft para plataformas de Microsoft Windows. (Shreiner, D., 2005). La empresa Silicon Graphics, Inc. (SGI), fue fundada en el año de 1982 por el Dr. James H. Clark quien dejó de trabajar como profesor asociado de Ingeniería Eléctrica en la Universidad de Stanford para formar SGI junto con Abbey Silverstone y luego se unieron un grupo de estudiantes graduados de Stanford como: Kurt Akeley, Tom Davis, Rocky Rhodes, Mark Hannah, Herb Kuta, y Mark Grossman. La empresa Mayfield Group proveyó la financiación inicial de Silicon Graphics, Inc. (SGI). Esta empresa fue comprada en 2009 por Rackable Systems y en año 2016, Hewlett Packard Enterprise (HPE) completó la adquisición de SGI (Kahle, B., Gilliat, B., 2001), (Silicon Graphics-Wikipedia, 2021).</p>
+                <img src="./assets/images/Capitulos/III/media/z2.png" style="display:block; margin:auto; width: 50%;"><br>
+                <h5><strong>Figura 5.1. </strong>Computadoras de Silicon Graphics en el año de 1997 (Vidani, P., 2021).</h5><br>
+                <p>La biblioteca Open Toolkit mejor conocida como OpenTK, es una biblioteca de gráficos de C# creada por Stefanos Apostolopoulos (2015), bajo la licencia de MIT License. Esta biblioteca reemplaza al Tao Framework creada por Randy Ridge (2008), bajo la licencia de MIT License, la cual también fue una biblioteca de C# que brindó acceso a bibliotecas de juegos y gráficos por computadora con OpenGL y SDL (Tao Framework-Wikipedia, 2021). </p>
+                <p>OpenTK, brinda acceso a herramientas gráficas contenidas en OpenGL, OpenCL y OpenAL, con una variedad de lenguajes basados en CLR como C# y F# entre otros. En particular, se puede usar con cualquier lenguaje que utilice .NET Framework o Mono Framework para versiones anteriores a 4.0 y .NET Core 3.1 y posteriores, continuando con .NET 5, para la versión principal, cuyos programas pueden ejecutarse en Visual Studio en versiones como 2017, 2019 y 2022 (OpenTK-Wikipedia, 2021).</p>
+                <p>En este capítulo, se discute la definición de puntos, líneas, triángulos, cuadriláteros, y primitivas en 3D básicas como cubos y conos, así como también sus relaciones para construir gráficos por computadora utilizando OpenTK con OpenGL y el lenguaje de programación C#, sobre el framework .NET con Visual Studio 2019.</p>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Objetivos">
+            <ng-template matTabContent>
+                <br>
+                <h1>Objetivos</h1>
+                <ul>
+                    <li>Revisar los principales conceptos en torno a algoritmos para la solución de problemas de gráficas por computadora en 2D y 3D, utilizando OpenTK con OpenGL.</li>
+                    <li>Entender cómo trabajan los algoritmos y las gráficas por computadora en 2D y 3D con el lenguaje C# en la construcción de programas con OpenTK. </li>
+                    <li>Aprender a crear algoritmos de gráficas por computadora en 2D y 3D en Pseudocódigo y en el lenguaje C# con OpenTK.</li>
+                    <li>Diseñar y crear programas con gráficas por computadora en 2D y 3D en el lenguaje C# con OpenTK y programación orientada a objetos con interfaces gráficas de usuario manejadas desde la consola.</li>
+                    <li>Resolver pracniques con algoritmos y programación orientada a objetos aplicados a gráficas por computadora en 2D y 3D.</li>
+                </ul>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Teoría">
+            <ng-template matTabContent>
+                <br>
+                <h1>5.1.   OpenTK</h1>
+                <p>OpenTK (Open Toolkit), es un conjunto de APIs gráficas desarrolladas para C#. Estas APIs son portátiles en varios sistemas operativos (OS) y rápidas en el momento de ejecutarse. OpenTK, tiene un conjunto de clases y librerías de bajo nivel para OpenGL, OpenGL ES, OpenAL y OpenCL, ya que parte del core (núcleo) de OpenTK está construido en C/C++. OpenTK, se ejecuta en todas las plataformas principales como Windows, Linux y MAC. Además, potencia el desarrollo de cientos de aplicaciones gráficas, juegos en 2D y 3D y programas de investigación matemática y científica (De Vries, J., Perks, D., 2021).</p>
+                <p>OpenTK proporciona varias bibliotecas de utilidades, incluido un paquete de matemáticas y álgebra lineal, un sistema de ventanas y manejo de entrada de datos. OpenTK no es un motor de juegos, ni intenta serlo: ofrece un conjunto útil de herramientas y permite decidir cómo usarlas en diferentes tipos de aplicaciones. Además, es el punto de partida ideal si se desea escribir un juego o un motor de juegos y también una aplicación científica desde cero (De Vries, J., Perks, D., 2021).</p>
+                <p>De acuerdo con (De Vries, J., Perks, D., 2021), las principales APIs de OpenTK son:</p>
+                <ul>
+                    <li>OpenTK.Audio.OpenAL</li>
+                    <li>OpenTK.Compute.Native</li>
+                    <li>OpenTK.Compute.OpenCL</li>
+                    <li>OpenTK.Core</li>
+                    <li>OpenTK.Graphics</li>
+                    <li>OpenTK.Input.Hid</li>
+                    <li>OpenTK.Mathematics</li>
+                    <li>OpenTK.Platform.Windows</li>
+                </ul>
+                <h1>5.1.1. OpenGL, OpenCL y OpenAL</h1>
+                <p>OpenGL es una biblioteca de representación de gráficos por computadora multiplataforma, desarrollada originalmente por Silicon Graphics (SGI) y ahora mantenida por el grupo Khronos. OpenGL se usa para todo, desde videojuegos hasta herramientas CAD, navegadores web y teléfonos móviles.</p>
+                <p>OpenCL es una especificación de computación paralela multiplataforma, desarrollada originalmente por Apple y ahora mantenida por el grupo Khronos. Se utiliza principalmente para realizar cálculos en GPU que, de otro modo, se calcularían de forma menos eficiente en CPU, pero también se puede utilizar para controlar procesadores de señales digitales (DSP), matrices de puertas programables en campo (FPGA) y otros tipos de aceleradores de cálculo de hardware.</p>
+                <p>OpenAL es una biblioteca de audio 3D multiplataforma, desarrollada originalmente por Loki Software y lanzada como una especificación abierta por Creative Labs, con múltiples implementaciones tanto en hardware como en software. OpenAL se usa en muchos juegos para proporcionar efectos de sonido y música y es el sucesor de EAX y A3D.</p>
+                <h1>5.1.2. Clases y Métodos Principales de OpenTK para la Graficación de Figuras Geométricas en 2D y 3D</h1>
+                <h1>5.1.2.1.	Class GameWindow</h1>
+                <p>La clase GameWindow contiene métodos multiplataforma para crear y renderizar en una ventana OpenGL, manejar la entrada y cargar recursos (Ramos, F., 2014). En la Tabla 5.1, se muestra un ejemplo de código fuente para esta clase, donde se define una ventana de resolución de 500×500, dentro del programa principal (void Main).</p>
+                <h5><strong>Tabla 5.1. </strong>Ejemplo de código fuente para la clase GameWindow.</h5><br>
+                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f1" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>                
+                <h1>5.1.2.2.	Class Game</h1>
+                <p>La clase Game contiene métodos para: a) Constructor/es de la clase Game; b) Arrancar una aplicación gráfica; c) Redimensionar una ventana; d) Renderizar los frames de la aplicación gráfica; e) Inicializar la carga de la aplicación gráfica. La estructura básica de la clase Game se muestra en la Tabla 5.2.</p>
+                <h5><strong>Tabla 5.2. </strong>Estructura básica de la clase game.</h5><br>
+                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
+                <p>En los Praqniques resueltos 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8 , 5.9 y 5.10, se muestran algunos ejemplos prácticos de cómo graficar figuras geométricas en 2D y 3D, como se indica a continuación:</p>
+                <ul>
+                    <li>Pracnique 5.1: Triángulo de 3 colores.</li>
+                    <li>Pracnique 5.2: Cuadrado de 4 colores rotando.</li>
+                    <li>Pracnique 5.3: Cubo de 6 colores con doble rotación.</li>
+                    <li>Pracnique 5.4: Dos cubos de diferente tamaño rotando.</li>
+                    <li>Pracnique 5.5: Un cubo y una pirámide rotando.</li>
+                    <li>Pracnique 5.6: Cubo manejado por teclado.</li>
+                    <li>Pracnique 5.7: Cubo con luces.</li>
+                    <li>Pracnique 5.8: Cubo con textura.</li>
+                    <li>Pracnique 5.9: Cubo con textura y cuadrado transparente.</li>
+                    <li>Pracnique 5.10: Cono rotando.</li>
+                </ul>
+                <p>La estructura de los Pracniques se basa en una adaptación del trabajo de Wirth, M., (2013), para lo cual los autores de este trabajo plantean las siguientes fases para el diseño, desarrollo e implementación de programas enfocados a la Computación Gráfica:              a) Sinopsis; b) Descripción del Problema; c) Geometría de la Figura; d) Algoritmos; e) Código de la Aplicación; f) Pruebas de la Aplicación. </p>    
+                <p>Los Pracniques resueltos son una adaptación del trabajo de The Pentamollis Project, (2017), que es un canal de YouTube que presenta un Curso Básico de OpenTK con C#, compuesto por 10 video tutoriales. </p>
+                <p>El análisis matemático y geométrico tanto 2D como 3D de las diferentes figuras geométricas, fue adaptado de los trabajos de Ammeraal, L., Zhang, K., (2017), Lengyel, E., (2011), Mortenson, M.E., (1999). Este análisis forma parte de la fase de Geometría de la Figura que se implementa en los diferentes praqniques.</p>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Video Tutorial">
+            <ng-template matTabContent>
+                <h2> VIDEO 1:</h2>
+                <div class="video-responsive">
+                    <div class="video-responsive">
+                        <video controls preload="auto">
+                            <source src="https://drive.google.com/uc?export=download&id=1LfFmOuv6IU1iljEnHWSBPaFCOCUkAAEO#t=1" type="video/mp4" />
+                                Tu navegador no soporta HTML5 Video
+                            </video>
+                    </div>
+                </div>
+                <br>
+                <h2> VIDEO 2:</h2>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/YqnAsdtdK5Q" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <br>
+                <h2> VIDEO 3:</h2>
+
+                <div class="video-responsive">
+                    <video controls preload="auto">
+                            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4#t=2" type="video/mp4" />
+                            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm#t=2" type="video/webm" />
+                            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv#t=2" type="video/ogg" />
+                            Tu navegador no soporta HTML5 Video
+                        </video>
+                </div>
+                <br>
+            </ng-template>
+        </mat-tab>
+
+        <mat-tab label="Praqniques">
+            <ng-template matTabContent>
+                <mat-tab-group>
+                    <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
+                    <mat-tab *ngFor="let tab of praqnique" label="{{tab.label}}">
+                        <br>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h2 style="color:green;"><strong>{{tab.tituloN}}</strong></h2>
+                                </td>
+                                <td>
+                                    <h2>{{tab.titulo}}</h2>
+                                </td>
+                            </tr>
+                        </table>
+                        <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                            <TR>
+                                <TABLE>
+                                    <TR><strong>SINOPSIS</strong></TR>
+                                    <TR>{{tab.sinopsisDescrip}}</TR>
+                                </TABLE>
+                            </TR>
+                            <TR>
+                                <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                                    <TR *ngFor="let item of tab.sinopsis">
+                                        <TD><strong>{{item.titulo}}</strong>{{item.descrip}}</TD>
+                                    </TR>
+                                </TABLE>
+                            </TR>
+                        </TABLE><br>
+                        <a href="{{tab.link}}" download="ProgramaPraqnique">
+                            <mat-icon>save_alt</mat-icon><strong>Descargar {{tab.tituloN}} PraqniqueCompGraf.zip</strong>
+                        </a>
+                        <br><br>
+                        <h3><strong>{{tab.A.subtitulo}}</strong></h3>
+                        <p>{{tab.A.problema}}</p>
+                        <img src="{{tab.A.fotoPath}}" style="display:block; margin:auto;"><br>
+                        <h5><strong>{{tab.A.fotoN}}</strong>{{tab.A.fotoDescrip}}</h5><br>
+                        
+                        <h3><strong>{{tab.B.subtitulo}}</strong></h3>
+                        <div *ngFor="let itemPasos of tab.B.pasosB">
+                            <mathjax [content]=itemPasos.parrafo class='box'></mathjax>
+                            <img src="{{itemPasos.fotoPath}}" style="display:block; margin:auto; ">
+                            <h5><strong>{{itemPasos.fotoN}}</strong>{{itemPasos.fotoDescrip}}</h5><br>    
+                        </div>
+
+                        <h3><strong>{{tab.C.subtitulo}}</strong></h3>
+                        <dl *ngFor="let itemAlgoritmos of tab.C.algoritmosC">
+                            <dt>{{itemAlgoritmos.titulo}}</dt>
+                            <dd>
+                                <ul *ngFor="let p of itemAlgoritmos.pasos; index as i">
+                                    <div value="{{i+1}}">{{p}}</div>
+                                </ul>
+                                <ul *ngFor="let p of itemAlgoritmos.pasosFormulas; index as i">
+                                    <div value="{{i+1}}">{{p}}</div>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <h3><strong>{{tab.D.subtitulo}}</strong></h3>
+                        <div *ngFor="let itemCodigos of tab.D.listaCodigo">
+                            <p>{{itemCodigos.problema}}</p>
+                            <h5><strong>{{itemCodigos.tablaN}}</strong>{{itemCodigos.tablaDescrip}}</h5><br>
+                            <pre><code [highlight]="itemCodigos.tablaDatos" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
+                        </div>
+                        <h3><strong>{{tab.E.subtitulo}}</strong></h3>
+                        <div *ngFor="let item of tab.E.listaPrueba">
+                            <p>{{item.problema}}</p>
+                            <img src="{{item.fotoPath}}" style="display:block; margin:auto; width: 30%;"><br>
+                            <h5><strong>{{item.fotoN}}</strong>{{item.fotoDescrip}}</h5><br>    
+                        </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Praqniques Propuestos">
+            <ng-template matTabContent>
+                <mat-tab-group>
+                    <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
+                    <mat-tab *ngFor="let tab of praqniquePropuesto" label="{{tab.label}}">
+                        <br>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h2 style="color:green;"><strong>{{tab.tituloN}}</strong></h2>
+                                </td>
+                                <td>
+                                    <h2>{{tab.titulo}}</h2>
+                                </td>
+                            </tr>
+                        </table>
+                        <h3><strong>{{tab.subtitulo}}</strong></h3>
+                        <div *ngFor="let item of tab.listaGeneral">
+                            <div *ngFor="let i of item.listaParrafoFotos">
+                                <mathjax [content]=i.problema class='box'></mathjax><br>
+                                <img src="{{i.fotoPathp1}}" style="display:block; margin:auto; width: 50%;"><br>
+                                <img src="{{i.fotoPath}}" style="display:block; margin:auto; width: 50%;"><br>
+                                <h5><strong>{{i.fotoN}}</strong>{{i.fotoDescrip}}</h5><br>        
+                            </div>
+                        </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Evaluación">
+            <ng-template matTabContent>
+                <div class="Evaluacion">
+                    <app-quiz [propagarNumCapitulo]="num_capitulo"></app-quiz>
+                </div>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Juegos">
+            <ng-template matTabContent>
+                <div class="Snake">
+                    <app-snake></app-snake>
+                </div>
+            </ng-template>
+
+        </mat-tab>
+        <mat-tab label="Resumen">
+            <ng-template matTabContent>
+                <br>
+                <h1>Resumen</h1>
+                <ul>
+                    <li>OpenTK (Open Toolkit), es un conjunto de APIs gráficas desarrolladas para C#. Estas APIs son portátiles en varios sistemas operativos (OS) y rápidas en el momento de ejecutarse.</li>
+                    <li>OpenTK, brinda acceso a herramientas gráficas contenidas en OpenGL, OpenCL y OpenAL, con una variedad de lenguajes basados en CLR como C# y F# entre otros.</li>
+                    <li>OpenTK proporciona varias bibliotecas de utilidades, incluido un paquete de matemáticas y álgebra lineal, un sistema de ventanas y manejo de entrada de datos. </li>
+                    <li>Las principales APIs de OpenTK son: a) OpenTK.Audio.OpenAL;                              b) OpenTK.Compute.Native; c) OpenTK.Compute.OpenCL; d) OpenTK.Core;   e) OpenTK.Graphics; f) OpenTK.Input.Hid; g) OpenTK.Mathematics;                      h) OpenTK.Platform.Windows.</li>
+                    <li>OpenGL es una biblioteca de representación de gráficos por computadora multiplataforma, desarrollada originalmente por Silicon Graphics (SGI) y ahora mantenida por el grupo Khronos.</li>
+                    <li>OpenCL es una especificación de computación paralela multiplataforma, desarrollada originalmente por Apple y ahora mantenida por el grupo Khronos.</li>
+                    <li>OpenAL es una biblioteca de audio 3D multiplataforma, desarrollada originalmente por Loki Software y lanzada como una especificación abierta por Creative Labs, con múltiples implementaciones tanto en hardware como en software.</li>
+                    <li>La clase GameWindow contiene métodos multiplataforma para crear y renderizar en una ventana OpenGL, manejar la entrada y cargar recursos.</li>
+                    <li>La clase Game contiene métodos para: a) Constructor/es de la clase Game; b) Arrancar una aplicación gráfica; c) Redimensionar una ventana; d) Renderizar los frames de la aplicación gráfica; e) Inicializar la carga de la aplicación gráfica.</li>
+                </ul>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Bibliografía">
+            <ng-template matTabContent>
+                <br>
+                <h1>Bibliografía</h1>
+                <ul>
+                    <li>Woo, M., Neider, J., Davis, T., Shreiner, D., 2005. OpenGL Programming Guide: The Official Guide to Learning OpenGL, Version 2 (The Red Book). Addison-Wesley, 5th Edition. ISBN-13: 978-0321335739. </li>
+                    <li>Shreiner, D., 2005. OpenGL: Reference Manual (The Blue Book). Addison-Wesley, 4th Edition. ISBN-13: 978-0321173836.</li>
+                    <li>Vidani, P., 2021. Silicon Graphics / SGI Vintage Stuff. Blog sgihardware-tumblr. Disponible en: https://sgihardware.tumblr.com/</li>
+                    <li>Kahle, B., Gilliat, B., 2001. SGI-Newsroom. Wayback Machine. Disponible en: https://web.archive.org/web/*/sgi</li>
+                    <li>Silicon Graphics-Wikipedia, 2021. Wikipedia. La enciclopedia libre. Fundación Wikimedia. Contenido multimedia bajo Licencia Creative Commons CC-BY-SA, 2001. Disponible en: https://es.wikipedia.org/wiki/Silicon_Graphics </li>
+                    <li>Tao Framework-Wikipedia, 2021. Wikipedia. La enciclopedia libre. Fundación Wikimedia. Contenido multimedia bajo Licencia Creative Commons CC-BY-SA, 2001. Disponible en: https://en.wikipedia.org/wiki/Tao_Framework </li>
+                    <li>OpenTK-Wikipedia, 2021. Wikipedia. La enciclopedia libre. Fundación Wikimedia. Contenido multimedia bajo Licencia Creative Commons CC-BY-SA, 2001. Disponible en: https://en.wikipedia.org/wiki/OpenTK </li>
+                    <li>De Vries, J., Perks, D., 2021. OpenTK. Tutoriales, Recursos, API, GitHub. Disponible en: https://opentk.net/</li>
+                    <li>The Pentamollis Project, 2017. OpenGL and C# Tutorial. The OpenTK Library. Canal de Youtube. Curso compuesto por 10 videotutoriales. Disponible en: https://www.youtube.com/watch?v=jb_gHLl1dgU&list=PLWzp0Bbyy_3ggUK3XZjBmwnSjhbhJH3kp</li>
+                    <li>Ramos, F., 2014. Pro OpenGL for C# Developers: High-Performance 2D and 3D Graphics for Deskto´p, Web, iOS and Android. Apress, United States. ISBN: 978-1-4842-0051-3.</li>
+                    <li>Ammeraal, L., Zhang, K., 2017. Computer Graphics for Java Programmers. Springer. Third Edition.</li>
+                    <li>Lengyel, E., 2011. Mathematics for 3D Game Programming and Computer Graphics. Charles River Media. Third Edition.</li>
+                    <li>Mortenson, M.E., 1999. Mathematics for Computer Graphics Applications. Industrial Press, Inc.; Second Edition. ISBN: 978-0831131111.</li>
+                    <li>Wirth, M., 2013. The Craft of Coding. Musing on Programming. Pracniques (Programming Case Studies). Available in: https://craftofcoding.wordpress.com/pracniques/, last accessed 2021/10/11.</li>
+                    <li>Kronos Group, 2006. OpenGL Documentation. Copyright © 1991-2006 Silicon Graphics, Inc. Disponible en: https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/gluPerspective.xml</li> 
+                    <li>Hock-Chuan, C., 2012. 3D Graphics with OpenGL by Examples. Available in: https://www3.ntu.edu.sg/home/ehchua/programming/opengl/CG_Examples.html </li>
+                    <li>Korthals Altes, G., 1998. Paper Models of Polyhedra. Available in: https://www.polyhedra.net/es/model.php?name-en=pyramids-of-the-same-height</li>
+                </ul>
+            </ng-template>
+        </mat-tab>
+    </mat-tab-group>
+
+    <button mat-button (click)="selectTabNext()" *ngIf="positionCurrentNext">{{titleNext}} <mat-icon>navigate_next</mat-icon></button>
+    <button mat-button (click)="selectTabBefore()" *ngIf="positionCurrentBefore"><mat-icon>navigate_before</mat-icon> Atras  &nbsp; &nbsp; &nbsp;&nbsp;</button>
+
 </div>
