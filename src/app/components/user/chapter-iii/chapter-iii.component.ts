@@ -101,7 +101,7 @@ export class ChapterIIIComponent implements OnInit {
 
     this.praqnique = [
       {
-        link: 'https://drive.google.com/uc?id=1egwN2u9pFA5YksGGot1bBMFel3bpc8I6&export=download',
+        link: 'https://drive.google.com/uc?id=14ziWB1vVKkPLwiig90TJGzC4u2ecsjX0&export=download',
         label: 'Praqnique 5.1',
         tituloN: 'Praqnique 5.1: ',
         titulo: 'Triángulo de 3 Colores',
@@ -385,7 +385,7 @@ export class ChapterIIIComponent implements OnInit {
         }
       },
       {
-        link: 'https://drive.google.com/uc?id=1egwN2u9pFA5YksGGot1bBMFel3bpc8I6&export=download',
+        link: 'https://drive.google.com/uc?id=18wY8amN5tAjk6cf-20Wr-soWxCX9F3R8&export=download',
         label: 'Praqnique 5.2',
         tituloN: 'Praqnique 5.2: ',
         titulo: 'Cuadrado de 4 Colores Rotando',
@@ -702,7 +702,7 @@ export class ChapterIIIComponent implements OnInit {
         }
       },
       {
-        link: 'https://drive.google.com/uc?id=1egwN2u9pFA5YksGGot1bBMFel3bpc8I6&export=download',
+        link: 'https://drive.google.com/uc?id=1yuUFYZW1tLv9ucW0j8MUme2SPOKTwXra&export=download',
         label: 'Praqnique 5.3',
         tituloN: 'Praqnique 5.3: ',
         titulo: 'Cubo de 6 Colores con Doble Rotación',
@@ -1085,7 +1085,7 @@ export class ChapterIIIComponent implements OnInit {
         }
       },
       {
-        link: 'https://drive.google.com/uc?id=1egwN2u9pFA5YksGGot1bBMFel3bpc8I6&export=download',
+        link: 'https://drive.google.com/uc?id=1w6y-jcWIWUma-cXZbT5Z1oCMRqn79PZq&export=download',
         label: 'Praqnique 5.4',
         tituloN: 'Praqnique 5.4: ',
         titulo: 'Dos Cubos de Diferente Tamaño Rotando',
@@ -1497,7 +1497,7 @@ export class ChapterIIIComponent implements OnInit {
         }
       },
       {
-        link: 'https://drive.google.com/uc?id=1egwN2u9pFA5YksGGot1bBMFel3bpc8I6&export=download',
+        link: 'https://drive.google.com/uc?id=1w6y-jcWIWUma-cXZbT5Z1oCMRqn79PZq&export=download',
         label: 'Praqnique 5.5',
         tituloN: 'Praqnique 5.5: ',
         titulo: 'Un Cubo y una Pirámide Rotando',
@@ -1991,7 +1991,7 @@ export class ChapterIIIComponent implements OnInit {
         }
       },
       {
-        link: 'https://drive.google.com/uc?id=1egwN2u9pFA5YksGGot1bBMFel3bpc8I6&export=download',
+        link: 'https://drive.google.com/uc?id=1K2U8lzjbPmiPgGTjtqWu1LjlPzmUBcSt&export=download',
         label: 'Praqnique 5.6',
         tituloN: 'Praqnique 5.6: ',
         titulo: 'Cubo Manejado por Teclado',
@@ -2606,7 +2606,7 @@ export class ChapterIIIComponent implements OnInit {
         }
       },
       {
-        link: 'https://drive.google.com/uc?id=1egwN2u9pFA5YksGGot1bBMFel3bpc8I6&export=download',
+        link: 'https://drive.google.com/uc?id=1VSl_C2MCiR98xupD8KFo75BWXtaXBRAY&export=download',
         label: 'Praqnique 5.7',
         tituloN: 'Praqnique 5.7: ',
         titulo: 'Cubo con Luces',
@@ -3018,7 +3018,7 @@ export class ChapterIIIComponent implements OnInit {
         }
       },
       {
-        link: 'https://drive.google.com/uc?id=1egwN2u9pFA5YksGGot1bBMFel3bpc8I6&export=download',
+        link: 'https://drive.google.com/uc?id=1yuUFYZW1tLv9ucW0j8MUme2SPOKTwXra&export=download',
         label: 'Praqnique 5.8',
         tituloN: 'Praqnique 5.8: ',
         titulo: 'Cubo con Textura',
@@ -3571,7 +3571,7 @@ export class ChapterIIIComponent implements OnInit {
         }
       },
       {
-        link: 'https://drive.google.com/uc?id=1egwN2u9pFA5YksGGot1bBMFel3bpc8I6&export=download',
+        link: 'https://drive.google.com/uc?id=1YuO1zJ6a55xbXmUyVeg7JHirKEyjOiUO&export=download',
         label: 'Praqnique 5.9',
         tituloN: 'Praqnique 5.9: ',
         titulo: 'Cubo con Textura y Cuadrado Transparente',
@@ -4276,7 +4276,7 @@ export class ChapterIIIComponent implements OnInit {
         }
       },
       {
-        link: 'https://drive.google.com/uc?id=1egwN2u9pFA5YksGGot1bBMFel3bpc8I6&export=download',
+        link: 'https://drive.google.com/uc?id=1uosbKrDAW5MB1UdrV21qEAkSbvrmGPyP&export=download',
         label: 'Praqnique 5.10',
         tituloN: 'Praqnique 5.10: ',
         titulo: 'Cono Rotando',
