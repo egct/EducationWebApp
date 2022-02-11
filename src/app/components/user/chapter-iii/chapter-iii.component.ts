@@ -101,7 +101,7 @@ export class ChapterIIIComponent implements OnInit {
 
     this.praqnique = [
       {
-        link: 'https://drive.google.com/uc?id=14ziWB1vVKkPLwiig90TJGzC4u2ecsjX0&export=download',
+        link: 'https://drive.google.com/uc?id=1gnTJGJ5-s5Ijk8cjhyjgOHNdWxofi_cH&export=download',
         label: 'Praqnique 5.1',
         tituloN: 'Praqnique 5.1: ',
         titulo: 'Triángulo de 3 Colores',
@@ -385,7 +385,7 @@ export class ChapterIIIComponent implements OnInit {
         }
       },
       {
-        link: 'https://drive.google.com/uc?id=18wY8amN5tAjk6cf-20Wr-soWxCX9F3R8&export=download',
+        link: 'https://drive.google.com/uc?id=1ngXsOJtKy8aqMWittkchR3F4pRxDx7NW&export=download',
         label: 'Praqnique 5.2',
         tituloN: 'Praqnique 5.2: ',
         titulo: 'Cuadrado de 4 Colores Rotando',
@@ -702,7 +702,7 @@ export class ChapterIIIComponent implements OnInit {
         }
       },
       {
-        link: 'https://drive.google.com/uc?id=1yuUFYZW1tLv9ucW0j8MUme2SPOKTwXra&export=download',
+        link: 'https://drive.google.com/uc?id=1RyE7j50DXYA4IvE8LFQgAQ9D9KdMxy78&export=download',
         label: 'Praqnique 5.3',
         tituloN: 'Praqnique 5.3: ',
         titulo: 'Cubo de 6 Colores con Doble Rotación',
@@ -1497,7 +1497,7 @@ export class ChapterIIIComponent implements OnInit {
         }
       },
       {
-        link: 'https://drive.google.com/uc?id=1w6y-jcWIWUma-cXZbT5Z1oCMRqn79PZq&export=download',
+        link: 'https://drive.google.com/uc?id=1SaZ-Gz7LPdZbwMwQ1DhCX2qFQ4inqjiz&export=download',
         label: 'Praqnique 5.5',
         tituloN: 'Praqnique 5.5: ',
         titulo: 'Un Cubo y una Pirámide Rotando',
