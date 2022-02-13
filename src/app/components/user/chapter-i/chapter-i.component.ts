@@ -2218,8 +2218,8 @@ export class ChapterIComponent implements OnInit {
     this.praqnique=[
         {
          link:'https://drive.google.com/uc?id=1qzWvOr4zObJAnqTutsf8s1Txog-R8JpS&export=download',
-         label: 'Praqnique 1.1', 
-         tituloN:'Praqnique 1.1: ',
+         label: 'Pracnique 1.1', 
+         tituloN:'Pracnique 1.1: ',
          titulo:'Hexágono de 6 Colores',
          sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un hexágono de 6 colores, dado el lado de un hexágono.',
          sinopsis:[
@@ -2579,8 +2579,8 @@ export class ChapterIComponent implements OnInit {
          },
          {
         link:'https://drive.google.com/uc?id=100iRxgQ-l7y3e5B9BXQ3q5FljehtsvRt&export=download',
-        label: 'Praqnique 1.2', 
-         tituloN:'Praqnique 1.2: ',
+        label: 'Pracnique 1.2', 
+         tituloN:'Pracnique 1.2: ',
          titulo:'Flor de la Margarita de 5 Pétalos',
          sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar una flor de la Margarita de 5 pétalos, dado el lado de un pentágono.',
          sinopsis:[
@@ -3170,8 +3170,8 @@ export class ChapterIComponent implements OnInit {
         },
          {        
         link:'https://drive.google.com/uc?id=1LpFnlZWVevOBnVYpL0_5z0K8JhlpiElq&export=download',
-         label: 'Praqnique 1.3', 
-         tituloN:'Praqnique 1.3: ',
+         label: 'Pracnique 1.3', 
+         tituloN:'Pracnique 1.3: ',
          titulo:'Polígonos Estrellados de 10 y 5 Puntas',
          sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un polígono estrellado de 10 puntas que contiene otros dos polígonos estrellados de 5 puntas, dado el lado de un decágono.',
          sinopsis:[
@@ -3957,7 +3957,7 @@ export class ChapterIComponent implements OnInit {
                         `
                     },
                     {
-                        problema:'La implementación de la clase frmTenPointedStarPolygon, se presenta a continuación en la Tabla 1.3.2, que es la clase que representa a la interfaz gráfica de usuario de la figura geométrica plantada en este praqnique.',
+                        problema:'La implementación de la clase frmTenPointedStarPolygon, se presenta a continuación en la Tabla 1.3.2, que es la clase que representa a la interfaz gráfica de usuario de la figura geométrica plantada en este pracnique.',
                         tablaN:'Tabla 1.3.2. ',
                         tablaDescrip:'Código de la clase frmTenPointedStarPolygon del programa.',
                         tablaDatos:
@@ -4049,9 +4049,9 @@ export class ChapterIComponent implements OnInit {
     ];
 
     this.praqniquePropuesto=[
-        {label: 'Praqnique Propuesto 1.1', tituloN:'Praqnique 1.1: ',titulo:'Polígonos Estrellados de 16 y 8 Puntas.',subtitulo:'A)   Problema',problema:'Dado el lado de un polígono regular de 16 lados, dibujar la figura geométrica correspondiente y los diferentes polígonos estrellados de 8 puntas, tal y como se muestra en la figura 1.1.1. Se debe considerar que las figuras geométricas se grafican con respecto al punto O(0,0).',fotoPath:'./assets/images/Capitulos/I/media/image299.jpg',fotoN:'Figura 1.1.1 ',fotoDescrip:'Polígonos estrellados de 16 y 8 puntas.'},
-        {label: 'Praqnique Propuesto 1.2', tituloN:'Praqnique 1.2: ',titulo:'Pentágonos y Polígonos Estrellados de 5 Puntas.',subtitulo:'A)   Problema',problema:'Dado el lado de un pentágono, dibujar la figura geométrica correspondiente y los diferentes polígonos estrellados de 5 puntas, tal y como se muestra en la figura 1.2.1. Se debe considerar que las figuras geométricas se grafican con respecto al punto O(0,0).',fotoPath:'./assets/images/Capitulos/I/media/image300.jpg',fotoN:'Figura 1.2.1 ',fotoDescrip:'Pentágonos y polígonos estrellados de 5 puntas.'},
-        {label: 'Praqnique Propuesto 1.3', tituloN:'Praqnique 1.3: ',titulo:'Gema de 10 Lados y Polígonos Estrellados de 5 Puntas.',subtitulo:'A)   Problema',problema:'Dado el lado de un decágono, dibujar la figura geométrica correspondiente a una gema y los diferentes polígonos estrellados de 5 puntas, tal y como se muestra en la figura 1.3.1. Se debe considerar que las figuras geométricas se grafican con respecto al punto O(0,0).',fotoPath:'./assets/images/Capitulos/I/media/image301.jpg',fotoN:'Figura 1.3.1 ',fotoDescrip:'Gema de 10 lados y polígonos estrellados de 5 puntas.'}
+        {label: 'Pracnique Propuesto 1.1', tituloN:'Pracnique 1.1: ',titulo:'Polígonos Estrellados de 16 y 8 Puntas.',subtitulo:'A)   Problema',problema:'Dado el lado de un polígono regular de 16 lados, dibujar la figura geométrica correspondiente y los diferentes polígonos estrellados de 8 puntas, tal y como se muestra en la figura 1.1.1. Se debe considerar que las figuras geométricas se grafican con respecto al punto O(0,0).',fotoPath:'./assets/images/Capitulos/I/media/image299.jpg',fotoN:'Figura 1.1.1 ',fotoDescrip:'Polígonos estrellados de 16 y 8 puntas.'},
+        {label: 'Pracnique Propuesto 1.2', tituloN:'Pracnique 1.2: ',titulo:'Pentágonos y Polígonos Estrellados de 5 Puntas.',subtitulo:'A)   Problema',problema:'Dado el lado de un pentágono, dibujar la figura geométrica correspondiente y los diferentes polígonos estrellados de 5 puntas, tal y como se muestra en la figura 1.2.1. Se debe considerar que las figuras geométricas se grafican con respecto al punto O(0,0).',fotoPath:'./assets/images/Capitulos/I/media/image300.jpg',fotoN:'Figura 1.2.1 ',fotoDescrip:'Pentágonos y polígonos estrellados de 5 puntas.'},
+        {label: 'Pracnique Propuesto 1.3', tituloN:'Pracnique 1.3: ',titulo:'Gema de 10 Lados y Polígonos Estrellados de 5 Puntas.',subtitulo:'A)   Problema',problema:'Dado el lado de un decágono, dibujar la figura geométrica correspondiente a una gema y los diferentes polígonos estrellados de 5 puntas, tal y como se muestra en la figura 1.3.1. Se debe considerar que las figuras geométricas se grafican con respecto al punto O(0,0).',fotoPath:'./assets/images/Capitulos/I/media/image301.jpg',fotoN:'Figura 1.3.1 ',fotoDescrip:'Gema de 10 lados y polígonos estrellados de 5 puntas.'}
     ];
   }
 

@@ -102,8 +102,8 @@ export class ChapterIIIComponent implements OnInit {
     this.praqnique = [
       {
         link: 'https://drive.google.com/uc?id=1gnTJGJ5-s5Ijk8cjhyjgOHNdWxofi_cH&export=download',
-        label: 'Praqnique 5.1',
-        tituloN: 'Praqnique 5.1: ',
+        label: 'Pracnique 5.1',
+        tituloN: 'Pracnique 5.1: ',
         titulo: 'Triángulo de 3 Colores',
         sinopsisDescrip: 'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un triángulo con 3 colores de un tamaño específico.',
         sinopsis: [
@@ -386,8 +386,8 @@ export class ChapterIIIComponent implements OnInit {
       },
       {
         link: 'https://drive.google.com/uc?id=1ngXsOJtKy8aqMWittkchR3F4pRxDx7NW&export=download',
-        label: 'Praqnique 5.2',
-        tituloN: 'Praqnique 5.2: ',
+        label: 'Pracnique 5.2',
+        tituloN: 'Pracnique 5.2: ',
         titulo: 'Cuadrado de 4 Colores Rotando',
         sinopsisDescrip: 'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un cuadrado rotando con 4 colores de un tamaño específico.',
         sinopsis: [
@@ -703,8 +703,8 @@ export class ChapterIIIComponent implements OnInit {
       },
       {
         link: 'https://drive.google.com/uc?id=1RyE7j50DXYA4IvE8LFQgAQ9D9KdMxy78&export=download',
-        label: 'Praqnique 5.3',
-        tituloN: 'Praqnique 5.3: ',
+        label: 'Pracnique 5.3',
+        tituloN: 'Pracnique 5.3: ',
         titulo: 'Cubo de 6 Colores con Doble Rotación',
         sinopsisDescrip: 'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un cubo con 6 colores de un tamaño específico con doble rotación.',
         sinopsis: [
@@ -1086,8 +1086,8 @@ export class ChapterIIIComponent implements OnInit {
       },
       {
         link: 'https://drive.google.com/uc?id=1w6y-jcWIWUma-cXZbT5Z1oCMRqn79PZq&export=download',
-        label: 'Praqnique 5.4',
-        tituloN: 'Praqnique 5.4: ',
+        label: 'Pracnique 5.4',
+        tituloN: 'Pracnique 5.4: ',
         titulo: 'Dos Cubos de Diferente Tamaño Rotando',
         sinopsisDescrip: 'Este pracnique explora la creación de un programa de gráficos por computadora para graficar dos cubos de diferente tamaño que estén rotando.',
         sinopsis: [
@@ -1498,8 +1498,8 @@ export class ChapterIIIComponent implements OnInit {
       },
       {
         link: 'https://drive.google.com/uc?id=1SaZ-Gz7LPdZbwMwQ1DhCX2qFQ4inqjiz&export=download',
-        label: 'Praqnique 5.5',
-        tituloN: 'Praqnique 5.5: ',
+        label: 'Pracnique 5.5',
+        tituloN: 'Pracnique 5.5: ',
         titulo: 'Un Cubo y una Pirámide Rotando',
         sinopsisDescrip: 'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un cubo y una pirámide que estén rotando.',
         sinopsis: [
@@ -1992,8 +1992,8 @@ export class ChapterIIIComponent implements OnInit {
       },
       {
         link: 'https://drive.google.com/uc?id=1K2U8lzjbPmiPgGTjtqWu1LjlPzmUBcSt&export=download',
-        label: 'Praqnique 5.6',
-        tituloN: 'Praqnique 5.6: ',
+        label: 'Pracnique 5.6',
+        tituloN: 'Pracnique 5.6: ',
         titulo: 'Cubo Manejado por Teclado',
         sinopsisDescrip: 'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un cubo 3D con texturas de un tamaño específico, la rotación es mediante el uso del teclado (R-L).',
         sinopsis: [
@@ -2607,8 +2607,8 @@ export class ChapterIIIComponent implements OnInit {
       },
       {
         link: 'https://drive.google.com/uc?id=1VSl_C2MCiR98xupD8KFo75BWXtaXBRAY&export=download',
-        label: 'Praqnique 5.7',
-        tituloN: 'Praqnique 5.7: ',
+        label: 'Pracnique 5.7',
+        tituloN: 'Pracnique 5.7: ',
         titulo: 'Cubo con Luces',
         sinopsisDescrip: 'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un cubo 3D con luces y rotación constante.',
         sinopsis: [
@@ -3019,8 +3019,8 @@ export class ChapterIIIComponent implements OnInit {
       },
       {
         link: 'https://drive.google.com/uc?id=1yuUFYZW1tLv9ucW0j8MUme2SPOKTwXra&export=download',
-        label: 'Praqnique 5.8',
-        tituloN: 'Praqnique 5.8: ',
+        label: 'Pracnique 5.8',
+        tituloN: 'Pracnique 5.8: ',
         titulo: 'Cubo con Textura',
         sinopsisDescrip: 'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un cubo 3D con textura y rotación constante.',
         sinopsis: [
@@ -3572,8 +3572,8 @@ export class ChapterIIIComponent implements OnInit {
       },
       {
         link: 'https://drive.google.com/uc?id=1YuO1zJ6a55xbXmUyVeg7JHirKEyjOiUO&export=download',
-        label: 'Praqnique 5.9',
-        tituloN: 'Praqnique 5.9: ',
+        label: 'Pracnique 5.9',
+        tituloN: 'Pracnique 5.9: ',
         titulo: 'Cubo con Textura y Cuadrado Transparente',
         sinopsisDescrip: 'Este pracnique explora la creación de un programa de gráficos por computadora para graficar: un cubo 3D con textura donde la rotación es mediante el uso del teclado (R), y un cuadrado de color azul donde su opacidad y transparencia es regulada por teclado utilizando las teclas (I - K).',
         sinopsis: [
@@ -4277,8 +4277,8 @@ export class ChapterIIIComponent implements OnInit {
       },
       {
         link: 'https://drive.google.com/uc?id=1uosbKrDAW5MB1UdrV21qEAkSbvrmGPyP&export=download',
-        label: 'Praqnique 5.10',
-        tituloN: 'Praqnique 5.10: ',
+        label: 'Pracnique 5.10',
+        tituloN: 'Pracnique 5.10: ',
         titulo: 'Cono Rotando',
         sinopsisDescrip: 'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un cono 3D color plomo de un tamaño específico con rotación controlada mediante el teclado.',
         sinopsis: [
@@ -4827,7 +4827,7 @@ export class ChapterIIIComponent implements OnInit {
 
     this.praqniquePropuesto = [
       {
-        label: 'Praqnique Propuesto 1.3.1', tituloN: 'Praqnique 1.3.1: ', titulo: 'Hexágono de 6 Colores.', subtitulo: 'A)   Problema',
+        label: 'Pracnique Propuesto 1.3.1', tituloN: 'Pracnique 1.3.1: ', titulo: 'Hexágono de 6 Colores.', subtitulo: 'A)   Problema',
         listaGeneral: [
           {
             listaParrafoFotos: [
@@ -4842,7 +4842,7 @@ export class ChapterIIIComponent implements OnInit {
         ]
       },
       {
-        label: 'Praqnique Propuesto 1.3.2', tituloN: 'Praqnique 1.3.2: ', titulo: 'Flor de la Margarita de 5 Pétalos.', subtitulo: 'A)   Problema',
+        label: 'Pracnique Propuesto 1.3.2', tituloN: 'Pracnique 1.3.2: ', titulo: 'Flor de la Margarita de 5 Pétalos.', subtitulo: 'A)   Problema',
         listaGeneral: [
           {
             listaParrafoFotos: [
@@ -4857,7 +4857,7 @@ export class ChapterIIIComponent implements OnInit {
         ]
       },
       {
-        label: 'Praqnique Propuesto 1.3.3', tituloN: 'Praqnique 1.3.3: ', titulo: 'Sólido Geométrico de 7 Colores.', subtitulo: 'A)   Problema',
+        label: 'Pracnique Propuesto 1.3.3', tituloN: 'Pracnique 1.3.3: ', titulo: 'Sólido Geométrico de 7 Colores.', subtitulo: 'A)   Problema',
         listaGeneral: [
           {
             listaParrafoFotos: [
@@ -4872,7 +4872,7 @@ export class ChapterIIIComponent implements OnInit {
         ]
       },
       {
-        label: 'Praqnique Propuesto 1.3.4', tituloN: 'Praqnique 1.3.4: ', titulo: 'Sólido Geométrico de 7 Colores.', subtitulo: 'A)   Problema',
+        label: 'Pracnique Propuesto 1.3.4', tituloN: 'Pracnique 1.3.4: ', titulo: 'Sólido Geométrico de 7 Colores.', subtitulo: 'A)   Problema',
         listaGeneral: [
           {
             listaParrafoFotos: [
@@ -4887,7 +4887,7 @@ export class ChapterIIIComponent implements OnInit {
         ]
       },
       {
-        label: 'Praqnique Propuesto 1.3.5', tituloN: 'Praqnique 1.3.5: ', titulo: 'Cuatro Sólidos Geométricos.', subtitulo: 'A)   Problema',
+        label: 'Pracnique Propuesto 1.3.5', tituloN: 'Pracnique 1.3.5: ', titulo: 'Cuatro Sólidos Geométricos.', subtitulo: 'A)   Problema',
         listaGeneral: [
           {
             listaParrafoFotos: [
@@ -4903,7 +4903,7 @@ export class ChapterIIIComponent implements OnInit {
         ]
       },
       {
-        label: 'Praqnique Propuesto 1.3.6', tituloN: 'Praqnique 1.3.6: ', titulo: 'Seis Sólidos Geométricos.', subtitulo: 'A)   Problema',
+        label: 'Pracnique Propuesto 1.3.6', tituloN: 'Pracnique 1.3.6: ', titulo: 'Seis Sólidos Geométricos.', subtitulo: 'A)   Problema',
         listaGeneral: [
           {
             listaParrafoFotos: [
@@ -4918,7 +4918,7 @@ export class ChapterIIIComponent implements OnInit {
         ]
       },
       {
-        label: 'Praqnique Propuesto 1.3.7', tituloN: 'Praqnique 1.3.7: ', titulo: 'Cinco Sólidos Platónicos.', subtitulo: 'A)   Problema',
+        label: 'Pracnique Propuesto 1.3.7', tituloN: 'Pracnique 1.3.7: ', titulo: 'Cinco Sólidos Platónicos.', subtitulo: 'A)   Problema',
         listaGeneral: [
           {
             listaParrafoFotos: [

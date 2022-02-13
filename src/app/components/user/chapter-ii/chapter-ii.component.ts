@@ -554,8 +554,8 @@ export class ChapterIIComponent implements OnInit {
     this.praqnique=[
         {
           link:'https://drive.google.com/uc?id=1egwN2u9pFA5YksGGot1bBMFel3bpc8I6&export=download',
-          label: 'Praqnique 3.1', 
-         tituloN:'Praqnique 3.1: ',
+          label: 'Pracnique 3.1', 
+         tituloN:'Pracnique 3.1: ',
          titulo:'Líneas y Puntos Notables de un Triángulo',
          sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un triángulo cualquiera y sus puntos y líneas notables.',
          sinopsis:[
@@ -2361,8 +2361,8 @@ export class ChapterIIComponent implements OnInit {
          },
          {
           link:'https://drive.google.com/uc?id=1rqz2QCg86nSAIM0XqNLV2Sd63zl6ZLBh&export=download',
-          label: 'Praqnique 3.2', 
-         tituloN:'Praqnique 3.2: ',
+          label: 'Pracnique 3.2', 
+         tituloN:'Pracnique 3.2: ',
          titulo:'Operaciones entre Vectores 2D',
          sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar vectores 2D y realizar diferentes operaciones entre ellos.',
          sinopsis:[
@@ -3304,8 +3304,8 @@ export class ChapterIIComponent implements OnInit {
          },
          {
           link:'https://drive.google.com/uc?id=1qXzTyckEquZYTH26v_pTbBulHIqBKxd0&export=download',
-          label: 'Praqnique 3.3', 
-         tituloN:'Praqnique 3.3: ',
+          label: 'Pracnique 3.3', 
+         tituloN:'Pracnique 3.3: ',
          titulo:'Operaciones entre Vectores 3D',
          sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar vectores 3D y realizar diferentes operaciones entre ellos.',
          sinopsis:[
@@ -5515,7 +5515,7 @@ export class ChapterIIComponent implements OnInit {
     ];
 
     this.praqniquePropuesto=[
-        {label: 'Praqnique Propuesto 3.4', tituloN:'Praqnique 3.4: ',titulo:'Puntos y Líneas Notables del Triángulo.',subtitulo:'A)   Problema',
+        {label: 'Pracnique Propuesto 3.4', tituloN:'Pracnique 3.4: ',titulo:'Puntos y Líneas Notables del Triángulo.',subtitulo:'A)   Problema',
         listaGeneral:[
           {
             listaParrafoFotos:[
@@ -5560,7 +5560,7 @@ export class ChapterIIComponent implements OnInit {
           }
          ]
         },
-        {label: 'Praqnique Propuesto 3.5', tituloN:'Praqnique 3.5: ',titulo:'Aplicación de Vectores y Dos Fuerzas en el Plano.',subtitulo:'A)   Problema', linkAnexo:'https://drive.google.com/uc?id=...&export=download',tituloAnexo:'Descargar Anexo 1.pdf',iconodescarga:'save_alt',
+        {label: 'Pracnique Propuesto 3.5', tituloN:'Pracnique 3.5: ',titulo:'Aplicación de Vectores y Dos Fuerzas en el Plano.',subtitulo:'A)   Problema', linkAnexo:'https://drive.google.com/uc?id=...&export=download',tituloAnexo:'Descargar Anexo 1.pdf',iconodescarga:'save_alt',
         listaGeneral:[
           {
             listaParrafoFotos:[
@@ -5599,7 +5599,7 @@ export class ChapterIIComponent implements OnInit {
           }
          ]
         },
-        {label: 'Praqnique Propuesto 3.6', tituloN:'Praqnique 3.6: ',titulo:'Aplicación de Vectores y Varias Fuerzas en el Plano.',subtitulo:'A)   Problema', linkAnexo:'https://drive.google.com/uc?id=...&export=download',tituloAnexo:'Descargar Anexo 2.pdf',iconodescarga:'save_alt',
+        {label: 'Pracnique Propuesto 3.6', tituloN:'Pracnique 3.6: ',titulo:'Aplicación de Vectores y Varias Fuerzas en el Plano.',subtitulo:'A)   Problema', linkAnexo:'https://drive.google.com/uc?id=...&export=download',tituloAnexo:'Descargar Anexo 2.pdf',iconodescarga:'save_alt',
         listaGeneral:[
           {
             listaParrafoFotos:[
@@ -5618,7 +5618,7 @@ export class ChapterIIComponent implements OnInit {
           }
          ]
         },
-        {label: 'Praqnique Propuesto 3.7', tituloN:'Praqnique 3.7: ',titulo:'Aplicación de Vectores y Fuerzas Coplanares.',subtitulo:'A)   Problema',
+        {label: 'Pracnique Propuesto 3.7', tituloN:'Pracnique 3.7: ',titulo:'Aplicación de Vectores y Fuerzas Coplanares.',subtitulo:'A)   Problema',
         listaGeneral:[
           {
             listaParrafoFotos:[
@@ -5644,7 +5644,7 @@ export class ChapterIIComponent implements OnInit {
           }
          ]
         },
-        {label: 'Praqnique Propuesto 3.8', tituloN:'Praqnique 3.8: ',titulo:'Aplicación de Vectores y Tensiones.',subtitulo:'A)   Problema',
+        {label: 'Pracnique Propuesto 3.8', tituloN:'Pracnique 3.8: ',titulo:'Aplicación de Vectores y Tensiones.',subtitulo:'A)   Problema',
         listaGeneral:[
           {
             listaParrafoFotos:[
@@ -5658,7 +5658,7 @@ export class ChapterIIComponent implements OnInit {
           }
          ]
         },
-        {label: 'Praqnique Propuesto 3.9', tituloN:'Praqnique 3.9: ',titulo:'Aplicación de Vectores y Fuerzas en el Espacio.',subtitulo:'A)   Problema',
+        {label: 'Pracnique Propuesto 3.9', tituloN:'Pracnique 3.9: ',titulo:'Aplicación de Vectores y Fuerzas en el Espacio.',subtitulo:'A)   Problema',
         listaGeneral:[
           {
             listaParrafoFotos:[
@@ -5690,7 +5690,7 @@ export class ChapterIIComponent implements OnInit {
           }
          ]
         },
-        {label: 'Praqnique Propuesto 3.10', tituloN:'Praqnique 3.10: ',titulo:'Aplicación de Vectores y Tensiones en el Espacio.',subtitulo:'A)   Problema',
+        {label: 'Pracnique Propuesto 3.10', tituloN:'Pracnique 3.10: ',titulo:'Aplicación de Vectores y Tensiones en el Espacio.',subtitulo:'A)   Problema',
         listaGeneral:[
           {
             listaParrafoFotos:[
